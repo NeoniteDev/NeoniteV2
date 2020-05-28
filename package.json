@@ -1,0 +1,22 @@
+{
+  "name": "neo",
+  "version": "1.1.0",
+  "description": "Fortnite lobby emulator with much customization options based on express/electron js",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^11.5.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "uuid": "^8.1.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kem0o/neonite"
+  },
+  "author": "kemo",
+  "license": "GNU"
+}
