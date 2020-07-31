@@ -1,23 +1,40 @@
-const crypto = require('crypto')
-
+const crypto = require('crypto');
+const fs = require('fs');
+const Profile = require("../profile");
 
 module.exports = (app) => {
-	//exchange (needed for egl2 support)
-	app.get('/account/api/oauth/exchange', function (req, res) {
-		res.json({
-			"expiresInSeconds": 99999,
-			"code": crypto.randomBytes(15).toString("hex"),
-			"creatingClientId": "61d2f70175e84a6bba80a5089e597e1c"
-		});
-	});
-
 	//token
-	app.post('/account/api/oauth/token', (req, res) => {
+	app.post('/account/api/oauth/token', async (req, res) => {
 		var displayName = "";
 		if (req.body.username) displayName = req.body.username.split("@")[0]
 		else if (req.body.email) displayName = req.body.email.split("@")[0]
 		else displayName = `InvalidUser${Math.random().toString().substring(15)}`
-
+		var accountId = displayName.replace(/ /g, '_');
+		if(!accountId.startsWith("InvalidUser")){
+			var profileId = "athena";
+			var profileData = Profile.readProfile(accountId, profileId);
+	
+			if (!profileData) {
+				profileData = Profile.readProfileTemplate(profileId);
+	
+				if (!profileData) {
+					throw new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId);
+				}
+	
+				profileData.created = profileData.updated = new Date().toISOString();
+				profileData['_id'] = accountId;
+				profileData.accountId = accountId;
+				await Profile.updatedCos(profileData);
+	
+				try {
+					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
+					Profile.saveProfile(accountId, profileId, profileData);
+				} catch (e) {
+					console.log("Failed creating profile");
+					throw e;
+				}
+			}
+		}
 		res.json({
 			access_token: crypto.randomBytes(15).toString("hex"),
 			expires_in: 28800,

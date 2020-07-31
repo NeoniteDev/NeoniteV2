@@ -1,5 +1,5 @@
 {
-  "name": "neo",
+  "name": "neonitev2",
   "version": "1.1.0",
   "description": "Fortnite lobby emulator with much customization options based on express/electron js",
   "main": "main.js",
@@ -15,8 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kem0o/neonite"
+    "url": "git+https://github.com/kem0o/neonite.git"
   },
   "author": "kemo",
-  "license": "GNU"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kem0o/neonite/issues"
+  },
+  "homepage": "https://github.com/kem0o/neonite#readme"
 }

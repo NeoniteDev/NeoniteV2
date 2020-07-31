@@ -4,7 +4,7 @@ const fs = require("fs");
 const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
-const port = 3003;
+const port = 5595;
 const version = "2.0.0";
 
 (function () {
@@ -18,7 +18,6 @@ const version = "2.0.0";
 	};
 
 	const app = express();
-	require('./discord')
 
 
 	app.use(bodyParser.urlencoded({ extended: false }));

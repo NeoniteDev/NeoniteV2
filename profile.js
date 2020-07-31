@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const axios = require("axios");
 
 // @author armisto#2174
 module.exports = {
@@ -154,6 +155,34 @@ module.exports = {
             return null;
         }
     },
+
+    async updatedCos(profileData){
+    //up to date cosmatics on login from officer's api.
+    const data = (await axios.get("https://fortnite-api.com/v2/cosmetics/br")).data;
+    for (cosmetic of data.data) {
+        const item = {
+            "templateId": cosmetic.type.backendValue + ":" + cosmetic.id.toLowerCase(),
+            "attributes": {
+                "max_level_bonus": 0,
+                "level": 1,
+                "item_seen": true,
+                "rnd_sel_cnt": 0,
+                "xp": 0,
+                "variants": cosmetic.variants ? cosmetic.variants.map(it => {
+                    return {
+                        channel: it.channel,
+                        active: it.options[0].tag,
+                        owned: it.options.map(it => it.tag)
+                    };
+                }) : [],
+                "favorite": false
+            },
+            "quantity": 1
+        };
+        profileData.items[item.templateId] = item;
+    }
+    return true;
+},
 
     saveProfile(accountId, profileId, data) {
         fs.writeFileSync(path.join(__dirname, `/config/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
