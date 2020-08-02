@@ -1,3 +1,4 @@
+const axios = require('axios');
 module.exports = (app) => {
     //lightswitch
     app.get('/lightswitch/api/service/bulk/status', (req, res) => {
@@ -123,9 +124,12 @@ module.exports = (app) => {
 		res.status(204).end();
     });
     
-	//keychain
-	app.get('/fortnite/api/storefront/v2/keychain', (req, res) => { res.json(["A93064DA8BDA456CADD2CD316BE64EE5:nziBPQTfuEl4IRK6pOaovQpqQC6nsMQZFTx+DEg62q4=:EID_BLANK"]); });
-    
+    //keychain
+    app.get('/fortnite/api/storefront/v2/keychain', (req, res) => { 
+	axios.get("https://api.nitestats.com/v1/epic/keychain").then(response => {
+		res.json(response.data);
+	})
+    })
     //party
     app.get('/party/api/v1/Fortnite/user/:accountId', (req, res) => {
 		res.json({
