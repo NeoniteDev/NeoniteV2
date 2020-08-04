@@ -13,9 +13,9 @@ Fortnite lobby emulator with much customization options
 #### • Launcher can be found in repo files or on the localhosted panel [Here](http://127.0.0.1:5595/launcher.zip)
 
 ### Used apis
-• [Fortnite-API](https://fortnite-api.com/) Made by [Officer](https://discordapp.com/users/373913699943186432)
+• [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://discordapp.com/users/373913699943186432)
 
-• [NiteStats API](https://nitestats.com/) Made by [VastBlast](https://discordapp.com/users/249459068341583872)
+• [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://discordapp.com/users/249459068341583872)
 
 ## License
 
