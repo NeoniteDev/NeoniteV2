@@ -110,9 +110,8 @@ module.exports = (app) => {
 	});
     
 	//cloudstorage
-	//yup empty cloudstorage (no matchmaking support at all)
 	app.get('/fortnite/api/cloudstorage/system', (req, res) => {
-		res.json([])
+		res.status(404).end();
 	});
 	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
 		res.json([])
