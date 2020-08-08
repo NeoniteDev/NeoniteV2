@@ -7,66 +7,7 @@
       "name": "BRWeeklyStorefront",
       "catalogEntries": [
         {
-          "devName": "[VIRTUAL]1 x Recon Expert for 1200 MtxCurrency",
-          "offerId": "v2:/4df18645a56429d8979bf3f1411ddf7f7ec5430234f9a8c555cf479061b05896",
-          "fulfillmentIds": [],
-          "dailyLimit": -1,
-          "weeklyLimit": -1,
-          "monthlyLimit": -1,
-          "categories": [
-            "Panel 3"
-          ],
-          "prices": [
-            {
-              "currencyType": "MtxCurrency",
-              "currencySubType": "",
-              "regularPrice": 1200,
-              "dynamicRegularPrice": 1200,
-              "finalPrice": 1200,
-              "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 1200
-            }
-          ],
-          "meta": {
-            "BannerOverride": "Back"
-          },
-          "matchFilter": "",
-          "filterWeight": 0,
-          "appStoreId": [],
-          "requirements": [
-            {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_022_athena_commando_f",
-              "minQuantity": 1
-            }
-          ],
-          "offerType": "StaticPrice",
-          "giftInfo": {
-            "bIsEnabled": true,
-            "forcedGiftBoxTemplateId": "",
-            "purchaseRequirements": [],
-            "giftRecordIds": []
-          },
-          "refundable": true,
-          "metaInfo": [
-            {
-              "key": "BannerOverride",
-              "value": "Back"
-            }
-          ],
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_022_athena_commando_f.DA_Featured_cid_022_athena_commando_f",
-          "itemGrants": [
-            {
-              "templateId": "AthenaCharacter:cid_022_athena_commando_f",
-              "quantity": 1
-            }
-          ],
-          "additionalGrants": [],
-          "sortPriority": -12,
-          "catalogGroupPriority": 0
-        },
-        {
-          "devName": "[VIRTUAL]1 x Renegade Raider for 1200 MtxCurrency",
+          "devName": "[VIRTUAL]1 x Dummeez for 1200 MtxCurrency",
           "offerId": "v2:/0689e11e50945556b50a3740c16c4b8665a699769b873e554c75ba3214a8122d",
           "fulfillmentIds": [],
           "dailyLimit": -1,
@@ -97,12 +38,12 @@
           "requirements": [
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_028_athena_commando_f",
+              "requiredId": "AthenaCharacter:CID_795_Athena_Commando_M_Dummeez",
               "minQuantity": 1
             },
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaBackpack:bid_518_hitmancase",
+              "requiredId": "AthenaBackpack:BID_549_Dummeez",
               "minQuantity": 1
             }
           ],
@@ -128,14 +69,14 @@
               "value": "Back"
             }
           ],
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_028_athena_commando_f.DA_Featured_cid_028_athena_commando_f",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_795_Athena_Commando_M_Dummeez",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_028_athena_commando_f",
+              "templateId": "AthenaCharacter:CID_795_Athena_Commando_M_Dummeez",
               "quantity": 1
             },
             {
-              "templateId": "AthenaBackpack:bid_518_hitmancase",
+              "templateId": "AthenaBackpack:BID_549_Dummeez",
               "quantity": 1
             }
           ],
@@ -165,16 +106,19 @@
             }
           ],
           "meta": {
-            "BannerOverride": "OG IS HERE!"
+            "BannerOverride": "New"
           },
           "matchFilter": "",
           "filterWeight": 0,
           "appStoreId": [],
           "requirements": [
             {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_017_athena_commando_m",
-              "minQuantity": 1
+              "templateId": "AthenaCharacter:CID_800_Athena_Commando_M_Robro",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:BID_554_Robro",
+              "quantity": 1
             }
           ],
           "offerType": "StaticPrice",
@@ -188,13 +132,17 @@
           "metaInfo": [
             {
               "key": "BannerOverride",
-              "value": "OG IS HERE"
+              "value": "New"
             }
           ],
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_017_athena_commando_m.DA_Featured_cid_017_athena_commando_m",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_800_Athena_Commando_M_Robro.CID_800_Athena_Commando_M_Robro",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_017_athena_commando_m",
+              "templateId": "AthenaCharacter:CID_800_Athena_Commando_M_Robro",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:BID_554_Robro",
               "quantity": 1
             }
           ],
@@ -224,7 +172,7 @@
             }
           ],
           "meta": {
-            "BannerOverride": "S2 BP"
+            "BannerOverride": "New"
           },
           "matchFilter": "",
           "filterWeight": 0,
@@ -232,12 +180,12 @@
           "requirements": [
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_035_athena_commando_m_medieval",
+              "requiredId": "AthenaCharacter:CID_798_Athena_Commando_M_JonesyVagabond",
               "minQuantity": 1
             },
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaBackpack:bid_004_blackknight",
+              "requiredId": "AthenaBackpack:BID_550_JonesyVagabond",
               "minQuantity": 1
             }
           ],
@@ -255,14 +203,14 @@
               "value": "S2 BP"
             }
           ],
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_035_athena_commando_m_medieval.DA_Featured_cid_035_athena_commando_m_medieval",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_798_Athena_Commando_M_JonesyVagabond.DA_Featured_CID_798_Athena_Commando_M_JonesyVagabond",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_035_athena_commando_m_medieval",
+              "templateId": "AthenaCharacter:CID_798_Athena_Commando_M_JonesyVagabond",
               "quantity": 1
             },
             {
-              "templateId": "AthenaBackpack:bid_004_blackknight",
+              "templateId": "AthenaBackpack:BID_550_JonesyVagabond",
               "quantity": 1
             }
           ],
@@ -271,75 +219,7 @@
           "catalogGroupPriority": 0
         },
         {
-          "devName": "[VIRTUAL]1 x Sparkle Specialist 1500 MtxCurrency",
-          "offerId": "v2:/b96e8474eec3787dbb5750b4e22e43a1f154439b635742ac347fe40b9908f26b",
-          "fulfillmentIds": [],
-          "dailyLimit": -1,
-          "weeklyLimit": -1,
-          "monthlyLimit": -1,
-          "categories": [
-            "Panel 2"
-          ],
-          "prices": [
-            {
-              "currencyType": "MtxCurrency",
-              "currencySubType": "",
-              "regularPrice": 1800,
-              "dynamicRegularPrice": 1800,
-              "finalPrice": 1800,
-              "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 1800
-            }
-          ],
-          "meta": {
-            "BannerOverride": "FLOSS INCLUDED!"
-          },
-          "matchFilter": "",
-          "filterWeight": 0,
-          "appStoreId": [],
-          "requirements": [
-            {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_039_athena_commando_f_disco",
-              "minQuantity": 1
-            },
-            {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaDance:eid_floss",
-              "minQuantity": 1
-            }
-          ],
-          "offerType": "StaticPrice",
-          "giftInfo": {
-            "bIsEnabled": true,
-            "forcedGiftBoxTemplateId": "",
-            "purchaseRequirements": [],
-            "giftRecordIds": []
-          },
-          "refundable": true,
-          "metaInfo": [
-            {
-              "key": "BannerOverride",
-              "value": "FLOSS INCLUDED!"
-            }
-          ],
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_039_athena_commando_f_disco.DA_Featured_cid_039_athena_commando_f_disco",
-          "itemGrants": [
-            {
-              "templateId": "AthenaCharacter:cid_039_athena_commando_f_disco",
-              "quantity": 1
-            },
-            {
-              "templateId": "AthenaDance:eid_floss",
-              "quantity": 1
-            }
-          ],
-          "additionalGrants": [],
-          "sortPriority": -7,
-          "catalogGroupPriority": 0
-        },
-        {
-          "devName": "[VIRTUAL]1 x Manic for 800 MtxCurrency",
+          "devName": "[VIRTUAL]1 x Triple scoop for 800 MtxCurrency",
           "offerId": "v2:/cfb83de85501d17c2298af5880e2660806a4f9eb045dd891fec21c5d70d00c70",
           "fulfillmentIds": [],
           "dailyLimit": -1,
@@ -352,15 +232,15 @@
             {
               "currencyType": "MtxCurrency",
               "currencySubType": "",
-              "regularPrice": 2000,
-              "dynamicRegularPrice": 2000,
-              "finalPrice": 2000,
+              "regularPrice": 1200,
+              "dynamicRegularPrice": 1200,
+              "finalPrice": 1200,
               "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 2000
+              "basePrice": 1200
             }
           ],
           "meta": {
-            "BannerOverride": "OMEGA LUL"
+            "BannerOverride": "New"
           },
           "matchFilter": "",
           "filterWeight": 0,
@@ -368,8 +248,17 @@
           "requirements": [
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_116_athena_commando_m_carbideblack",
+              "requiredId": "AthenaCharacter:CID_833_Athena_Commando_F_TripleScoop",
               "minQuantity": 1
+            },
+            {
+              "requirementType": "DenyOnItemOwnership",
+              "requiredId": "AthenaBackpack:BID_587_TripleScoop",
+              "minQuantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:Pickaxe_ID_449_TripleScoopFemale",
+              "quantity": 1
             }
           ],
           "offerType": "StaticPrice",
@@ -383,18 +272,26 @@
           "metaInfo": [
             {
               "key": "BannerOverride",
-              "value": "OMGEA LUL"
+              "value": "New"
             }
           ],
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_116_athena_commando_m_carbideblack.DA_Featured_cid_116_athena_commando_m_carbideblack",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_TripleScoopBundle.DA_Featured_TripleScoopBundle",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_116_athena_commando_m_carbideblack",
+              "templateId": "AthenaCharacter:CID_833_Athena_Commando_F_TripleScoop",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:BID_587_TripleScoop",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:Pickaxe_ID_449_TripleScoopFemale",
               "quantity": 1
             }
           ],
           "additionalGrants": [],
-          "sortPriority": -1,
+          "sortPriority": -7,
           "catalogGroupPriority": 0
         }
       ]
@@ -416,11 +313,11 @@
             {
               "currencyType": "MtxCurrency",
               "currencySubType": "",
-              "regularPrice": 800,
-              "dynamicRegularPrice": 800,
-              "finalPrice": 800,
+              "regularPrice": 500,
+              "dynamicRegularPrice": 500,
+              "finalPrice": 500,
               "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 800
+              "basePrice": 500
             }
           ],
           "meta": {},
@@ -430,7 +327,7 @@
           "requirements": [
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_001_athena_commando_f_default",
+              "requiredId": "AthenaDance:EID_LineDance",
               "minQuantity": 1
             }
           ],
@@ -445,7 +342,7 @@
           "displayAssetPath": "None",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_001_athena_commando_f_default",
+              "templateId": "AthenaDance:EID_LineDance",
               "quantity": 1
             }
           ],
@@ -453,157 +350,9 @@
           "sortPriority": 0,
           "catalogGroupPriority": 0
         },
-        {
-          "devName": "[VIRTUAL]1 x Prima Remix for 200 MtxCurrency",
-          "offerId": "v2:/289d5f51d1f4ee0e52bb4213e07a54d164cb73c5699b3de5a72bea5a642425ca",
-          "fulfillmentIds": [],
-          "dailyLimit": -1,
-          "weeklyLimit": -1,
-          "monthlyLimit": -1,
-          "categories": [
-            "Daily 3"
-          ],
-          "prices": [
-            {
-              "currencyType": "MtxCurrency",
-              "currencySubType": "",
-              "regularPrice": 800,
-              "dynamicRegularPrice": 800,
-              "finalPrice": 800,
-              "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 800
-            }
-          ],
-          "meta": {},
-          "matchFilter": "",
-          "filterWeight": 0,
-          "appStoreId": [],
-          "requirements": [
-            {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_002_athena_commando_f_default",
-              "minQuantity": 1
-            }
-          ],
-          "offerType": "StaticPrice",
-          "giftInfo": {
-            "bIsEnabled": true,
-            "forcedGiftBoxTemplateId": "",
-            "purchaseRequirements": [],
-            "giftRecordIds": []
-          },
-          "refundable": true,
-          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_cid_002_athena_commando_f_default.DA_Featured_cid_002_athena_commando_f_default",
-          "itemGrants": [
-            {
-              "templateId": "AthenaCharacter:cid_002_athena_commando_f_default",
-              "quantity": 1
-            }
-          ],
-          "additionalGrants": [],
-          "sortPriority": 0,
-          "catalogGroupPriority": 0
-        },
-        {
-          "devName": "[VIRTUAL]1 x Gold Digger for 800 MtxCurrency",
-          "offerId": "v2:/7fed47d7463351b6c4d691e71609b17d22339a3f2b24245faa0218686b54d325",
-          "fulfillmentIds": [],
-          "dailyLimit": -1,
-          "weeklyLimit": -1,
-          "monthlyLimit": -1,
-          "categories": [
-            "Daily 4"
-          ],
-          "prices": [
-            {
-              "currencyType": "MtxCurrency",
-              "currencySubType": "",
-              "regularPrice": 800,
-              "dynamicRegularPrice": 800,
-              "finalPrice": 800,
-              "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 800
-            }
-          ],
-          "meta": {},
-          "matchFilter": "",
-          "filterWeight": 0,
-          "appStoreId": [],
-          "requirements": [
-            {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_003_athena_commando_f_default",
-              "minQuantity": 1
-            }
-          ],
-          "offerType": "StaticPrice",
-          "giftInfo": {
-            "bIsEnabled": true,
-            "forcedGiftBoxTemplateId": "",
-            "purchaseRequirements": [],
-            "giftRecordIds": []
-          },
-          "refundable": true,
-          "itemGrants": [
-            {
-              "templateId": "AthenaCharacter:cid_003_athena_commando_f_default",
-              "quantity": 1
-            }
-          ],
-          "additionalGrants": [],
-          "sortPriority": 0,
-          "catalogGroupPriority": 0
-        },
-        {
-          "devName": "[VIRTUAL]1 x Dream Feet for 500 MtxCurrency",
-          "offerId": "v2:/48314620cb5f0e4752ae7ca1599b0be7ab4b9a7376a328a9f08516bc4e980c36",
-          "fulfillmentIds": [],
-          "dailyLimit": -1,
-          "weeklyLimit": -1,
-          "monthlyLimit": -1,
-          "categories": [
-            "Daily 5"
-          ],
-          "prices": [
-            {
-              "currencyType": "MtxCurrency",
-              "currencySubType": "",
-              "regularPrice": 800,
-              "dynamicRegularPrice": 800,
-              "finalPrice": 800,
-              "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 800
-            }
-          ],
-          "meta": {},
-          "matchFilter": "",
-          "filterWeight": 0,
-          "appStoreId": [],
-          "requirements": [
-            {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_004_athena_commando_f_default",
-              "minQuantity": 1
-            }
-          ],
-          "offerType": "StaticPrice",
-          "giftInfo": {
-            "bIsEnabled": true,
-            "forcedGiftBoxTemplateId": "",
-            "purchaseRequirements": [],
-            "giftRecordIds": []
-          },
-          "refundable": true,
-          "itemGrants": [
-            {
-              "templateId": "AthenaCharacter:cid_004_athena_commando_f_default",
-              "quantity": 1
-            }
-          ],
-          "additionalGrants": [],
-          "sortPriority": 0,
-          "catalogGroupPriority": 0
-        },
+
+
+        
         {
           "devName": "[VIRTUAL]1 x Vulture, 1 x Containment Pack for 1500 MtxCurrency",
           "offerId": "v2:/0eb2bfda7e087e8fb56e3e0784309e3689354efda996247ab435cd12bf7f254d",
@@ -618,11 +367,11 @@
             {
               "currencyType": "MtxCurrency",
               "currencySubType": "",
-              "regularPrice": 800,
-              "dynamicRegularPrice": 800,
-              "finalPrice": 800,
+              "regularPrice": 500,
+              "dynamicRegularPrice": 500,
+              "finalPrice": 500,
               "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 800
+              "basePrice": 500
             }
           ],
           "meta": {},
@@ -632,7 +381,7 @@
           "requirements": [
             {
               "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_005_athena_commando_m_default",
+              "requiredId": "AthenaEmote:EID_JulyBooks",
               "minQuantity": 1
             }
           ],
@@ -647,63 +396,1958 @@
           "displayAssetPath": "None",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_005_athena_commando_m_default",
+              "templateId": "AthenaDance:EID_JulyBooks",
               "quantity": 1
             }
           ],
           "additionalGrants": [],
           "sortPriority": 0,
           "catalogGroupPriority": 0
-        },
+        }
+      ]
+    },
+    {
+      "name": "BRStarterKits",
+      "catalogEntries": [
         {
-          "devName": "[VIRTUAL]1 x Waterworks for 200 MtxCurrency",
-          "offerId": "v2:/93eb55efd82ef6f0da45cc44d74cb410768dbc8c3c26f0557825367fd1ed7309",
-          "fulfillmentIds": [],
+          "offerId": "08F1E56C4FA0D12D7CF185A60B91B8BE",
+          "devName": "Season 10 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
           "dailyLimit": -1,
           "weeklyLimit": -1,
           "monthlyLimit": -1,
-          "categories": [
-            "Daily 6"
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "10628a9e5f9b4a5c94f1fe7ad5d0438b",
+            "ios_rmpa08_C",
+            "",
+            "",
+            "",
+            "RMPA080000000000",
+            "b1192b17-bf7b-4be9-8d07-ba34a475a763",
+            "c-starterpack00010-SPACK08",
+            "sam_RMPA08"
           ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "F6144A364FC567EAEA542F88D28F218D",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Red Strike Pack",
+          "shortDescription": "",
+          "description": "Silence your foes with the Red Strike Pack. An outfit, a back bling and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_384_Athena_Commando_M_StreetAssasin.DA_Featured_CID_384_Athena_Commando_M_StreetAssasin",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_384_athena_commando_m_streetassassin",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_247_streetassassin",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "CC7F7B484282D7038AA8BAA05F540518",
+          "devName": "Final Reckoning",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "69422bf51a694caca994436621abcaba",
+            "ios_fnlrkg_c",
+            "",
+            "",
+            "",
+            "FNLRKG0000000000",
+            "54532a9c-bbca-4b8c-898f-565fc393ff40",
+            "c-specialpack00002-FNLRKG",
+            "sam_FNLRKG"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "A4DDC8244FFE3B8EF0E013B49E2E4538",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "The Final Reckoning Pack",
+          "shortDescription": "",
+          "description": "Frighten your foes with outfits from one of the Island's darkest of tales, The Final Reckoning!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_FinalReckoningBundle.DA_Featured_FinalReckoningBundle",
+          "itemGrants": []
+        },
+        {
+          "offerId": "C4B01410479582CA23741693413810E9",
+          "devName": "Darkfire Bundle",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "5751d4fec6464315b915bfec8e48b271",
+            "ios_dfrdgl_C",
+            "",
+            "",
+            "",
+            "DFRDGL0000000000",
+            "7bc913ec-3122-40db-963a-0dd2e251185a",
+            "c-specialpack00001-DFRDGL",
+            "sam_DFRDGL"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "C26EDCA5418EE82F1C650E88639F9D03",
+              "minQuantity": 1
+            },
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "590B5F4348393BC73E29F0B0913056CA",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Fortnite - Darkfire Bundle",
+          "shortDescription": "",
+          "description": "Embrace your dark side, heat up the battle and slip into the shadows with the Darkfire Bundle.",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_DarkFireBundle.DA_Featured_DarkFireBundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_574_athena_commando_f_cuberockerpunk",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_517_athena_commando_m_darkeaglefire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_510_athena_commando_f_angeleclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_374_cuberockerpunk_female",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_347_darkeaglefire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_341_angeleclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_258_rockerpunkcube1h",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_261_darkeaglefire1h",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_260_angeleclipse1h",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaItemWrap:wrap_127_fragmentedglow",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaItemWrap:wrap_128_fragmentedgloweclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaItemWrap:wrap_129_fragmentedglowfire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaDance:eid_darkfirelegends",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "4E40664F40E1629B022638A891ABDDDE",
+          "devName": "Celestial",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "sam_galaxy_lord"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "C41CA9D5485DCC109BD51495B2D22A09",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "LCheck",
+              "value": "A,B"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 15,
+          "title": "Galaxy",
+          "shortDescription": "",
+          "description": "Victory is written in the stars.",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_175_Athena_Commando_M_Celestial.DA_Featured_CID_175_Athena_Commando_M_Celestial",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_175_athena_commando_m_celestial",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaGlider:glider_id_090_celestial",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_138_celestial",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_116_celestial",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "869BE9DD49181A5099618D8A78699728",
+          "devName": "Season 12 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "24f4bb5bda1e438487706aad6a4332d2",
+            "ios_rmpa10_C",
+            "",
+            "",
+            "",
+            "RMPA100000000000",
+            "34394e39-5156-304e-c030-443339460f00",
+            "c-starterpack00012-SPACK10",
+            "sam_RMPA10"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "072002BD417D1A172AEDC9B9FC41A987",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "The Iris Pack",
+          "shortDescription": "",
+          "description": "Keep the competition in your sights with the Iris Pack. An outfit, a back bling, a pickaxe and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_HoodieBandit_Bundle.DA_Featured_HoodieBandit_Bundle",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_674_athena_commando_f_hoodiebandit",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_457_hoodiebandit",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_343_hoodiebanditfemale",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "F186F0DD420ED9945866B0825017AE3C",
+          "devName": "Season 8 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "71a6102c3104441589fd54ee9327fe24",
+            "ios_rmpa06_C",
+            "",
+            "",
+            "",
+            "RMPA060000000000",
+            "a494c79e-90ad-4738-9787-debcf5065951",
+            "c-starterpack00080-SPACK06",
+            "sam_RMPA06"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "E9AD46E848A082CB54C6C5B8E98375E7",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Laguna Pack",
+          "shortDescription": "",
+          "description": "Strum it up and kick back with the Laguna Pack. An outfit, a back bling, a wrap and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_367_Athena_Commando_F_Tropical.DA_Featured_CID_367_Athena_Commando_F_Tropical",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_367_athena_commando_f_tropical",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_231_tropicalfemale",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaItemWrap:wrap_033_tropicalgirl",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "6279BD2B4B2738ADF3C4D0846FCF34B0",
+          "devName": "Season 11 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "b217d78d2e0947bf8ded0fb379d7be46",
+            "ios_rmpa09_C",
+            "",
+            "",
+            "",
+            "RMPA090000000000",
+            "ad4c7310-6db1-4586-b51f-900c9955fc76",
+            "c-starterpack00011-SPACK09",
+            "sam_RMPA09"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "6F04E501424478A3E6F6E9AC7F8A0DA2",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "The Wavebreaker Pack",
+          "shortDescription": "",
+          "description": "Crash through waves of enemies with the Wavebreaker Pack. An outfit, a back bling, a pickaxe and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_BulletBlueF_Bundle.DA_Featured_BulletBlueF_Bundle",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_575_athena_commando_f_bulletblue",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_375_bulletbluefemale",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_281_bulletbluefemale",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "06F2E11747D7F3A608EAF5B71A015303",
+          "devName": "Fallen Love Ranger Challenge Pack",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "bc104d187b194964b9ce0259bfefcd24",
+            "ios_dlrcp01_C",
+            "",
+            "",
+            "",
+            "DLRCP10000000000",
+            "be550ae0-49b9-40dd-bfa3-f682f8a7beb1",
+            "c-seasonpack000002-DLRCP01",
+            "sam_DLRCP1"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "84A31E1D4250DE16B9973A820E047247",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Fallen Love Ranger Challenge Pack",
+          "shortDescription": "",
+          "description": "Take on the challenges issued by the Fallen Love Ranger and earn up to 2,000 V-Bucks! ",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_343_Athena_Commando_M_CupidDark.DA_Featured_CID_343_Athena_Commando_M_CupidDark",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_343_athena_commando_m_cupiddark",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_208_cupiddarkmale",
+              "quantity": 1
+            },
+            {
+              "templateId": "ChallengeBundleSchedule:bundleschedule_styles_cupiddark",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "B118838B4FD55AC125DB0DAE3D016143",
+          "devName": "Slurp Legends",
+          "offerType": "StaticPrice",
           "prices": [
             {
               "currencyType": "MtxCurrency",
               "currencySubType": "",
-              "regularPrice": 800,
-              "dynamicRegularPrice": 800,
-              "finalPrice": 800,
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
               "saleExpiration": "9999-12-31T23:59:59.999Z",
-              "basePrice": 800
+              "basePrice": 0
             }
           ],
-          "meta": {},
-          "matchFilter": "",
-          "filterWeight": 0,
-          "appStoreId": [],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": true,
+          "appStoreId": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
           "requirements": [
             {
-              "requirementType": "DenyOnItemOwnership",
-              "requiredId": "AthenaCharacter:cid_006_athena_commando_m_default",
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "AE7FF6C14DE3703D42325BAB165E3683",
               "minQuantity": 1
             }
           ],
-          "offerType": "StaticPrice",
-          "giftInfo": {
-            "bIsEnabled": true,
-            "forcedGiftBoxTemplateId": "",
-            "purchaseRequirements": [],
-            "giftRecordIds": []
-          },
-          "refundable": true,
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "DERBY DYNAMO CHALLENGE PACK",
+          "shortDescription": "<text color=\"FFFFFFFF\" fontface=\"black\" size=\"20\" Case=\"AllCaps\">Roll through the competition with the Derby Dynamo Challenge pack. Get the Derby Dynamo Outfit with Built-In-Emote, Quad Roller Back Bling, and complete Quick Challenges to earn up to 1,500 V-Bucks!</>\r\nThis pack contains:",
+          "description": "",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_TripleScoopBundle.DA_Featured_TripleScoopBundle",
           "itemGrants": [
             {
-              "templateId": "AthenaCharacter:cid_006_athena_commando_m_default",
+              "templateId": "AthenaCharacter:CID_833_Athena_Commando_F_TripleScoop",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:BID_587_TripleScoop",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:Pickaxe_ID_449_TripleScoopFemale",
               "quantity": 1
             }
           ],
-          "additionalGrants": [],
-          "sortPriority": 0,
-          "catalogGroupPriority": 0
+          "giftInfo": {
+            "bIsEnabled": false,
+            "forcedGiftBoxTemplateId": "",
+            "purchaseRequirements": []
+          }
+        },
+        {
+          "offerId": "9F5895BB46EEF32197FD30B2B8BD34B3",
+          "devName": "Breakpoint's Challenge Pack",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "755cfa1663154c35a2ddcc94c07165db",
+            "ios_scncp1_C",
+            "",
+            "",
+            "",
+            "SCNCP10000000000",
+            "f55fda8a-5d77-4229-ac6a-2d9531304f51",
+            "c-seasonpack000006-SCNCP1",
+            "sam_SCNCP1"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "74DD582C489507D076E5C5AAA08AFE96",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Breakpoint's Challenge Pack",
+          "shortDescription": "",
+          "description": "Start a digital revolution and take on Breakpoint's challenges to earn up to 1,000 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_429_Athena_Commando_F_NeonLines.DA_Featured_CID_429_Athena_Commando_F_NeonLines",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_429_athena_commando_f_neonlines",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_284_neonlines",
+              "quantity": 1
+            },
+            {
+              "templateId": "ChallengeBundleSchedule:bundleschedule_styles_neonlines",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "4EEFB69645A8CBB239BAD1A520AA4663",
+          "devName": "Season 4 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "3c8c7982474145e9ab639354fdbf628d",
+            "ios_rmpa02_C",
+            "30100",
+            "google_rmpa02",
+            "",
+            "RMPA020000000000",
+            "ffb9356c-c7bd-456a-8246-857da7705ff9",
+            "c-starterpack00000-SPACK02",
+            "sam_RMPA02"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "674DE41846A914BB78828393F6343442",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Season 4 Starter Kit",
+          "shortDescription": "",
+          "description": "An epic skin and 600 v-bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_139_Athena_Commando_M_Fighterpilot.DA_Featured_CID_139_Athena_Commando_M_FighterPilot",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_139_athena_commando_m_fighterpilot",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_056_fighterpilot",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "CC2826D8418DCC959280AD9E2D95532C",
+          "devName": "Ikonik",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "sam_ikonic"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "39BA6D8A407FDDF15BCCEFAA82C9F286",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "LCheck",
+              "value": "A,B"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 15,
+          "title": "IKONIK",
+          "shortDescription": "",
+          "description": "Claim your iKONIK outfit and Scenario emote as part of the Samsung promotion.",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_313_Athena_Commando_M_KpopFashion.DA_Featured_CID_313_Athena_Commando_M_KpopFashion",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_313_athena_commando_m_kpopfashion",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaDance:eid_kpopdance03",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "0935379349B600E02DC20EA2FA25FC81",
+          "devName": "Glacial Legends",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "3aedd91fbcd545e48f02129b1a5322fa",
+            "ios_glclgd1_C",
+            "",
+            "",
+            "",
+            "GLCLGD0000000000",
+            "97b1db16-1e8d-4735-9f40-522f8257839e",
+            "c-seasonpack000009-GLCLGD1",
+            "sam_GLCLGD"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "C3898B0D4961AEAC6A8CEDA77F279F67",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Polar Legends Pack",
+          "shortDescription": "",
+          "description": "Put the competition on ice with the Polar legends pack.",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_PolarLegendsBundle.DA_Featured_PolarLegendsBundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_653_athena_commando_f_uglysweaterfrozen",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_656_athena_commando_m_teriyakifishfreezerburn",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_644_athena_commando_m_cattus",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_442_cattus",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_051_athena_commando_m_holidayelf",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_445_elf",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "5D363EEF4BABEE99840FC3B68CF3B1B2",
+          "devName": "P-1000's Challenge Pack",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "97a6db55099d44009f987f8671920754",
+            "ios_peecp1_C",
+            "",
+            "",
+            "",
+            "PEECP10000000000",
+            "1e581de8-367d-4313-8765-a07485d569c9",
+            "c-seasonpack000008-PEECP1",
+            "sam_PEECP1"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "0F2FFF0947C7F74783B86EB74CAEB13A",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "P-1000's Challenge Pack",
+          "shortDescription": "",
+          "description": "Get the P-1000 Outfit and Emote, and complete challenges to earn up to 1,500 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_PeelyMechBundle.DA_Featured_PeelyMechBundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_534_athena_commando_m_peelymech",
+              "quantity": 1
+            },
+            {
+              "templateId": "ChallengeBundleSchedule:bundleschedule_styles_peelymech",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "1BEA82A04291B004750C6EA4D2D57965",
+          "devName": "Dark Reflections",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "56ba62d3600d498cb2e01961dbf42927",
+            "ios_cublgd1_C",
+            "",
+            "",
+            "",
+            "CUBLGD0000000000",
+            "0da4c6bb-1bdd-4219-aba1-7c54803bb0a4",
+            "c-seasonpack000007-CUBLGD1",
+            "sam_CUBLGD"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "C87BB099425E3E46A1761EAFB6BC5E13",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Dark Reflections",
+          "shortDescription": "",
+          "description": "Did the Cube ever corrupt, or was the darkness always there? Let your dark side take control while wearing the Dark Reflections pack.",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CubePaintBundle.DA_Featured_CubePaintBundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_513_athena_commando_m_cubepaintjonesy",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_512_athena_commando_f_cubepaintredknight",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_511_athena_commando_m_cubepaintwildcard",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_343_cuberedknight",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_344_cubewildcard",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_263_jonesycube",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "1BA9A3294555AD27E8B1438E8EB48E90",
+          "devName": "Inferno's Challenge Pack",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "b787584e9b134eafb01115908a442aeb",
+            "ios_infcp1_C",
+            "",
+            "",
+            "",
+            "INFCP10000000000",
+            "2badd1ea-8aa4-4109-9e2a-0b31d270934f",
+            "c-seasonpack000004-INFCP1",
+            "sam_INFCP1"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "CE1CF4D1424F6781846CDB92DA6AE9A6",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Inferno's Challenge Pack",
+          "shortDescription": "",
+          "description": "Take on Inferno's challenges and get yourself up to 1,000 V-Bucks, a pickaxe and a wrap!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_370_Athena_Commando_M_EvilSuit.DA_Featured_CID_370_Athena_Commando_M_EvilSuit",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_370_athena_commando_m_evilsuit",
+              "quantity": 1
+            },
+            {
+              "templateId": "ChallengeBundleSchedule:bundleschedule_styles_redsuitguy",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "5D98B13A4A11DCD9FAF596A472030734",
+          "devName": "Bassassin Challenge Pack",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "39fba8c88d0647b29309874e6f7d4de9",
+            "ios_bascp1_C",
+            "",
+            "",
+            "",
+            "BASCP10000000000",
+            "52445039-484e-304e-c030-394446524800",
+            "c-seasonpack000010-BASCP1",
+            "sam_BASCP1"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "37D5CA4D46127ACEFE2A2F815AA6385B",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Bassassin Challenge Pack",
+          "shortDescription": "",
+          "description": "As a Bassassin, it pays to be cold-blooded. Get the Contract Giller Outfit, Dorsal Destroyer Back Bling, and complete Daily Assignments to earn up to 1,000 V-Bucks! ",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_S12ChallengePack.DA_Featured_S12ChallengePack",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_722_athena_commando_m_teriyakifishassassin",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_496_teriyakifishassassin",
+              "quantity": 1
+            },
+            {
+              "templateId": "ChallengeBundleSchedule:bundleschedule_styles_agentfishstick",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "9DD831A348B80D3F40E28ABA21991A63",
+          "devName": "Season 3 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "84aba7b08b734e7c90a0112173b1f7fb",
+            "ios_s3rpma_C",
+            "",
+            "google_s3rpma",
+            "",
+            "S3RMPA0000000000",
+            "5c174e59-97ff-454c-bdad-58de6c62b7c3",
+            "c-starterpack00000-SPACK01",
+            ""
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "8A6F1D0C452CCC14F6D789A65732F9A5",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Season 3 Starter Kit",
+          "shortDescription": "",
+          "description": "A epic skin and 600 v-bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_090_Athena_Commando_M_Tactical.DA_Featured_CID_090_Athena_Commando_M_Tactical",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_090_athena_commando_m_tactical",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_030_tacticalrogue",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "8FC5B9C9439AB95F937929A7A5D8EC79",
+          "devName": "Shadows Rising",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "04e522517a384a509d5bf31904846159",
+            "ios_darlgd1_C",
+            "",
+            "",
+            "",
+            "DARLGD0000000000",
+            "3fdee98e-5216-4f32-b0e6-d663545733c2",
+            "c-seasonpack000005-DARLGD1",
+            "sam_DARLGD"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "D06A5BF54861C123B1CFF796BB08FE1D",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Shadows Rising",
+          "shortDescription": "",
+          "description": "Eclipse the competition this season while wearing the Shadows Rising pack!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_EclipseBundle.DA_Featured_EclipseBundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_439_athena_commando_f_skullbriteeclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_437_athena_commando_f_aztececlipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_438_athena_commando_m_winterghouleclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_285_skullbriteeclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_287_aztecfemaleeclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_286_winterghoulmaleeclipse",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaItemWrap:wrap_081_blackout2",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "A7E94C3848E1337B395D57B4FD87778D",
+          "devName": "Season 6 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "8ca6dbe417c9470783e9e2293cc0f4a9",
+            "ios_rmpa04_C",
+            "",
+            "",
+            "",
+            "RMPA040000000000",
+            "bef8995c-af47-4247-83d5-41ff1c551705",
+            "c-starterpack00001-SPACK04",
+            "sam_RMPA04"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "817F6B1B40214571D32E0CA9F89B616F",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Summit Striker",
+          "shortDescription": "",
+          "description": "An epic skin and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_253_Athena_Commando_M_MilitaryFashion2.DA_Featured_CID_253_Athena_Commando_M_MilitaryFashion2",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_253_athena_commando_m_militaryfashion2",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_134_militaryfashion",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "DD483E7B4174D7AA0BD1C5BE18E5925F",
+          "devName": "Season 9 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "77da03157c38443e991a72264ee5f23b",
+            "ios_rmpa07_C",
+            "",
+            "",
+            "",
+            "RMPA070000000000",
+            "143e5fd4-4a06-40d4-9912-d90ebb6e5d3f",
+            "c-starterpack00090-SPACK07",
+            "sam_RMPA07"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "999F3240427BA4D0974021AE6A511FF7",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Wilde Pack",
+          "shortDescription": "",
+          "description": "Fight with fury with the Wilde Pack. An outfit, a back bling and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_420_Athena_Commando_F_WhiteTiger.DA_Featured_CID_420_Athena_Commando_F_WhiteTiger",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_420_athena_commando_f_whitetiger",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_277_whitetiger",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "9622E4B94D377780F2410982F4DEADE9",
+          "devName": "Black Monday",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "2eb58adefbba454ba1dab2d530536403",
+            "ios_blamon_C",
+            "",
+            "",
+            "",
+            "BLAMON0000000000",
+            "d40f973e-ebb3-447c-b1ce-4bbe12ddada5",
+            "c-specialpack00000-BLAMON",
+            "sam_BLAMON"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "0253BB94416C809D99F0638C6F8A86A1",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Batman Caped Crusader Pack",
+          "shortDescription": "",
+          "description": "Activate the bat-signal! The Caped Crusader has joined the fight.",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_BlackMondayBundle_6W4X3.DA_Featured_BlackMondayBundle_6W4X3",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_528_athena_commando_m_blackmondayhouston_7dgbt",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_529_athena_commando_m_blackmondaykansas_hwd90",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_362_blackmondayhouston_2i53g",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_360_blackmondaykansas_vcz9m",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_277_blackmondaymale_5tlsd",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaGlider:glider_id_178_blackmondaymale_03m3e",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "164435F248762115C99DC2A3204A2D1F",
+          "devName": "Season 5 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "494b1e73046543d6ba53c4574fd1b54c",
+            "ios_rmpa03_C",
+            "",
+            "",
+            "",
+            "RMPA030000000000",
+            "6c1b4276-3f57-4946-ac49-f8f61c643a28",
+            "c-starterpack00050-SPACK03",
+            "sam_RMPA03"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "4A71EECC4B2F2AB2E00C0FBB4FF77751",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Ace Pack",
+          "shortDescription": "",
+          "description": "An epic skin and 600 v-bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_195_Athena_Commando_F_Bling.DA_Featured_CID_195_Athena_Commando_F_Bling",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_195_athena_commando_f_bling",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_101_blingfemale",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "B678DA8341FB458C68C64E99176862D0",
+          "devName": "Deep Freeze Bundle",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "bf5dfcaa2e354fc482142f6ee0fcd61f",
+            "ios_dfbndl_C",
+            "",
+            "",
+            "",
+            "DFBNDL0000000000",
+            "0a002971-0678-4021-b0f1-2f839756bee8",
+            "c-retailbundle0000-DFBNDL1",
+            ""
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "821E9F494FE5FB80045FC69ED54BADD1",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "1000"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 9,
+          "title": "Deep Freeze Bundle",
+          "shortDescription": "",
+          "description": "Brrr! A very cool bundle!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_TBD_Athena_Commando_M_RaptorArcticCamo_Bundle.DA_Featured_CID_TBD_Athena_Commando_M_RaptorArcticCamo_Bundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_261_athena_commando_m_raptorarcticcamo",
+              "quantity": 1
+            },
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 1000
+            },
+            {
+              "templateId": "AthenaGlider:glider_id_074_raptorarcticcamo",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaPickaxe:pickaxe_id_097_raptorarcticcamo",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_142_raptorarcticcamo",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "CB64AFD84FCF2DE9E71E54A33B44DE0E",
+          "devName": "Season 7 Starter Kit (RMT)",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "9c823c76c5e94c62b4d6a0616c56aebd",
+            "ios_rmpa05_C",
+            "",
+            "",
+            "",
+            "RMPA050000000000",
+            "8a3c2009-3789-4afc-992f-49a3ff6e7d1d",
+            "c-starterpack00000-SPACK05",
+            "sam_RMPA05"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "CF78A7AB41F59B39BE3FC7B3248A77DF",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [
+            {
+              "key": "MtxQuantity",
+              "value": "600"
+            },
+            {
+              "key": "MtxBonus",
+              "value": "100"
+            }
+          ],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Cobalt Pack",
+          "shortDescription": "",
+          "description": "An epic skin and 600 V-Bucks!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_CID_327_Athena_Commando_M_BlueMystery.DA_Featured_CID_327_Athena_Commando_M_BlueMystery",
+          "itemGrants": [
+            {
+              "templateId": "Currency:MtxPurchased",
+              "quantity": 499
+            },
+            {
+              "templateId": "Currency:MtxPurchaseBonus",
+              "quantity": 101
+            },
+            {
+              "templateId": "AthenaCharacter:cid_327_athena_commando_m_bluemystery",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_203_bluemystery",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "C5D695E24F0660D558AFFE816B8BB0E7",
+          "devName": "Lava Legends",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "8e9937437c044c7e9628ae088af4a295",
+            "ios_lvalgd1_C",
+            "",
+            "",
+            "",
+            "LVALGD0000000000",
+            "11d3693d-dfa2-48ca-ad06-09c8637a29e0",
+            "c-seasonpack000003-LVALGD1",
+            "sam_LVALGD"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "C35410BF476787A8F32A4091202CAC0F",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Lava Legends",
+          "shortDescription": "",
+          "description": "Bring the heat this season with the Lava Legends pack!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_LavaLegendsBundle.DA_Featured_LavaLegendsBundle",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_379_athena_commando_m_battlehoundfire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_380_athena_commando_f_darkviking_fire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_243_battlehoundfire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_244_darkvikingfire",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaGlider:glider_id_134_darkvikingfire",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "offerId": "917A7A14466225C5EBBC7DBE00A63D70",
+          "devName": "Frozen Legends",
+          "offerType": "StaticPrice",
+          "prices": [
+            {
+              "currencyType": "RealMoney",
+              "currencySubType": "",
+              "regularPrice": 0,
+              "dynamicRegularPrice": -1,
+              "finalPrice": 0,
+              "saleExpiration": "9999-12-31T23:59:59.999Z",
+              "basePrice": 0
+            }
+          ],
+          "categories": [],
+          "dailyLimit": -1,
+          "weeklyLimit": -1,
+          "monthlyLimit": -1,
+          "refundable": false,
+          "appStoreId": [
+            "",
+            "493dd27f9efa42aa89a25c1400c02a29",
+            "ios_frzlgd1_C",
+            "",
+            "",
+            "",
+            "FRZLGD0000000000",
+            "db344708-8609-4852-b73f-d101c0e9d64c",
+            "c-seasonpack000001-FRZLGD1",
+            "sam_FRZLGD"
+          ],
+          "requirements": [
+            {
+              "requirementType": "DenyOnFulfillment",
+              "requiredId": "43672C454B192864F806AD81AFB6701D",
+              "minQuantity": 1
+            }
+          ],
+          "metaInfo": [],
+          "catalogGroup": "",
+          "catalogGroupPriority": 0,
+          "sortPriority": 10,
+          "title": "Frozen Legends",
+          "shortDescription": "",
+          "description": "Stay frosty this season with the Frozen Legends pack!",
+          "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_Athena_FrozenLegends.DA_Featured_Athena_FrozenLegends",
+          "itemGrants": [
+            {
+              "templateId": "AthenaCharacter:cid_293_athena_commando_m_ravenwinter",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_294_athena_commando_f_redknightwinter",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaCharacter:cid_295_athena_commando_m_cupidwinter",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_166_ravenwintermale",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_167_redknightwinterfemale",
+              "quantity": 1
+            },
+            {
+              "templateId": "AthenaBackpack:bid_168_cupidwintermale",
+              "quantity": 1
+            }
+          ]
         }
       ]
     }
