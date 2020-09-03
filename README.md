@@ -24,4 +24,4 @@ Fortnite lobby emulator with much customization options
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
-We __do not__ provide any kind of support on this project.
+We provide support on this project within our official discord community server.
