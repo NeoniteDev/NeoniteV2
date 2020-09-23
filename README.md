@@ -24,4 +24,4 @@ Fortnite lobby emulator with much customization options
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
-We provide support on this project within our official discord community server.
+We provide support on this project within our official discord community server.[![Run on Repl.it](https://repl.it/badge/github/kem0o/neonitev2)](https://repl.it/github/kem0o/neonitev2)
