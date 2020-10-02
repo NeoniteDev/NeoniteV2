@@ -111,7 +111,7 @@ module.exports = (app) => {
     
 	//cloudstorage
 	app.get('/fortnite/api/cloudstorage/system', (req, res) => {
-		res.status(404).end();
+		res.status(204).end();
 	});
 	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
 		res.json([])
