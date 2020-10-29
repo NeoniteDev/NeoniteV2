@@ -36,7 +36,7 @@
             },
             "Character": {
               "items": [
-                null
+                "AthenaCharacter:cid_028_athena_commando_f"
               ],
               "activeVariants": []
             },
@@ -129,7 +129,7 @@
             },
             "Character": {
               "items": [
-                null
+                "AthenaCharacter:cid_028_athena_commando_f"
               ],
               "activeVariants": []
             },
@@ -206,7 +206,7 @@
       "mfa_reward_claimed": true,
       "quest_manager": {},
       "book_level": 1000,
-      "season_num": 12,
+      "season_num": 14,
       "season_update": 0,
       "book_xp": 0,
       "permissions": [],
@@ -224,7 +224,7 @@
       "inventory_limit_bonus": 0,
       "last_applied_loadout": "loadout_1",
       "daily_rewards": {},
-      "xp": 0,
+      "xp": 50000,
       "season_friend_match_boost": 0,
       "active_loadout_index": 0
     }
