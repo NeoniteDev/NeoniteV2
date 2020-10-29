@@ -1,11 +1,15 @@
+
+
 module.exports = (app) => {
     app.get("/content/api/pages/fortnite-game", (req, res) => {
         res.json({
-            _title: 'Fortnite Game',
-            _activeDate: new Date(),
+            "jcr:isCheckedOut": true,
+            _title: "Fortnite Game",
+            "jcr:baseVersion": "a7ca237317f1e7883b3279-c38f-4aa7-a325-e099e4bf71e5",
+            _activeDate: "2017-08-30T03:20:48.050Z",
             lastModified: new Date(),
-            _locale: 'en-US',
-            battleroyalenews: {
+            _locale: "en-US",
+            battleroyalenewsv2: {
                 news: {
                     motds: [
                         {
@@ -13,16 +17,17 @@ module.exports = (app) => {
                             image: "https://cdn.discordapp.com/attachments/703974059121049720/715300713995042877/Fornite1920x1080.jpg",
                             tileImage: "https://cdn.discordapp.com/attachments/703974059121049720/715300717837156362/FortniteMidLogo.jpg",
                             hidden: false,
-                            tabTitleOverride: "FORTNITE.DEV V2",
+                            videoMute: false,
+                            tabTitleOverride: "Neonite V2",
                             _type: "CommonUI Simple Message MOTD",
-                            title: "Welcome To Fortnite.Dev",
+                            title: "Neonite",
                             body: "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord by clicking the button below.",
+                            videoLoop: false,
                             videoStreamingEnabled: false,
-                            sortingPriority: 20,
-                            id: "Fortnite-Dev-Welcome",
-                            videoFullscreen: false,
+                            sortingPriority: 0,
+                            id: `Neonite-welcome-1`,
                             spotlight: false,
-                            websiteURL: "https://discord.gg/DJ6VUmD",
+                            websiteURL:"https://discord.gg/DJ6VUmD",
                             websiteButtonText: "Join our Discord!"
                         }
                     ]
@@ -37,26 +42,50 @@ module.exports = (app) => {
                 _activeDate: "2020-01-21T14:00:00.000Z",
                 lastModified: new Date(),
                 _locale: "en-US"
-            },
+           },
             emergencynotice: {
                 news: {
                     platform_messages: [],
-                    _type: 'Battle Royale News',
+                    _type: "Battle Royale News",
                     messages: [
                         {
                             hidden: false,
-                            _type: 'CommonUI Simple Message Base',
-                            subgame: 'br',
-                            title: "Fortnite.Dev V2",
+                            _type: "CommonUI Simple Message Base",
+                            subgame: "br",
+                            title: "Neonite V2",
                             body: "Made by kemo (@xkem0x).\nDiscord: https://discord.gg/DJ6VUmD",
                             spotlight: true
                         }
                     ]
                 },
-                _title: 'emergencynotice',
-                _activeDate: "2019-12-03T00:51:35.524Z",
+                _title: "emergencynotice",
+                _activeDate: new Date(),
                 lastModified: new Date(),
-                _locale: 'en-US'
+                _locale: "en-US"
+            },
+            dynamicbackgrounds: {
+                "jcr:isCheckedOut": true,
+                backgrounds: {
+                    backgrounds: [
+                        {
+                            stage: "halloween2020",
+                            _type: "DynamicBackground",
+                            key: "lobby"
+                        },
+                        {
+                            stage: "halloween2020",
+                            _type: "DynamicBackground",
+                            key: "vault"
+                        }
+                    ],
+                    "_type": "DynamicBackgroundList"
+                },
+                _title: "dynamicbackgrounds",
+                _noIndex: false,
+                "jcr:baseVersion": "a7ca237317f1e71f17852c-bccd-4be6-89a0-1bb52672a444",
+                _activeDate: new Date(),
+                lastModified: new Date(),
+                _locale: "en-US"
             }
         })
     })
