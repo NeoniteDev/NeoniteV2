@@ -53,7 +53,7 @@ module.exports = (app) => {
                             _type: "CommonUI Simple Message Base",
                             subgame: "br",
                             title: "Neonite V2",
-                            body: "Made by kemo (@xkem0x).\nDiscord: https://discord.gg/DJ6VUmD",
+                            body: "Made by kemo (@xkem0x).\r\nDiscord: https://discord.gg/DJ6VUmD",
                             spotlight: true
                         }
                     ]
@@ -68,12 +68,12 @@ module.exports = (app) => {
                 backgrounds: {
                     backgrounds: [
                         {
-                            stage: "halloween2020",
+                            stage: "season14",
                             _type: "DynamicBackground",
                             key: "lobby"
                         },
                         {
-                            stage: "halloween2020",
+                            stage: "season14",
                             _type: "DynamicBackground",
                             key: "vault"
                         }
