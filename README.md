@@ -15,9 +15,9 @@ Fortnite lobby emulator with much customization options
 #### • [NinjaRipper for neonite](https://github.com/kem0o/FNinjaRipper)
 
 ### Used APIs
-• [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://discordapp.com/users/373913699943186432)
+• [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://github.com/NotOfficer)
 
-• [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://discordapp.com/users/249459068341583872)
+• [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://github.com/VastBlast)
 
 ### Contributors
 - [Amrsatrio](https://github.com/Amrsatrio)
