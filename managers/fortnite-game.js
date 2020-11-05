@@ -15,7 +15,7 @@ module.exports = (app) => {
                         "hidden": false,
                         "_type": "CommonUI Simple Message Base",
                         "subgame": "br",
-                        "body": "Made by kemo (@xkem0x).\nDiscord: https://discord.gg/DJ6VUmD",
+                        "body": "Made by kemo (@xkem0x).\r\nDiscord: https://discord.gg/DJ6VUmD",
                         "title": "Neonite V2",
                         "spotlight": false
                     }, 
@@ -42,23 +42,22 @@ module.exports = (app) => {
                 "jcr:isCheckedOut": true,
                 "show_ad_violator": false,
                 "_title": "playlistinformation",
-                "frontend_matchmaking_header_text_description": "v2",
-                "frontend_matchmaking_header_text": "Neonite",
+                "frontend_matchmaking_header_text_description": "NOW AVAILABLE",
+                "frontend_matchmaking_header_text": "NEW LTM!",
                 "playlist_info": {
                     "_type": "Playlist Information",
                     "playlists": [{
-                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/partyroyaleupdated/FR_12PR_In-Game_Launch_ModeTile-1024x512-564244d37587a31764a057e113439fbfb60923f3.jpg",
+                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/partyroyaleupdated/EN_12PR_In-Game_Launch_ModeTile-1024x512-13cf734f07363d61f6fec3a2f5486a3550035c32.jpg",
                         "playlist_name": "Playlist_Papaya",
                         "hidden": false,
                         "violator": "",
                         "_type": "FortPlaylistInfo",
-                        "description": " Deskcription comming soon in EN-US for now its french :\r\n Bienvenue à la Fête royale, un nouveau lieu évolutif et expérimental. Laissez vos armes et votre matos au vestiaire et venez vous éclater entre potes, jouer à des jeux et assister à des événements en direct. Faites des courses d'obstacles sur terre ou sur mer, partez pêcher entre potes, pratiquez la chute en planeur et retrouvez quelques-uns de vos artistes préférés. Montez dans le bus de fête et profitez-en bien !",
-                        "display_subname": ""
+                        "description": "Welcome to Party Royale, a new experimental and evolving space. Leave your weapons and mats behind and hang out with friends, play games and enjoy live entertainment. Catch live shows. Race around obstacle courses by land or sea. Go fishing with friends, perfect your skydive, and get up close and connect with some of your favorite artists. Hop on the party bus and enjoy the ride."
                     }, {
                         "image": "https://cdn2.unrealengine.com/14br-marvelknockout-mystique-ltm-tile-1024x512-969813783.jpg",
                         "playlist_name": "Playlist_Cobalt_HT_Duos",
-                        "violator": "",
                         "hidden": false,
+                        "violator": "",
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
@@ -66,7 +65,7 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/14br-marvelknockout-wolverine-ltm-tile-1024x512-969818067.jpg",
                         "playlist_name": "Playlist_Cobalt_HT_Trios",
-                        "violator": "NOUVEAU",
+                        "violator": "",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
                         "description": "",
@@ -75,8 +74,8 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/marvel-standoff-1024x512-010756809.jpg",
                         "playlist_name": "Playlist_hightower",
-                        "hidden": false,
                         "violator": "",
+                        "hidden": false,
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
@@ -84,8 +83,8 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/marvel-standoff-1024x512-010756809.jpg",
                         "playlist_name": "Playlist_hightower_12",
-                        "violator": "",
                         "hidden": false,
+                        "violator": "",
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
@@ -93,8 +92,8 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/14br-marveltakeoverltm-playlisttile-1024x512-1024x512-081336658.jpg",
                         "playlist_name": "Playlist_HighTower_Hydro",
-                        "violator": "",
                         "hidden": false,
+                        "violator": "",
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
@@ -107,12 +106,12 @@ module.exports = (app) => {
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
-                        "display_name": "Domination Marvel"
+                        "display_name": "Marvel Takeover"
                     }, {
                         "image": "https://cdn2.unrealengine.com/14br-rallyroyaleltm-playlisttile-1024x512-268454418.jpg",
                         "playlist_name": "Playlist_Argon_HighTower_Duos_16",
-                        "violator": "",
                         "hidden": false,
+                        "violator": "",
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
@@ -120,8 +119,8 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/14br-rallyroyaleltm-playlisttile-1024x512-268454418.jpg",
                         "playlist_name": "Playlist_Argon_HighTower_Solo_16",
-                        "hidden": false,
                         "violator": "",
+                        "hidden": false,
                         "_type": "FortPlaylistInfo",
                         "description": "",
                         "display_subname": "",
@@ -202,51 +201,51 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg",
                         "playlist_name": "Playlist_Music_Highest   ",
-                        "violator": "ÉVÉNEMENT EN DIRECT",
+                        "violator": "LIVE EVENT",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Atterrissez à Sweaty Sands pour participer à un voyage inoubliable. (Déconseillé aux personnes photosensibles)",
-                        "display_name": "Travis Scott Astronomical"
+                        "description": "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)",
+                        "display_name": "Travis Scott’s Astronomical"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg",
                         "playlist_name": "Playlist_Music_Higher",
-                        "violator": "ÉVÉNEMENT EN DIRECT",
+                        "violator": "LIVE EVENT",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Atterrissez à Sweaty Sands pour participer à un voyage inoubliable. (Déconseillé aux personnes photosensibles)",
-                        "display_name": "Travis Scott Astronomical"
+                        "description": "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)",
+                        "display_name": "Travis Scott’s Astronomical"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg",
                         "playlist_name": "Playlist_Music_High",
-                        "violator": "ÉVÉNEMENT EN DIRECT",
+                        "violator": "LIVE EVENT",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Atterrissez à Sweaty Sands pour participer à un voyage inoubliable. (Déconseillé aux personnes photosensibles)",
-                        "display_name": "Travis Scott Astronomical"
+                        "description": "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)",
+                        "display_name": "Travis Scott’s Astronomical"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg",
                         "playlist_name": "Playlist_Music_Med",
-                        "violator": "ÉVÉNEMENT EN DIRECT",
+                        "violator": "LIVE EVENT",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Atterrissez à Sweaty Sands pour participer à un voyage inoubliable. (Déconseillé aux personnes photosensibles)",
-                        "display_name": "Travis Scott Astronomical"
+                        "description": "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)",
+                        "display_name": "Travis Scott’s Astronomical"
                     }, {
-                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_PostShow-1024x512-d690fb6ebba8e08fa99102eea12fccc100ed8ece.jpg",
+                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg",
                         "playlist_name": "Playlist_Music_Low",
-                        "violator": "",
+                        "violator": "LIVE EVENT",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Rejoignez-nous pour le prochain spectacle Astronomical le 26 avril à 00h00 (CEST).",
-                        "display_name": "PROCHAIN ÉVÉNEMENT"
+                        "description": "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)",
+                        "display_name": "Travis Scott’s Astronomical"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg",
                         "playlist_name": "Playlist_Music_Lowest",
-                        "violator": "ÉVÉNEMENT EN DIRECT",
+                        "violator": "LIVE EVENT",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Atterrissez à Sweaty Sands pour participer à un voyage inoubliable. (Déconseillé aux personnes photosensibles)",
-                        "display_name": "Travis Scott Astronomical"
+                        "description": "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)",
+                        "display_name": "Travis Scott’s Astronomical"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Knockout_PlaylistTile-1024x512-455f3aa88d1c74b606b17f84852a4c1bbd82eedb.jpg",
                         "playlist_name": "Playlist_Cobalt_Duos_P_Respawn",
@@ -258,8 +257,14 @@ module.exports = (app) => {
                         "playlist_name": "Playlist_NowPlaying",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Ayo & Teo sont à la recherche de l'équipe la plus stylée. Faites un tour à Risky Reels pour regarder l'émission !",
-                        "display_name": "À L'ANTENNE !"
+                        "description": "Ayo & Teo are on the hunt to find the squad with the most sauce. Stop by Risky Reels to catch part of the show!",
+                        "display_name": "Now Playing!"
+                    }, {
+                        "playlist_name": "Playlist_Bots_ArsenicCore_Solo_MaxFog",
+                        "hidden": false,
+                        "violator": "",
+                        "_type": "FortPlaylistInfo",
+                        "display_name": "Dev Autoflush Solos"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Knockout_PlaylistTile-1024x512-455f3aa88d1c74b606b17f84852a4c1bbd82eedb.jpg",
                         "playlist_name": "playlist_cobalt_squads_p_respawn",
@@ -275,42 +280,72 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/SearchDestroy_Tile_1024x512-1024x512-1e61afa9f8eeced10f55155b9a32530322492138.jpg",
                         "playlist_name": "Playlist_Creative_SourDropper_2",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Opération destruction est un mode temporaire créé par la communauté. \r\nCrique - Créé par : KKSlider \r\n\r\nAssaillants et défenseurs s'affrontent dans ce mode où chaque joueur n'a qu'une vie par manche.  \r\nObjectif des assaillants : poser les bombes sur les sites marqués par A ou B. \r\nObjectif des défenseurs : empêcher les bombes d'être posées et désamorcer celles qui le sont. Au début de chaque manche, les joueurs peuvent dépenser l'or qu'ils ont gagné lors des précédentes manches. L'équipe qui remporte la majorité des manches gagne la partie ! \r\n\r\nSi vous lancez une partie avec moins de 6 joueurs, vous serez placé dans une équipe contenant d'autres joueurs.",
-                        "display_subname": "Crique",
-                        "display_name": "OPÉRATION DESTRUCTION"
+                        "description": "Search and Destroy is a community made LTM. ",
+                        "display_subname": "COVE",
+                        "display_name": "Search and Destroy"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/SearchDestroy_Tile_1024x512-1024x512-1e61afa9f8eeced10f55155b9a32530322492138.jpg",
                         "playlist_name": "Playlist_Creative_SourDropper",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Opération destruction est un mode temporaire créé par la communauté. \r\nUsine - Créé par : DICO \r\n\r\nAssaillants et défenseurs s'affrontent dans ce mode où chaque joueur n'a qu'une vie par manche.  \r\nObjectif des assaillants : poser les bombes sur les sites marqués par A ou B. \r\nObjectif des défenseurs : empêcher les bombes d'être posées et désamorcer celles qui le sont. Au début de chaque manche, les joueurs peuvent dépenser l'or qu'ils ont gagné lors des précédentes manches. L'équipe qui remporte la majorité des manches gagne la partie ! \r\n\r\nSi vous lancez une partie avec moins de 6 joueurs, vous serez placé dans une équipe contenant d'autres joueurs.",
-                        "display_subname": "Usine",
-                        "display_name": "OPÉRATION DESTRUCTION"
+                        "description": "Search and Destroy is a community made LTM. ",
+                        "display_subname": "FACTORY",
+                        "display_name": "Search and Destroy"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/11BR_BattleLabs_PlaylistTile-(2)-1024x512-ca5f4e84a2941264f787239caa5458d0eabd39e3.jpg",
-                        "playlist_name": "Playlist_BattleLab_Fortnitemares_MaxFog",
+                        "playlist_name": "Playlist_BattleLab",
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Blue-1024x512-0f76af6296545de1b2d9da766e76475418bc5940.jpg",
                         "playlist_name": "Playlist_Creative_ZebraWallet_Random",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Guerre de zones en groupe.  Les jeux de type Guerre de zone sont des batailles effrénées jusqu'à la victoire, dans un contexte de tempête se déplaçant rapidement. Les parties se déroulent sur des cartes de petite taille créées par la communauté. Des apparitions et un inventaire aléatoires rendent chaque manche unique. Affrontez 15 autres joueurs, membres de votre groupe y compris.",
-                        "display_name": "BATAILLE GÉNÉRALE EN GROUPE"
+                        "description": "Party queue Zone Wars.  Zone Wars games are a fast paced fight to the finish, forcing you to battle high ground while running from the fast moving storm. Zone Wars takes place on smaller, community made maps. Randomized spawns and inventory make each round feel unique. Play against 15 other players including anyone in your party.",
+                        "display_name": "PARTY FFA"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Red-1024x512-2e1c5e38b652093029befb6a86a44db844474af8.jpg",
                         "playlist_name": "Playlist_Creative_ZebraWallet_Random2",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Guerre de zones en solo.  Les jeux de type Guerre de zone sont des batailles effrénées jusqu'à la victoire, dans un contexte de tempête se déplaçant rapidement. Les parties se déroulent sur des cartes de petite taille créées par la communauté. Des apparitions et un inventaire aléatoires rendent chaque manche unique. Affrontez 15 autres joueurs aléatoires en solo.",
-                        "display_name": "BATAILLE GÉNÉRALE EN SOLO"
+                        "description": "Solo queue Zone Wars.  Zone Wars games are a fast paced fight to the finish, forcing you to battle high ground while running from the fast moving storm. Zone Wars takes place on smaller, community made maps. Randomized spawns and inventory make each round feel unique. Play solo against 15 other random players.",
+                        "display_name": "SOLO FFA"
+                    }, {
+                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Blue-1024x512-0f76af6296545de1b2d9da766e76475418bc5940.jpg",
+                        "playlist_name": "Playlist_Creative_ZebraWallet_solos",
+                        "hidden": false,
+                        "_type": "FortPlaylistInfo",
+                        "display_name": "Zone Wars 0"
+                    }, {
+                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Blue-1024x512-0f76af6296545de1b2d9da766e76475418bc5940.jpg",
+                        "playlist_name": "Playlist_Creative_ZebraWallet_D",
+                        "violator": "COMMUNITY CREATION",
+                        "hidden": false,
+                        "_type": "FortPlaylistInfo",
+                        "description": "A solo queue, FFA simulation of the end-game scenario in Battle Royale with a quick moving zone. Randomized spawns and inventory items make each round unique. Stick around after the first game. there are multiple rounds in each session.  Zone Wars is a collection of games made by the community. The four maps included in this playlist are:  Desert created by JotaPeGame. Code: jotapegame Downhill River created by Enigma. Code: enigma Vortex created by Zeroyahero. Code: zeroyahero Colosseum created by Jesgran. Code: jesgran",
+                        "display_name": "Zone Wars 4"
+                    }, {
+                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Black-1024x512-23ba95e82931361ce535a643fdac54e120254374.jpg",
+                        "playlist_name": "Playlist_Creative_ZebraWallet_Random_Solos",
+                        "violator": "COMMUNITY CREATION",
+                        "hidden": false,
+                        "_type": "FortPlaylistInfo",
+                        "description": "A solo queue, FFA simulation of the end-game scenario in Battle Royale with a quick moving zone. Randomized spawns and inventory items make each round unique. Stick around after the first game. there are multiple rounds in each session.  Zone Wars is a collection of games made by the community. The four maps included in this playlist are:  Desert created by JotaPeGame. Code: jotapegame Downhill River created by Enigma. Code: enigma Vortex created by Zeroyahero. Code: zeroyahero Colosseum created by Jesgran. Code: jesgran",
+                        "display_name": "Zone Wars 3"
+                    }, {
+                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile-1024x512-a2741f113a7178ca15d71d281dcc2b614ff90754.jpg",
+                        "playlist_name": "Playlist_Creative_ZebraWallet_Random_Squads",
+                        "violator": "COMMUNITY CREATION",
+                        "hidden": false,
+                        "_type": "FortPlaylistInfo",
+                        "description": "A solo queue, FFA simulation of the end-game scenario in Battle Royale with a quick moving zone. Randomized spawns and inventory items make each round unique. Stick around after the first game. there are multiple rounds in each session.  Zone Wars is a collection of games made by the community. The four maps included in this playlist are:  Desert created by JotaPeGame. Code: jotapegame Downhill River created by Enigma. Code: enigma Vortex created by Zeroyahero. Code: zeroyahero Colosseum created by Jesgran. Code: jesgran",
+                        "display_name": "Zone Wars 0"
                     }, {
                         "image": "https://cdn2.unrealengine.com/13br-summersplash-ltm-siphon-motd-1024x512-1024x512-501004672.jpg",
                         "playlist_name": "Playlist_Vamp_Duo",
@@ -319,10 +354,10 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/11BR_2v2_GunFright_LTM-1024x512-f3b0f0157e8652a23db8abc23814d97893179e20.jpg",
                         "playlist_name": "Playlist_Creative_Hyena_G",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Code BluDrive \r\nCode Axel-Capek \r\n\r\nQuel duo triomphera de cette bataille de champions à deux contre deux ? \r\n\r\nTous les joueurs commencent chaque manche avec le même équipement défini aléatoirement. Le duo qui a remporté le plus de victoires après 5 manches gagne la partie ! \r\n\r\nCartes créées par : BluDrive (Manoir) \r\nAxel-Capek (Cour)"
+                        "description": "Code BluDrive "
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/11BR_LTM_ModeTile-1024x512-aae4d5b5eb1ea4eeb31f852c8b98516681bfe769.jpg",
                         "playlist_name": "Playlist_DADBRO_Squads",
@@ -346,41 +381,32 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile-1024x512-a2741f113a7178ca15d71d281dcc2b614ff90754.jpg",
                         "playlist_name": "Playlist_Creative_ZebraWallet_A",
-                        "violator": "BATAILLE GÉNÉRALE EN GROUPE",
+                        "violator": "PARTY FFA",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Code jesgran Zone Wars - Arena  Une simulation de fin de partie de Battle Royale en solo, avec une zone mouvante étroite. Éliminez vos adversaires tout en évitant la tempête qui se referme. Des apparitions et un inventaire aléatoires rendent chaque manche unique. Restez après le premier jeu : il y a plusieurs manches à chaque session.  Devenez le gladiateur ultime et régnez sur le Colisée. Cette île de style ouvert requiert une maîtrise de la construction rapide.  Créé par Jesgran.",
-                        "display_name": "COLISÉE"
-                    }, {
-                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Red-1024x512-2e1c5e38b652093029befb6a86a44db844474af8.jpg",
-                        "playlist_name": "Playlist_Creative_ZebraWallet_D",
-                        "violator": "BATAILLE GÉNÉRALE EN SOLO",
-                        "hidden": false,
-                        "_type": "FortPlaylistInfo",
-                        "description": "Code jotapegame Desert Zone Wars 4.1  Une simulation de fin de partie de Battle Royale en solo, avec une zone mouvante étroite. Éliminez vos adversaires tout en évitant la tempête qui se referme. Des apparitions et un inventaire aléatoires rendent chaque manche unique. Restez après le premier jeu : il y a plusieurs manches à chaque session.  Combattez au milieu d'une petite ville du désert et atteignez le dernier cercle. L'assortiment d'armes et de véhicules variés permet une expérience de jeu originale.  Créé par JotaPeGame.",
-                        "display_name": "DÉSERT"
+                        "description": "Code jesgran Zone Wars - Arena  A party, FFA simulation of the end-game scenario in Battle Royale with a quick-moving zone. Eliminate the competition as you avoid the Storm. Randomized spawns and inventory items make each round unique. Stick around after the first game. There are multiple rounds in each session. Become the ultimate gladiator in this Colosseum style island. An open style island demands quick building. Created by Jesgran.",
+                        "display_name": "Colosseum"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Blue-1024x512-0f76af6296545de1b2d9da766e76475418bc5940.jpg",
                         "playlist_name": "Playlist_Creative_ZebraWallet_DH",
-                        "violator": "BATAILLE GÉNÉRALE EN GROUPE",
+                        "violator": "PARTY FFA",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Code enigma S10 Enigmas Downhill River Zonewars X  Une simulation de fin de partie de Battle Royale en solo, avec une zone mouvante étroite. Éliminez vos adversaires tout en évitant la tempête qui se referme. Des apparitions et un inventaire aléatoires rendent chaque manche unique. Restez après le premier jeu : il y a plusieurs manches à chaque session.  Dévalez une colline et traversez une rivière tout en restant dans les limites de la tempête ! Les tremplins communautaires et le trajet constant de la tempête permettent de se familiariser avec le jeu en quelques manches.  Créé par Enigma.",
-                        "display_name": "RIVIÈRE"
+                        "description": "Code enigma S10 Enigmas Downhill River Zonewars X  A party, FFA simulation of the end-game scenario in Battle Royale with a quick-moving zone. Eliminate the competition as you avoid the Storm. Randomized spawns and inventory items make each round unique. Stick around after the first game. There are multiple rounds in each session.  Stay out of the storm as you move downhill through a river in this original style Zone Wars island. Community launch pads and a consistent Storm path allows for familiarity after a few rounds.  Created by Enigma.",
+                        "display_name": "Downhill River"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_ZoneWars_In-Game_ModeTile_Black-1024x512-23ba95e82931361ce535a643fdac54e120254374.jpg",
                         "playlist_name": "Playlist_Creative_ZebraWallet_V",
-                        "violator": "BATAILLE GÉNÉRALE EN GROUPE",
+                        "violator": "PARTY FFA",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Code zeroyahero Vortex Zone Wars by Zeroyahero  Une simulation de fin de partie de Battle Royale en solo, avec une zone mouvante étroite. Éliminez vos adversaires tout en évitant la tempête qui se referme. Des apparitions et un inventaire aléatoires rendent chaque manche unique. Restez après le premier jeu : il y a plusieurs manches à chaque session.  La petite originalité de cette Guerre de zones est son terrain montagneux : l'altitude peut varier énormément d'une zone à l'autre !  Créé par Zeroyahero.",
-                        "display_name": "VORTEX"
+                        "description": "Code zeroyahero Vortex Zone Wars A party, FFA simulation of the end-game scenario in Battle Royale with a quick-moving zone. Eliminate the competition as you avoid the Storm. Randomized spawns and inventory items make each round unique. Stick around after the first game. There are multiple rounds in each session.  This island puts a unique twist on the Zone Wars game with mountainous terrain to traverse. The elevation change from zone to zone can be quite drastic!  Created by Zeroyahero",
+                        "display_name": "Vortex"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_TheCombine_ModeTile-1024x512-3aa8ebdfe1df7d9995e824a781eacdb954ee9615.jpg",
                         "playlist_name": "Playlist_Crucible_Solo",
                         "hidden": false,
-                        "_type": "FortPlaylistInfo",
-                        "display_name": "Le Creuset"
+                        "_type": "FortPlaylistInfo"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Playground-1024x512-53db8a4b5fb41251af279eaf923bc00ecbc17792.jpg",
                         "playlist_name": "Playlist_Creative_PlayOnly_40",
@@ -390,7 +416,7 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10CM_LTM_KnockTown_Playlist-1024x512-72e32b88b332b4d3ee3ee5255eff9522b660485c.jpg",
                         "playlist_name": "Playlist_Creative_KaleTofu",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
@@ -411,7 +437,7 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/09CM_WorldCup_FeatIsland_WorldRun_ModeTile-1024x512-34d66c90603f4e64ebd56054b889c4ec163abea5.jpg",
                         "playlist_name": "Playlist_Creative_Squad_Battle_16_B",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
@@ -422,21 +448,23 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/09CM_WorldCup_FeatIsland_JunkyardJuke_ModeTile-1024x512-7a2585ce248f1efa438674c368b37116dc5514de.jpg",
                         "playlist_name": "Playlist_Creative_Squad_Battle_16_A",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
-                        "_type": "FortPlaylistInfo"
+                        "_type": "FortPlaylistInfo",
+                        "description": ""
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/09CM_WorldCup_FeatIsland_SkyStation_ModeTile-1024x512-a5424f9ac27626a73646c9fd158901c4c363ec0c.jpg",
                         "playlist_name": "Playlist_Creative_Squad_Battle_32_A",
-                        "violator": "CRÉATION DE LA COMMUNAUTÉ",
+                        "violator": "COMMUNITY CREATION",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Conçu par Team Evolve. Présenté lors de la finale de la Fortnite World Cup - Mode Créatif.  Affrontez les autres sections pour capturer des zones et gagner des points ! Tous les joueurs peuvent capturer une zone et gagner des points pour leur équipe. Utilisez des grenades répulsives pour chasser les autres équipes des zones de capture ! Les joueurs peuvent désormais gagner de l'EXP après chaque partie et les trois meilleures équipes gagnent de l'EXP bonus."
+                        "description": "Created by Team Evolve. Featured in the Fortnite World Cup Creative Finals.  Battle other squads to capture zones and score points! Any player can capture a zone and score points for your team. Use impulse grenades to blast other teams out of the capture zones. Players can now earn XP after each game and the top three teams will earn bonus XP."
                     }, {
                         "image": "https://cdn2.unrealengine.com/13br-summersplash-ltm-oneshot-motd-1024x512-1024x512-347318026.jpg",
                         "playlist_name": "Playlist_Low_Solo",
                         "hidden": false,
-                        "_type": "FortPlaylistInfo"
+                        "_type": "FortPlaylistInfo",
+                        "display_name": ""
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/14DaysofSummer/09BR_14DoS_LTM_HeavyMetal_ModeTile-1024x512-4db8223707fb313220eef577dafde5c14106e49d.jpg",
                         "playlist_name": "Playlist_Heavy_Solo",
@@ -445,7 +473,7 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/09CM_In-Game_PropHunt_ModeTile-1024x512-1510311027a93a720b42ed22e711c7e478931adb.jpg",
                         "playlist_name": "Playlist_Creative_PuppyHugs",
-                        "violator": "CRÉÉ PAR DES JOUEURS",
+                        "violator": "PLAYER MADE!",
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
@@ -456,30 +484,30 @@ module.exports = (app) => {
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/EN_CM09_BeachAssaultCreativeLTM_ContestWinner_ModeTile-1024x512-9cdeb2e0ea37179a37d3384cf73c9949d2d19546.jpg",
                         "playlist_name": "Playlist_Creative_BeachAssault",
-                        "violator": "CRÉÉ PAR DES JOUEURS",
+                        "violator": "PLAYER MADE",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "display_name": "Assaut sur la plage, par Prudiz"
+                        "display_name": "BEACH ASSAULT BY PRUDIZ"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/BR_LTM_Barebones-1024x512-4a29337febb04e9043d57c9e61afe849f8a9e9c7.jpg",
                         "playlist_name": "Playlist_Hard_Solo",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Dans ce mode, la carte, la boussole, les comptes à rebours et de nombreux autres éléments d'interface sont désactivés."
+                        "description": "This mode has the map, compass, storm timer and many other elements of the Heads Up Display turned off."
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/14DaysofSummer/09BR_14DoS_LTM_BlueWeapons_ModeTile-1024x512-0c38f1bc3b991943e3f6650bf7acfbcdd8739b1e.jpg",
                         "playlist_name": "Playlist_Blue_Squads",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Toutes les armes sont de rareté bleue !",
-                        "display_name": "Peur bleue"
+                        "description": "",
+                        "display_name": ""
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/11BR_Solid_Gold_Playlist_Tile_1025x512-1024x512-ea1253854e55ed01f3d6e012ecfa373cc1b38d37.jpg",
                         "playlist_name": "Playlist_SolidGold_Squads",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Toutes les armes sont légendaires !",
-                        "display_name": "Or massif"
+                        "description": "",
+                        "display_name": ""
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/14DaysofSummer/09BR_14DoS_LTM_PurpleReign_ModeTile-1024x512-c5a7e2bd3f32b83f17e4fa28817312ab6210133c.jpg",
                         "playlist_name": "Playlist_Purple_Squads",
@@ -551,18 +579,6 @@ module.exports = (app) => {
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
-                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/14DaysofSummer/09BR_14DoS_LTM_WaterBalloons_ModeTile-1024x512-ea418e1a4fb6ce21d5f01f2ac18ae60e41e9ef74.jpg",
-                        "playlist_name": "Playlist_Bison_Respawn_Squads",
-                        "hidden": false,
-                        "_type": "FortPlaylistInfo",
-                        "description": "Deux équipes de grande taille s'affrontent avec des ballons remplis d'eau pour décrocher la Victoire royale dans ce mode bourré d'action où le premier camp à atteindre l'objectif d'éliminations l'emporte !"
-                    }, {
-                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/14DaysofSummer/09BR_14DoS_LTM_WaterBalloons_ModeTile-1024x512-ea418e1a4fb6ce21d5f01f2ac18ae60e41e9ef74.jpg",
-                        "playlist_name": "Playlist_Bison_Respawn",
-                        "hidden": false,
-                        "_type": "FortPlaylistInfo",
-                        "description": "Deux équipes de grande taille s'affrontent avec des ballons remplis d'eau pour décrocher la Victoire royale dans ce mode bourré d'action où le premier camp à atteindre l'objectif d'éliminations l'emporte !"
-                    }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/14DaysofSummer/09BR_14DoS_LTM_SiphonRumble_ModeTile-1024x512-02ad3c97e4cdc7172f6ea59140b89b004f95886a.jpg",
                         "playlist_name": "Playlist_Respawn_20_Sif",
                         "hidden": false,
@@ -588,7 +604,7 @@ module.exports = (app) => {
                         "violator": "PLAYER MADE!",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Created by NotNellaf & Tollmolia in collaboration with Jordan Brand. \r\n\r\nShow off your moves in the Downtown Drop LTM. Launch off massive jumps, grind down city streets and collect coins to win! \r\n\r\nProve you deserve the title of G.O.A.T."
+                        "description": "Created by NotNellaf & Tollmolia in collaboration with Jordan Brand. "
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/09BR_Social_LTM_WicksBounty_Announce_PlaylistTile-1024x512-df3870c355530a7591c7a3fa453c15686c862989.jpg",
                         "playlist_name": "Playlist_Wax_Squads",
@@ -634,7 +650,7 @@ module.exports = (app) => {
                         "playlist_name": "Playlist_PlaygroundV2",
                         "hidden": false,
                         "_type": "FortPlaylistInfo",
-                        "description": "Jouez aux meilleures créations de la communauté. Il y a une nouvelle île à la Une chaque jour dans le mode Créatif !"
+                        "description": "Play the best games made by the community. There is a new Featured Island to check out every day!"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/08BR_LTM_FloorIsLava_ModeTile-1024x512-f1af4cd98c7ff0ce4058f4e3b65a853641d0a35e.jpg",
                         "playlist_name": "Playlist_Fill_Squads",
@@ -761,7 +777,8 @@ module.exports = (app) => {
                         "image": "https://cdn2.unrealengine.com/13br-summersplash-ltm-oneshot-motd-1024x512-1024x512-347318026.jpg",
                         "playlist_name": "Playlist_Low_Duos",
                         "hidden": false,
-                        "_type": "FortPlaylistInfo"
+                        "_type": "FortPlaylistInfo",
+                        "display_name": ""
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/BR_LTM_GroundGame-1024x512-37a4d1d335b4c9427bdc672db0f335f4df813874.jpg",
                         "playlist_name": "Playlist_Ground_Duos",
@@ -791,7 +808,8 @@ module.exports = (app) => {
                         "image": "https://cdn2.unrealengine.com/13br-summersplash-ltm-oneshot-motd-1024x512-1024x512-347318026.jpg",
                         "playlist_name": "Playlist_Low_Squads",
                         "hidden": false,
-                        "_type": "FortPlaylistInfo"
+                        "_type": "FortPlaylistInfo",
+                        "display_name": ""
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/BR_LTM_HighExplosives50s-1024x512-3a8d44af3c2718b5aaaaebbd4627258a657bf0bf.jpg",
                         "playlist_name": "Playlist_50v50HE",
@@ -1096,7 +1114,7 @@ module.exports = (app) => {
                         "_type": "FortPlaylistInfo"
                     }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/11BR_Close_EncountersMOTD_1024x512-1024x512-b8ae46224a1de0d4db833c23755f4afabffb34b9.jpg",
-                        "playlist_name": "Playlist_Close_Squad",
+                        "playlist_name": "Playlist_Close_Squads",
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
@@ -1116,11 +1134,6 @@ module.exports = (app) => {
                         "hidden": false,
                         "_type": "FortPlaylistInfo"
                     }, {
-                        "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/11BR_Close_EncountersMOTD_1024x512-1024x512-b8ae46224a1de0d4db833c23755f4afabffb34b9.jpg",
-                        "playlist_name": "Playlist_Close_Squads",
-                        "hidden": false,
-                        "_type": "FortPlaylistInfo"
-                    }, {
                         "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/LTM_50v50-1024x512-788bf1a67426f54307c4296123ac2d3ff8cc0d6c.png",
                         "playlist_name": "Playlist_50v50",
                         "hidden": false,
@@ -1137,25 +1150,14 @@ module.exports = (app) => {
                         "special_border": "None",
                         "_type": "FortPlaylistInfo"
                     }, {
-                        "image": "https://cdn2.unrealengine.com/14br-launch-modetiles-duos-1024x512-850175511.jpg",
-                        "playlist_name": "Playlist_DefaultDuo",
-                        "hidden": false,
-                        "special_border": "None",
-                        "_type": "FortPlaylistInfo"
-                    }, {
-                        "image": "https://cdn2.unrealengine.com/14br-launch-modetiles-trios-1024x512-850175437.jpg",
-                        "playlist_name": "playlist_trios",
-                        "hidden": false,
-                        "_type": "FortPlaylistInfo"
-                    }, {
                         "image": "https://cdn2.unrealengine.com/14br-fortnitemares-solo-1024x512-326832464.jpg",
                         "playlist_name": "Playlist_Arseniccore_Solo_Maxfog",
                         "hidden": false,
                         "special_border": "None",
                         "_type": "FortPlaylistInfo"
                     }, {
-                        "image": "https://cdn2.unrealengine.com/14br-launch-modetiles-squad-1024x512-850175426.jpg",
-                        "playlist_name": "Playlist_DefaultSquad",
+                        "image": "https://cdn2.unrealengine.com/14br-launch-modetiles-duos-1024x512-850175511.jpg",
+                        "playlist_name": "Playlist_DefaultDuo",
                         "hidden": false,
                         "special_border": "None",
                         "_type": "FortPlaylistInfo"
@@ -1166,9 +1168,20 @@ module.exports = (app) => {
                         "special_border": "None",
                         "_type": "FortPlaylistInfo"
                     }, {
+                        "image": "https://cdn2.unrealengine.com/14br-launch-modetiles-trios-1024x512-850175437.jpg",
+                        "playlist_name": "playlist_trios",
+                        "hidden": false,
+                        "_type": "FortPlaylistInfo"
+                    }, {
                         "image": "https://cdn2.unrealengine.com/14br-fortnitemares-trios-1024x512-326846465.jpg",
                         "playlist_name": "playlist_arseniccore_trios_maxfog",
                         "hidden": false,
+                        "_type": "FortPlaylistInfo"
+                    }, {
+                        "image": "https://cdn2.unrealengine.com/14br-launch-modetiles-squad-1024x512-850175426.jpg",
+                        "playlist_name": "Playlist_DefaultSquad",
+                        "hidden": false,
+                        "special_border": "None",
                         "_type": "FortPlaylistInfo"
                     }, {
                         "image": "https://cdn2.unrealengine.com/14br-fortnitemares-squad-1024x512-326850231.jpg",
@@ -1179,9 +1192,9 @@ module.exports = (app) => {
                     }]
                 },
                 "_noIndex": false,
-                "jcr:baseVersion": "a7ca237317f1e75e69721b-e10f-4b06-bd20-3a713b3b27e5",
+                "jcr:baseVersion": "a7ca237317f1e7e358ae2f-0f54-4e20-8ec7-267b4668393c",
                 "_activeDate": "2018-04-25T15:05:39.956Z",
-                "lastModified": "2020-10-14T14:18:18.578Z",
+                "lastModified": "2020-10-16T11:57:44.884Z",
                 "_locale": "en-US"
             },
             "dynamicbackgrounds": {
@@ -1192,7 +1205,7 @@ module.exports = (app) => {
                         "_type": "DynamicBackground",
                         "key": "lobby"
                     }, {
-                        "stage": "default",
+                        "stage": "season14",
                         "_type": "DynamicBackground",
                         "key": "vault"
                     }],
@@ -13365,8 +13378,8 @@ module.exports = (app) => {
                 "sectionList": {
                     "_type": "ShopSectionList",
                     "sections": [{
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13375,11 +13388,11 @@ module.exports = (app) => {
                         "landingPriority": 70,
                         "sectionId": "Featured",
                         "bShowTimer": true,
-                        "sectionDisplayName": "À la Une",
+                        "sectionDisplayName": "Featured",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13390,38 +13403,60 @@ module.exports = (app) => {
                         "bShowTimer": false,
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
-                            "stage": "default",
-                            "_type": "DynamicBackground",
-                            "key": "vault"
+                            "_type": "DynamicBackground"
+                        },
+                        "_type": "ShopSection",
+                        "landingPriority": 65,
+                        "sectionId": "CustomizeHero",
+                        "bShowTimer": true,
+                        "sectionDisplayName": "Customize Your Hero!",
+                        "bShowIneligibleOffers": true
+                    }, {
+                        "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
+                        "bEnableToastNotification": true,
+                        "background": {
+                            "_type": "DynamicBackground"
+                        },
+                        "_type": "ShopSection",
+                        "landingPriority": 64,
+                        "sectionId": "HeroGear",
+                        "bShowTimer": true,
+                        "sectionDisplayName": "Hero Gear",
+                        "bShowIneligibleOffers": true
+                    }, {
+                        "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
+                        "bEnableToastNotification": false,
+                        "background": {
+                            "_type": "DynamicBackground"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 65,
                         "sectionId": "BannerBrigade",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Brigade de la bannière",
+                        "sectionDisplayName": "Banner Brigade",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
-                            "stage": "default",
-                            "_type": "DynamicBackground",
-                            "key": "vault"
+                            "_type": "DynamicBackground"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 64,
                         "sectionId": "BannerGear",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Bannières",
+                        "sectionDisplayName": "Banner Gear",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13432,23 +13467,11 @@ module.exports = (app) => {
                         "landingPriority": 60,
                         "sectionId": "Daily",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Quotidien",
+                        "sectionDisplayName": "Daily",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
-                        "bEnableToastNotification": true,
-                        "background": {
-                            "_type": "DynamicBackground"
-                        },
-                        "_type": "ShopSection",
-                        "landingPriority": 59,
-                        "sectionId": "Daily2",
-                        "bShowTimer": true,
-                        "bShowIneligibleOffers": true
-                    }, {
                         "bShowIneligibleOffersIfGiftable": false,
-                        "bSortOffersByOwnership": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13456,26 +13479,41 @@ module.exports = (app) => {
                             "key": "vault"
                         },
                         "_type": "ShopSection",
-                        "landingPriority": 50,
-                        "sectionId": "Special",
+                        "landingPriority": 59,
+                        "sectionId": "Daily2",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Offres spéciales",
+                        "sectionDisplayName": "",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
+                        "bEnableToastNotification": true,
+                        "background": {
+                            "stage": "default",
+                            "_type": "DynamicBackground",
+                            "key": "vault"
+                        },
+                        "_type": "ShopSection",
+                        "landingPriority": 60,
+                        "sectionId": "Special",
+                        "bShowTimer": true,
+                        "sectionDisplayName": "Special Offers",
+                        "bShowIneligibleOffers": true
+                    }, {
+                        "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
                         },
                         "_type": "ShopSection",
-                        "landingPriority": 49,
+                        "landingPriority": 59,
                         "sectionId": "Special2",
                         "bShowTimer": true,
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13489,8 +13527,8 @@ module.exports = (app) => {
                         "sectionDisplayName": "Star Wars",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13499,24 +13537,26 @@ module.exports = (app) => {
                         "landingPriority": 65,
                         "sectionId": "StartParty",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Faites la fête !",
+                        "sectionDisplayName": "Start the Party!",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
-                            "_type": "DynamicBackground"
+                            "stage": "default",
+                            "_type": "DynamicBackground",
+                            "key": "vault"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 64,
                         "sectionId": "PartyGear",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Objets de fête",
+                        "sectionDisplayName": "Party Gear",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13525,11 +13565,11 @@ module.exports = (app) => {
                         "landingPriority": 64,
                         "sectionId": "TurnMusicUp",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Montez le son !",
+                        "sectionDisplayName": "Turn the Music Up!",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13538,11 +13578,11 @@ module.exports = (app) => {
                         "landingPriority": 30,
                         "sectionId": "SpookyOffers",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Offres flippantes",
+                        "sectionDisplayName": "Spooky Offers",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13551,25 +13591,24 @@ module.exports = (app) => {
                         "landingPriority": 29,
                         "sectionId": "SpookyOffers2",
                         "bShowTimer": true,
+                        "sectionDisplayName": "",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
-                            "stage": "default",
-                            "_type": "DynamicBackground",
-                            "key": "vault"
+                            "_type": "DynamicBackground"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 65,
                         "sectionId": "Fortnitemares",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Fortnite : Cauchemars",
+                        "sectionDisplayName": "Fortnitemares",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13578,57 +13617,29 @@ module.exports = (app) => {
                         "landingPriority": 65,
                         "sectionId": "Ghostbusters",
                         "bShowTimer": true,
-                        "sectionDisplayName": "S.O.S. Fantômes",
+                        "sectionDisplayName": "Ghostbusters",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
-                            "_type": "DynamicBackground"
+                            "stage": "default",
+                            "_type": "DynamicBackground",
+                            "key": "vault"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 64,
                         "sectionId": "GhostbustersGear",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Équipement S.O.S. Fantômes",
+                        "sectionDisplayName": "Ghostbusters Gear",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
-                        },
-                        "_type": "ShopSection",
-                        "landingPriority": 65,
-                        "sectionId": "CustomizeHero",
-                        "bShowTimer": true,
-                        "sectionDisplayName": "Personnalisez votre héros !",
-                        "bShowIneligibleOffers": true
-                    }, {
-                        "bShowIneligibleOffersIfGiftable": false,
-                        "bSortOffersByOwnership": false,
-                        "bEnableToastNotification": true,
-                        "background": {
-                            "stage": "default",
-                            "_type": "DynamicBackground",
-                            "key": "vault"
-                        },
-                        "_type": "ShopSection",
-                        "landingPriority": 64,
-                        "sectionId": "HeroGear",
-                        "bShowTimer": true,
-                        "sectionDisplayName": "Équipement de héros",
-                        "bShowIneligibleOffers": true
-                    }, {
-                        "bShowIneligibleOffersIfGiftable": false,
-                        "bSortOffersByOwnership": false,
-                        "bEnableToastNotification": true,
-                        "background": {
-                            "stage": "default",
-                            "_type": "DynamicBackground",
-                            "key": "vault"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 40,
@@ -13637,32 +13648,38 @@ module.exports = (app) => {
                         "sectionDisplayName": "Marvel",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
-                            "_type": "DynamicBackground"
+                            "stage": "default",
+                            "_type": "DynamicBackground",
+                            "key": "vault"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 39,
                         "sectionId": "Marvel2",
                         "bShowTimer": true,
+                        "sectionDisplayName": "",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
-                        "bEnableToastNotification": false,
+                        "bShowIneligibleOffersIfGiftable": false,
+                        "bEnableToastNotification": true,
                         "background": {
-                            "_type": "DynamicBackground"
+                            "stage": "default",
+                            "_type": "DynamicBackground",
+                            "key": "vault"
                         },
                         "_type": "ShopSection",
                         "landingPriority": 38,
                         "sectionId": "Marvel3",
                         "bShowTimer": true,
+                        "sectionDisplayName": "",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "_type": "DynamicBackground"
@@ -13673,8 +13690,8 @@ module.exports = (app) => {
                         "bShowTimer": true,
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13684,11 +13701,11 @@ module.exports = (app) => {
                         "_type": "ShopSection",
                         "sectionId": "Bundles",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Packs",
+                        "sectionDisplayName": "Bundles",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13698,11 +13715,11 @@ module.exports = (app) => {
                         "_type": "ShopSection",
                         "sectionId": "Characters",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Tenues",
+                        "sectionDisplayName": "Outfits",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13712,11 +13729,11 @@ module.exports = (app) => {
                         "_type": "ShopSection",
                         "sectionId": "Backpacks",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Accessoires de dos",
+                        "sectionDisplayName": "Back Blings",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13727,11 +13744,11 @@ module.exports = (app) => {
                         "landingPriority": 0,
                         "sectionId": "Pickaxes",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Outils de collecte",
+                        "sectionDisplayName": "Harvesting Tools",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13741,11 +13758,11 @@ module.exports = (app) => {
                         "_type": "ShopSection",
                         "sectionId": "Gliders",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Planeurs",
+                        "sectionDisplayName": "Gliders",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13755,11 +13772,11 @@ module.exports = (app) => {
                         "_type": "ShopSection",
                         "sectionId": "MusicPacks",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Musiques",
+                        "sectionDisplayName": "Music Packs",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13769,11 +13786,11 @@ module.exports = (app) => {
                         "_type": "ShopSection",
                         "sectionId": "Wraps",
                         "bShowTimer": true,
-                        "sectionDisplayName": "Revêtements",
+                        "sectionDisplayName": "Wraps",
                         "bShowIneligibleOffers": true
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": true,
                         "background": {
                             "stage": "default",
@@ -13784,11 +13801,11 @@ module.exports = (app) => {
                         "landingPriority": 80,
                         "sectionId": "LimitedTime",
                         "bShowTimer": false,
-                        "sectionDisplayName": "Durée limitée",
+                        "sectionDisplayName": "Limited Time",
                         "bShowIneligibleOffers": false
                     }, {
-                        "bShowIneligibleOffersIfGiftable": false,
                         "bSortOffersByOwnership": false,
+                        "bShowIneligibleOffersIfGiftable": false,
                         "bEnableToastNotification": false,
                         "background": {
                             "stage": "default",
@@ -13799,14 +13816,14 @@ module.exports = (app) => {
                         "landingPriority": 90,
                         "sectionId": "Battlepass",
                         "bShowTimer": false,
-                        "sectionDisplayName": "Passe de combat",
+                        "sectionDisplayName": "Battle Pass",
                         "bShowIneligibleOffers": true
                     }]
                 },
                 "_noIndex": false,
-                "jcr:baseVersion": "a7ca237317f1e79fa56c01-4b70-484c-b109-e65916cbfd2b",
-                "_activeDate": "2020-09-15T00:00:00.000Z",
-                "lastModified": "2020-10-29T04:18:46.404Z",
+                "jcr:baseVersion": "a7ca237317f1e77f7abaac-2b4d-4df8-828b-6056a1904470",
+                "_activeDate": "2020-10-28T00:00:00.000Z",
+                "lastModified": "2020-11-02T15:56:44.648Z",
                 "_locale": "en-US"
             },
             "creativenewsv2": {
@@ -13962,23 +13979,14 @@ module.exports = (app) => {
                 "itemsList": {
                     "_type": "ShopCarouselItemList",
                     "items": [{
-                        "tileImage": "https://cdn2.unrealengine.com/14br-carvingcrew-motd-1920x1080-1920x1080-375163249.jpg",
-                        "fullTitle": "Pote potiron",
+                        "tileImage": "https://media.discordapp.net/attachments/703974059121049720/774007298786983985/NeoniteWallpaper1920x1080.png",
+                        "fullTitle": "Neonite",
                         "hidden": false,
                         "_type": "ShopCarouselItem",
                         "landingPriority": 100,
                         "action": "ShowOfferDetails",
                         "offerId": "v2:/cc29bec6d0bdd2876fb412cf674a7960003bbb76b2eb9b930833a61b604a3b4e",
-                        "title": "Pote potiron"
-                    }, {
-                        "tileImage": "https://cdn2.unrealengine.com/14br-fortnitemares-partytrooper-jbalvin-motd-1920x1080-1920x1080-324815704.jpg",
-                        "fullTitle": "Soldat festif",
-                        "hidden": false,
-                        "_type": "ShopCarouselItem",
-                        "landingPriority": 100,
-                        "offerId": "v2:/72077a2b9037cf18f0efb3b3907846458632a69cad2a28c4167e801e7d1f74ba",
-                        "action": "ShowOfferDetails",
-                        "title": "Soldat festif"
+                        "title": "Neonite"
                     }]
                 },
                 "_title": "shop-carousel",

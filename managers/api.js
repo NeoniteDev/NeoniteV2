@@ -1,4 +1,8 @@
 const axios = require('axios');
+const path = require('path');
+const crypto = require("crypto");
+const fs = require('fs');
+
 module.exports = (app) => {
     //lightswitch
     app.get('/lightswitch/api/service/bulk/status', (req, res) => {
@@ -110,17 +114,56 @@ module.exports = (app) => {
 	});
     
 	//cloudstorage
-	app.get('/fortnite/api/cloudstorage/system', (req, res) => {
-		res.status(204).end();
+	app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
+
+		//inspiration: https://github.com/AlexDev404/AuroraFN-Backend/blob/3db03fa403387b7e829304e947f6e24fe9c3fa6c/routes/services/cloudstorage.js#L25
+		//originally by : @slushia
+
+		let engine = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultEngine.ini'));
+		let runtime = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini'));
+		res.json([{
+			"uniqueFilename": "3460cbe1c57d4a838ace32951a4d7171",
+			"filename": "DefaultEngine.ini",
+			"hash": crypto.createHash("sha1").update(engine).digest("hex"),
+			"hash256": crypto.createHash("sha256").update(engine).digest("hex"),
+			"length": engine.length,
+			"contentType": "application/octet-stream",
+			"uploaded": fs.statSync(path.join(__dirname ,'../hotfixes/DefaultEngine.ini')).mtime,
+			"storageType": "S3",
+			"doNotCache": false
+		},
+		{
+			"uniqueFilename": "c52c1f9246eb48ce9dade87be5a66f29",
+			"filename": "DefaultRuntimeOptions.ini",
+			"hash": crypto.createHash("sha1").update(runtime).digest("hex"),
+			"hash256": crypto.createHash("sha256").update(runtime).digest("hex"),
+			"length": runtime.length,
+			"contentType": "application/octet-stream",
+			"uploaded": fs.statSync(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini')).mtime,
+			"storageType": "S3",
+			"doNotCache": false
+		}])
 	});
+
+	//cba adding more
+	app.get('/fortnite/api/cloudstorage/system/3460cbe1c57d4a838ace32951a4d7171', (req, res) => {
+		res.setHeader("content-type", "application/octet-stream")
+		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultEngine.ini'));
+	});
+
+	app.get('/fortnite/api/cloudstorage/system/c52c1f9246eb48ce9dade87be5a66f29', (req, res) => {
+		res.setHeader("content-type", "application/octet-stream")
+		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini'));
+	});
+	
 	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
 		res.json([])
 	});
 	app.get('/fortnite/api/cloudstorage/user/:accountId/:fileName', (req, res) => {
-		res.set('Content-Type', 'application/octet-stream').send("")
+		res.status(204).send();
 	});
 	app.put('/fortnite/api/cloudstorage/user/:accountId/:fileName', (req, res) => {
-		res.status(204).end();
+		res.status(204).send();
     });
     
     //keychain
@@ -128,7 +171,8 @@ module.exports = (app) => {
 	axios.get("https://api.nitestats.com/v1/epic/keychain").then(response => {
 		res.json(response.data);
 	})
-    })
+	})
+	
     //party
     app.get('/party/api/v1/Fortnite/user/:accountId', (req, res) => {
 		res.json({

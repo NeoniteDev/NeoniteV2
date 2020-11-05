@@ -296,6 +296,23 @@ module.exports = (app) => {
 
 				break;
 
+			case "RefundMtxPurchase":
+				checkValidProfileID("common_core");
+
+				response.profileChanges[0] = {
+					"changeType": "itemAdded",
+					"itemId": uuidv4(),
+					"item": {
+						"templateId": "Currency:MtxComplimentary",
+						"attributes": {
+							"platform": "Shared"
+						},
+						"quantity": 1500
+					}
+				}
+
+			   break;
+
 			default:
 				throw new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command);
 		}
