@@ -19,6 +19,19 @@ Fortnite lobby emulator with much customization options
 
 • [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://discordapp.com/users/249459068341583872)
 
+### Contributors
+- [Amrsatrio](https://github.com/Amrsatrio)
+Profile.js and much api reversing
+
+- [GewoonIraj](https://github.com/GewoonIraj)
+Cataba shop hotfix
+
+- [Beat-YT](https://github.com/Beat-YT)
+PRs
+
+- [Ayal](https://github.com/AyalX)
+Management
+
 ## Community Support
 <a href="https://discord.gg/pUKacSd"><img src="https://discordapp.com/api/guilds/703690937074974761/widget.png?style=banner2"></a>
 
