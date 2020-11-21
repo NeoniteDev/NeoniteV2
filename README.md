@@ -20,7 +20,7 @@ Fortnite lobby emulator with much customization options
 #### • [NinjaRipper for Neonite](https://github.com/kem0o/FNinjaRipper)
 
 
-#### Join the official [Neonite Discord Server](https://discord.gg/PNdHGpNPcQ) for support.
+#### • Join the official [Neonite Discord Server](https://discord.gg/PNdHGpNPcQ) for support.
 #### • You can't go in games!
 #### • You can't get banned!
 #### • We do not provide any support for older versions of the game!
