@@ -32,6 +32,8 @@ Fortnite lobby emulator with much customization options
 
 • [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://github.com/VastBlast)
 
+• [BenBot API](https://benbotfn.tk/) <img src="https://stoplight.io/images/mark_light_bg.png" width="30" title="Fortnite-API"> Made by [FabianFG](https://github.com/FabianFG)
+
 ### Contributors
 - [Amrsatrio](https://github.com/Amrsatrio)
 Profile.js and much api reversing
