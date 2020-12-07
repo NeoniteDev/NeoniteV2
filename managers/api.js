@@ -2,6 +2,7 @@ const axios = require('axios');
 const path = require('path');
 const crypto = require("crypto");
 const fs = require('fs');
+const jwt = require("jsonwebtoken")
 
 module.exports = (app) => {
     //lightswitch
@@ -187,4 +188,100 @@ module.exports = (app) => {
 	app.get("/fortnite/api/matchmaking/session/findPlayer/:id", (req, res) => {
 		res.json([])
 	})
-}
+
+	app.all("/fortnite/api/game/v2/matchmakingservice/ticket/player/:accountId", (req, res) => {
+	var subregions = req.params.subregions
+	var partyId = req.params.partyId
+	var platform = req.params.platform
+
+	attribs = {    
+		"player.subregions": subregions,
+		"player.hasMultipleInputTypes": "",
+		"player.option.partyId": partyId,
+		"player.option.uiLanguage": "",
+		"player.platform": platform,
+		"player.preferredSubregion": "",
+		"player.option.spectator": "",
+		"player.inputTypes": "",
+		"player.input": "",
+		"playlist.revision": "",
+		"player.teamFormat": "",
+		"player.option.microphoneEnabled": ""}
+	
+		var ticketToken = jwt.sign({
+		playerId: req.params.accountId,
+		partyPlayerIds: [req.params.accountId],
+		bucketId: "",
+		attributes: attribs,
+		expireAt: ""
+	}, "bignuts")
+
+	res.json({
+		serviceUrl: "",
+		ticketType: "",
+		payload: ticketToken,
+		signature: "bignuts"
+	});
+});
+
+app.all("/fortnite/api/game/v2/matchmaking/account/:accId/session/:sessId", (req, res) => {
+
+	res.json({
+		accountId: req.params.accId,
+		sessionId: "",
+		key:""
+	});
+});		
+	app.all("/fortnite/api/matchmaking/session/:sessionId", (req, res) => {
+		res.json({
+				"id": "",
+				"ownerId": "",
+				"ownerName": "",
+				"serverName": "",
+				"serverAddress": "0.0.0.0",
+				"serverPort": 0,
+				"maxPublicPlayers": 0,
+				"openPublicPlayers": 0,
+				"maxPrivatePlayers": 0,
+				"openPrivatePlayers": 0,
+				"attributes": {
+					"REGION_s": "",
+					"GAMEMODE_s": "",
+					"ALLOWBROADCASTING_b": "",
+					"SUBREGION_s": "",
+					"DCID_s": "",
+					"NEEDS_i": 0,
+					"NEEDSSORT_i": 0,
+					"tenant_s": "",
+					"MATCHMAKINGPOOL_s": "Any",
+					"STORMSHIELDDEFENSETYPE_i": 0,
+					"HOTFIXVERSION_i": 0,
+					"PLAYLISTNAME_s": "",
+					"MATCHSTARTTIME_s": "",
+					"SESSIONKEY_s": "",
+					"TENANT_s": "Fortnite",
+					"BEACONPORT_i": 0
+				},
+				"publicPlayers": [],
+				"privatePlayers": [],
+				"totalPlayers": 0,
+				"allowJoinInProgress": false,
+				"shouldAdvertise": false,
+				"isDedicated": false,
+				"usesStats": false,
+				"allowInvites": false,
+				"usesPresence": false,
+				"allowJoinViaPresence": false,
+				"allowJoinViaPresenceFriendsOnly": false,
+				"buildUniqueId": "",
+				"lastUpdated": "",
+				"started": true
+			
+		});
+	});		
+		
+	app.all("/fortnite/api/matchmaking/session/:sId/join", (req, res) => {
+		res.status(204).send();
+	});
+
+};
