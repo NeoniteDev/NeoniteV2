@@ -49,7 +49,7 @@ const version = "2.0.0";
 	});
 
 	app.listen(port, () => {
-		console.log(`Neonite v${version} is listening on port ${port}!`);
+		console.log(`Neonite v${version} is listening on port the ${port}!`);
 	});
 
 	module.exports = app;
