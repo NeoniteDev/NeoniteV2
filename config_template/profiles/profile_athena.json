@@ -108,46 +108,76 @@
           "slots": {
             "Pickaxe": {
               "items": [
-                null
+                "AthenaPickaxe:pickaxe_lockjaw"
               ],
               "activeVariants": []
             },
             "Dance": {
               "items": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
+                "AthenaDance:EID_MashedPotato",
+                "AthenaDance:EID_Boombox",
+                "AthenaDance:eid_theshow",
+                "AthenaDance:EID_LunchBox",
+                "AthenaDance:EID_JanuaryBop",
+                "AthenaDance:eid_professorpup"
               ]
             },
             "Glider": {
               "items": [
-                null
+                "AthenaGlider:glider_id_116_pizzapit"
               ]
             },
             "Character": {
               "items": [
-                "AthenaCharacter:cid_028_athena_commando_f"
+                "AthenaCharacter:CID_967_Athena_Commando_M_AncientGladiator"
               ],
-              "activeVariants": []
+              "activeVariants": [
+                {
+                  "variants": [
+                    {
+                      "channel": "Progressive",
+                      "active": "Stage4",
+                      "owned": []
+                    },
+                    {
+                      "channel": "Material",
+                      "active": "Mat6",
+                      "owned": []
+                    },
+                    {
+                      "channel": "Parts",
+                      "active": "Stage1",
+                      "owned": []
+                    }
+                  ]
+                }
+              ]
             },
             "Backpack": {
               "items": [
-                null
+                "AthenaBackpack:petcarrier_014_hightowerradish"
               ],
-              "activeVariants": []
+              "activeVariants": [
+                {
+                  "variants": [
+                    {
+                      "channel": "Material",
+                      "active": "Color.001",
+                      "owned": []
+                    }
+                  ]
+                }
+              ]
             },
             "ItemWrap": {
               "items": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
+                "AthenaItemWrap:wrap_127_fragmentedglow",
+                "AthenaItemWrap:wrap_127_fragmentedglow",
+                "AthenaItemWrap:wrap_127_fragmentedglow",
+                "AthenaItemWrap:wrap_127_fragmentedglow",
+                "AthenaItemWrap:wrap_127_fragmentedglow",
+                "AthenaItemWrap:wrap_127_fragmentedglow",
+                "AthenaItemWrap:wrap_127_fragmentedglow"
               ],
               "activeVariants": [
                 null,
@@ -161,7 +191,7 @@
             },
             "LoadingScreen": {
               "items": [
-                null
+                "AthenaLoadingScreen:LSID_266_Cosmos"
               ],
               "activeVariants": [
                 null
@@ -169,7 +199,7 @@
             },
             "MusicPack": {
               "items": [
-                null
+                "AthenaMusicPack:musicpack_040_xmaschiptunes"
               ],
               "activeVariants": [
                 null
@@ -177,7 +207,7 @@
             },
             "SkyDiveContrail": {
               "items": [
-                null
+                "AthenaSkyDiveContrail:trails_id_097_hightowerspeedlines"
               ],
               "activeVariants": [
                 null
@@ -187,7 +217,7 @@
         },
         "use_count": 0,
         "banner_icon_template": "",
-        "locker_name": "",
+        "locker_name": "Neonite made by Kemo",
         "banner_color_template": "",
         "item_seen": false,
         "favorite": false
@@ -206,7 +236,7 @@
       "mfa_reward_claimed": true,
       "quest_manager": {},
       "book_level": 1000,
-      "season_num": 14,
+      "season_num": 15,
       "season_update": 0,
       "book_xp": 0,
       "permissions": [],
