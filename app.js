@@ -5,7 +5,7 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const port = 5595;
-const version = "2.0.0";
+const version = "2.0.1";
 
 (function () {
 	"use strict";
