@@ -1,0 +1,273 @@
+    },
+    "HomebaseBannerIcon:BRS13_BlackKnight": {
+      "templateId": "HomebaseBannerIcon:BRS13_BlackKnight",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_MechanicalEngineer": {
+      "templateId": "HomebaseBannerIcon:BRS13_MechanicalEngineer",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_OceanRider": {
+      "templateId": "HomebaseBannerIcon:BRS13_OceanRider",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_ProfessorPup": {
+      "templateId": "HomebaseBannerIcon:BRS13_ProfessorPup",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_Racer-Zero": {
+      "templateId": "HomebaseBannerIcon:BRS13_Racer-Zero",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_Sandcastle": {
+      "templateId": "HomebaseBannerIcon:BRS13_Sandcastle",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_SpaceWanderer": {
+      "templateId": "HomebaseBannerIcon:BRS13_SpaceWanderer",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_Yonezu": {
+      "templateId": "HomebaseBannerIcon:BRS13_Yonezu",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS13_TacticalScuba": {
+      "templateId": "HomebaseBannerIcon:BRS13_TacticalScuba",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_Clover": {
+      "templateId": "HomebaseBannerIcon:BRS14_Clover",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerDate": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerDate",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerGrape": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerGrape",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerHoneyDew": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerHoneyDew",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerRadish": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerRadish",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerMango": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerMango",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerSquash": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerSquash",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerTapas": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerTapas",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerTomato": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerTomato",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_HighTowerWasabi": {
+      "templateId": "HomebaseBannerIcon:BRS14_HighTowerWasabi",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_Infinity": {
+      "templateId": "HomebaseBannerIcon:BRS14_Infinity",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_Kettlebell": {
+      "templateId": "HomebaseBannerIcon:BRS14_Kettlebell",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_PSPlusPack11": {
+      "templateId": "HomebaseBannerIcon:BRS14_PSPlusPack11",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_Pedestal": {
+      "templateId": "HomebaseBannerIcon:BRS14_Pedestal",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS14_Scooter": {
+      "templateId": "HomebaseBannerIcon:BRS14_Scooter",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_AncientGladiator": {
+      "templateId": "HomebaseBannerIcon:BRS15_AncientGladiator",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_CosmosA": {
+      "templateId": "HomebaseBannerIcon:BRS15_CosmosA",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_CosmosB": {
+      "templateId": "HomebaseBannerIcon:BRS15_CosmosB",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_CosmosC": {
+      "templateId": "HomebaseBannerIcon:BRS15_CosmosC",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_FlapjackWrangler": {
+      "templateId": "HomebaseBannerIcon:BRS15_FlapjackWrangler",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_FutureSamurai": {
+      "templateId": "HomebaseBannerIcon:BRS15_FutureSamurai",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_Lexa": {
+      "templateId": "HomebaseBannerIcon:BRS15_Lexa",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_Shapeshifter": {
+      "templateId": "HomebaseBannerIcon:BRS15_Shapeshifter",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:BRS15_SpaceFighter": {
+      "templateId": "HomebaseBannerIcon:BRS15_SpaceFighter",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:StarlightBanner1": {
+      "templateId": "HomebaseBannerIcon:StarlightBanner1",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:StarlightBanner2": {
+      "templateId": "HomebaseBannerIcon:StarlightBanner2",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:StarlightBanner3": {
+      "templateId": "HomebaseBannerIcon:StarlightBanner3",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:StarlightBanner4": {
+      "templateId": "HomebaseBannerIcon:StarlightBanner4",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:StarlightBanner6": {
+      "templateId": "HomebaseBannerIcon:StarlightBanner6",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
+    },
+    "HomebaseBannerIcon:StarlightBanner5": {
+      "templateId": "HomebaseBannerIcon:StarlightBanner5",
+      "attributes": {
+        "item_seen": true
+      },
+      "quantity": 1
