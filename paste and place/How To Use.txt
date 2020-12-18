@@ -1,0 +1,30 @@
+How to use Skin Fixes:
+1. Copy everything in there.
+2. Make sure you're on a new line, and paste it on the line shown in profile-athena.json
+
+      },
+      "quantity": 1
+Paste Everything here in the profile.
+    }
+  },
+  "stats": {
+    "attributes": {
+      "season_match_boost": 999,
+      "loadouts": [
+        "sandbox_loadout",
+        "loadout_1"
+3. For bonus effect, use find and replace to replace the following strings on the left with the ones on the right.
+
+AthenaPetCarrier>AthenaBackpack
+AthenaSpray>AthenaDance
+AthenaToy>AthenaDance
+AthenaEmoji>AthenaDance
+
+How to Use Banners:
+1. Copy the whole document and paste it after any banner icon on a new line in this kind of location.
+      },
+      "quantity": 1
+Paste fixes here
+    },
+    "HomebaseBannerIcon:standardbanner4": {
+(Note, it can be before/after any banner, this is just an example.)
