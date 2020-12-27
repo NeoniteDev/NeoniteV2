@@ -185,6 +185,10 @@ module.exports = {
 },
 
     saveProfile(accountId, profileId, data) {
-        fs.writeFileSync(path.join(__dirname, `/config/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
+        if (accountId.length >= 32) {
+            fs.writeFileSync(path.join(__dirname, `/config/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
+        } else {
+            return;
+        }
     }
 };

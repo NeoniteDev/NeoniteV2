@@ -29,8 +29,11 @@ module.exports = (app) => {
 
 				//creating profile if it doesn't exist
 				try {
-					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
-					Profile.saveProfile(accountId, profileId, profileData);
+					// Sync [FIX]
+					if (accountId.length >= 32) {
+						fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
+						Profile.saveProfile(accountId, profileId, profileData);
+					}
 				} catch (e) {
 					console.log("Failed creating profile");
 					throw e;
