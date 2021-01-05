@@ -5,7 +5,7 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const port = 5595;
-const version = "2.0.1";
+const version = "2.1.0";
 
 (function () {
 	"use strict";
@@ -27,7 +27,7 @@ const version = "2.0.1";
 	app.use("/", express.static("public"));
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
-		require(`${__dirname}/managers/${route}`)(app);
+		require(`${__dirname}/managers/${route}`)(app, port);
 	})
 
 	app.use((req, res, next) => {
