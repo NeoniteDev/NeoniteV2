@@ -2,7 +2,7 @@
 
 Fortnite lobby emulator with much customization options
 
-###As a acquiescence to Epic Games Inc.: <br> We are not providing any/support in-game cosmetics or a way to have them, if you want skins go buy them on the real game.
+### As a acquiescence to Epic Games Inc.: <br> We are not providing any/support in-game cosmetics or a way to have them, if you want skins go buy them on the real game.
 
 ## Installation [![Run on Repl.it](https://repl.it/badge/github/kem0o/neonitev2)](https://repl.it/github/kem0o/neonitev2)
 
