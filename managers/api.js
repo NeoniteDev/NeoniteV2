@@ -122,7 +122,6 @@ module.exports = (app) => {
 
 		let engine = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultEngine.ini'));
 		let runtime = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini'));
-		let game = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultGame.ini'));
 		res.json([{
 			"uniqueFilename": "3460cbe1c57d4a838ace32951a4d7171",
 			"filename": "DefaultEngine.ini",
@@ -144,17 +143,6 @@ module.exports = (app) => {
 			"uploaded": fs.statSync(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini')).mtime,
 			"storageType": "S3",
 			"doNotCache": false
-		},
-		{
-			"uniqueFilename": "a22d837b6a2b46349421259c0a5411bf",
-			"filename": "DefaultGame.ini",
-			"hash": crypto.createHash("sha1").update(game).digest("hex"),
-			"hash256": crypto.createHash("sha256").update(game).digest("hex"),
-			"length": game.length,
-			"contentType": "application/octet-stream",
-			"uploaded": fs.statSync(path.join(__dirname ,'../hotfixes/DefaultGame.ini')).mtime,
-			"storageType": "S3",
-			"doNotCache": false
 		}])
 	});
 
@@ -167,11 +155,6 @@ module.exports = (app) => {
 	app.get('/fortnite/api/cloudstorage/system/c52c1f9246eb48ce9dade87be5a66f29', (req, res) => {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini'));
-	});
-	
-	app.get('/fortnite/api/cloudstorage/system/a22d837b6a2b46349421259c0a5411bf', (req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultGame.ini'));
 	});
 	
 	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
