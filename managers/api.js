@@ -122,8 +122,19 @@ module.exports = (app) => {
 
 		let engine = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultEngine.ini'));
 		let runtime = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini'));
+		let game = fs.readFileSync(path.join(__dirname ,'../hotfixes/DefaultGame.ini'));
 		res.json([{
-			"uniqueFilename": "3460cbe1c57d4a838ace32951a4d7171",
+			"uniqueFilename": "DefaultEngine.neonite",
+			"filename": "DefaultEngine.ini",
+			"hash": crypto.createHash("sha1").update(engine).digest("hex"),
+			"hash256": crypto.createHash("sha256").update(engine).digest("hex"),
+			"length": engine.length,
+			"contentType": "application/octet-stream",
+			"uploaded": fs.statSync(path.join(__dirname ,'../hotfixes/DefaultEngine.ini')).mtime,
+			"storageType": "S3",
+			"doNotCache": false
+		},{
+			"uniqueFilename": "DefaultGame.neonite",
 			"filename": "DefaultEngine.ini",
 			"hash": crypto.createHash("sha1").update(engine).digest("hex"),
 			"hash256": crypto.createHash("sha256").update(engine).digest("hex"),
@@ -134,7 +145,7 @@ module.exports = (app) => {
 			"doNotCache": false
 		},
 		{
-			"uniqueFilename": "c52c1f9246eb48ce9dade87be5a66f29",
+			"uniqueFilename": "Runtime.neonite",
 			"filename": "DefaultRuntimeOptions.ini",
 			"hash": crypto.createHash("sha1").update(runtime).digest("hex"),
 			"hash256": crypto.createHash("sha256").update(runtime).digest("hex"),
@@ -147,14 +158,19 @@ module.exports = (app) => {
 	});
 
 	//cba adding more
-	app.get('/fortnite/api/cloudstorage/system/3460cbe1c57d4a838ace32951a4d7171', (req, res) => {
+	app.get('/fortnite/api/cloudstorage/system/DefaultEngine.neonite', (req, res) => {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultEngine.ini'));
 	});
 
-	app.get('/fortnite/api/cloudstorage/system/c52c1f9246eb48ce9dade87be5a66f29', (req, res) => {
+	app.get('/fortnite/api/cloudstorage/system/Runtime.neonite', (req, res) => {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultRuntimeOptions.ini'));
+	});
+	
+	app.get('/fortnite/api/cloudstorage/system/DefaultGame.neonite', (req, res) => {
+		res.setHeader("content-type", "application/octet-stream")
+		res.sendFile(path.join(__dirname ,'../hotfixes/DefaultGame.ini'));
 	});
 	
 	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
