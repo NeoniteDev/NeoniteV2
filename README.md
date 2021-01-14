@@ -17,7 +17,7 @@ Fortnite lobby emulator with much customization options
 9. Type in your username(Don't use any kind of special characters including spaces!)
 10. Click launch
 
-##FAQs
+## FAQs
 #### • The localhosted dashboard can be found [here](http://localhost:5595)
 #### • The standard port is `5595`
 #### • [NinjaRipper for Neonite](https://github.com/kem0o/FNinjaRipper)
