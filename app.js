@@ -6,8 +6,9 @@ const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
 const port = 5595;
-const version = "2.0.1";
+const version = "2.5.0";
 
+/* Lobby bot by @TheBeatYT_evil */
 (function () {
 	"use strict";
 
@@ -56,7 +57,7 @@ const version = "2.0.1";
 	})
 
 	app.use("/", express.static("public"));
-
+        //For lobby bot
 	global.xmppClients = {}
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
