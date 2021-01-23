@@ -7,7 +7,10 @@ const axios = require('axios')
 const fs = require("fs");
 
 
-
+/* 
+Inspiration : https://github.com/SpencerDring/AuroraFN-Backend/blob/develop/xmpp/Client.js
+originally by : @slushia
+*/
 module.exports = class Client extends EventEmitter {
     constructor(ws) {
         super()
