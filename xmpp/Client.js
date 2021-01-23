@@ -187,17 +187,15 @@ module.exports = class Client extends EventEmitter {
         if (message.root.attributes.type == "chat") {
 
             var to = message.root.attributes.to.split("@")[0]
-            if (to != "NeoniteBot") { return; }
+            if (to != "NeoniteBot") return;
             var msg = `${message.root.children[0].content}`
-
-            if (msg == "!copy" || msg == "!perfectTiming") {
+l
+            if (msg == "!copy" || msg == "!perfectTiming") 
                 this.bCopyEmote = !this.bCopyEmote;
-            }
+            
 
             if (msg == "!addbot" || msg == "!AddBot" || msg == "!addBot")
-            {
                 this.AddOneBot("LobbyBotPartyLMFAO")
-            }
 
             if (msg.startsWith("!skin ")) {
                 var name = msg.replace(/!skin /g, '')
