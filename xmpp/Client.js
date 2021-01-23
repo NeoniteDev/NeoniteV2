@@ -192,7 +192,7 @@ module.exports = class Client extends EventEmitter {
             var to = message.root.attributes.to.split("@")[0]
             if (to != "NeoniteBot") return;
             var msg = `${message.root.children[0].content}`
-l
+
             if (msg == "!copy" || msg == "!perfectTiming") 
                 this.bCopyEmote = !this.bCopyEmote;
             
