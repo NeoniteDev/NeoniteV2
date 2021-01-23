@@ -560,6 +560,61 @@ module.exports = class Client extends EventEmitter {
         }, 1000);
     }
 
+    setPresice(member_state_updated, PartyId) {
+        var counterLol = 0
+        this.ws.send(xmlbuilder.create({
+            'message': {
+                '@xmlns': 'jabber:client',
+                '@id': this.uuid,
+                '@to': this.jid,
+                '@from': 'xmpp-admin@prod.ol.epicgames.com',
+                'body': {
+                    "#text": JSON.stringify(
+                        {
+                            "sent": new Date(),
+                            "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
+                            "revision": 0,
+                            "ns": "Fortnite",
+                            "party_id": PartyId || "LobbyBotPartyLMFAO",
+                            "account_id": `NeoniteBot`,
+                            "account_dn": `NeoniteBot`,
+                            "member_state_removed": [],
+                            "member_state_updated": member_state_updated,
+                            "joined_at": new Date(),
+                            "updated_at": new Date()
+                        })
+                }
+            }
+        }).end().replace(`<?xml version="1.0"?>`, "").trim())
+        while (counterLol <= this.NumberOfBot) {
+            counterLol = counterLol + 1
+            this.ws.send(xmlbuilder.create({
+                'message': {
+                    '@xmlns': 'jabber:client',
+                    '@id': this.uuid,
+                    '@to': this.jid,
+                    '@from': 'xmpp-admin@prod.ol.epicgames.com',
+                    'body': {
+                        "#text": JSON.stringify(
+                            {
+                                "sent": new Date(),
+                                "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
+                                "revision": 0,
+                                "ns": "Fortnite",
+                                "party_id": PartyId || "LobbyBotPartyLMFAO",
+                                "account_id": `NeoniteBot${counterLol}`,
+                                "account_dn": `NeoniteBot`,
+                                "member_state_removed": [],
+                                "member_state_updated": member_state_updated,
+                                "joined_at": new Date(),
+                                "updated_at": new Date()
+                            })
+                    }
+                }
+            }).end().replace(`<?xml version="1.0"?>`, "").trim())
+        }
+    }
+
 
     sendPresence(to, from, data) {
         this.ws.send(xmlbuilder.create({
