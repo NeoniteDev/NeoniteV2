@@ -72,26 +72,14 @@ module.exports = (app) => {
     })
 
     app.patch('/party/api/v1/Fortnite/parties/:partyId/members/:accountId/meta', (req, res) => {
-        if (xmppClients[req.params.accountId].client.bCopyEmote && req.body.update['Default:FrontendEmote_j']) {
-            var Parsed = JSON.parse(req.body.update['Default:FrontendEmote_j'])
-            /*{
-                "FrontendEmote": {
-                    "emoteItemDef": "/Game/Athena/Items/Cosmetics/Dances/EID_GoodVibes.EID_GoodVibes",
-                        "emoteEKey": "",
-                            "emoteSection": -2
-                }
-            }*/
-            if (xmppClients[req.params.accountId].client.botCurrentEmote == Parsed.FrontendEmote.emoteItemDef.split('.')[1])
-            {
-                xmppClients[req.params.accountId].client.setBotEmote("NONE")
-            }
-            xmppClients[req.params.accountId].client.setAllbotsEmote(Parsed.FrontendEmote.emoteItemDef.split('.')[1])
-        }
+        if (xmppClients[req.params.accountId].client.bCopyEmote && req.body.update)
+            xmppClients[req.params.accountId].client.setPresice(req.body.update, req.params.partyId) 
+        
         res.status(204).end()
     })
 
     app.post(`/party/api/v1/Fortnite/parties/:partyId/members/NeoniteBot/confirm`, (req, res) => {
-        var accountID = req.headers.authorization.split("@")[1] || "BeatYT2"
+        var accountID = req.headers.authorization.split("@")[1]
         xmppClients[accountID].client.JoinBot("LobbyBotPartyLMFAO")
         res.status(204).end()
     })
@@ -173,7 +161,12 @@ module.exports = (app) => {
         res.status(204).send()
     })
 
+    // /party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/BeatYT3 
+
     app.delete('/party/api/v1/Fortnite/parties/*/members/:accountId', (req, res) => {
+        if (xmppClients[req.params.accountId].client) {
+            xmppClients[req.params.accountId].client.NumberOfBot = 0
+        }
         res.status(204).end()
     })
 
