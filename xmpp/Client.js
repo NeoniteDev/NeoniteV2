@@ -155,7 +155,7 @@ module.exports = class Client extends EventEmitter {
                         '@id': "_xmpp_session1"
                     }
                 }).end().replace(`<?xml version="1.0"?>`, "").trim())
-                
+
                 break;
             default:
                 this.ws.send(xmlbuilder.create({
@@ -174,8 +174,8 @@ module.exports = class Client extends EventEmitter {
 
     async handlepresence(message) {
         try {
-            
-            this.sendPresence(this.jid, this.botJid, JSON.stringify({ "Status": "Neonite Lobby Bot", "bIsPlaying": false, "bIsJoinable": true, "bHasVoiceSupport": false, "SessionId": "", "ProductName": "Fortnite", "Properties": {"FortBasicInfo_j": { "homeBaseRating": 0 }, "FortLFG_I": "0", "FortPartySize_i": 1, "FortSubGame_i": 1, "InUnjoinableMatch_b": false, "FortGameplayStats_j": { "state": "", "playlist": "None", "numKills": 0, "bFellToDeath": false }, "party.joininfodata.286331153_j": { "bIsPrivate": false }, "KairosProfile_j":{"appInstalled":"init","avatar":"cid_527_athena_commando_f_streetfashionred","avatarBackground":"[]"}}}))//1C00ff00
+
+            this.sendPresence(this.jid, this.botJid, JSON.stringify({ "Status": "Neonite Lobby Bot", "bIsPlaying": false, "bIsJoinable": true, "bHasVoiceSupport": false, "SessionId": "", "ProductName": "Fortnite", "Properties": { "FortBasicInfo_j": { "homeBaseRating": 0 }, "FortLFG_I": "0", "FortPartySize_i": 1, "FortSubGame_i": 1, "InUnjoinableMatch_b": false, "FortGameplayStats_j": { "state": "", "playlist": "None", "numKills": 0, "bFellToDeath": false }, "party.joininfodata.286331153_j": { "bIsPrivate": false }, "KairosProfile_j": { "appInstalled": "init", "avatar": "cid_527_athena_commando_f_streetfashionred", "avatarBackground": "[]" } } }))//1C00ff00
             var thing = JSON.parse(message.root.children.find(x => x.name == "status").content)
             this.sendPresence(this.jid, this.jid.split("/")[0], JSON.stringify(thing))
             this.latest = JSON.stringify(thing)
@@ -192,10 +192,24 @@ module.exports = class Client extends EventEmitter {
             var to = message.root.attributes.to.split("@")[0]
             if (to != "NeoniteBot") return;
             var msg = `${message.root.children[0].content}`
-
-            if (msg == "!copy" || msg == "!perfectTiming") 
+            if (msg == "!copy" || msg == "!perfectTiming")
                 this.bCopyEmote = !this.bCopyEmote;
-            
+
+            if (msg == "!add4bot" || msg == "!Add4Bot" || msg == "!add4Bot") {
+                console.log(this.NumberOfBot)
+                if (this.NumberOfBot == 0) {
+                    this.AddOneBot("LobbyBotPartyLMFAO")
+                    this.AddOneBot("LobbyBotPartyLMFAO")
+                }
+                else {
+                    this.AddOneBot("LobbyBotPartyLMFAO")
+                    this.AddOneBot("LobbyBotPartyLMFAO")
+                    this.AddOneBot("LobbyBotPartyLMFAO")
+                    this.AddOneBot("LobbyBotPartyLMFAO")
+                }
+
+            }
+
 
             if (msg == "!addbot" || msg == "!AddBot" || msg == "!addBot")
                 this.AddOneBot("LobbyBotPartyLMFAO")
@@ -203,20 +217,20 @@ module.exports = class Client extends EventEmitter {
             if (msg.startsWith("!skin ")) {
                 var name = msg.replace(/!skin /g, '')
                 axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${name}&matchMethod=contains&type=outfit`).then(response => {
-                    this.setBotSkin(response.data.data.id)
+                    this.setAllBotsSkins(response.data.data.id)
                     fs.writeFile('./config/NeoniteBot/config.json', JSON.stringify({
                         skin: response.data.data.id,
                         emote: BotConfig.emote
-                    }), function (err, data) {})
-                    
+                    }), function (err, data) { })
+
                 }).catch(error => {
                     if (error.response) {
                         this.sendChat(this.botJid, "Skin not found!")
                     } else if (error.request) {
-                        // The request was made but no response was received
+
                         this.sendChat(this.botJid, "Unknow Error: " + error.request)
                     } else {
-                        // Something happened in setting up the request that triggered an Error
+
                         this.sendChat(this.botJid, "Unknow Error: " + error.message)
                     }
 
@@ -225,22 +239,42 @@ module.exports = class Client extends EventEmitter {
             else if (msg.startsWith("!emote ") || msg.startsWith("!Emote ")) {
                 var name = msg.replace(/!emote /g, '').replace(/!Emote /g, '')
                 axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${name}&matchMethod=contains&type=emote`).then(response => {
-                    this.setBotEmote(response.data.data.id)
+                    //this.setBotEmote(response.data.data.id)
+                    this.setAllbotsEmote(response.data.data.id)
                 }).catch(error => {
                     if (error.response) {
                         this.sendChat(this.botJid, "Emote not found!")
                     } else if (error.request) {
-                        // The request was made but no response was received
+
                         this.sendChat(this.botJid, "Unknow Error: " + error.request)
                     } else {
-                        // Something happened in setting up the request that triggered an Error
+
                         this.sendChat(this.botJid, "Unknow Error: " + error.message)
                     }
 
                 });
             }
+            if (msg.startsWith("!backpack " || msg.startsWith("!Backpack "))) {
+                var name = msg.replace(/!backpack /g, '').replace(/!Backpack /g, '')
+                axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${name}&matchMethod=contains&type=backpack`).then(response => {
+                    this.setAllbotBackBling(`/Game/Athena/Items/Cosmetics/Backpacks/${response.data.data.id}.${response.data.data.id}`, "LobbyBotPartyLMFAO")
+                }).catch(error => {
+                    if (error.response) {
+                        axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${name}&matchMethod=contains&type=PET`).then(response => {
+                            this.setAllbotBackBling(`/Game/Athena/Items/Cosmetics/PetCarriers/${response.data.data.id.replace(/BID/g, 'PetCarrier')}.${response.data.data.id.replace(/BID/g, 'PetCarrier')}`, "LobbyBotPartyLMFAO")
+                        }).catch(error => {
+                            if (error.response) { this.sendChat(this.botJid, "Backpack not found!") } else if (error.request) { this.sendChat(this.botJid, "Unknow Error: " + error.request) } else { this.sendChat(this.botJid, "Unknow Error: " + error.message) }
+                            
+                        });
+                    } else if (error.request) {
 
+                        this.sendChat(this.botJid, "Unknow Error: " + error.request)
+                    } else {
+                        this.sendChat(this.botJid, "Unknow Error: " + error.message)
+                    }
 
+                });
+            }
         }
     }
 
@@ -315,7 +349,7 @@ module.exports = class Client extends EventEmitter {
     }
 
     JoinBot(PartyId) {
-        
+
         this.ws.send(xmlbuilder.create({
             'message': {
                 '@xmlns': 'jabber:client',
@@ -352,6 +386,8 @@ module.exports = class Client extends EventEmitter {
                 }
             }
         }).end().replace(`<?xml version="1.0"?>`, "").trim())
+
+        //setBot
 
         setTimeout(() => {
             this.ws.send(xmlbuilder.create({
@@ -404,16 +440,15 @@ module.exports = class Client extends EventEmitter {
                     }
                 }
             }).end().replace(`<?xml version="1.0"?>`, "").trim())
-            
+
             try {
                 global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
                     if (err) global.BotConfig = false;
                 }))
-            }catch {}
+            } catch { }
 
-            this.setBotSkin(BotConfig.skin || "CID_286_Athena_Commando_F_NeonCat")
-            if (BotConfig.emote)
-            {
+            this.setAllBotsSkins(BotConfig.skin || "CID_286_Athena_Commando_F_NeonCat")
+            if (BotConfig.emote) {
                 this.setBotEmote(BotConfig.emote)
             }
         }, 1000);
@@ -421,7 +456,7 @@ module.exports = class Client extends EventEmitter {
     }
 
     AddOneBot(PartyId) {
-        if (this.NumberOfBot + 1 >= 16) {return this.sendChat(this.botJid, "You reached the bot Limit! (16)")}
+        if (this.NumberOfBot + 1 >= 16) { return this.sendChat(this.botJid, "You reached the bot Limit! (16)") }
 
         this.NumberOfBot = this.NumberOfBot + 1
         this.ws.send(xmlbuilder.create({
@@ -477,7 +512,7 @@ module.exports = class Client extends EventEmitter {
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
                                 "account_id": `NeoniteBot${this.NumberOfBot}`,
-                                "account_dn": `NeoniteBot${this.NumberOfBot}`,
+                                "account_dn": `NeoniteBot`,
                                 "member_state_removed": [],
                                 "member_state_updated": {
                                     "Default:Location_s": "PreLobby",
@@ -489,7 +524,7 @@ module.exports = class Client extends EventEmitter {
                                     "Default:SpectateAPartyMemberAvailable_b": "false",
                                     "Default:UtcTimeStartedMatchAthena_s": "0001-01-01T00:00:00.000Z",
                                     "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/CID_286_Athena_Commando_F_NeonCat.CID_286_Athena_Commando_F_NeonCat\",\"characterEKey\":\"\",\"backpackDef\":\"/Game/Athena/Items/Cosmetics/PetCarriers/PetCarrier_012_Drift_Fox.PetCarrier_012_Drift_Fox\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
-                                    "Default:AthenaCosmeticLoadoutVariants_j": "{\"AthenaCosmeticLoadoutVariants\":{\"vL\":{\"AthenaPickaxe\":{\"i\":[{\"c\":\"Mesh\",\"v\":\"Stage0\",\"dE\":0}]},\"AthenaCharacter\":{\"i\":[{\"c\":\"Progressive\",\"v\":\"Stage2\",\"dE\":0},{\"c\":\"Material\",\"v\":\"Mat1\",\"dE\":0}]},\"AthenaBackpack\":{\"i\":[{\"c\":\"Material\",\"v\":\"Mat2\",\"dE\":0}]}}}}",    
+                                    "Default:AthenaCosmeticLoadoutVariants_j": "{\"AthenaCosmeticLoadoutVariants\":{\"vL\":{\"AthenaPickaxe\":{\"i\":[{\"c\":\"Mesh\",\"v\":\"Stage0\",\"dE\":0}]},\"AthenaCharacter\":{\"i\":[{\"c\":\"Progressive\",\"v\":\"Stage2\",\"dE\":0},{\"c\":\"Material\",\"v\":\"Mat1\",\"dE\":0}]},\"AthenaBackpack\":{\"i\":[{\"c\":\"Material\",\"v\":\"Mat2\",\"dE\":0}]}}}}",
                                     "Default:GameReadiness_s": "NotReady",
                                     "Default:InGameReadyCheckStatus_s": "None",
                                     "Default:HiddenMatchmakingDelayMax_U": "0",
@@ -501,7 +536,7 @@ module.exports = class Client extends EventEmitter {
                                     "Default:VoiceChatStatus_s": "PartyVoice",
                                     "Default:SidekickStatus_s": "None",
                                     "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
-                                    "Default:AthenaBannerInfo_j": `{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":${this.NumberOfBot}}}`,
+                                    "Default:AthenaBannerInfo_j": `{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}`,
                                     "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
                                     "Default:Platform_j": "{\"Platform\":{\"platformDescription\":{\"name\":\"WIN\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}",
                                     "Default:PlatformUniqueId_s": "INVALID",
@@ -514,20 +549,17 @@ module.exports = class Client extends EventEmitter {
                     }
                 }
             }).end().replace(`<?xml version="1.0"?>`, "").trim())
-            
+
             try {
                 global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
                     if (err) global.BotConfig = false;
                 }))
-            }catch {}
+            } catch { }
 
-            this.setBotSkin(BotConfig.skin || "CID_286_Athena_Commando_F_NeonCat")
-            if (BotConfig.emote)
-            {
-                this.setBotEmote(BotConfig.emote)
-            }
+            this.setAllBotsSkins(BotConfig.skin || "CID_286_Athena_Commando_F_NeonCat")
         }, 1000);
     }
+
 
     sendPresence(to, from, data) {
         this.ws.send(xmlbuilder.create({
@@ -542,7 +574,134 @@ module.exports = class Client extends EventEmitter {
         }).end().replace(`<?xml version="1.0"?>`, "").trim())
     }
 
-    setBotSkin(cid, PartyId) {
+    setAllbotsEmote(eid, PartyId) {
+        if (eid == "NONE" || eid == null) { this.botCurrentEmote = null; }
+        var counterLol = 0
+        this.ws.send(xmlbuilder.create({
+            'message': {
+                '@xmlns': 'jabber:client',
+                '@id': this.uuid,
+                '@to': this.jid,
+                '@from': 'xmpp-admin@prod.ol.epicgames.com',
+                'body': {
+                    "#text": JSON.stringify(
+                        {
+                            "sent": new Date(),
+                            "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
+                            "revision": 0,
+                            "ns": "Fortnite",
+                            "party_id": PartyId || "LobbyBotPartyLMFAO",
+                            "account_id": `NeoniteBot`,
+                            "account_dn": `NeoniteBot`,
+                            "member_state_removed": [],
+                            "member_state_updated": {
+                                "Default:FrontendEmote_j": `{\"FrontendEmote\":{\"emoteItemDef\":\"/Game/Athena/Items/Cosmetics/Dances/${eid}.${eid}\",\"emoteEKey\":\"\",\"emoteSection\":-1}}`,
+                            },
+                            "joined_at": new Date(),
+                            "updated_at": new Date()
+                        })
+                }
+            }
+        }).end().replace(`<?xml version="1.0"?>`, "").trim())
+        while (counterLol <= this.NumberOfBot) {
+            counterLol = counterLol + 1
+            this.ws.send(xmlbuilder.create({
+                'message': {
+                    '@xmlns': 'jabber:client',
+                    '@id': this.uuid,
+                    '@to': this.jid,
+                    '@from': 'xmpp-admin@prod.ol.epicgames.com',
+                    'body': {
+                        "#text": JSON.stringify(
+                            {
+                                "sent": new Date(),
+                                "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
+                                "revision": 0,
+                                "ns": "Fortnite",
+                                "party_id": PartyId || "LobbyBotPartyLMFAO",
+                                "account_id": `NeoniteBot${counterLol}`,
+                                "account_dn": `NeoniteBot`,
+                                "member_state_removed": [],
+                                "member_state_updated": {
+                                    "Default:FrontendEmote_j": `{\"FrontendEmote\":{\"emoteItemDef\":\"/Game/Athena/Items/Cosmetics/Dances/${eid}.${eid}\",\"emoteEKey\":\"\",\"emoteSection\":-1}}`,
+                                },
+                                "joined_at": new Date(),
+                                "updated_at": new Date()
+                            })
+                    }
+                }
+            }).end().replace(`<?xml version="1.0"?>`, "").trim())
+        }
+    }
+
+    setAllbotBackBling(path, PartyId) {
+        try {
+            global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
+                if (err) global.BotConfig = false;
+            }))
+        } catch { }
+
+        var counter = 0
+        this.ws.send(xmlbuilder.create({
+            'message': {
+                '@xmlns': 'jabber:client',
+                '@id': this.uuid,
+                '@to': this.jid,
+                '@from': 'xmpp-admin@prod.ol.epicgames.com',
+                'body': {
+                    "#text": JSON.stringify(
+                        {
+                            "sent": new Date(),
+                            "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
+                            "revision": 0,
+                            "ns": "Fortnite",
+                            "party_id": PartyId || "LobbyBotPartyLMFAO",
+                            "account_id": `NeoniteBot`,
+                            "account_dn": "NeoniteBot",
+                            "member_state_removed": [],
+                            "member_state_updated": {
+                                "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/${BotConfig.skin}.${BotConfig.skin}\",\"characterEKey\":\"\",\"backpackDef\":\"${path}\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
+                            },
+                            "joined_at": new Date(),
+                            "updated_at": new Date()
+                    })
+                }
+            }
+        }).end().replace(`<?xml version="1.0"?>`, "").trim())
+
+        while (counter <= this.NumberOfBot) {
+            counter = counter + 1
+            this.ws.send(xmlbuilder.create({
+                'message': {
+                    '@xmlns': 'jabber:client',
+                    '@id': this.uuid,
+                    '@to': this.jid,
+                    '@from': 'xmpp-admin@prod.ol.epicgames.com',
+                    'body': {
+                        "#text": JSON.stringify(
+                            {
+                                "sent": new Date(),
+                                "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
+                                "revision": 0,
+                                "ns": "Fortnite",
+                                "party_id": PartyId || "LobbyBotPartyLMFAO",
+                                "account_id": `NeoniteBot`,
+                                "account_dn": "NeoniteBot",
+                                "member_state_removed": [],
+                                "member_state_updated": {
+                                    "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/${BotConfig.skin}.${BotConfig.skin}\",\"characterEKey\":\"\",\"backpackDef\":\"${path}\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
+                                },
+                                "joined_at": new Date(),
+                                "updated_at": new Date()
+                        })
+                    }
+                }
+            }).end().replace(`<?xml version="1.0"?>`, "").trim())
+        }
+    }
+
+    setAllBotsSkins(cid, PartyId) {
+        var counter = 0
         var HeroID = cid.replace(/CID/g, 'HID')
         this.ws.send(xmlbuilder.create({
             'message': {
@@ -558,7 +717,7 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId || "LobbyBotPartyLMFAO",
-                            "account_id": "NeoniteBot",
+                            "account_id": `NeoniteBot`,
                             "account_dn": "NeoniteBot",
                             "member_state_removed": [],
                             "member_state_updated": {
@@ -598,13 +757,9 @@ module.exports = class Client extends EventEmitter {
                 }
             }
         }).end().replace(`<?xml version="1.0"?>`, "").trim())
-    }
 
-    setAllbotsEmote(eid, PartyId) {
-        var counterLol = 0
-        while (counterLol <= this.NumberOfBot)
-        {
-            counterLol = counterLol + 1
+        while (counter <= this.NumberOfBot) {
+            counter = counter + 1
             this.ws.send(xmlbuilder.create({
                 'message': {
                     '@xmlns': 'jabber:client',
@@ -619,11 +774,39 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": `NeoniteBot${counterLol}`,
-                                "account_dn": `NeoniteBot${counterLol}`,
+                                "account_id": `NeoniteBot${counter}`,
+                                "account_dn": "NeoniteBot",
                                 "member_state_removed": [],
                                 "member_state_updated": {
-                                    "Default:FrontendEmote_j": `{\"FrontendEmote\":{\"emoteItemDef\":\"/Game/Athena/Items/Cosmetics/Dances/${eid}.${eid}\",\"emoteEKey\":\"\",\"emoteSection\":-1}}`,
+                                    "Default:Location_s": "PreLobby",
+                                    "Default:CampaignHero_j": `{\"CampaignHero\":{\"heroItemInstanceId\":\"\",\"heroType\":\"/Game/Athena/Heroes/${HeroID}.${HeroID}\"}}`,
+                                    "Default:MatchmakingLevel_U": "0",
+                                    "Default:ZoneInstanceId_s": "",
+                                    "Default:HomeBaseVersion_U": "1",
+                                    "Default:HasPreloadedAthena_b": "false",
+                                    "Default:FrontendEmote_j": "{\"FrontendEmote\":{\"emoteItemDef\":\"None\",\"emoteEKey\":\"\",\"emoteSection\":-1}}",
+                                    "Default:NumAthenaPlayersLeft_U": "0",
+                                    "Default:SpectateAPartyMemberAvailable_b": "false",
+                                    "Default:UtcTimeStartedMatchAthena_s": "0001-01-01T00:00:00.000Z",
+                                    "Default:GameReadiness_s": "NotReady",
+                                    "Default:InGameReadyCheckStatus_s": "None",
+                                    "Default:HiddenMatchmakingDelayMax_U": "0",
+                                    "Default:ReadyInputType_s": "Count",
+                                    "Default:CurrentInputType_s": "MouseAndKeyboard",
+                                    "Default:AssistedChallengeInfo_j": "{\"AssistedChallengeInfo\":{\"questItemDef\":\"None\",\"objectivesCompleted\":0}}",
+                                    "Default:FeatDefinition_s": "None",
+                                    "Default:MemberSquadAssignmentRequest_j": "{\"MemberSquadAssignmentRequest\":{\"startingAbsoluteIdx\":-1,\"targetAbsoluteIdx\":-1,\"swapTargetMemberId\":\"INVALID\",\"version\":0}}",
+                                    "Default:VoiceChatStatus_s": "PartyVoice",
+                                    "Default:SidekickStatus_s": "None",
+                                    "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/${cid}.${cid}\",\"characterEKey\":\"\",\"backpackDef\":\"/Game/Athena/Items/Cosmetics/PetCarriers/PetCarrier_012_Drift_Fox.PetCarrier_012_Drift_Fox\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
+                                    "Default:AthenaCosmeticLoadoutVariants_j": "{\"AthenaCosmeticLoadoutVariants\":{\"vL\":{\"AthenaPickaxe\":{\"i\":[{\"c\":\"Mesh\",\"v\":\"Stage0\",\"dE\":0}]},\"AthenaCharacter\":{\"i\":[{\"c\":\"Progressive\",\"v\":\"Stage2\",\"dE\":0},{\"c\":\"Material\",\"v\":\"Mat1\",\"dE\":0}]},\"AthenaBackpack\":{\"i\":[{\"c\":\"Material\",\"v\":\"Mat2\",\"dE\":0}]}}}}",
+                                    "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
+                                    "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
+                                    "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
+                                    "Default:Platform_j": "{\"Platform\":{\"platformDescription\":{\"name\":\"WIN\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}",
+                                    "Default:PlatformUniqueId_s": "INVALID",
+                                    "Default:PlatformSessionId_s": "",
+                                    "Default:CrossplayPreference_s": "OptedIn"
                                 },
                                 "joined_at": new Date(),
                                 "updated_at": new Date()
@@ -632,37 +815,5 @@ module.exports = class Client extends EventEmitter {
                 }
             }).end().replace(`<?xml version="1.0"?>`, "").trim())
         }
-    }
-
-    setBotEmote(eid, PartyId) {
-        if (eid == "NONE" || eid == null) { this.botCurrentEmote = null; }
-        else { this.botCurrentEmote = eid; }
-
-        this.ws.send(xmlbuilder.create({
-            'message': {
-                '@xmlns': 'jabber:client',
-                '@id': this.uuid,
-                '@to': this.jid,
-                '@from': 'xmpp-admin@prod.ol.epicgames.com',
-                'body': {
-                    "#text": JSON.stringify(
-                        {
-                            "sent": new Date(),
-                            "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
-                            "revision": 0,
-                            "ns": "Fortnite",
-                            "party_id": PartyId || "LobbyBotPartyLMFAO",
-                            "account_id": "NeoniteBot",
-                            "account_dn": "NeoniteBot",
-                            "member_state_removed": [],
-                            "member_state_updated": {
-                                "Default:FrontendEmote_j": `{\"FrontendEmote\":{\"emoteItemDef\":\"/Game/Athena/Items/Cosmetics/Dances/${eid}.${eid}\",\"emoteEKey\":\"\",\"emoteSection\":-1}}`,
-                            },
-                            "joined_at": new Date(),
-                            "updated_at": new Date()
-                        })
-                }
-            }
-        }).end().replace(`<?xml version="1.0"?>`, "").trim())
     }
 }
