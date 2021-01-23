@@ -25,7 +25,6 @@ module.exports = (app) => {
 				profileData.created = profileData.updated = new Date().toISOString();
 				profileData['_id'] = accountId;
 				profileData.accountId = accountId;
-				await Profile.updatedCos(profileData);
 	
 				try {
 					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
