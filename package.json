@@ -9,8 +9,10 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "path": "^0.12.7",
-    "uuid": "^8.1.0",
-    "ws": "^7.4.1"
+    "uuid": "^8.3.2",
+    "ws": "^7.4.2",
+    "xml-parser": "^1.2.1",
+    "xmlbuilder": "^15.1.1"
   },
   "scripts": {
     "start": "node app.js"
