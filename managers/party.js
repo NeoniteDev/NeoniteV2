@@ -85,7 +85,6 @@ module.exports = (app) => {
             {
                 xmppClients[req.params.accountId].client.setBotEmote("NONE")
             }
-            xmppClients[req.params.accountId].client.setBotEmote(Parsed.FrontendEmote.emoteItemDef.split('.')[1])
             xmppClients[req.params.accountId].client.setAllbotsEmote(Parsed.FrontendEmote.emoteItemDef.split('.')[1])
         }
         res.status(204).end()
