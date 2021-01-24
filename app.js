@@ -7,8 +7,9 @@ const { ApiException } = errors;
 const { Console } = require("console");
 const port = 5595;
 const version = "2.5.0";
+const URL_LOGGING = false;
 
-/* Lobby bot by @TheBeatYT_evil */
+// Lobby bot by: @TheBeatYT_evil
 (function () {
 	"use strict";
 
@@ -51,10 +52,11 @@ const version = "2.5.0";
 	app.use(bodyParser.json());
 	app.set("etag", false);
 
-	app.use((req, res, next) => {
-		console.log(req.url)
-		next()
-	})
+	if (URL_LOGGING)
+		app.use((req, res, next) => {
+			console.log(req.url)
+			next()
+		})
 
 	app.use("/", express.static("public"));
         //For lobby bot
