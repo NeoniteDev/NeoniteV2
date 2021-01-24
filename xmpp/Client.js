@@ -192,10 +192,26 @@ module.exports = class Client extends EventEmitter {
             var to = message.root.attributes.to.split("@")[0]
             if (to != "NeoniteBot") return;
             var msg = `${message.root.children[0].content}`
-            if (msg == "!copy" || msg == "!perfectTiming")
+            
+            if (msg == "!help" || msg == "!Help")
+            {
+                var text = '\n' +
+                '========================================' + '\n' +
+                '!Skin      Change all bots skins' + '\n' +
+                '!Emote     Set all bots emotes' + '\n' +
+                '!Copy      Toggle copy mode' + '\n' +
+                '!Addbot    Add one bot to the Party' + '\n' +
+                '!Add4bot   Add 4 bots to the Party' + '\n' +
+                '!Help      Show this help Message' + '\n' +
+                '========================================' + '\n'
+
+                this.sendChat(this.botJid, text)
+            }
+            
+            else if (msg == "!copy" || msg == "!perfectTiming")
                 this.bCopyEmote = !this.bCopyEmote;
 
-            if (msg == "!add4bot" || msg == "!Add4Bot" || msg == "!add4Bot") {
+            else if (msg == "!add4bot" || msg == "!Add4Bot" || msg == "!add4Bot") {
                 console.log(this.NumberOfBot)
                 if (this.NumberOfBot == 0) {
                     this.AddOneBot("LobbyBotPartyLMFAO")
