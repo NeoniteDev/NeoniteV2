@@ -29,8 +29,6 @@ Fortnite lobby emulator with much customization options
 #### • We do not provide any support for older versions of the game!
 #### • You can't join other peoples lobbies
 
-### Lobby bot
-• [List of commands](https://github.com/Beat-YT/Neonite-Bot-Commands/blob/main/README.md)
 
 ### Used APIs
 • [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://github.com/NotOfficer)
@@ -49,6 +47,10 @@ Fortnite lobby emulator with much customization options
 
 ## Community Support
 <a href="https://discord.gg/pUKacSd"><img src="https://discordapp.com/api/guilds/703690937074974761/widget.png?style=banner2"></a>
+
+## Lobby bot
+• [List of commands](https://github.com/Beat-YT/Neonite-Bot-Commands/blob/main/README.md)
+
 
 ## License
 
