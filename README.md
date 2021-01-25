@@ -28,7 +28,9 @@ Fortnite lobby emulator with much customization options
 #### • You can't get banned!
 #### • We do not provide any support for older versions of the game!
 #### • You can't join other peoples lobbies
- 
+
+### Lobby bot
+• [List of commands](https://github.com/Beat-YT/Neonite-Bot-Commands/blob/main/README.md)
 
 ### Used APIs
 • [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://github.com/NotOfficer)
