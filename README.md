@@ -40,7 +40,7 @@ Fortnite lobby emulator with much customization options
 | Contributor | Helped with |
 | ----------- | ----------- |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Profile.js and much api reversing |
-| [Beat-YT](https://github.com/Beat-YT)   | Pull Requests |
+| [Beat-YT](https://github.com/Beat-YT)   | Pull Requests and the Lobby Bot |
 | [Kyiro](https://github.com/Kyiro)   | Pull Requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
