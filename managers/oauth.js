@@ -7,7 +7,9 @@ module.exports = (app) => {
 	app.post('/account/api/oauth/token', async (req, res) => {
 		var displayName = "";
 		var accountId = "";
-		if (req.body.username) displayName, accountId = req.body.username.split("@")[0]
+		
+		if (req.body.username.split("@")[0].startsWith("NeoniteBot")) displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}`
+		else if (req.body.username) displayName, accountId = req.body.username.split("@")[0]
 		else if (req.body.exchange_code){try {
 			displayName = Buffer.from(req.body.exchange_code, 'base64').toString();
 			accountId = req.body.exchange_code
@@ -108,7 +110,7 @@ module.exports = (app) => {
 			{
 				displayName = Buffer.from(req.query.accountId, 'base64').toString();
 			}
-			if (`${req.query.accountId}`.startsWith(BotName)) { displayName = BotName }
+			if (`${req.query.accountId}`.startsWith("NeoniteBot")) { displayName = "NeoniteBot" }
 
 			res.json([{
 				id: req.query.accountId,
@@ -120,7 +122,7 @@ module.exports = (app) => {
 			let response = []
 			req.query.accountId.forEach(accId => {
 				var dn = accId
-				if (`${accId}`.startsWith(BotName)) { dn = BotName }
+				if (`${accId}`.startsWith("NeoniteBot")) { dn = "NeoniteBot" }
 				response.push({
 					id: accId,
 					displayName: dn,
