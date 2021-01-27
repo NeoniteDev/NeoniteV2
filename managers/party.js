@@ -164,9 +164,12 @@ module.exports = (app) => {
     // /party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/BeatYT3 
 
     app.delete('/party/api/v1/Fortnite/parties/*/members/:accountId', (req, res) => {
-        if (xmppClients[req.params.accountId].client) {
+        try {
+            if (xmppClients[req.params.accountId].client) {
             xmppClients[req.params.accountId].client.NumberOfBot = 0
         }
+        }
+        catch {}
         res.status(204).end()
     })
 
