@@ -6,26 +6,32 @@ module.exports = (app) => {
 	//token
 	app.post('/account/api/oauth/token', async (req, res) => {
 		var displayName = "";
-		if (displayName.startsWith("NeoniteBot")) { displayName = "NeoniteUser" }
-		else if (req.body.username) displayName = req.body.username.split("@")[0]
-		else if (req.body.email) displayName = req.body.email.split("@")[0]
+		var accountId = "";
+		if (req.body.username) displayName, accountId = req.body.username.split("@")[0]
+		else if (req.body.exchange_code){try {
+			displayName = Buffer.from(req.body.exchange_code, 'base64').toString();
+			accountId = req.body.exchange_code
+			if (!accountId.endsWith('=')) accountId = accountId + '='
+		}catch{displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}`}}
+		else if (req.body.email) displayName, accountId = req.body.email.split("@")[0]
 		else displayName = `InvalidUser${Math.random().toString().substring(15)}`
-		var accountId = displayName.replace(/ /g, '_');
-		if(!accountId.startsWith("InvalidUser")){
+		accountId = accountId.replace(/ /g, '_');
+		if (!accountId.startsWith("InvalidUser")) {
 			var profileId = "athena";
 			var profileData = Profile.readProfile(accountId, profileId);
-	
+
 			if (!profileData) {
 				profileData = Profile.readProfileTemplate(profileId);
-	
+
 				if (!profileData) {
 					throw new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId);
 				}
-	
+
 				profileData.created = profileData.updated = new Date().toISOString();
 				profileData['_id'] = accountId;
 				profileData.accountId = accountId;
-	
+				await Profile.updatedCos(profileData);
+
 				try {
 					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
 					Profile.saveProfile(accountId, profileId, profileData);
@@ -35,19 +41,19 @@ module.exports = (app) => {
 				}
 			}
 		}
-		
+
 		res.json({
-			access_token: crypto.randomBytes(15).toString("hex") + `@${displayName}`, //Make life Easier
+			access_token: crypto.randomBytes(15).toString("hex") + `@${accountId}`, //Make life Easier
 			expires_in: 28800,
 			expires_at: "9999-12-31T23:59:59.999Z",
 			token_type: "bearer",
-			account_id: displayName.replace(/ /g, '_'),
+			account_id: accountId,
 			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
 			internal_client: true,
 			client_service: "fortnite",
 			displayName: displayName,
 			app: "fortnite",
-			in_app_id: displayName.replace(/ /g, '_'),
+			in_app_id: accountId,
 			device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
 		})
 	});
@@ -85,22 +91,45 @@ module.exports = (app) => {
 
 	//account info
 	app.get('/account/api/public/account/:accountId', (req, res) => {
+		var displayname = `${req.params.accountId}`
+		if (displayname.endsWith('=')) displayname = Buffer.from(req.params.accountId, 'base64').toString();
 		res.json({
 			id: req.params.accountId,
-			displayName: req.params.accountId,
+			displayName: displayname,
 			externalAuths: {}
 		})
 	});
+	//http://localhost:5595/account/api/public/account?accountId=NeoniteBot10&accountId=NeoniteBot11&accountId=NeoniteBot12&accountId=NeoniteBot13&accountId=NeoniteBot14&accountId=NeoniteBot15
 
 	app.get('/account/api/public/account/', (req, res) => {
-		var displayName = req.query.accountId ? req.query.accountId.replace(/_/g, ' ') : req.query.accountId
-		if (`${req.query.accountId}`.startsWith("NeoniteBot")) {displayName = "NeoniteBot"}
+		try {
+			var displayName = req.query.accountId ? req.query.accountId.replace(/_/g, ' ') : req.query.accountId
+			if (`${req.query.accountId}`.endsWith('='))
+			{
+				displayName = Buffer.from(req.query.accountId, 'base64').toString();
+			}
+			if (`${req.query.accountId}`.startsWith(BotName)) { displayName = BotName }
 
-		res.json([{
-			id: req.query.accountId,
-			displayName: displayName,
-			externalAuths: {}
-		}])
+			res.json([{
+				id: req.query.accountId,
+				displayName: displayName,
+				externalAuths: {}
+			}])
+		}
+		catch {
+			let response = []
+			req.query.accountId.forEach(accId => {
+				var dn = accId
+				if (`${accId}`.startsWith(BotName)) { dn = BotName }
+				response.push({
+					id: accId,
+					displayName: dn,
+					externalAuths: {}
+				})
+			})
+			res.json(response)
+		}
+
 	});
 
 	// device auth
