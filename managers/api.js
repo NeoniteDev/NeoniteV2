@@ -14,7 +14,7 @@ module.exports = (app) => {
 			"message": "GO AWAY KID",
 			"maintenanceUri": null,
 			"allowedActions": ["PLAY", "DOWNLOAD"],
-			"banned": false
+			"banned": req.headers.authorization.split('@')[1] == "NeoniteBot"
 		}]);
 	});
 
