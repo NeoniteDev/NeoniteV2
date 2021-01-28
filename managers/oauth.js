@@ -8,8 +8,8 @@ module.exports = (app) => {
 		var displayName = "";
 		var accountId = "";
 		
-		if (req.body.username.split("@")[0].startsWith("NeoniteBot")) displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}`
-		else if (req.body.username) displayName, accountId = req.body.username.split("@")[0]
+	
+                if (req.body.username) displayName, accountId = req.body.username.split("@")[0]
 		else if (req.body.exchange_code){try {
 			displayName = Buffer.from(req.body.exchange_code, 'base64').toString();
 			accountId = req.body.exchange_code
