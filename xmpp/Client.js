@@ -199,6 +199,8 @@ module.exports = class Client extends EventEmitter {
                 '========================================' + '\n' +
                 '!Skin      Change all bots skins' + '\n' +
                 '!Emote     Set all bots emotes' + '\n' +
+                '!Backpack     Set all bots backpling' + '\n' +
+		        '(Type random for none)' + '\n' +
                 '!Copy      Toggle copy mode' + '\n' +
                 '!Addbot    Add one bot to the Party' + '\n' +
                 '!Add4bot   Add 4 bots to the Party' + '\n' +
