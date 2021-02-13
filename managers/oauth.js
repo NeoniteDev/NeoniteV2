@@ -101,7 +101,7 @@ module.exports = (app) => {
 			externalAuths: {}
 		})
 	});
-	//http://localhost:5595/account/api/public/account?accountId=NeoniteBot10&accountId=NeoniteBot11&accountId=NeoniteBot12&accountId=NeoniteBot13&accountId=NeoniteBot14&accountId=NeoniteBot15
+	//http://localhost:5595/account/api/public/account?accountId=PogniteNEOBot10&accountId=PogniteNEOBot11&accountId=PogniteNEOBot12&accountId=PogniteNEOBot13&accountId=PogniteNEOBot14&accountId=PogniteNEOBot15
 
 	app.get('/account/api/public/account/', (req, res) => {
 		try {
@@ -110,7 +110,7 @@ module.exports = (app) => {
 			{
 				displayName = Buffer.from(req.query.accountId, 'base64').toString();
 			}
-			if (`${req.query.accountId}`.startsWith("NeoniteBot")) { displayName = "NeoniteBot" }
+			if (`${req.query.accountId}`.startsWith("PogniteNEOBot")) { displayName = "PogniteNEOBot" }
 
 			res.json([{
 				id: req.query.accountId,
@@ -122,7 +122,7 @@ module.exports = (app) => {
 			let response = []
 			req.query.accountId.forEach(accId => {
 				var dn = accId
-				if (`${accId}`.startsWith("NeoniteBot")) { dn = "NeoniteBot" }
+				if (`${accId}`.startsWith("PogniteNEOBot")) { dn = "PogniteNEOBot" }
 				response.push({
 					id: accId,
 					displayName: dn,

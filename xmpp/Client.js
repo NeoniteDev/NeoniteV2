@@ -102,7 +102,7 @@ module.exports = class Client extends EventEmitter {
             }).end().replace(`<?xml version="1.0"?>`, "").trim())
         }
 
-        this.botJid = `NeoniteBot@prod.ol.epicgames.com/V2:Fortnite:WIN::${parsed[0]}`
+        this.botJid = `PogniteNEOBot@prod.ol.epicgames.com/V2:Fortnite:WIN::${parsed[0]}`
 
         this.id = parsed[0]
         this.bIsAuthenticated = true
@@ -175,7 +175,7 @@ module.exports = class Client extends EventEmitter {
     async handlepresence(message) {
         try {
 
-            this.sendPresence(this.jid, this.botJid, JSON.stringify({ "Status": "Neonite Lobby Bot", "bIsPlaying": false, "bIsJoinable": true, "bHasVoiceSupport": false, "SessionId": "", "ProductName": "Fortnite", "Properties": { "FortBasicInfo_j": { "homeBaseRating": 0 }, "FortLFG_I": "0", "FortPartySize_i": 1, "FortSubGame_i": 1, "InUnjoinableMatch_b": false, "FortGameplayStats_j": { "state": "", "playlist": "None", "numKills": 0, "bFellToDeath": false }, "party.joininfodata.286331153_j": { "bIsPrivate": false }, "KairosProfile_j": { "appInstalled": "init", "avatar": "cid_527_athena_commando_f_streetfashionred", "avatarBackground": "[]" } } }))//1C00ff00
+            this.sendPresence(this.jid, this.botJid, JSON.stringify({ "Status": "PogniteNEO Lobby Bot", "bIsPlaying": false, "bIsJoinable": true, "bHasVoiceSupport": false, "SessionId": "", "ProductName": "Fortnite", "Properties": { "FortBasicInfo_j": { "homeBaseRating": 0 }, "FortLFG_I": "0", "FortPartySize_i": 1, "FortSubGame_i": 1, "InUnjoinableMatch_b": false, "FortGameplayStats_j": { "state": "", "playlist": "None", "numKills": 0, "bFellToDeath": false }, "party.joininfodata.286331153_j": { "bIsPrivate": false }, "KairosProfile_j": { "appInstalled": "init", "avatar": "cid_527_athena_commando_f_streetfashionred", "avatarBackground": "[]" } } }))//1C00ff00
             var thing = JSON.parse(message.root.children.find(x => x.name == "status").content)
             this.sendPresence(this.jid, this.jid.split("/")[0], JSON.stringify(thing))
             this.latest = JSON.stringify(thing)
@@ -190,7 +190,7 @@ module.exports = class Client extends EventEmitter {
         if (message.root.attributes.type == "chat") {
 
             var to = message.root.attributes.to.split("@")[0]
-            if (to != "NeoniteBot") return;
+            if (to != "PogniteNEOBot") return;
             var msg = `${message.root.children[0].content}`
             
             if (msg == "!help" || msg == "!Help")
@@ -234,7 +234,7 @@ module.exports = class Client extends EventEmitter {
                 var name = msg.replace(/!skin /g, '')
                 axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${name}&matchMethod=contains&type=outfit`).then(response => {
                     this.setAllBotsSkins(response.data.data.id)
-                    fs.writeFile('./config/NeoniteBot/config.json', JSON.stringify({
+                    fs.writeFile('./config/PogniteNEOBot/config.json', JSON.stringify({
                         skin: response.data.data.id,
                         emote: BotConfig.emote
                     }), function (err, data) { })
@@ -350,11 +350,11 @@ module.exports = class Client extends EventEmitter {
                         "revision": 0,
                         "ns": "Fortnite",
                         "party_id": partyID,
-                        "account_id": "NeoniteBot",
-                        "account_dn": "NeoniteBot",
+                        "account_id": "PogniteNEOBot",
+                        "account_dn": "PogniteNEOBot",
                         "member_state_updated": {
-                            "urn:epic:member:dn_s": "NeoniteBot",
-                            "urn:epic:member:joinrequestusers_j": "{\"users\":[{\"id\":\"NeoniteBot\",\"dn\":\"NeoniteBot\",\"plat\":\"WIN\",\"data\":\"{\\\"CrossplayPreference_i\\\":\\\"1\\\",\\\"SubGame_u\\\":\\\"1\\\"}\"}]}"
+                            "urn:epic:member:dn_s": "PogniteNEOBot",
+                            "urn:epic:member:joinrequestusers_j": "{\"users\":[{\"id\":\"PogniteNEOBot\",\"dn\":\"PogniteNEOBot\",\"plat\":\"WIN\",\"data\":\"{\\\"CrossplayPreference_i\\\":\\\"1\\\",\\\"SubGame_u\\\":\\\"1\\\"}\"}]}"
                         },
                         "joined_at": new Date(),
                         "updated_at": new Date()
@@ -390,11 +390,11 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId,
-                            "account_id": "NeoniteBot",
-                            "account_dn": "NeoniteBot",
+                            "account_id": "PogniteNEOBot",
+                            "account_dn": "PogniteNEOBot",
                             "member_state_updated": {
-                                "urn:epic:member:joinrequestusers_j": "{\"users\":[{\"id\":\"NeoniteBot\",\"dn\":\"NeoniteBot\",\"plat\":\"WIN\",\"data\":\"{\\\"CrossplayPreference_i\\\":\\\"1\\\",\\\"SubGame_u\\\":\\\"1\\\"}\"}]}",
-                                "urn:epic:member:dn_s": "NeoniteBot"
+                                "urn:epic:member:joinrequestusers_j": "{\"users\":[{\"id\":\"PogniteNEOBot\",\"dn\":\"PogniteNEOBot\",\"plat\":\"WIN\",\"data\":\"{\\\"CrossplayPreference_i\\\":\\\"1\\\",\\\"SubGame_u\\\":\\\"1\\\"}\"}]}",
+                                "urn:epic:member:dn_s": "PogniteNEOBot"
                             },
                             "joined_at": new Date(),
                             "updated_at": new Date()
@@ -420,8 +420,8 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": "NeoniteBot",
-                                "account_dn": "NeoniteBot",
+                                "account_id": "PogniteNEOBot",
+                                "account_dn": "PogniteNEOBot",
                                 "member_state_removed": [],
                                 "member_state_updated": {
                                     "Default:Location_s": "PreLobby",
@@ -458,7 +458,7 @@ module.exports = class Client extends EventEmitter {
             }).end().replace(`<?xml version="1.0"?>`, "").trim())
 
             try {
-                global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
+                global.BotConfig = JSON.parse(fs.readFileSync('./config/PogniteNEOBot/config.json', 'utf8', function (err, data) {
                     if (err) global.BotConfig = false;
                 }))
             } catch { }
@@ -487,7 +487,7 @@ module.exports = class Client extends EventEmitter {
                             "sent": new Date(),
                             "type": "com.epicgames.social.party.notification.v0.MEMBER_JOINED",
                             "connection": {
-                                "id": `NeoniteBot${this.NumberOfBot}@prod.ol.epicgames.com/V2:Fortnite:WIN::BOT${this.NumberOfBot}`,
+                                "id": `PogniteNEOBot${this.NumberOfBot}@prod.ol.epicgames.com/V2:Fortnite:WIN::BOT${this.NumberOfBot}`,
                                 "meta": {
                                     "urn:epic:conn:platform_s": "WIN",
                                     "urn:epic:conn:type_s": "game"
@@ -499,11 +499,11 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId,
-                            "account_id": `NeoniteBot${this.NumberOfBot}`,
-                            "account_dn": `NeoniteBot`,
+                            "account_id": `PogniteNEOBot${this.NumberOfBot}`,
+                            "account_dn": `PogniteNEOBot`,
                             "member_state_updated": {
-                                "urn:epic:member:joinrequestusers_j": `{\"users\":[{\"id\":\"NeoniteBot${this.NumberOfBot}\",\"dn\":\"NeoniteBot\",\"plat\":\"WIN\",\"data\":\"{\\\"CrossplayPreference_i\\\":\\\"1\\\",\\\"SubGame_u\\\":\\\"1\\\"}\"}]}`,
-                                "urn:epic:member:dn_s": `NeoniteBot`
+                                "urn:epic:member:joinrequestusers_j": `{\"users\":[{\"id\":\"PogniteNEOBot${this.NumberOfBot}\",\"dn\":\"PogniteNEOBot\",\"plat\":\"WIN\",\"data\":\"{\\\"CrossplayPreference_i\\\":\\\"1\\\",\\\"SubGame_u\\\":\\\"1\\\"}\"}]}`,
+                                "urn:epic:member:dn_s": `PogniteNEOBot`
                             },
                             "joined_at": new Date(),
                             "updated_at": new Date()
@@ -527,8 +527,8 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": `NeoniteBot${this.NumberOfBot}`,
-                                "account_dn": `NeoniteBot`,
+                                "account_id": `PogniteNEOBot${this.NumberOfBot}`,
+                                "account_dn": `PogniteNEOBot`,
                                 "member_state_removed": [],
                                 "member_state_updated": {
                                     "Default:Location_s": "PreLobby",
@@ -567,7 +567,7 @@ module.exports = class Client extends EventEmitter {
             }).end().replace(`<?xml version="1.0"?>`, "").trim())
 
             try {
-                global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
+                global.BotConfig = JSON.parse(fs.readFileSync('./config/PogniteNEOBot/config.json', 'utf8', function (err, data) {
                     if (err) global.BotConfig = false;
                 }))
             } catch { }
@@ -592,8 +592,8 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId || "LobbyBotPartyLMFAO",
-                            "account_id": `NeoniteBot`,
-                            "account_dn": `NeoniteBot`,
+                            "account_id": `PogniteNEOBot`,
+                            "account_dn": `PogniteNEOBot`,
                             "member_state_removed": [],
                             "member_state_updated": member_state_updated,
                             "joined_at": new Date(),
@@ -618,8 +618,8 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": `NeoniteBot${counterLol}`,
-                                "account_dn": `NeoniteBot`,
+                                "account_id": `PogniteNEOBot${counterLol}`,
+                                "account_dn": `PogniteNEOBot`,
                                 "member_state_removed": [],
                                 "member_state_updated": member_state_updated,
                                 "joined_at": new Date(),
@@ -662,8 +662,8 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId || "LobbyBotPartyLMFAO",
-                            "account_id": `NeoniteBot`,
-                            "account_dn": `NeoniteBot`,
+                            "account_id": `PogniteNEOBot`,
+                            "account_dn": `PogniteNEOBot`,
                             "member_state_removed": [],
                             "member_state_updated": {
                                 "Default:FrontendEmote_j": `{\"FrontendEmote\":{\"emoteItemDef\":\"/Game/Athena/Items/Cosmetics/Dances/${eid}.${eid}\",\"emoteEKey\":\"\",\"emoteSection\":-1}}`,
@@ -690,8 +690,8 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": `NeoniteBot${counterLol}`,
-                                "account_dn": `NeoniteBot`,
+                                "account_id": `PogniteNEOBot${counterLol}`,
+                                "account_dn": `PogniteNEOBot`,
                                 "member_state_removed": [],
                                 "member_state_updated": {
                                     "Default:FrontendEmote_j": `{\"FrontendEmote\":{\"emoteItemDef\":\"/Game/Athena/Items/Cosmetics/Dances/${eid}.${eid}\",\"emoteEKey\":\"\",\"emoteSection\":-1}}`,
@@ -707,7 +707,7 @@ module.exports = class Client extends EventEmitter {
 
     setAllbotBackBling(path, PartyId) {
         try {
-            global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
+            global.BotConfig = JSON.parse(fs.readFileSync('./config/PogniteNEOBot/config.json', 'utf8', function (err, data) {
                 if (err) global.BotConfig = false;
             }))
         } catch { }
@@ -727,8 +727,8 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId || "LobbyBotPartyLMFAO",
-                            "account_id": `NeoniteBot`,
-                            "account_dn": "NeoniteBot",
+                            "account_id": `PogniteNEOBot`,
+                            "account_dn": "PogniteNEOBot",
                             "member_state_removed": [],
                             "member_state_updated": {
                                 "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/${BotConfig.skin}.${BotConfig.skin}\",\"characterEKey\":\"\",\"backpackDef\":\"${path}\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
@@ -756,8 +756,8 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": `NeoniteBot`,
-                                "account_dn": "NeoniteBot",
+                                "account_id": `PogniteNEOBot`,
+                                "account_dn": "PogniteNEOBot",
                                 "member_state_removed": [],
                                 "member_state_updated": {
                                     "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/${BotConfig.skin}.${BotConfig.skin}\",\"characterEKey\":\"\",\"backpackDef\":\"${path}\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
@@ -788,8 +788,8 @@ module.exports = class Client extends EventEmitter {
                             "revision": 0,
                             "ns": "Fortnite",
                             "party_id": PartyId || "LobbyBotPartyLMFAO",
-                            "account_id": `NeoniteBot`,
-                            "account_dn": "NeoniteBot",
+                            "account_id": `PogniteNEOBot`,
+                            "account_dn": "PogniteNEOBot",
                             "member_state_removed": [],
                             "member_state_updated": {
                                 "Default:Location_s": "PreLobby",
@@ -845,8 +845,8 @@ module.exports = class Client extends EventEmitter {
                                 "revision": 0,
                                 "ns": "Fortnite",
                                 "party_id": PartyId || "LobbyBotPartyLMFAO",
-                                "account_id": `NeoniteBot${counter}`,
-                                "account_dn": "NeoniteBot",
+                                "account_id": `PogniteNEOBot${counter}`,
+                                "account_dn": "PogniteNEOBot",
                                 "member_state_removed": [],
                                 "member_state_updated": {
                                     "Default:Location_s": "PreLobby",

@@ -15,8 +15,8 @@ module.exports = (app, port) => {
                         "hidden": false,
                         "_type": "CommonUI Simple Message Base",
                         "subgame": "br",
-                        "body": "Made by kemo (@xkem0x).\r\nDiscord: https://discord.gg/DJ6VUmD",
-                        "title": "Neonite V2",
+                        "body": "Created by Kemo (@xkem0x).\nForked by PogniteHQ (@pognitehq).",
+                        "title": "PogniteNEO V1",
                         "spotlight": false
                     }, 
                     ],
@@ -883,8 +883,8 @@ module.exports = (app, port) => {
                     "_type": "CommonUI Simple Message",
                     "message": {
                         "_type": "CommonUI Simple Message Base",
-                        "title": "Neonite",
-                        "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord."
+                        "title": "PogniteNEO V1",
+                        "body": "Created by Kemo (@xkem0x).\nForked by PogniteHQ (@pognitehq)."
                     }
                 },
                 "_activeDate": "2017-08-30T03:08:31.687Z",
@@ -895,12 +895,12 @@ module.exports = (app, port) => {
                 "news": {
                     "_type": "Battle Royale News",
                     "messages": [{
-                        "image": `http://127.0.0.1:${port}/Neonite1024.png`,
+                        "image": `http://127.0.0.1:${port}/PogniteNeoWallpaper1024x546.png`,
                         "hidden": false,
                         "_type": "CommonUI Simple Message Base",
-                        "adspace": "Neonite v2!",
-                        "title": "Neonite",
-                        "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord.",
+                        "adspace": "PogniteNEO V1",
+                        "title": "PogniteNEO",
+                        "body": "Created by Kemo (@xkem0x).\nForked by PogniteHQ (@pognitehq).",
                         "spotlight": false
                     }]
                 },
@@ -919,8 +919,8 @@ module.exports = (app, port) => {
                     "_type": "CommonUI Simple Message",
                     "message": {
                         "_type": "CommonUI Simple Message Base",
-                        "title": "Neonite",
-                        "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord."
+                        "title": "PogniteNEO",
+                        "body": "Created by Kemo (@xkem0x).\nForked by PogniteHQ (@pognitehq)."
                     }
                 },
                 "_activeDate": "2017-07-19T13:14:04.490Z",
@@ -1385,18 +1385,18 @@ module.exports = (app, port) => {
                 "news": {
                     "motds": [{
                         "entryType": "Website",
-                        "image": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
-                        "tileImage": `http://127.0.0.1:${port}/Neonite1024.png`,
+                        "image": `http://127.0.0.1:${port}/PogniteWallpaper1920x1080.png`,
+                        "tileImage": `http://127.0.0.1:${port}/PogniteNeoWallpaper1024x546.png`,
                         "videoMute": false,
                         "hidden": false,
-                        "tabTitleOverride": "Neonite V2",
+                        "tabTitleOverride": "PogniteNEO V1",
                         "_type": "CommonUI Simple Message MOTD",
-                        "title": "Neonite",
-                        "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord by clicking the button below.",
+                        "title": "PogniteNEO",
+                        "body": "Created by Kemo (@xkem0x).\nForked by PogniteHQ (@pognitehq).",
                         "videoLoop": false,
                         "videoStreamingEnabled": false,
                         "sortingPriority": 80,
-                        "id": "NeoniteNewsBR",
+                        "id": "PogniteNEONewsBR",
                         "videoAutoplay": false,
                         "videoFullscreen": false,
                         "spotlight": false,
@@ -1420,18 +1420,18 @@ module.exports = (app, port) => {
                 "news": {
                     "motds": [{
                         "entryType": "Website",
-                        "image": `http://127.0.0.1:${port}/Neonite1024.png`,
-                        "tileImage": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
+                        "image": `http://127.0.0.1:${port}/PogniteNeoWallpaper1024x546.png`,
+                        "tileImage": `http://127.0.0.1:${port}/PogniteNeoWallpaper1920x1080.png`,
                         "videoMute": false,
                         "hidden": false,
-                        "tabTitleOverride": "Neonite V2",
+                        "tabTitleOverride": "PogniteNEO V1",
                         "_type": "CommonUI Simple Message MOTD",
-                        "title": "Neonite",
-                        "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord by clicking the button below.",
+                        "title": "PogniteNEO",
+                        "body": "Created by Kemo (@xkem0x).\nForked by PogniteHQ (@pognitehq).",
                         "videoLoop": false,
                         "videoStreamingEnabled": false,
                         "sortingPriority": 80,
-                        "id": "NeoniteNews",
+                        "id": "PogniteNEONews",
                         "videoAutoplay": false,
                         "videoFullscreen": false,
                         "spotlight": false,
@@ -1456,14 +1456,14 @@ module.exports = (app, port) => {
                 "itemsList": {
                     "_type": "ShopCarouselItemList",
                     "items": [{
-                        "tileImage": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
-                        "fullTitle": "Neonite",
+                        "tileImage": `http://127.0.0.1:${port}/PogniteNeoWallpaper1920x1080.png`,
+                        "fullTitle": "PogniteNEO",
                         "hidden": false,
                         "_type": "ShopCarouselItem",
                         "landingPriority": 100,
                         "action": "ShowOfferDetails",
                         "offerId": "v2:/cc29bec6d0bdd2876fb412cf674a7960003bbb76b2eb9b930833a61b604a3b4e",
-                        "title": "Neonite"
+                        "title": "PogniteNEO"
                     }]
                 },
                 "_title": "shop-carousel",

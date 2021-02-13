@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
 const port = 5595;
-const version = "2.5.0";
+const version = "1.0.1";
 const URL_LOGGING = false;
 
 // Lobby bot by: @TheBeatYT_evil
@@ -14,7 +14,7 @@ const URL_LOGGING = false;
 	"use strict";
 
 	try {
-		global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
+		global.BotConfig = JSON.parse(fs.readFileSync('./config/PogniteNeoBot/config.json', 'utf8', function (err, data) {
 			if (err) global.BotConfig = false;
 		}))
 	}
@@ -30,8 +30,8 @@ const URL_LOGGING = false;
 	};
 
 	if (!BotConfig) {
-		fs.mkdirSync(`./config/NeoniteBot/`, { recursive: true });
-		fs.writeFile(`./config/NeoniteBot/config.json`, JSON.stringify({
+		fs.mkdirSync(`./config/PogniteNeoBot/`, { recursive: true });
+		fs.writeFile(`./config/PogniteNeoBot/config.json`, JSON.stringify({
 			skin: 'CID_286_Athena_Commando_F_NeonCat',
 			emote: null
 		}), function (err, data) {
@@ -85,7 +85,7 @@ const URL_LOGGING = false;
 	});
 
 	app.listen(port, () => {
-		console.log(`Neonite v${version} is listening on port ${port}!`);
+		console.log(`PogniteNEO v${version} is listening on port ${port}!`);
 	});
 
 

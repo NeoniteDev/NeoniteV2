@@ -14,7 +14,7 @@ module.exports = (app) => {
 			"message": "GO AWAY KID",
 			"maintenanceUri": null,
 			"allowedActions": ["PLAY", "DOWNLOAD"],
-			"banned": req.headers.authorization.split('@')[1] == "NeoniteBot"
+			"banned": req.headers.authorization.split('@')[1] == "PogniteNEOBot"
 		}]);
 	});
 
@@ -69,7 +69,7 @@ module.exports = (app) => {
 	app.get('/friends/api/v1/:accountId/summary', (req, res) => {
 		res.json({
             "friends": [{
-                "accountId": "NeoniteBot",
+                "accountId": "PogniteNEO Bot",
                 "groups": [],
                 "mutual": 0,
                 "alias": "",
