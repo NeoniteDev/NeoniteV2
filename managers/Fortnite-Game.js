@@ -1385,7 +1385,7 @@ module.exports = (app, port) => {
                 "news": {
                     "motds": [{
                         "entryType": "Website",
-                        "image": `http://127.0.0.1:${port}/PogniteWallpaper1920x1080.png`,
+                        "image": `http://127.0.0.1:${port}/PogniteNeoWallpaper1920x1080.png`,
                         "tileImage": `http://127.0.0.1:${port}/PogniteNeoWallpaper1024x546.png`,
                         "videoMute": false,
                         "hidden": false,

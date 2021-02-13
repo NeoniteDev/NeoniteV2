@@ -1,0 +1,18 @@
+{
+  "created": "2021-02-13T20:47:56.398Z",
+  "updated": "2021-02-13T20:47:56.398Z",
+  "rvn": 1,
+  "wipeNumber": 1,
+  "accountId": "PogniteNEO",
+  "profileId": "common_public",
+  "version": "fortnite_start",
+  "items": {},
+  "stats": {
+    "attributes": {
+      "banner_color": "",
+      "homebase_name": "",
+      "banner_icon": ""
+    }
+  },
+  "_id": "PogniteNEO"
+}

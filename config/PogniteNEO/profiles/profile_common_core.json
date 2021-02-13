@@ -1,0 +1,26 @@
+{
+  "_id": "PogniteNEO",
+  "created": "2021-02-13T20:47:56.400Z",
+  "updated": "2021-02-13T20:47:56.400Z",
+  "rvn": 1,
+  "wipeNumber": 1,
+  "accountId": "PogniteNEO",
+  "profileId": "common_core",
+  "version": "pognite_2",
+  "items": {
+    "Currency:MtxPurchased": {
+      "attributes": {
+        "platform": "EpicPC"
+      },
+      "quantity": 0,
+      "templateId": "Currency:MtxPurchased"
+    }
+  },
+  "stats": {
+    "attributes": {
+      "mtx_affiliate": "PogniteNEO",
+      "current_mtx_platform": "EpicPC",
+      "mtx_purchase_history": {}
+    }
+  }
+}

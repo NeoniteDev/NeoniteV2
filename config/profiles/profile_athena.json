@@ -1,0 +1,134 @@
+{
+  "_id": "",
+  "Update": "profile by tim",
+  "created": "2021-02-13T20:47:53.255Z",
+  "updated": "2021-02-13T20:47:53.255Z",
+  "rvn": 19,
+  "wipeNumber": 1,
+  "accountId": "",
+  "profileId": "athena",
+  "version": "pognite_2",
+  "items": {
+    "sandbox_loadout": {
+      "templateId": "CosmeticLocker:cosmeticlocker_athena",
+      "attributes": {
+        "locker_slots_data": {
+          "slots": {
+            "Pickaxe": {
+              "items": [
+                ""
+              ],
+              "activeVariants": []
+            },
+            "Dance": {
+              "items": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            "Glider": {
+              "items": [
+                ""
+              ]
+            },
+            "Character": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                {
+                  "variants": []
+                }
+              ]
+            },
+            "Backpack": {
+              "items": [],
+              "activeVariants": [
+                {
+                  "variants": []
+                }
+              ]
+            },
+            "ItemWrap": {
+              "items": [],
+              "activeVariants": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            "LoadingScreen": {
+              "items": [],
+              "activeVariants": [
+                null
+              ]
+            },
+            "MusicPack": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                null
+              ]
+            },
+            "SkyDiveContrail": {
+              "items": [],
+              "activeVariants": [
+                null
+              ]
+            }
+          }
+        },
+        "use_count": 1,
+        "banner_icon_template": "",
+        "locker_name": "",
+        "banner_color_template": "",
+        "item_seen": false,
+        "favorite": false
+      },
+      "quantity": 1
+    }
+  },
+  "stats": {
+    "attributes": {
+      "season_match_boost": 0,
+      "loadouts": [
+        "sandbox_loadout"
+      ],
+      "rested_xp_overflow": 0,
+      "mfa_reward_claimed": true,
+      "quest_manager": {},
+      "book_level": 0,
+      "season_num": 15,
+      "season_update": 1,
+      "book_xp": 1,
+      "permissions": [],
+      "book_purchased": true,
+      "lifetime_wins": 0,
+      "party_assist_quest": "",
+      "purchased_battle_pass_tier_offers": [],
+      "rested_xp_exchange": 0.333,
+      "level": 0,
+      "xp_overflow": 0,
+      "rested_xp": 0,
+      "rested_xp_mult": 0,
+      "accountLevel": 0,
+      "competitive_identity": {},
+      "inventory_limit_bonus": 0,
+      "last_applied_loadout": "sandbox_loadout",
+      "daily_rewards": {},
+      "xp": 0,
+      "season_friend_match_boost": 1,
+      "active_loadout_index": 1
+    }
+  },
+  "commandRevision": 0
+}
