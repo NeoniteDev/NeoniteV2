@@ -7,17 +7,11 @@ module.exports = (app) => {
 	app.post('/account/api/oauth/token', async (req, res) => {
 		var displayName = "";
 		var accountId = "";
-		
 	
-                if (req.body.username) displayName, accountId = req.body.username.split("@")[0]
-		else if (req.body.exchange_code){try {
-			displayName = Buffer.from(req.body.exchange_code, 'base64').toString();
-			accountId = req.body.exchange_code
-			if (!accountId.endsWith('=')) accountId = accountId + '='
-		}catch{displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}`}}
-		else if (req.body.email) displayName, accountId = req.body.email.split("@")[0]
+                if (req.body.username) displayName = req.body.username.split("@")[0]
+		else if (req.body.email) displayName = req.body.email.split("@")[0]
 		else displayName = `InvalidUser${Math.random().toString().substring(15)}`
-		accountId = accountId.replace(/ /g, '_');
+		accountId = displayName.replace(/ /g, '_');
 		if (!accountId.startsWith("InvalidUser")) {
 			var profileId = "athena";
 			var profileData = Profile.readProfile(accountId, profileId);
@@ -45,7 +39,7 @@ module.exports = (app) => {
 		}
 
 		res.json({
-			access_token: crypto.randomBytes(15).toString("hex") + `@${accountId}`, //Make life Easier
+			access_token: crypto.randomBytes(15).toString("hex"),
 			expires_in: 28800,
 			expires_at: "9999-12-31T23:59:59.999Z",
 			token_type: "bearer",
@@ -104,34 +98,11 @@ module.exports = (app) => {
 	//http://localhost:5595/account/api/public/account?accountId=NeoniteBot10&accountId=NeoniteBot11&accountId=NeoniteBot12&accountId=NeoniteBot13&accountId=NeoniteBot14&accountId=NeoniteBot15
 
 	app.get('/account/api/public/account/', (req, res) => {
-		try {
-			var displayName = req.query.accountId ? req.query.accountId.replace(/_/g, ' ') : req.query.accountId
-			if (`${req.query.accountId}`.endsWith('='))
-			{
-				displayName = Buffer.from(req.query.accountId, 'base64').toString();
-			}
-			if (`${req.query.accountId}`.startsWith("NeoniteBot")) { displayName = "NeoniteBot" }
-
 			res.json([{
 				id: req.query.accountId,
-				displayName: displayName,
+				displayName: req.query.accountId.replace(/_/g, ' '),
 				externalAuths: {}
 			}])
-		}
-		catch {
-			let response = []
-			req.query.accountId.forEach(accId => {
-				var dn = accId
-				if (`${accId}`.startsWith("NeoniteBot")) { dn = "NeoniteBot" }
-				response.push({
-					id: accId,
-					displayName: dn,
-					externalAuths: {}
-				})
-			})
-			res.json(response)
-		}
-
 	});
 
 	// device auth
