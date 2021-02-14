@@ -14,7 +14,7 @@ module.exports = (app) => {
 			"message": "GO AWAY KID",
 			"maintenanceUri": null,
 			"allowedActions": ["PLAY", "DOWNLOAD"],
-			"banned": req.headers.authorization.split('@')[1] == "NeoniteBot"
+			"banned": false
 		}]);
 	});
 
@@ -23,73 +23,9 @@ module.exports = (app) => {
 		res.json([])
 	});
 
-	app.get('/api/v1/search', (req, res) => {
-		setTimeout(() => {
-			let result = []
-			let count = 0
-			fs.readdirSync(`${__dirname}/../config`).forEach(Username => {
-				if (Username == req.query.prefix)
-				{
-					count = count + 1
-					result.push({
-						"accountId": Username,
-						"matches": [{
-							"value": Username,
-							"platform": "epic"
-						}],
-						"matchType": "exact",
-						"epicMutuals": 0,
-						"sortPosition": count
-					})
-				}
-				else if (Username.startsWith(req.query.prefix) || Username.startsWith(`${req.query.prefix}`.toLowerCase()) || Username.startsWith(`${req.query.prefix}`.toUpperCase()))
-				{
-					count = count + 1
-					result.push({
-						"accountId": Username,
-						"matches": [{
-							"value": Username,
-							"platform": "epic"
-						}],
-						"matchType": "prefix",
-						"epicMutuals": 0,
-						"sortPosition": count
-					})
-				}
-			})
-			res.json(result)	
-		}, 1000);
-		
-	})
-
 	app.get('/api/v1/assets/Fortnite/:version/', (req, res) => {
 		res.json([])
 	});
-
-	app.get('/friends/api/v1/:accountId/summary', (req, res) => {
-		res.json({
-            "friends": [{
-                "accountId": "NeoniteBot",
-                "groups": [],
-                "mutual": 0,
-                "alias": "",
-                "note": "",
-                "favorite": true,
-                "created": "2021-01-17T16:42:04.125Z"
-            }],
-            "incoming": [],
-            "suggested": [],
-            "blocklist": [],
-            "settings": {
-                "acceptInvites": "public"
-            },
-            "limitsReached": {
-                "incoming": false,
-                "outgoing": false,
-                "accepted": false
-            }
-        })
-	})
 
 
 	//version check
