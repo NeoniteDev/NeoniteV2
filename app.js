@@ -9,18 +9,8 @@ const port = 5595;
 const version = "2.5.0";
 const URL_LOGGING = false;
 
-// Lobby bot by: @TheBeatYT_evil
 (function () {
 	"use strict";
-
-	try {
-		global.BotConfig = JSON.parse(fs.readFileSync('./config/NeoniteBot/config.json', 'utf8', function (err, data) {
-			if (err) global.BotConfig = false;
-		}))
-	}
-	catch {
-		global.BotConfig = false
-	}
 
 	String.prototype.format = function () {
 		const args = arguments[0] instanceof Array ? arguments[0] : arguments;
@@ -28,22 +18,6 @@ const URL_LOGGING = false;
 			return typeof args[number] != "undefined" ? args[number] : match;
 		});
 	};
-
-	if (!BotConfig) {
-		fs.mkdirSync(`./config/NeoniteBot/`, { recursive: true });
-		fs.writeFile(`./config/NeoniteBot/config.json`, JSON.stringify({
-			skin: 'CID_286_Athena_Commando_F_NeonCat',
-			emote: null
-		}), function (err, data) {
-			if (err) global.BotConfig = false;
-		})
-		global.BotConfig = {
-			skin: 'CID_286_Athena_Commando_F_NeonCat',
-			emote: null
-		}
-	}
-
-	require('./xmpp')
 
 	const app = express();
 
@@ -59,8 +33,6 @@ const URL_LOGGING = false;
 		})
 
 	app.use("/", express.static("public"));
-        //For lobby bot
-	global.xmppClients = {}
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
 		require(`${__dirname}/managers/${route}`)(app, port);
