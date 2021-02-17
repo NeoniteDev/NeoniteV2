@@ -42,9 +42,7 @@
 
 Neonite V2 is a popular private server written in JavaScript, aimed to provide a fun yet easy-to-use program for people wanting to customize their Fortnite experience.
 
-[![Neonite++ Demo][product-screenshot]]()
-
-_This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._
+_This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._ <br>
 _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for Neonite V2 has been stripped. If you want to use skins, please purchase them on Fortnite._
 
 
@@ -78,7 +76,7 @@ Project Link: [https://github.com/NeoniteDev/NeonitePlusPlus](https://github.com
 ## Credits
 
 ### Used APIs
-• [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://github.com/NotOfficer)
+• [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://github.com/NotOfficer) <br>
 • [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://github.com/VastBlast)
 
 ### Contributors
