@@ -51,8 +51,8 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 
 
 <!-- INSTALL -->
-## Installation [![Run on Repl.it](https://repl.it/badge/github/kem0o/neonitev2)](https://repl.it/github/kem0o/neonitev2)	
-
+## Installation
+[![Run on Repl.it](https://repl.it/badge/github/kem0o/neonitev2)](https://repl.it/github/kem0o/neonitev2)
 
 - Install the latest version of **[Node.JS](https://nodejs.org/en/download/current/)**.
 - Download **[Neonite](https://github.com/NeoniteDev/NeoniteV2/releases)**.
