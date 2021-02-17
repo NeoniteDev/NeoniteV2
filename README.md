@@ -28,7 +28,7 @@
 ## Table of Contents
 
 <ol>
-    <li><a href="#about-neonite">About Neonite V2</a></li>
+    <li><a href="#about-neonite-v2">About Neonite V2</a></li>
 	<li><a href="#faqs">FAQs</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#credits">Credits</a></li>
