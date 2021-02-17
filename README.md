@@ -1,59 +1,99 @@
-# Neonite V2
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-Fortnite lobby emulator with much customization options
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <p align="center">
+    A Fortnite private server / lobby emulator allowing you to design your dream Fortnite experience.
+	<br />
+	<a href="https://github.com/NeoniteDev/NeoniteV2/releases">Downloads »</a>
+    <br />
+    <br />
+    <a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a>
+    ·
+    <a href="https://dsc.gg/neonite">Discord Server</a>
+  </p>
+</p>
 
-### In acquiescence to Epic Games Inc.: <br> We are not providing any/support in-game cosmetics or a way to have them, if you want skins go buy them on the real game.
 
-## Installation [![Run on Repl.it](https://repl.it/badge/github/kem0o/neonitev2)](https://repl.it/github/kem0o/neonitev2)
 
-1. Install the latest version of **[Node.JS](https://nodejs.org/en/download/current/)**.
-2. Download **[Neonite](https://github.com/NeoniteDev/neonitev2/archive/fdev.zip)**.
-3. Extract the zip.
-4. Open `install.bat` and wait for it to install. (Only required on the first run!)
-5. Open `run.bat`, it should say `Neonite v2.0.0 is listening on port 5595!` (DON'T CLOSE THIS WHILE USING NEONITE!)
-6. Download the **[launcher](https://github.com/kem0o/neonitev2/raw/fdev/public/launcher.zip)**.
-7. Extract the launcher
-8. Open `FortniteLauncher.exe`
-9. Type in your username(Don't use any kind of special characters including spaces!)
-10. Click launch
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
+<ol>
+    <li><a href="#about-neonite">About Neonite V2</a></li>
+	<li><a href="#faqs">FAQs</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#credits">Credits</a></li>
+    <li><a href="#license">License</a></li>
+</ol>
+
+
+
+<!-- ABOUT NEONITEV2 -->
+## About Neonite V2
+
+Neonite V2 is a popular private server written in JavaScript, aimed to provide a fun yet easy-to-use program for people wanting to customize their Fortnite experience.
+
+[![Neonite++ Demo][product-screenshot]]()
+
+_This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._
+_In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for Neonite V2 has been stripped. If you want to use skins, please purchase them on Fortnite._
+
+
+
+<!-- FAQs -->
 ## FAQs
-#### • The localhosted dashboard can be found [here](http://localhost:5595)
-#### • The standard port is `5595`
-#### • [NinjaRipper for Neonite](https://github.com/kem0o/FNinjaRipper)
+
+ * How do I access Neonite V2?
+   * You can access Neonite V2's dashboard at http://localhost:5595/.
+ * Can I go in-game?
+   * No, however, Neonite++ development is currently underway, and will be released soon.
+ * Will I get banned?
+   * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
+ * How do I play with my friends?
+   * Neonite V2 is a locally-hosted project, meaning it has no party or friends functionality.
 
 
-#### • Join the official [Neonite Discord Server](https://discord.gg/PNdHGpNPcQ) for support.
-#### • You can't go in games!
-#### • You can't get banned!
-#### • We do not provide any support for older versions of the game!
-#### • You can't join other peoples lobbies
 
+<!-- CONTACT -->
+## Contact
+
+Email: <a href="mailto:contact@neonite.dev">contact@neonite.dev</a>
+
+Discord Server: [Neonite](https://dsc.gg/neonite)
+
+Project Link: [https://github.com/NeoniteDev/NeonitePlusPlus](https://github.com/NeoniteDev/NeonitePlusPlus)
+
+
+
+<!-- CREDITS -->
+## Credits
 
 ### Used APIs
 • [Fortnite-API](https://fortnite-api.com/) <img src="https://fortnite-api.com/assets/img/logo.png" width="30" title="Fortnite-API"> Made by [Officer](https://github.com/NotOfficer)
-
 • [NiteStats API](https://nitestats.com/) <img src="https://api.nitestats.com/v1/static/ns-logo.png" width="30" title="Fortnite-API"> Made by [VastBlast](https://github.com/VastBlast)
 
 ### Contributors
 
 | Contributor | Helped with |
 | ----------- | ----------- |
-| [Amrsatrio](https://github.com/Amrsatrio)  | Profile.js and much api reversing |
-| [Beat-YT](https://github.com/Beat-YT)   | Pull Requests and the Lobby Bot |
-| [Kyiro](https://github.com/Kyiro)   | Pull Requests |
+| [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
+| [Beat-YT](https://github.com/Beat-YT)   | Pull requests and the Lobby Bot |
+| [Kyiro](https://github.com/Kyiro)   | Pull requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
 
-## Community Support
-<a href="https://discord.gg/pUKacSd"><img src="https://discordapp.com/api/guilds/703690937074974761/widget.png?style=banner2"></a>
-
-## Lobby bot
-• [List of commands](https://github.com/Beat-YT/Neonite-Bot-Commands/blob/main/README.md)
 
 
+<!-- LICENSE -->
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
-
-We provide support on this project within our official discord community server.
