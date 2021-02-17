@@ -1,3 +1,5 @@
+
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -29,6 +31,7 @@
 
 <ol>
     <li><a href="#about-neonite-v2">About Neonite V2</a></li>
+    <li><a href="#installation">Installation</a></li>
 	<li><a href="#faqs">FAQs</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#credits">Credits</a></li>
@@ -44,6 +47,22 @@ Neonite V2 is a popular private server written in JavaScript, aimed to provide a
 
 _This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._ <br>
 _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for Neonite V2 has been stripped. If you want to use skins, please purchase them on Fortnite._
+
+
+
+<!-- INSTALL -->
+## Installation [![Run on Repl.it](https://repl.it/badge/github/kem0o/neonitev2)](https://repl.it/github/kem0o/neonitev2)	
+
+
+- Install the latest version of **[Node.JS](https://nodejs.org/en/download/current/)**.
+- Download **[Neonite](https://github.com/NeoniteDev/NeoniteV2/releases)**.
+- Extract the source code.
+- Open `install.bat` and wait for it to install. (only required on the first run!)	
+- Open `run.bat`, it should say `Neonite v2.0.0 is listening on port 5595!` (DON'T CLOSE THIS WHILE USING NEONITE!)	
+- Download the **[launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/launcher.zip?raw=true)**.	
+- Extract the launcher and open `FortniteLauncher.exe`.
+- Type in your username (don't use any special characters or spaces.)	
+- Click launch, and enjoy!
 
 
 
