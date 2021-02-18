@@ -24,7 +24,14 @@ module.exports = (app) => {
 	});
 
 	app.get('/api/v1/assets/Fortnite/:version/', (req, res) => {
-		res.json([])
+		res.json({
+		    "FortPlaylistAthena": {
+			"meta": {
+			    "promotion": 0
+			},
+			"assets": {}
+		    }
+		})
 	});
 
 
