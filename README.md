@@ -87,9 +87,6 @@ Email: <a href="mailto:contact@neonite.dev">contact@neonite.dev</a>
 
 Discord Server: [Neonite](https://dsc.gg/neonite)
 
-Project Link: [https://github.com/NeoniteDev/NeonitePlusPlus](https://github.com/NeoniteDev/NeonitePlusPlus)
-
-
 
 <!-- CREDITS -->
 ## Credits
