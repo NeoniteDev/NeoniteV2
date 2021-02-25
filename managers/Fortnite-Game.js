@@ -1401,7 +1401,7 @@ module.exports = (app, port) => {
                         "videoFullscreen": false,
                         "spotlight": false,
                         "websiteURL": "https://discord.gg/DJ6VUmD",
-                        "websiteButtonTex" : "Join our discord"
+                        "websiteButtonText" : "Join our discord"
                     }
                 ],
                 },
@@ -1436,7 +1436,7 @@ module.exports = (app, port) => {
                         "videoFullscreen": false,
                         "spotlight": false,
                         "websiteURL": "https://discord.gg/DJ6VUmD",
-                        "websiteButtonTex" : "Join our discord"
+                        "websiteButtonText" : "Join our discord"
                     }
                 ],
                 },
