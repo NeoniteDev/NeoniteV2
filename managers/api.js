@@ -293,7 +293,6 @@ module.exports = (app) => {
 		let engine = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultEngine.ini'));
 		let runtime = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultRuntimeOptions.ini'));
 		let game = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultGame.ini'));
-		let Setting = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultGameUserSettings.ini'));
 		res.json([{
 			"uniqueFilename": "3460cbe1c57d4a838ace32951a4d7171",
 			"filename": "DefaultEngine.ini",
