@@ -5,9 +5,13 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
-const port = 5595;
-const version = "2.5.0";
-const URL_LOGGING = false;
+const version = "2.0.1";
+const URL_LOGGING = true;
+
+global.port = 5595;
+
+global.xmppClients = [];
+
 
 (function () {
 	"use strict";
@@ -19,7 +23,12 @@ const URL_LOGGING = false;
 		});
 	};
 
+
+	require('./xmpp')
+
 	const app = express();
+	//var expressWs = require('express-ws')(app);
+
 
 
 	app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,7 +37,6 @@ const URL_LOGGING = false;
 
 	if (URL_LOGGING)
 		app.use((req, res, next) => {
-			console.log(req.url)
 			next()
 		})
 
@@ -59,6 +67,7 @@ const URL_LOGGING = false;
 	app.listen(port, () => {
 		console.log(`Neonite v${version} is listening on port ${port}!`);
 	});
+
 
 
 	module.exports = app;
