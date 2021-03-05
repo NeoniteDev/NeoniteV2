@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 const fs = require('fs');
+const uuid = require('uuid')
 const Profile = require("../profile");
 
 module.exports = (app) => {
@@ -7,11 +8,21 @@ module.exports = (app) => {
 	app.post('/account/api/oauth/token', async (req, res) => {
 		var displayName = "";
 		var accountId = "";
-	
-                if (req.body.username) displayName = req.body.username.split("@")[0]
-		else if (req.body.email) displayName = req.body.email.split("@")[0]
-		else displayName = `InvalidUser${Math.random().toString().substring(15)}`
-		accountId = displayName.replace(/ /g, '_');
+		if (req.body.username) {
+			accountId = req.body.username.split("@")[0] || req.body.username;
+			displayName = req.body.username.split("@")[0] || req.body.username;
+		}
+
+		else if (req.body.exchange_code) {
+			try {
+				displayName = Buffer.from(req.body.exchange_code, 'base64').toString();
+				accountId = req.body.exchange_code
+				if (!accountId.endsWith('=')) accountId = accountId + '='
+			} catch { displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}` }
+		}
+		else if (req.body.email) displayName, accountId = req.body.email.split("@")[0]
+		else displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}`
+		accountId = accountId.replace(/ /g, '_');
 		if (!accountId.startsWith("InvalidUser")) {
 			var profileId = "athena";
 			var profileData = Profile.readProfile(accountId, profileId);
@@ -39,7 +50,7 @@ module.exports = (app) => {
 		}
 
 		res.json({
-			access_token: crypto.randomBytes(15).toString("hex"),
+			access_token: uuid.v4().replace(/-/g, ""),
 			expires_in: 28800,
 			expires_at: "9999-12-31T23:59:59.999Z",
 			token_type: "bearer",
@@ -95,14 +106,35 @@ module.exports = (app) => {
 			externalAuths: {}
 		})
 	});
-	//http://localhost:5595/account/api/public/account?accountId=NeoniteBot10&accountId=NeoniteBot11&accountId=NeoniteBot12&accountId=NeoniteBot13&accountId=NeoniteBot14&accountId=NeoniteBot15
 
+	app.get("/account/api/public/account/displayName/:displayName", (req, res) => {
+		res.json({
+			"id": req.params.displayName,
+			"displayName": req.params.displayName,
+			"externalAuths": {}
+		})
+	})
+
+	
 	app.get('/account/api/public/account/', (req, res) => {
+		try {
+			var response = []
+			req.query.accountId.forEach(accId => {
+				response.push([{
+					id: accId,
+					displayName: accId.startsWith("NeoniteBot") ? "NeoniteBot" : accId,
+					externalAuths: {}
+				}])
+			})
+			res.json(response)
+		}
+		catch {
 			res.json([{
 				id: req.query.accountId,
-				displayName: req.query.accountId.replace(/_/g, ' '),
+				displayName: req.query.accountId.startsWith("NeoniteBot") ? "NeoniteBot" : req.query.accountId,
 				externalAuths: {}
 			}])
+		}
 	});
 
 	// device auth
