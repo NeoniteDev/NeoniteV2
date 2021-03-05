@@ -33,6 +33,11 @@ module.exports = (app) => {
 		    }
 		})
 	});
+	
+	app.post("/fortnite/api/game/v2/profileToken/verify/*", (req, res) => { res.status(204).end() })
+
+	
+	
 
 
 	//version check
