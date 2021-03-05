@@ -5,7 +5,7 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
-const version = "2.0.1";
+const version = "2.6.0";
 const URL_LOGGING = true;
 
 global.port = 5595;
