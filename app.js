@@ -69,7 +69,7 @@ global.xmppClients = [];
 
 	app.listen(config.port || 5595, () => {
 		NeoLog.Log(`v${version} is listening on port ` + config.port || 5595 + "!");
-		NeoLog.Log(`Lobby bot server start on port ` + config.LobbyBotPort || 80)
+		NeoLog.Log(`Lobby bot server started on port ` + config.LobbyBotPort || 80)
 	});
 
 	module.exports = app;
