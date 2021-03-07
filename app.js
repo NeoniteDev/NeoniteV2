@@ -8,9 +8,10 @@ const { Console } = require("console");
 const version = "2.6.0";
 const URL_LOGGING = true;
 const NeoLog = require('./structs/NeoLog')
-const config = require("./config.json")
 
 global.xmppClients = [];
+global.port = 5595
+global.LobbyBotPort = 80
 
 (function () {
 	"use strict";
@@ -68,8 +69,8 @@ global.xmppClients = [];
 	});
 
 	app.listen(config.port || 5595, () => {
-		NeoLog.Log(`v${version} is listening on port ` + config.port || 5595 + "!");
-		NeoLog.Log(`Lobby bot server started on port ` + config.LobbyBotPort || 80)
+		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
+		NeoLog.Log(`Lobby bot server started on port ` + LobbyBotPort || 80)
 	});
 
 	module.exports = app;
