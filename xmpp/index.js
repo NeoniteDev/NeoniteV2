@@ -3,7 +3,7 @@ const builder = require("xmlbuilder")
 const WebSocket = require('ws');
 const uuid = require("uuid")
 var xml2json = require('xml2json');
-
+const config = require("../config.json")
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
@@ -12,13 +12,13 @@ function XmppPrint(msg, type) {
     console.log(`[\x1b[33mXMPP\x1b[0m]: ${msg}`)
 }
 
-if (port == 80) {
+if (config.port == 80) {
     return XmppPrint("Cannot Listen on Port 80 since its the same port as the Server. Please change it or the bot won't Work", 1)
 }
 var clients = []
 
 
-const wss = new WebSocket.Server({ port: process.env.xmppPort || 80 });
+const wss = new WebSocket.Server({ port: config.LobbyBotPort || 80 });
 
 wss.on('listening', ws => {
     //XmppPrint(`Listening on Port ${wss.options.port}`)

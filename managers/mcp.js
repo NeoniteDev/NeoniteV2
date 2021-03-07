@@ -258,6 +258,69 @@ module.exports = (app) => {
 				break;
 			}
 
+			case "EquipBattleRoyaleCustomization":
+				var slot, itemToSlot
+
+				switch (req.body.slotName) {
+					case "Character":
+						slot = "favorite_character"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Backpack":
+						slot = "favorite_backpack"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Pickaxe":
+						slot = "favorite_pickaxe"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Glider":
+						slot = "favorite_glider"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "SkyDiveContrail":
+						slot = "favorite_skydivecontrail"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "MusicPack":
+						slot = "favorite_musicpack"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "LoadingScreen":
+						slot = "favorite_loadingscreen"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Dance":
+					case "ItemWrap":
+						var bIsDance = req.body.slotName == "Dance";
+						slot = bIsDance ? "favorite_dance" : "favorite_itemwraps";
+						var arr = profileData.stats.attributes[statName] || [];
+						if (req.body.indexWithinSlot == -1) {
+							// handle wrap "Apply To All"
+							arr = [];
+
+							for (var i = 0; i < (bIsDance ? 6 : 7); ++i) {
+								arr[i] = req.body.itemToSlot;
+							}
+						} else {
+							arr[req.body.indexWithinSlot || 0] = req.body.itemToSlot;
+						}
+
+						for (var i = 0; i < arr.length; ++i) {
+							if (arr[i] == null) {
+								arr[i] = "";
+							}
+						}
+
+						itemToSlot = arr;
+						break
+				}
+
+				if (slot != null && itemToSlot != null) {
+					Profile.modifyStat(profileData, slot, itemToSlot, response.profileChanges);
+				}
+				break
+
 			case "SetItemFavoriteStatus":
 				checkValidProfileID("campaign", "athena");
 
