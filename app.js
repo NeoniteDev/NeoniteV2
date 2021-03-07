@@ -61,7 +61,6 @@ global.LobbyBotPort = 80;
 
 	app.listen(port, () => {
 		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
-		NeoLog.Log(`Lobby bot server started on port ` + LobbyBotPort || 80)
 	});
 
 	module.exports = app;
