@@ -21,7 +21,7 @@ var clients = []
 const wss = new WebSocket.Server({ port: process.env.xmppPort || 80 });
 
 wss.on('listening', ws => {
-    XmppPrint(`Listening on Port ${wss.options.port}`)
+    //XmppPrint(`Listening on Port ${wss.options.port}`)
 })
 
 wss.on("connection", ws => {
