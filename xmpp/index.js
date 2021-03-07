@@ -20,7 +20,7 @@ var clients = []
 const wss = new WebSocket.Server({ port: LobbyBotPort || 80 });
 
 wss.on('listening', ws => {
-    //XmppPrint(`Listening on Port ${wss.options.port}`)
+    XmppPrint(`Listening on Port ${wss.options.port}`)
 })
 
 wss.on("connection", ws => {
@@ -35,11 +35,6 @@ wss.on("connection", ws => {
 
     var BotJid = `NeoniteBot@prod.ol.epicgames.com/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
 
-    //SendMessage("pogu")
-
-    /*function Sendmessage(body) {
-        
-    }*/
     ws.on('message', (msg) => {
         //console.log(message)
         var doc = xmlparser(msg);
