@@ -76,6 +76,8 @@ module.exports = (app) => {
 		res.json([])
 	});
 
+	app.get("/fortnite/api/game/v2/world/info", (req, res) => res.json({}))
+
 	app.get("/friends/api/v1/*/blocklist", (req, res) => { res.json([]) })
 
 	app.get("/eulatracking/api/public/agreements/fn/account/*", (req, res) => { res.status(204).end() })
@@ -247,7 +249,22 @@ module.exports = (app) => {
 
 	//friends list
 	app.get('/friends/api/public/friends/:accountId', (req, res) => {
-		res.json([]);
+		res.json([
+			{
+				accountId: 'NeoniteBot',
+				status: 'ACCEPTED',
+				direction: 'INBOUND',
+				created: '2018-12-06T04:46:01.296Z',
+				favorite: false
+			},
+			{
+				accountId: req.params.accountId,
+				status: 'ACCEPTED',
+				direction: 'INBOUND',
+				created: '2018-12-06T04:46:01.296Z',
+				favorite: false
+			}
+		]);
 	});
 
 	//datarouter

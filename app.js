@@ -8,10 +8,9 @@ const { Console } = require("console");
 const version = "2.6.0";
 const NeoLog = require('./structs/NeoLog')
 
-global.port = 5595;
-
 global.xmppClients = [];
-
+global.port = 5595
+global.LobbyBotPort = 80
 
 (function () {
 	"use strict";
@@ -35,11 +34,15 @@ global.xmppClients = [];
 	app.use("/", express.static("public"));
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
-		require(`${__dirname}/managers/${route}`)(app, port);
+		require(`${__dirname}/managers/${route}`)(app, config.port);
 	})
 
 	app.use((req, res, next) => {
-		next(new ApiException(errors.com.epicgames.common.not_found));
+		if (req.headers["user-agent"].includes("Mozilla")) {
+
+		} else {
+			next(new ApiException(errors.com.epicgames.common.not_found));
+		}
 	})
 
 	app.use((err, req, res, next) => {
@@ -56,9 +59,9 @@ global.xmppClients = [];
 		error.apply(res);
 	});
 
-	app.listen(port, () => {
-		NeoLog.Log(`v${version} is listening on port ${port}!`);
-		NeoLog.Log(`Lobby bot server start on port 443`)
+	app.listen(config.port || 5595, () => {
+		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
+		NeoLog.Log(`Lobby bot server started on port ` + LobbyBotPort || 80)
 	});
 
 	module.exports = app;

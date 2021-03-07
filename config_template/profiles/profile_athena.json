@@ -127,7 +127,23 @@
       "daily_rewards": {},
       "xp": 0,
       "season_friend_match_boost": 1,
-      "active_loadout_index": 1
+      "active_loadout_index": 1,
+      "favorite_musicpack": "",
+      "favorite_glider": "",
+      "favorite_pickaxe": "",
+      "favorite_skydivecontrail": "",
+      "favorite_backpack": "",
+      "favorite_dance": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "favorite_itemwraps": [],
+      "favorite_character": "",
+      "favorite_loadingscreen": ""
     }
   },
   "commandRevision": 0

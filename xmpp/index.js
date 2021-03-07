@@ -3,7 +3,7 @@ const builder = require("xmlbuilder")
 const WebSocket = require('ws');
 const uuid = require("uuid")
 var xml2json = require('xml2json');
-
+const config = require("../config.json")
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
@@ -18,7 +18,7 @@ if (port == 80) {
 var clients = []
 
 
-const wss = new WebSocket.Server({ port: process.env.xmppPort || 80 });
+const wss = new WebSocket.Server({ port: LobbyBotPort || 80 });
 
 wss.on('listening', ws => {
     //XmppPrint(`Listening on Port ${wss.options.port}`)

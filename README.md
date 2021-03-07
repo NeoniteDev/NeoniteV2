@@ -58,7 +58,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 - Download **[Neonite](https://github.com/NeoniteDev/NeoniteV2/releases)**.
 - Extract the source code.
 - Open `install.bat` and wait for it to install. (only required on the first run!)	
-- Open `run.bat`, it should say `Neonite v2.0.0 is listening on port 5595!` (DON'T CLOSE THIS WHILE USING NEONITE!)	
+- Open `run.bat`, it should say `[Neonite]: v2.6.0 is listening on port 5595!` (DON'T CLOSE THIS WHILE USING NEONITE!)	
 - Download the **[launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/launcher.zip?raw=true)**.	
 - Extract the launcher and open `FortniteLauncher.exe`.
 - Type in your username (don't use any special characters or spaces.)	
@@ -104,6 +104,7 @@ Discord Server: [Neonite](https://dsc.gg/neonite)
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
+| [Jacobb](https://github.com/Jacobb626)   | Pull requests |
 
 
 
