@@ -6,7 +6,6 @@ const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
 const version = "2.6.0";
-const URL_LOGGING = true;
 const NeoLog = require('./structs/NeoLog')
 
 global.port = 5595;
@@ -28,18 +27,10 @@ global.xmppClients = [];
 	require('./xmpp')
 
 	const app = express();
-	//var expressWs = require('express-ws')(app);
-
-
 
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json());
 	app.set("etag", false);
-
-	if (URL_LOGGING)
-		app.use((req, res, next) => {
-			next()
-		})
 
 	app.use("/", express.static("public"));
 
