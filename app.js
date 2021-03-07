@@ -7,6 +7,7 @@ const { ApiException } = errors;
 const { Console } = require("console");
 const version = "2.6.0";
 const URL_LOGGING = true;
+const NeoLog = require('./structs/NeoLog')
 
 global.port = 5595;
 
@@ -65,10 +66,9 @@ global.xmppClients = [];
 	});
 
 	app.listen(port, () => {
-		console.log(`Neonite v${version} is listening on port ${port}!`);
+		NeoLog.Log(` v${version} is listening on port ${port}!`);
+		NeoLog.Log(` Lobby bot server start on port 443`)
 	});
-
-
 
 	module.exports = app;
 }());
