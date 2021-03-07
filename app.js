@@ -34,7 +34,7 @@ global.LobbyBotPort = 80
 	app.use("/", express.static("public"));
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
-		require(`${__dirname}/managers/${route}`)(app, config.port);
+		require(`${__dirname}/managers/${route}`)(app, port);
 	})
 
 	app.use((req, res, next) => {
@@ -59,7 +59,7 @@ global.LobbyBotPort = 80
 		error.apply(res);
 	});
 
-	app.listen(config.port || 5595, () => {
+	app.listen(port, () => {
 		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
 		NeoLog.Log(`Lobby bot server started on port ` + LobbyBotPort || 80)
 	});
