@@ -9,8 +9,8 @@ const version = "2.6.0";
 const NeoLog = require('./structs/NeoLog')
 
 global.xmppClients = [];
-global.port = 5595
-global.LobbyBotPort = 80
+global.port = 5595;
+global.LobbyBotPort = 80;
 
 (function () {
 	"use strict";
