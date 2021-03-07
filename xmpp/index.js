@@ -3,7 +3,6 @@ const builder = require("xmlbuilder")
 const WebSocket = require('ws');
 const uuid = require("uuid")
 var xml2json = require('xml2json');
-const config = require("../config.json")
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
