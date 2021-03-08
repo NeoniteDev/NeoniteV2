@@ -34,6 +34,13 @@ wss.on("connection", ws => {
     var AuthType
 
     var BotJid = `NeoniteBot@prod.ol.epicgames.com/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
+    
+    ws.on('close', () => {
+        if (global.xmppClients.find(x => x.Ws == ws))
+        {
+            global.xmppClients.splice(po.findIndex(x => x == po.find(x2 => x2.Ws == ws)))
+        }
+    })
 
     ws.on('message', (msg) => {
         //console.log(message)
