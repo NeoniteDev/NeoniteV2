@@ -38,7 +38,7 @@ wss.on("connection", ws => {
     ws.on('close', () => {
         if (global.xmppClients.find(x => x.Ws == ws))
         {
-            global.xmppClients.splice(po.findIndex(x => x == po.find(x2 => x2.Ws == ws)))
+            global.xmppClients.splice(global.xmppClients.findIndex(x => x == global.xmppClients.find(x2 => x2.Ws == ws)))
         }
     })
 
