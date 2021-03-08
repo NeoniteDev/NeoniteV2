@@ -1,1 +1,2 @@
-start npm start
+node app.js
+cmd /k
