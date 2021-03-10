@@ -3,7 +3,6 @@ const builder = require("xmlbuilder")
 const WebSocket = require('ws');
 const uuid = require("uuid")
 var xml2json = require('xml2json');
-const config = require("../config.json")
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
@@ -21,7 +20,7 @@ var clients = []
 const wss = new WebSocket.Server({ port: LobbyBotPort || 80 });
 
 wss.on('listening', ws => {
-    //XmppPrint(`Listening on Port ${wss.options.port}`)
+    XmppPrint(`Listening on Port ${wss.options.port}`)
 })
 
 wss.on("connection", ws => {
@@ -35,12 +34,14 @@ wss.on("connection", ws => {
     var AuthType
 
     var BotJid = `NeoniteBot@prod.ol.epicgames.com/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
+    
+    ws.on('close', () => {
+        if (global.xmppClients.find(x => x.Ws == ws))
+        {
+            global.xmppClients.splice(global.xmppClients.findIndex(x => x == global.xmppClients.find(x2 => x2.Ws == ws)))
+        }
+    })
 
-    //SendMessage("pogu")
-
-    /*function Sendmessage(body) {
-        
-    }*/
     ws.on('message', (msg) => {
         //console.log(message)
         var doc = xmlparser(msg);

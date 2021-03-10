@@ -5,13 +5,12 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
-const version = "2.6.0";
-const URL_LOGGING = true;
+const version = "2.7.0";
 const NeoLog = require('./structs/NeoLog')
 
 global.xmppClients = [];
-global.port = 5595
-global.LobbyBotPort = 80
+global.port = 5595;
+global.LobbyBotPort = 80;
 
 (function () {
 	"use strict";
@@ -27,23 +26,15 @@ global.LobbyBotPort = 80
 	require('./xmpp')
 
 	const app = express();
-	//var expressWs = require('express-ws')(app);
-
-
 
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json());
 	app.set("etag", false);
 
-	if (URL_LOGGING)
-		app.use((req, res, next) => {
-			next()
-		})
-
 	app.use("/", express.static("public"));
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
-		require(`${__dirname}/managers/${route}`)(app, config.port);
+		require(`${__dirname}/managers/${route}`)(app, port);
 	})
 
 	app.use((req, res, next) => {
@@ -68,9 +59,8 @@ global.LobbyBotPort = 80
 		error.apply(res);
 	});
 
-	app.listen(config.port || 5595, () => {
+	app.listen(port, () => {
 		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
-		NeoLog.Log(`Lobby bot server started on port ` + LobbyBotPort || 80)
 	});
 
 	module.exports = app;
