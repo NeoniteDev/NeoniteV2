@@ -70,7 +70,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
  * How do I access Neonite V2?
    * You can access Neonite V2's dashboard at http://localhost:5595/.
  * Can I go in-game?
-   * No, however, Neonite++ development is currently underway, and will be released soon.
+   * No, however, Neonite++ is available to use for in-game support (Download (in the discord)[https://neonite.dev]).
  * Will I get banned?
    * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
