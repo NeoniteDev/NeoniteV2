@@ -2,55 +2,51 @@ const crypto = require('crypto');
 const fs = require('fs');
 const uuid = require('uuid')
 const Profile = require("../profile");
+const { ApiException } = require('../structs/errors');
+const errors = require("../structs/errors");
 
 module.exports = (app) => {
 	//token
 	app.post('/account/api/oauth/token', async (req, res) => {
 		var displayName = "";
 		var accountId = "";
-		if (req.body.username) {
-			accountId = req.body.username.split("@")[0] || req.body.username;
-			displayName = req.body.username.split("@")[0] || req.body.username;
-		}
+		switch (req.body.grant_type) {
+			case "client_credentials":
+				displayName = null;
+				accountId = null;
+				break;
 
-		else if (req.body.exchange_code) {
-			try {
-				displayName = Buffer.from(req.body.exchange_code, 'base64').toString();
-				accountId = req.body.exchange_code
-				if (!accountId.endsWith('=')) accountId = accountId + '='
-			} catch { displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}` }
-		}
-		else if (req.body.email) displayName, accountId = req.body.email.split("@")[0]
-		else displayName, accountId = `InvalidUser${Math.random().toString().substring(15)}`
-		accountId = accountId.replace(/ /g, '_');
-		if (!accountId.startsWith("InvalidUser")) {
-			var profileId = "athena";
-			var profileData = Profile.readProfile(accountId, profileId);
-
-			if (!profileData) {
-				profileData = Profile.readProfileTemplate(profileId);
-
-				if (!profileData) {
-					throw new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId);
+			case "password":
+				if (!req.body.username) {
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username")
+				}
+				if (req.body.username.includes("@")) {
+					displayName = req.body.username.split("@")[0]
+				}
+				else {
+					displayName = req.body.username;
 				}
 
-				profileData.created = profileData.updated = new Date().toISOString();
-				profileData['_id'] = accountId;
-				profileData.accountId = accountId;
-				//await Profile.updatedCos(profileData);
+				accountId = displayName.replace(/ /g, "_");
+				break;
 
-				try {
-					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
-					Profile.saveProfile(accountId, profileId, profileData);
-				} catch (e) {
-					console.log("Failed creating profile");
-					throw e;
+			case "exchange_code":
+				if (!req.body.exchange_code) {
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
 				}
-			}
+				
+				displayName = req.body.exchange_code;
+				accountId = req.body.exchange_code;
+
+				break;
+		
+			default:
+				throw new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type)
+				break;
 		}
 
 		res.json({
-			access_token: uuid.v4().replace(/-/g, ""),
+			access_token: crypto.randomBytes(16).toString("hex"),
 			expires_in: 28800,
 			expires_at: "9999-12-31T23:59:59.999Z",
 			token_type: "bearer",
