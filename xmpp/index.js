@@ -2,7 +2,6 @@ const xmlparser = require('xml-parser')
 const builder = require("xmlbuilder")
 const WebSocket = require('ws');
 const uuid = require("uuid")
-var xml2json = require('xml2json');
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
@@ -17,13 +16,20 @@ if (port == 80) {
 var clients = []
 
 
-const wss = new WebSocket.Server({ port: LobbyBotPort || 80 });
+const wss = new WebSocket.Server({ port: process.env.xmppPort || 80 });
 
 wss.on('listening', ws => {
     XmppPrint(`Listening on Port ${wss.options.port}`)
 })
 
 wss.on("connection", ws => {
+
+    ws.on('close', () => {
+        if (global.xmppClients.find(x => x.Ws == ws)) {
+            global.xmppClients.splice(global.xmppClients.findIndex(x => x == global.xmppClients.find(x2 => x2.Ws == ws)))
+        }
+    })
+
     XmppPrint("New Connection")
     var resource
     var accountId
@@ -34,14 +40,12 @@ wss.on("connection", ws => {
     var AuthType
 
     var BotJid = `NeoniteBot@prod.ol.epicgames.com/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
-    
-    ws.on('close', () => {
-        if (global.xmppClients.find(x => x.Ws == ws))
-        {
-            global.xmppClients.splice(global.xmppClients.findIndex(x => x == global.xmppClients.find(x2 => x2.Ws == ws)))
-        }
-    })
 
+    //SendMessage("pogu")
+
+    /*function Sendmessage(body) {
+        
+    }*/
     ws.on('message', (msg) => {
         //console.log(message)
         var doc = xmlparser(msg);
@@ -53,6 +57,18 @@ wss.on("connection", ws => {
                 .up()
                 .toString()
             )
+        }
+
+        if (!doc.root) {
+            ws.send(builder.create("stream:error")
+                .att("xmlns:stream", "http://etherx.jabber.org/streams")
+                .ele("not-well-formed")
+                .att("xmlns", "urn:ietf:params:xml:ns:xmpp-streams")
+                .up()
+                .toString()
+            )
+            functions.Close();
+            return
         }
 
         switch (doc.root.name) {
@@ -331,25 +347,8 @@ wss.on("connection", ws => {
                 functions.Close()
                 break;
 
-            default: {
-                var rootName = doc.root.name.replace("stream:", "")
-                var XMLJson = JSON.parse(xml2json.toJson(msg, { reversible: true }));
-                XMLJson[doc.root.name].error =
-                {
-                    type: 'cancel',
-                    code: '501',
-                    'feature-not-implemented': { xmlns: 'urn:ietf:params:xml:ns:xmpp-stanzas' },
-                    text: {
-                        xmlns: 'urn:ietf:params:xml:ns:xmpp-stanzas',
-                        'xml:lang': 'en',
-                        '$t': 'Feature not supported yet.'
-                    }
-                }
-                XMLJson[doc.root.name].type = "error"
-                var xml = xml2json.toXml(JSON.stringify(XMLJson))
-                console.log(xml)
-                ws.send(xml)
-            }
+            default:
+                break;
         }
     })
 
@@ -492,8 +491,36 @@ wss.on("connection", ws => {
                         "Default:MemberSquadAssignmentRequest_j": "{\"MemberSquadAssignmentRequest\":{\"startingAbsoluteIdx\":-1,\"targetAbsoluteIdx\":-1,\"swapTargetMemberId\":\"INVALID\",\"version\":0}}",
                         "Default:VoiceChatStatus_s": "PartyVoice",
                         "Default:SidekickStatus_s": "None",
-                        "Default:AthenaCosmeticLoadout_j": `{\"AthenaCosmeticLoadout\":{\"characterDef\":\"/Game/Athena/Items/Cosmetics/Characters/${cid}.${cid}\",\"characterEKey\":\"\",\"backpackDef\":\"/Game/Athena/Items/Cosmetics/PetCarriers/PetCarrier_012_Drift_Fox.PetCarrier_012_Drift_Fox\",\"backpackEKey\":\"\",\"pickaxeDef\":\"/Game/Athena/Items/Cosmetics/Pickaxes/Pickaxe_ID_288_RebirthMedicFemale.Pickaxe_ID_288_RebirthMedicFemale\",\"pickaxeEKey\":\"\",\"contrailDef\":\"/Game/Athena/Items/Cosmetics/Contrails/Trails_ID_087_TNTina.Trails_ID_087_TNTina\",\"contrailEKey\":\"\",\"scratchpad\":[]}}`,
-                        "Default:AthenaCosmeticLoadoutVariants_j": "{\"AthenaCosmeticLoadoutVariants\":{\"vL\":{\"AthenaPickaxe\":{\"i\":[{\"c\":\"Mesh\",\"v\":\"Stage0\",\"dE\":0}]},\"AthenaCharacter\":{\"i\":[{\"c\":\"Progressive\",\"v\":\"Stage2\",\"dE\":0},{\"c\":\"Material\",\"v\":\"Mat1\",\"dE\":0}]},\"AthenaBackpack\":{\"i\":[{\"c\":\"Material\",\"v\":\"Mat2\",\"dE\":0}]}}}}",
+                        "Default:AthenaCosmeticLoadout_j": JSON.stringify({
+                            "AthenaCosmeticLoadout": {
+                                "characterDef": `/Game/Athena/Items/Cosmetics/Characters/${cid}.${cid}`,
+                                "characterEKey": "",
+                                "backpackDef": "None",
+                                "backpackEKey": "",
+                                "pickaxeDef": "None",
+                                "pickaxeEKey": "",
+                                "contrailDef": "None",
+                                "contrailEKey": "",
+                                "scratchpad": [
+
+                                ]
+                            }
+                        }),
+                        "Default:AthenaCosmeticLoadoutVariants_j": JSON.stringify({
+                            "AthenaCosmeticLoadoutVariants":{
+                               "vL":{
+                                  "AthenaPickaxe":{
+                                     "i":[]
+                                  },
+                                  "AthenaCharacter":{
+                                     "i":[]
+                                  },
+                                  "AthenaBackpack":{
+                                     "i":[]
+                                  }
+                               }
+                            }
+                         }),
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
                         "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
@@ -513,6 +540,7 @@ wss.on("connection", ws => {
 })
 
 wss.on("error", error => {
+
 })
 
 
