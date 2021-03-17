@@ -5,7 +5,7 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const { Console } = require("console");
-const version = "2.7.1";
+const version = "2.7.2";
 const NeoLog = require('./structs/NeoLog')
 
 global.xmppClients = [];
