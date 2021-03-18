@@ -18,7 +18,7 @@ module.exports = (app) => {
 
 			case "password":
 				if (!req.body.username) {
-					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username")
+					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username"))
 				}
 				if (req.body.username.includes("@")) {
 					displayName = req.body.username.split("@")[0]
