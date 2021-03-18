@@ -7,7 +7,7 @@ const errors = require("../structs/errors");
 
 module.exports = (app) => {
 	//token
-	app.post('/account/api/oauth/token', async (req, res) => {
+	app.post('/account/api/oauth/token', async (req, res, next) => {
 		var displayName = "";
 		var accountId = "";
 		switch (req.body.grant_type) {
@@ -32,7 +32,7 @@ module.exports = (app) => {
 
 			case "exchange_code":
 				if (!req.body.exchange_code) {
-					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
+					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code"))
 				}
 				
 				displayName = req.body.exchange_code;
@@ -41,7 +41,7 @@ module.exports = (app) => {
 				break;
 		
 			default:
-				throw new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type)
+				return next(new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type))
 				break;
 		}
 
