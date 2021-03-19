@@ -157,7 +157,7 @@ wss.on("connection", ws => {
                                 Ws: ws,
                                 uuid: UUID,
                                 Settings: {
-                                    bCopyEmote: false,
+                                    bCopyEmote: true,
                                     botNumber: 0
                                 },
                                 functions: functions
@@ -207,7 +207,7 @@ wss.on("connection", ws => {
                             Ws: ws,
                             uuid: UUID,
                             Settings: {
-                                bCopyEmote: false,
+                                bCopyEmote: true,
                                 botNumber: 0
                             },
                             functions: functions
