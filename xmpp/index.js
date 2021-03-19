@@ -5,9 +5,9 @@ const uuid = require("uuid")
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
-        return console.error(`[\x1b[33mXMPP\x1b[0m] Error: ${msg}\n`)
+        return console.error(`[\x1b[33;1mXMPP\x1b[0m] Error: ${msg}\n`)
     }
-    console.log(`[\x1b[33mXMPP\x1b[0m]: ${msg}`)
+    console.log(`[\x1b[33;1mXMPP\x1b[0m]: ${msg}`)
 }
 
 if (port == 80) {
