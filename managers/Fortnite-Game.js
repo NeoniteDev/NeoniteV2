@@ -58,6 +58,7 @@ module.exports = (app, port) => {
                     "_locale": "en-US"
                 },
                 "playlistinformation": response.data.playlistinformation,
+                "dynamicbackgrounds": response.data.dynamicbackgrounds,
                 "shopSections": response.data.shopSections,
                 "battleroyalenewsv2": {
                     "news": {
