@@ -8,7 +8,7 @@ module.exports = (app) => {
             season = req.headers["user-agent"].split("-")[1].split(".")[0]
         } catch {
             //idk why i did ?? but sure
-            season = 1 ?? 2
+            season = 1
         }
 
         res.json({
