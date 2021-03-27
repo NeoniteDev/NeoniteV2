@@ -62,7 +62,7 @@ global.LobbyBotPort = 80;
 	app.listen(port, () => {
 		if (process.env.testing == "yes")
 		{
-			NeoLog.Log("Sucessfully passed Github Tedt")
+			NeoLog.Log("Sucessfully passed Github Test")
 			process.exit(0)
 		}
 		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
