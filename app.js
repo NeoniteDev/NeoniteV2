@@ -60,11 +60,12 @@ global.LobbyBotPort = 80;
 	});
 
 	app.listen(port, () => {
-		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
 		if (process.env.testing == "yes")
 		{
+			NeoLog.Log("Sucessfully passed Github Tedt")
 			process.exit(0)
 		}
+		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
 	});
 
 	module.exports = app;
