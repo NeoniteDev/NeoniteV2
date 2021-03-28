@@ -97,8 +97,9 @@ Discord Server: [Neonite](https://dsc.gg/neonite)
 
 | Contributor | Helped with |
 | ----------- | ----------- |
+| [Kemo](https://github.com/kem0o)  | Original creator and maintainer |
+| [Beat-YT](https://github.com/Beat-YT)   | Current maintainer |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
-| [Beat-YT](https://github.com/Beat-YT)   | Pull requests and the Lobby Bot |
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
