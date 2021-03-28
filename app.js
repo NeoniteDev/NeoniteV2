@@ -60,9 +60,12 @@ global.LobbyBotPort = 80;
 	});
 
 	app.listen(port, () => {
-		if (process.env.testing == "yes")
+		if (process.argv.includes("--test"))
 		{
-			NeoLog.Log("Sucessfully passed Github Test")
+			if (process.env.testing == "yes") {
+				NeoLog.Log("Starting Github Test");
+			}
+			require(`${__dirname}/.github/test/testing.js`)(app);
 			process.exit(0)
 		}
 		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
