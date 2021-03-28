@@ -8,8 +8,13 @@ Array.prototype.insert = function ( index, item ) {
     this.splice( index, 0, item );
 };
 
+const express = require("express");
+/**
+ * 
+ * @param {express.Express} app 
+ */
 module.exports = (app) => {
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', function (req, res) {
+	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', function (req, res, next) {
 		res.set("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 
@@ -20,7 +25,7 @@ module.exports = (app) => {
 				profileData = Profile.readProfileTemplate(profileId);
 
 				if (!profileData) {
-					throw new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId);
+					throw next(new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId));
 				}
 
 				profileData.created = profileData.updated = new Date().toISOString();
@@ -55,7 +60,7 @@ module.exports = (app) => {
 		var profileId = req.query.profileId || "common_core";
 		const { profileData, response } = getOrCreateProfile(profileId);
 		const { profileChanges } = response;
-		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, ...validProfileIds);
+		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds);
 
 		//profile commands
 		switch (command) {
@@ -92,7 +97,7 @@ module.exports = (app) => {
 				}
 
 				if (catalogEntryToPurchase == null) {
-					throw new ApiException(errors.com.epicgames.modules.gamesubcatalog.catalog_out_of_date).with(req.body.offerId);
+					throw next(new ApiException(errors.com.epicgames.modules.gamesubcatalog.catalog_out_of_date).with(req.body.offerId));
 				}
 
 				let grantToProfileId = "athena";
@@ -171,7 +176,7 @@ module.exports = (app) => {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem);
+					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
 				if (typeof req.body.bannerIconTemplateName === "string" && item.attributes.banner_icon_template != req.body.bannerIconTemplateName) {
@@ -190,7 +195,7 @@ module.exports = (app) => {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem);
+					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
 				if (typeof req.body.name === "string" && item.attributes.locker_name != req.body.name) {
@@ -205,7 +210,7 @@ module.exports = (app) => {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem);
+					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
 				const locker_slots_data = item.attributes.locker_slots_data;
@@ -377,7 +382,7 @@ module.exports = (app) => {
 			   break;
 
 			default:
-				throw new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command);
+				throw next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 		}
 
 		if (profileChanges.length > 0) {
@@ -400,10 +405,10 @@ module.exports = (app) => {
 	});
 }
 
-function checkValidProfileID0(command, sentProfileId, ...validProfileIds) {
+function checkValidProfileID0(command, sentProfileId, next, ...validProfileIds) {
 	if (command && sentProfileId) {
 		if (validProfileIds.indexOf(sentProfileId) == -1) {
-			throw new ApiException(errors.com.epicgames.modules.profiles.invalid_command).with(command, `player:profile_${sentProfileId}`, sentProfileId);
+			throw next(new ApiException(errors.com.epicgames.modules.profiles.invalid_command).with(command, `player:profile_${sentProfileId}`, sentProfileId));
 		} else {
 			return true;
 		}
