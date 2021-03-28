@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "node app.js",
-     "test": "node --unhandled-rejections=strict app.js"
+    "test": "node --unhandled-rejections=strict app.js --test"
   },
   "repository": {
     "type": "git",
