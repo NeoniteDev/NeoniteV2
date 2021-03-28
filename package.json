@@ -1,7 +1,7 @@
 {
   "name": "neonitev2",
-  "version": "1.1.0",
-  "description": "Fortnite lobby emulator with much customization options based on express/electron js",
+  "version": "2.7.2",
+  "description": "A Fortnite private server / lobby emulator allowing you to design your dream Fortnite experience",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.21.1",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "node app.js",
-     "test": "node app.js"
+     "test": "node --unhandled-rejections=strict app.js"
   },
   "repository": {
     "type": "git",
