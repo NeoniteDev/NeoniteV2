@@ -1,7 +1,33 @@
 @charset "UTF-8";
+
 body {
     color: #fff;
-    font-family: Rubik, sans-serif
+    font-family: Rubik, sans-serif;
+    background: rgb(117,23,244);
+    background: linear-gradient(127deg, rgba(117,23,244,1) 80%, rgba(153,41,244,234,1) 88%);
+}
+
+.buttons_area {
+    --bg-color:#2ecc71; 
+    text-align: center;
+}
+button.npp {
+    background: lighten(red, 3%);  
+    border: 1px solid darken(red, 4%);
+    box-shadow: 0px 2px 0 darken(red, 5%), 2px 4px 6px darken(red, 2%);
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all 150ms linear;
+  }
+  
+button.npp:hover {
+    background: darken(red, 1.5%);
+    border: 1px solid rgba(#000, .05);
+    box-shadow: 1px 1px 2px rgba(#fff, .2);
+    color: lighten(red, 18%); 
+    text-decoration: none;
+    text-shadow: -1px -1px 0 darken(red, 9.5%);
+    transition: all 250ms linear;
 }
 
 .item.footer {
@@ -11,6 +37,18 @@ body {
     font-size: 18px;
     line-height: 1.7;
     grid-column: span 1
+}
+
+div.title {
+    text-align: center; 
+    opacity: 0.7;  
+    width: 100%; height: auto;
+}
+
+p.title {
+    font-family:'burbank'; 
+    font-size: 80px;
+    text-shadow: 2px 2px #000000;
 }
 
 
