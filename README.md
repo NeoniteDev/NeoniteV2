@@ -19,8 +19,11 @@
     <br />
     <br />
     <a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a>
-    ·
-    <a href="https://dsc.gg/neonite">Discord Server</a>
+	  ·
+	  <a href="https://dsc.gg/neonite">Discord Server</a>
+	  ·
+	  <a href="https://neonite.dev/">Website</a>
+
   </p>
 </p>
 
