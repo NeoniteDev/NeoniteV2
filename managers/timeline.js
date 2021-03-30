@@ -5,10 +5,10 @@ module.exports = (app) => {
         var season
 
         try {
-            season = req.headers["user-agent"].split("-")[1].split(".")[0]
+            season = req.headers["user-agent"].split("-")[1].split(".")[0];
         } catch {
             //idk why i did ?? but sure
-            season = 1
+            season = 1;
         }
 
         res.json({
@@ -25,7 +25,7 @@ module.exports = (app) => {
                             {
                                 "eventType": `EventFlag.LobbySeason${season}`,
                                 "activeUntil": "9999-12-31T23:59:59.999Z",
-                                "activeSince": "2019-12-31T23:59:59.999Z"
+                                "activeSince": "2021-03-30T12:39:59.056Z"
                             }
                         ],
                         "state": {
@@ -37,15 +37,15 @@ module.exports = (app) => {
                             "matchXpBonusPoints": 0,
                             "eventPunchCardTemplateId": "",
                             "seasonBegin": new Date(),
-                            "seasonEnd": new Date(),
-                            "seasonDisplayedEnd": new Date(),
-                            "weeklyStoreEnd": new Date(),
-                            "stwEventStoreEnd": new Date(),
-                            "stwWeeklyStoreEnd": new Date(),
-                            "dailyStoreEnd": new Date()
+                            "seasonEnd": "9999-12-31T23:59:59.999Z",
+                            "seasonDisplayedEnd": "9999-12-31T23:59:59.999Z",
+                            "weeklyStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "stwEventStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "stwWeeklyStoreEnd": "9999-12-31T23:59:59.999Z",
+                            "dailyStoreEnd": "9999-12-31T23:59:59.999Z"
                         }
                     }],
-                    "cacheExpire": new Date()
+                    "cacheExpire": "9999-12-31T23:59:59.999Z"
                 }
             },
             "cacheIntervalMins": 15,
