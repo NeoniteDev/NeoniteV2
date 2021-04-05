@@ -7,7 +7,12 @@ const { setTimeout } = require('timers');
 const errors = require('./../structs/errors');
 const { ErrDef, ApiException } = require('./../structs/errors');
 var builder = require('xmlbuilder')
+const Express = require('express')
 
+/**
+ * 
+ * @param {Express.Application} app 
+ */
 module.exports = (app) => {
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
@@ -83,6 +88,33 @@ module.exports = (app) => {
 	app.get("/eulatracking/api/public/agreements/fn/account/*", (req, res) => { res.status(204).end() })
 
 	app.get("/friends/api/v1/*/recent/fortnite", (req, res) => { res.json([]) })
+
+	app.get("/api/v1/events/:game/download/:accountId", (req, res) => {
+		res.json({
+			"player": {
+				"gameId": req.params.game,
+				"accountId": req.params.accountId,
+				"tokens": [],
+				"teams": {},
+				"pendingPayouts": [],
+				"pendingPenalties": {},
+				"persistentScores": {},
+				"groupIdentity": {}
+			},
+			"events": [],
+			"templates": [],
+			"scores": []
+		})
+	})
+
+	app.get("/fortnite/api/game/v2/br-inventory/account/:accountId", (req, res) => {
+		res.json({
+			"stash": {
+				"globalcash": 0
+			}
+		})
+	})
+
 
 	app.get("/catalog/api/shared/bulk/offers", (req, res) => { res.json({}) })
 
@@ -301,9 +333,27 @@ module.exports = (app) => {
 		})
 	});
 
+	app.get('/fortnite/api/cloudstorage/system/config', (req, res) => {
+		res.status(404);
+		res.json({
+			"errorCode": "errors.com.epicgames.common.not_found",
+			"errorMessage": "Sorry the resource you were trying to find could not be found",
+			"numericErrorCode": 1004,
+			"originatingService": "fortnite",
+			"intent": "prod-live"
+		})
+	})
+
+	app.get('/content-controls/edecf7a882494f5e9ca9c6b61d9181cf', (req, res) => {
+		res.status(404);
+		res.json({
+			"errorCode": "errors.com.epicgames.content_controls.errors.com.epicgames.content_controls.no_user_config_found",
+			"message": "No user found with provided principal id"
+		})
+	})
+
 	//cloudstorage
 	app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
-
 		//inspiration: https://github.com/AlexDev404/AuroraFN-Backend/blob/3db03fa403387b7e829304e947f6e24fe9c3fa6c/routes/services/cloudstorage.js#L25
 		//originally by : @slushia
 
@@ -354,7 +404,14 @@ module.exports = (app) => {
 		res.sendFile(path.join(__dirname, '../hotfixes/DefaultRuntimeOptions.ini'));
 	});
 
-	
+	app.get('/statsproxy/api/statsv2/account/:accountId', (req, res) => {
+		res.json({
+			"startTime": 0,
+			"endTime": 9223372036854775807,
+			"stats": {},
+			"accountId": req.params.accountId
+		})
+	})
 
 	app.get('/fortnite/api/cloudstorage/system/DefaultGame.ini', (req, res) => {
 		res.setHeader("content-type", "application/octet-stream")
@@ -365,9 +422,7 @@ module.exports = (app) => {
 		res.json([])
 	});
 
-	app.get('/fortnite/api/cloudstorage/user/:accountId/GameUserSettings.ini', (req, res, next) => {
-		res.setHeader('Content-Type', 'text/plain')
-	});
+	app.put('/fortnite/api/cloudstorage/user/:accountId/:filename', (req, res) => res.status(204).end())
 
 	app.post("/fortnite/api/game/v2/profileToken/verify/*", (req, res) => { res.status(204).end() })
 
