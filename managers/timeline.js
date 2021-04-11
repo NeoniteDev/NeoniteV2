@@ -1,14 +1,12 @@
-const axios = require('axios');
 
 module.exports = (app) => {
     app.get('/fortnite/api/calendar/v1/timeline', (req, res) => {
         var season
 
         try {
-            season = req.headers["user-agent"].split("-")[1].split(".")[0];
+            season = req.headers["user-agent"].split("-")[1].split(".")[0]
         } catch {
-            //idk why i did ?? but sure
-            season = 1;
+            season = 1
         }
 
         res.json({
@@ -25,18 +23,18 @@ module.exports = (app) => {
                             {
                                 "eventType": `EventFlag.LobbySeason${season}`,
                                 "activeUntil": "9999-12-31T23:59:59.999Z",
-                                "activeSince": "2021-03-30T12:39:59.056Z"
+                                "activeSince": "2019-12-31T23:59:59.999Z"
                             }
                         ],
                         "state": {
                             "activeStorefronts": [],
                             "eventNamedWeights": {},
                             "activeEvents": [],
-                            "seasonNumber": 10,
+                            "seasonNumber": parseInt(season),
                             "seasonTemplateId": `AthenaSeason:athenaseason${season}`,
                             "matchXpBonusPoints": 0,
                             "eventPunchCardTemplateId": "",
-                            "seasonBegin": new Date(),
+                            "seasonBegin": "9999-12-31T23:59:59.999Z",
                             "seasonEnd": "9999-12-31T23:59:59.999Z",
                             "seasonDisplayedEnd": "9999-12-31T23:59:59.999Z",
                             "weeklyStoreEnd": "9999-12-31T23:59:59.999Z",
@@ -48,7 +46,7 @@ module.exports = (app) => {
                     "cacheExpire": "9999-12-31T23:59:59.999Z"
                 }
             },
-            "cacheIntervalMins": 15,
+            "cacheIntervalMins": 99999,
             "currentTime": new Date()
         })
     })
