@@ -38,11 +38,7 @@ global.LobbyBotPort = 80;
 	})
 
 	app.use((req, res, next) => {
-		if (req.headers["user-agent"].includes("Mozilla")) {
-
-		} else {
-			next(new ApiException(errors.com.epicgames.common.not_found));
-		}
+		next(new ApiException(errors.com.epicgames.common.not_found));
 	})
 
 	app.use((err, req, res, next) => {
