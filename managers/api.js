@@ -1,13 +1,12 @@
 const axios = require('axios');
 const path = require('path');
-const crypto = require("crypto");
 const fs = require('fs');
 const jwt = require("jsonwebtoken");
 const { setTimeout } = require('timers');
 const errors = require('./../structs/errors');
 const { ErrDef, ApiException } = require('./../structs/errors');
-var builder = require('xmlbuilder')
-const Express = require('express')
+var builder = require('xmlbuilder');
+const Express = require('express');
 
 /**
  * 
@@ -16,8 +15,10 @@ const Express = require('express')
 module.exports = (app) => {
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
+		//adds serviceId based on what the game feeds it, if undefined defaults to fortnite
+		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortnite";
 		res.json([{
-			"serviceInstanceId": "fortnite",
+			"serviceInstanceId": serviceId,
 			"status": "UP",
 			"message": "GO AWAY KID",
 			"maintenanceUri": null,
@@ -333,75 +334,12 @@ module.exports = (app) => {
 		})
 	});
 
-	app.get('/fortnite/api/cloudstorage/system/config', (req, res) => {
-		res.status(404);
-		res.json({
-			"errorCode": "errors.com.epicgames.common.not_found",
-			"errorMessage": "Sorry the resource you were trying to find could not be found",
-			"numericErrorCode": 1004,
-			"originatingService": "fortnite",
-			"intent": "prod-live"
-		})
-	})
-
 	app.get('/content-controls/edecf7a882494f5e9ca9c6b61d9181cf', (req, res) => {
 		res.status(404);
 		res.json({
 			"errorCode": "errors.com.epicgames.content_controls.errors.com.epicgames.content_controls.no_user_config_found",
 			"message": "No user found with provided principal id"
 		})
-	})
-
-	//cloudstorage
-	app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
-		//inspiration: https://github.com/AlexDev404/AuroraFN-Backend/blob/3db03fa403387b7e829304e947f6e24fe9c3fa6c/routes/services/cloudstorage.js#L25
-		//originally by : @slushia
-
-		let engine = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultEngine.ini'));
-		let runtime = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultRuntimeOptions.ini'));
-		let game = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultGame.ini'));
-		res.json([{
-			"uniqueFilename": "3460cbe1c57d4a838ace32951a4d7171",
-			"filename": "DefaultEngine.ini",
-			"hash": crypto.createHash("sha1").update(engine).digest("hex"),
-			"hash256": crypto.createHash("sha256").update(engine).digest("hex"),
-			"length": engine.length,
-			"contentType": "application/octet-stream",
-			"uploaded": fs.statSync(path.join(__dirname, '../hotfixes/DefaultEngine.ini')).mtime,
-			"storageType": "S3",
-			"doNotCache": false
-		}, {
-			"uniqueFilename": "DefaultGame.ini",
-			"filename": "DefaultGame.ini",
-			"hash": crypto.createHash("sha1").update(game).digest("hex"),
-			"hash256": crypto.createHash("sha256").update(game).digest("hex"),
-			"length": game.length,
-			"contentType": "application/octet-stream",
-			"uploaded": fs.statSync(path.join(__dirname, '../hotfixes/DefaultGame.ini')).mtime,
-			"storageType": "S3",
-			"doNotCache": false
-		}, {
-			"uniqueFilename": "c52c1f9246eb48ce9dade87be5a66f29",
-			"filename": "DefaultRuntimeOptions.ini",
-			"hash": crypto.createHash("sha1").update(runtime).digest("hex"),
-			"hash256": crypto.createHash("sha256").update(runtime).digest("hex"),
-			"length": runtime.length,
-			"contentType": "application/octet-stream",
-			"uploaded": fs.statSync(path.join(__dirname, '../hotfixes/DefaultRuntimeOptions.ini')).mtime,
-			"storageType": "S3",
-			"doNotCache": false
-		}])
-	});
-
-	//cba adding more
-	app.get('/fortnite/api/cloudstorage/system/3460cbe1c57d4a838ace32951a4d7171', (req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../hotfixes/DefaultEngine.ini'));
-	});
-
-	app.get('/fortnite/api/cloudstorage/system/c52c1f9246eb48ce9dade87be5a66f29', (req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../hotfixes/DefaultRuntimeOptions.ini'));
 	});
 
 	app.get('/statsproxy/api/statsv2/account/:accountId', (req, res) => {
