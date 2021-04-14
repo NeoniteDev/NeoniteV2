@@ -113,4 +113,4 @@ Discord Server: [Neonite](https://dsc.gg/neonite)
 <!-- LICENSE -->
 ## License
 
-This project is licensed under the [GPL-3.0 License](https://opensource.org/licenses/GPL-3.0)
+This project is licensed under the [Neo License](https://neonite.dev/LICENSE.html)
