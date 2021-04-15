@@ -250,4 +250,8 @@ module.exports = (app, port) => {
             })
         })
     })
+    //implementation needed in the future, response example: https://api.nitestats.com/v1/epic/prm/motd
+	/*app.post("/api/v1/fortnite-br/surfaces/motd/target", (req, res) => {
+		res.status(404).end();
+	})*/
 }
