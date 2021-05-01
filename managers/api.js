@@ -48,7 +48,6 @@ module.exports = (app) => {
 		}).then(response => {
 			res.json(response.data)
 		}).catch(lul => {
-			console.log(lul)
 			res.json({
 				"appName": req.query.appName,
 				"labelName": req.headers['user-agent'].split(" ")[0] || req.headers['user-agent'],
