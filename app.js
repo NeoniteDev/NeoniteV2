@@ -4,7 +4,6 @@ const fs = require("fs");
 const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
-const { Console } = require("console");
 const version = "2.7.2";
 const NeoLog = require('./structs/NeoLog')
 
@@ -61,7 +60,7 @@ global.LobbyBotPort = 80;
 			require(`${__dirname}/.github/test/testing.js`)(app);
 			process.exit(0)
 		}
-		NeoLog.Log(`v${version} is listening on port ` + port || 5595 + "!");
+		NeoLog.Log(`v${version} is listening on port ${port || 5595}!`);
 	});
 
 	module.exports = app;
