@@ -1,6 +1,7 @@
 
-<!-- saved from url=(0038)http://localhost:5595/MobileLogin.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
                 alert("Invalid username");
             }
             else {
-                window.location.replace(`com.epicgames.fortnite://fnauth/?code=${username || "NeoniteUser"}`);
+                window.location.replace(`com.epicgames.fortnite://NeoniteLogin/?code=${username || "NeoniteUser"}`);
             }
         }
     </script>
