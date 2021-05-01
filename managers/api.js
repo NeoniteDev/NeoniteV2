@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios').default;
 const path = require('path');
 const fs = require('fs');
 const jwt = require("jsonwebtoken");
@@ -7,6 +7,11 @@ const errors = require('./../structs/errors');
 const { ErrDef, ApiException } = require('./../structs/errors');
 var builder = require('xmlbuilder');
 const Express = require('express');
+
+Date.prototype.addHours = function (h) {
+	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
+	return this;
+}
 
 /**
  * 
@@ -31,6 +36,44 @@ module.exports = (app) => {
 	app.get('/account/api/public/account/:accountId/externalAuths', (req, res) => {
 		res.json([])
 	});
+
+
+	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", async (req, res) => {
+		const token = (await axios.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", "grant_type=client_credentials", { headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: "Basic M2Y2OWU1NmM3NjQ5NDkyYzhjYzI5ZjFhZjA4YThhMTI6YjUxZWU5Y2IxMjIzNGY1MGE2OWVmYTY3ZWY1MzgxMmU=" } })).data.access_token;
+
+		axios.get("https://launcher-public-service-prod06.ol.epicgames.com" + req.url, {
+			headers: {
+				authorization: "bearer " + token
+			}
+		}).then(response => {
+			res.json(response.data)
+		}).catch(lul => {
+			console.log(lul)
+			res.json({
+				"appName": req.query.appName,
+				"labelName": req.headers['user-agent'].split(" ")[0] || req.headers['user-agent'],
+				"buildVersion": req.headers['user-agent'].split(" ")[0] || req.headers['user-agent'],
+				"catalogItemId": req.params.catalogItemId,
+				"expires": new Date().addHours(2),
+				"items": {"MANIFEST":{"signature":"ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268","distribution":"https://epicgames-download1.akamaized.net/","path":"Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest","hash":"2817e928c4e0cdce735e8328e37d6fd5338134df","additionalDistributions":[]},"CHUNKS":{"signature":"ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268","distribution":"https://epicgames-download1.akamaized.net/","path":"Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest","additionalDistributions":[]}},
+				"assetId": "FortniteContentBuilds"
+			})
+		})
+	})
+
+	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
+		res.json(
+			{
+				"distributions": [
+					"https://download.epicgames.com/",
+					"https://download2.epicgames.com/",
+					"https://download3.epicgames.com/",
+					"https://download4.epicgames.com/",
+					"https://epicgames-download1.akamaized.net/",
+					"https://fastly-download.epicgames.com/"
+				]
+			})
+	})
 
 	app.post("/api/v1/user/setting", (req, res) => {
 		res.json([

@@ -5,6 +5,12 @@ const Profile = require("../profile");
 const { ApiException } = require('../structs/errors');
 const errors = require("../structs/errors");
 
+const { application } = require('express');
+
+/**
+ * 
+ * @param {application} app 
+ */
 module.exports = (app) => {
 	//token
 	app.post('/account/api/oauth/token', async (req, res, next) => {
@@ -12,8 +18,8 @@ module.exports = (app) => {
 		var accountId = "";
 		switch (req.body.grant_type) {
 			case "client_credentials":
-				displayName = null;
-				accountId = null;
+				displayName = req.h;
+				accountId = req.h;
 				break;
 
 			case "password":
@@ -30,16 +36,34 @@ module.exports = (app) => {
 				accountId = displayName.replace(/ /g, "_");
 				break;
 
+			case "authorization_code":
+				if (!req.body.code) {
+					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username"))
+				}
+				displayName = req.body.code;
+				accountId = req.body.code;
+
+				break;
+
+			case "device_auth":
+				if (!req.body.account_id) {
+					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("account_id"))
+				}
+				displayName = req.body.account_id;
+				accountId = req.body.account_id;
+				break;
+
+
 			case "exchange_code":
 				if (!req.body.exchange_code) {
 					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code"))
 				}
-				
+
 				displayName = req.body.exchange_code;
 				accountId = req.body.exchange_code;
 
 				break;
-		
+
 			default:
 				return next(new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type))
 				break;
@@ -111,7 +135,7 @@ module.exports = (app) => {
 		})
 	})
 
-	
+
 	app.get('/account/api/public/account/', (req, res) => {
 		try {
 			var response = []
@@ -138,7 +162,9 @@ module.exports = (app) => {
 
 	app.post('/account/api/public/account/:accountId/deviceAuth', (req, res) => res.json({
 		accountId: req.params.accountId,
-		deviceId: "aabbccddeeff11223344556677889900",
-		secret: "aabbccddeeff11223344556677889900"
+		deviceId: "null",
+		secret: "null"
 	}));
+
+	app.delete('/account/api/public/account/:accountId/deviceAuth/*', (req, res) => res.status(204).end());
 }

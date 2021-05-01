@@ -1,0 +1,43 @@
+
+<!-- saved from url=(0038)http://localhost:5595/MobileLogin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonite Login</title>
+    <link rel="stylesheet" type="text/css" href="/index.css" media="screen">
+    <script>
+        function Login() {
+            var username = ""+ document.getElementById('UserNameTxt').value;
+            if (!username || username > 2) {
+                alert("Invalid username");
+            }
+            else {
+                window.location.replace(`com.epicgames.fortnite://fnauth/?code=${username || "NeoniteUser"}`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+    <div class="title">
+        <p class="title">Neonite v2</p>
+    </div>
+    <div class="item button-100 buttons_area">
+        <p>Username:</p>
+        <input id="UserNameTxt">
+        <br>
+        <br>
+        <button onclick="Login()" style="padding: .3rem 2rem;">Login</button>
+    </div>
+    <br>
+    <br>
+
+    <div class="name" style="padding: 20px">Page Made by: <a href="https://twitter.com/TheBeatYT_evil" style="color:white" target="_blank">Beat YT</a></div>
+    <div class="name">Neonite made by: <a href="https://twitter.com/xkem0x" style="color:white" target="_blank">kemo</a>
+    </div>
+
+
+
+</body></html>
