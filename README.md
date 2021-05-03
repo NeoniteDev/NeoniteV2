@@ -1,5 +1,3 @@
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -10,21 +8,23 @@
 -->
 
 <!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <p align="center">
-    A Fortnite private server / lobby emulator allowing you to design your dream Fortnite experience.
-	<br />
-	<a href="https://github.com/NeoniteDev/NeoniteV2/releases">Downloads »</a>
-    <br />
-    <br />
-    <a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a>
-	  ·
-	  <a href="https://dsc.gg/neonite">Discord Server</a>
-	  ·
-	  <a href="https://neonite.dev/">Website</a>
 
-  </p>
+<p align="center">
+	<img align="center" src="https://neonite.dev/images/neonite.png" alt="Logo" width="216" height="127">
+</p>
+<p align="center">A Fortnite private server / lobby emulator allowing you to design your dream Fortnite experience.</p>
+<p align="center">
+	<a href="https://github.com/NeoniteDev/NeoniteV2/releases">Downloads</a>
+	.
+	<a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a>
+	.
+	<a href="https://dsc.gg/neonit">Discord Server</a>
+	.
+	<a href="https://neonite.dev/">Website</a>
+</p>
+<p align="center">
+    <img alt="Release" src="https://img.shields.io/github/v/release/NeoniteDev/NeoniteV2?color=blue&style=for-the-badge">
+    <img alt="Stars" src="https://img.shields.io/github/stars/NeoniteDev/NeoniteV2?color=blue&style=for-the-badge">
 </p>
 
 
