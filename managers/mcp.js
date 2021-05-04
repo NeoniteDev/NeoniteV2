@@ -65,6 +65,7 @@ module.exports = (app) => {
 		//profile commands
 		switch (command) {
 			case "SetHardcoreModifier":
+				break;
 			case "ClientQuestLogin":
 				break;
 
