@@ -22,15 +22,26 @@ module.exports = (app) => {
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
 		//adds serviceId based on what the game feeds it, if undefined defaults to fortnite
 		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortnite";
-		res.json([{
-			"serviceInstanceId": serviceId,
-			"status": "UP",
-			"message": "GO AWAY KID",
-			"maintenanceUri": null,
-			"allowedActions": ["PLAY", "DOWNLOAD"],
-			"banned": false
-		}]);
+		res.json([
+			{
+				"serviceInstanceId": serviceId,
+				"status": "UP",
+				"message": "Hi",
+				"maintenanceUri": "https://dsc.gg/neonite",
+				"allowedActions": [],
+				"banned": false,
+				"launcherInfoDTO": {
+					"appName": "Fortnite",
+					"catalogItemId": "4fe75bbc5a674f4f9b356b5c90567da5",
+					"namespace": "fn"
+				}
+			}
+		]);
 	});
+
+
+	// empty json endpoint if needed
+	app.all("/api/json", (req, res) => res.json({}));
 
 	//external auth
 	app.get('/account/api/public/account/:accountId/externalAuths', (req, res) => {
@@ -54,7 +65,7 @@ module.exports = (app) => {
 				"buildVersion": req.headers['user-agent'].split(" ")[0] || req.headers['user-agent'],
 				"catalogItemId": req.params.catalogItemId,
 				"expires": new Date().addHours(2),
-				"items": {"MANIFEST":{"signature":"ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268","distribution":"https://epicgames-download1.akamaized.net/","path":"Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest","hash":"2817e928c4e0cdce735e8328e37d6fd5338134df","additionalDistributions":[]},"CHUNKS":{"signature":"ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268","distribution":"https://epicgames-download1.akamaized.net/","path":"Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest","additionalDistributions":[]}},
+				"items": { "MANIFEST": { "signature": "ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268", "distribution": "https://epicgames-download1.akamaized.net/", "path": "Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest", "hash": "2817e928c4e0cdce735e8328e37d6fd5338134df", "additionalDistributions": [] }, "CHUNKS": { "signature": "ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268", "distribution": "https://epicgames-download1.akamaized.net/", "path": "Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest", "additionalDistributions": [] } },
 				"assetId": "FortniteContentBuilds"
 			})
 		})

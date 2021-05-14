@@ -39,7 +39,7 @@ wss.on("connection", ws => {
 
     var AuthType
 
-    var BotJid = `NeoniteBot@prod.ol.epicgames.com/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
+    var BotJid = `NeoniteBot@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
 
     //SendMessage("pogu")
 
@@ -74,7 +74,7 @@ wss.on("connection", ws => {
         switch (doc.root.name) {
 
             case "open":
-                var build = builder.create('open').att("id", UUID).att('xmlns', 'urn:ietf:params:xml:ns:xmpp-framing').att('from', 'prod.ol.epicgames.com')
+                var build = builder.create('open').att("id", UUID).att('xmlns', 'urn:ietf:params:xml:ns:xmpp-framing').att('from', 'neonite.dev')
                 ws.send(build.toString());
 
 
@@ -127,7 +127,7 @@ wss.on("connection", ws => {
                             resource = query.children.find(x => x.name == "resource").content
                             accountId = query.children.find(x => x.name == "username").content
                             token = query.children.find(x => x.name == "password").content
-                            Jid = `${accountId}@prod.ol.epicgames.com/${resource}`
+                            Jid = `${accountId}@neonite.dev/${resource}`
 
                             var bIsValid = resource && accountId && token && Jid
                             if (!bIsValid) {
@@ -172,14 +172,14 @@ wss.on("connection", ws => {
                             return;
                         }
                         resource = doc.root.children.find(x => x.name == "bind").children.find(x => x.name == "resource").content
-                        Jid = accountId + "@prod.ol.epicgames.com/" + resource;
+                        Jid = accountId + "@neonite.dev/" + resource;
                         /*
 
-                        <iq xmlns="jabber:client" from="prod.ol.epicgames.com"
-                            to="BeatYT@prod.ol.epicgames.com/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D" 
+                        <iq xmlns="jabber:client" from="neonite.dev"
+                            to="BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D" 
                             type="result" id="_xmpp_bind1">
                             <bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
-                                <jid>BeatYT@prod.ol.epicgames.com/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
+                                <jid>BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
                             </bind>
                         </iq>
 
@@ -188,7 +188,7 @@ wss.on("connection", ws => {
                         ws.send(builder.create('iq')
                             .att("xmlns", "jabber:client")
                             .att("to", Jid)
-                            .att("from", "prod.ol.epicgames.com")
+                            .att("from", "neonite.dev")
                             .att("type", "result")
                             .att("id", '_xmpp_bind1')
                             .ele("bind")
@@ -223,7 +223,7 @@ wss.on("connection", ws => {
                     default:
                         ws.send(builder.create('iq')
                             .att('type', 'result')
-                            .att("from", "prod.ol.epicgames.com")
+                            .att("from", "neonite.dev")
                             .att('xmlns', 'jabber:client')
                             .att('to', Jid)
                             .att('id', doc.root.attributes.id)
@@ -378,7 +378,7 @@ wss.on("connection", ws => {
                 .att('xmlns', "jabber:client")
                 .att('to', Jid)
                 .att('id', UUID)
-                .att("from", "xmpp-admin@prod.ol.epicgames.com")
+                .att("from", "xmpp-admin@neonite.dev")
                 .ele('body')
                 .txt(body)
                 .up()
@@ -394,7 +394,7 @@ wss.on("connection", ws => {
                     "sent": new Date(),
                     "type": "com.epicgames.social.party.notification.v0.MEMBER_JOINED",
                     "connection": {
-                        "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}@prod.ol.epicgames.com/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT${BotNumber != 0 ? BotNumber : ""}`,
+                        "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT${BotNumber != 0 ? BotNumber : ""}`,
                         "meta": {
                             "urn:epic:conn:platform_s": "WIN",
                             "urn:epic:conn:type_s": "game"
