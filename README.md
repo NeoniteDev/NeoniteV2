@@ -42,6 +42,9 @@
 </ol>
 
 
+<!-- SUPPORT US -->
+## Support Us
+Use the Code Neonite in the item shop to support us! #EpicPartner
 
 <!-- ABOUT NEONITEV2 -->
 ## About Neonite V2
