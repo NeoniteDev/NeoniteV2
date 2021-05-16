@@ -12,7 +12,6 @@ Date.prototype.addHours = function (h) {
 	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
 	return this;
 }
-
 /**
  * 
  * @param {Express.Application} app 
@@ -38,6 +37,23 @@ module.exports = (app) => {
 			}
 		]);
 	});
+
+	app.get("/lightswitch/api/service/:serviceId/status", (req, res) => {
+		const serviceId = req.params.serviceId ? req.params.serviceId.toLowerCase() : "fortnite";
+		res.json({
+			"serviceInstanceId": serviceId,
+			"status": "UP",
+			"message": "Hello",
+			"maintenanceUri": "https://dsc.gg/neonite",
+			"allowedActions": [],
+			"banned": false,
+			"launcherInfoDTO": {
+			  "appName": "Fortnite",
+			  "catalogItemId": "4fe75bbc5a674f4f9b356b5c90567da5",
+			  "namespace": "fn"
+			}
+		  })
+	})
 
 
 	// empty json endpoint if needed
