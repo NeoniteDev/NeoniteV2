@@ -58,14 +58,16 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 <!-- INSTALL -->
 ## Installation
 
-- Install the latest version of **[Node.JS](https://nodejs.org/en/download/current/)**.
+- Install the latest version of **[Node.JS](https://nodejs.org/en/download/current/)**. 
+- (Download the latest **[.NET Runtime](https://dotnet.microsoft.com/download)** if NeoniteV2 is not working for you.)
 - Download **[Neonite](https://github.com/NeoniteDev/NeoniteV2/releases)**.
 - Extract the source code.
 - Open `install.bat` and wait for it to install. (only required on the first run!)	
 - Open `run.bat`, it should say `[Neonite]: v2.7.3 is listening on port 5595!` (DON'T CLOSE THIS WHILE USING NEONITE!)	
 - Download the **[launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/launcher.zip?raw=true)**.	
 - Extract the launcher and open `FortniteLauncher.exe`.
-- Type in your username (don't use any special characters or spaces.)	
+- Type in your username, make sure to put "@." at the end or it won't let you login. (don't use any special characters or spaces.)
+- Type a random password (doesn't matter what you put, so you can login)	
 - Click launch, and enjoy!
 
 
