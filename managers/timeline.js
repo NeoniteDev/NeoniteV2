@@ -1,13 +1,29 @@
-
+const { default: axios } = require('axios');
+const { application } = require('express')
+/**
+ * @param {application} app
+ */
 module.exports = (app) => {
-    app.get('/fortnite/api/calendar/v1/timeline', (req, res) => {
-        var season
+    app.get('/fortnite/api/calendar/v1/timeline', async (req, res) => {
+        var version;
 
         try {
-            season = req.headers["user-agent"].split("-")[1].split(".")[0]
+            version = req.headers["user-agent"].split("-")[1].split("-CL")[0]
         } catch {
-            season = 1
+            version = "1.0"
         }
+
+
+        var CurrentVersion = (await axios.get("https://fortnite-public-service-prod.ak.epicgames.com/fortnite/api/version")).data.version;
+
+        if (CurrentVersion && CurrentVersion == version) {
+            var Calendar = await axios.get("https://api.nitestats.com/v1/epic/modes", {timeout: 3000});
+            if (Calendar.status == 200) {
+                return res.json(Calendar.data);
+            }
+        }
+
+        var season = version.split('.')[0]
 
         res.json({
             "channels": {
