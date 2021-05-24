@@ -4,7 +4,7 @@ const fs = require('fs');
 const jwt = require("jsonwebtoken");
 const { setTimeout } = require('timers');
 const errors = require('./../structs/errors');
-const { ErrDef, ApiException } = require('./../structs/errors');
+const { ErrDef, ApiException, com } = require('./../structs/errors');
 var builder = require('xmlbuilder');
 const Express = require('express');
 
@@ -394,6 +394,10 @@ module.exports = (app) => {
 
 	//sac
 	app.get('/affiliate/api/public/affiliates/slug/:affiliateName', (req, res) => {
+		if (req.params.affiliateName != "Neonite") {
+			throw new ApiException(errors.com.epicgames.ecommerce.affiliate.not_found).with(req.params.affiliateName);
+		}
+
 		res.json({
 			id: "aabbccddeeff11223344556677889900",
 			slug: req.params.affiliateName,

@@ -9,12 +9,13 @@ Array.prototype.insert = function ( index, item ) {
 };
 
 const express = require("express");
+const { default: axios } = require("axios");
 /**
  * 
  * @param {express.Express} app 
  */
 module.exports = (app) => {
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', function (req, res, next) {
+	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
 		res.set("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 
@@ -82,13 +83,15 @@ module.exports = (app) => {
 
 			case "PurchaseCatalogEntry":
 				checkValidProfileID("common_core");
-				const shop = require("../shop.json")
+
+				const shop = (await axios.get("https://api.nitestats.com/v1/epic/store")).data;
+
 				let catalogEntryToPurchase = null;
 
 				for (storefront of shop.storefronts) {
-					if (!storefront.name.startsWith("BR")) {
+					/*if (!storefront.name.startsWith("BR")) {
 						throw new Error("Unsupported");
-					}
+					}*/
 
 					for (catalogEntry of storefront.catalogEntries) {
 						if (catalogEntry.offerId == req.body.offerId) {
@@ -108,7 +111,7 @@ module.exports = (app) => {
 				for (itemGrant of catalogEntryToPurchase.itemGrants) {
 					lootResult.push({
 						"itemType": itemGrant.templateId,
-						"itemGuid": uuidv4(),
+						"itemGuid": itemGrant.templateId,
 						"itemProfile": grantToProfileId,
 						"quantity": itemGrant.quantity
 					});
@@ -129,7 +132,6 @@ module.exports = (app) => {
 					}, grantProfile.response.profileChanges);
 				}
 
-				response.multiUpdate = [grantProfile.response];
 				response.notifications = [
 					{
 						"type": "CatalogPurchase",
@@ -146,6 +148,16 @@ module.exports = (app) => {
 					response.profileCommandRevision = grantProfile.profileData.commandRevision || 1;
 					Profile.saveProfile(accountId, grantToProfileId, grantProfile.profileData);
 				}
+				var athenaProfile = getOrCreateProfile("athena");
+
+				athenaProfile.response.profileChanges = [
+					{
+						changeType: "fullProfileUpdate",
+						profile: athenaProfile.profileData
+					}
+				]
+
+				response.multiUpdate = [athenaProfile.response];
 
 				break;
 
@@ -167,10 +179,11 @@ module.exports = (app) => {
 
 			case "SetAffiliateName":
 				checkValidProfileID("common_core");
-				const force = false;
-				Profile.modifyStat(profileData, "mtx_affiliate", force ? "Fortnite.Dev" : req.body.affiliateName, profileChanges);
+				const force = true;
+				Profile.modifyStat(profileData, "mtx_affiliate", force ? "Neonite" : req.body.affiliateName, profileChanges);
 				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
 				break;
+				
 
 			case "SetCosmeticLockerBanner": {
 				checkValidProfileID("campaign", "athena");

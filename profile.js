@@ -117,6 +117,14 @@ module.exports = {
         if (!statName || statValue == null) {
             return false;
         }
+        if (!profile.stats) {
+            profile.stats = {
+                attributes: {
+
+                }
+            }
+        }
+        
         profile.stats.attributes[statName] = statValue;
 
         if (profileChangesArr != null) {

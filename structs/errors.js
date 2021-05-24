@@ -53,7 +53,7 @@ class ApiException extends Error {
 }
 
 module.exports = {
-    com: { //{"errorCode":"errors.com.epicgames.cloudstorage.file_not_found","errorMessage":"Sorry, we couldn't find a file yo for account 7b4c78500866465a9dc36bfe7e6aa8d9","messageVars":["yo","7b4c78500866465a9dc36bfe7e6aa8d9"],"numericErrorCode":12007,"originatingService":"fortnite","intent":"prod-live"}
+    com: { // errors.com.epicgames.ecommerce.affiliate.not_found 
         epicgames: {
             common: {
                 not_found: new ErrDef("errors.com.epicgames.common.not_found", "Sorry the resource you were trying to find could not be found", 1004, 404),
@@ -81,6 +81,11 @@ module.exports = {
                 profiles: {
                     invalid_command: new ErrDef("errors.com.epicgames.modules.profiles.invalid_command", "{0} is not valid on {1} profiles ({2})", 12801, 400),
                     operation_forbidden: new ErrDef("errors.com.epicgames.modules.profiles.operation_forbidden", "Unable to find template configuration for profile {0}", 12813, 200)
+                }
+            },
+            ecommerce: {
+                affiliate: {
+                    not_found: new ErrDef("errors.com.epicgames.ecommerce.affiliate.not_found ", "Sorry, the affiliate cannot be found by slug [{0}]", 47010, 404)
                 }
             }
         }
