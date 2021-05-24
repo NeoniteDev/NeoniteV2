@@ -407,7 +407,7 @@ module.exports = (app) => {
 		})
 	});
 
-	app.get('/content-controls/edecf7a882494f5e9ca9c6b61d9181cf', (req, res) => {
+	app.get('/content-controls/:accountId', (req, res) => {
 		res.status(404);
 		res.json({
 			"errorCode": "errors.com.epicgames.content_controls.errors.com.epicgames.content_controls.no_user_config_found",
