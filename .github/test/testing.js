@@ -158,7 +158,7 @@ module.exports = (app) => {
 
 
         layer.keys.forEach(key => {
-            req.params[key.name] = "GitHubTest";
+            req.params[key.name] = "Neonite";
         })
 
         /**
