@@ -158,9 +158,11 @@ module.exports = (app) => {
 
 
         layer.keys.forEach(key => {
-            req.params[key.name] = "Neonite";
+            req.params[key.name] = "GithubTesting";
         })
 
+        
+        req.params.affiliateName = "Neonite";
         /**
          * 
          * @param {ApiException} thing 
