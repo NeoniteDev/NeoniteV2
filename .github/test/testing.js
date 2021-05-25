@@ -169,7 +169,7 @@ module.exports = (app) => {
             console.log("Next Called by " + path + "\n")
             if (!thing) throw new Error("Unknow Error at " + path);
 
-            else if (!thing instanceof ApiException) throw thing;
+            else if (!thing.errorMessage) throw thing;
 
 
             var message = thing.errorMessage;
