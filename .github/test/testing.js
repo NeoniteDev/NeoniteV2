@@ -127,6 +127,8 @@ module.exports = (app) => {
                 netcl: "CodeQL",
                 displayName: "GithubTest",
                 accountId: "GithubTest",
+            },
+            cookies : {
             }
         };
 
@@ -135,6 +137,7 @@ module.exports = (app) => {
             json(data) {
                 console.log("PASSED " + path + "\n")
             },
+            
 
             send(data) {
                 console.log("PASSED " + path + "\n")
@@ -149,7 +152,8 @@ module.exports = (app) => {
 
             status(status) { return (res) },
             setHeader(header, value) { },
-            set(name, value) { }
+            set(name, value) { },
+            cookie(name, value) {}
         }
 
         req.method = Object.entries(layer.route.methods)[0][0];
@@ -182,7 +186,7 @@ module.exports = (app) => {
 
             console.log(`Api Error At route ${path}: ${message}\n`);
 
-            throw thing;
+            //throw thing;
         }
 
         if (ExcludedEndpoint.includes(path)) return;
