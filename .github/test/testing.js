@@ -182,7 +182,7 @@ module.exports = (app) => {
 
             console.log(`Api Error At route ${path}: ${message}\n`);
 
-            throw thing;
+            //throw thing;
         }
 
         if (ExcludedEndpoint.includes(path)) return;
