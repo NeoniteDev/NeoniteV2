@@ -111,7 +111,7 @@
       "season_update": 1,
       "book_xp": 1,
       "permissions": [],
-      "book_purchased": true,
+      "book_purchased": false,
       "lifetime_wins": 0,
       "party_assist_quest": "",
       "purchased_battle_pass_tier_offers": [],

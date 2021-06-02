@@ -16,8 +16,13 @@ const { default: axios } = require("axios");
  */
 module.exports = (app) => {
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
-		res.set("Content-Type", "application/json");
+		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
+
+		var season = 1;
+        try {
+            season = parseInt(req.headers["user-agent"].split('-')[1].split('.')[0]);
+        } catch { }
 
 		const getOrCreateProfile = profileId => {
 			var profileData = Profile.readProfile(accountId, profileId);
@@ -399,6 +404,8 @@ module.exports = (app) => {
 				throw next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 		}
 
+		
+
 		if (profileChanges.length > 0) {
 			Profile.bumpRvn(profileData);
 			response.profileRevision = profileData.rvn || 1;
@@ -414,7 +421,7 @@ module.exports = (app) => {
 				"profile": profileData
 			}];
 		}
-
+ 
 		res.json(response);
 	});
 }
