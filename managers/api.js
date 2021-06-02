@@ -155,7 +155,8 @@ module.exports = (app) => {
 
 	app.get("/friends/api/v1/*/blocklist", (req, res) => { res.json([]) })
 
-	app.get("/eulatracking/api/public/agreements/fn/account/*", (req, res) => { res.status(204).end() })
+
+	app.get("/eulatracking/api/public/agreements/*/account/:accountId", (req, res) => { res.status(204).end() })
 
 	app.get("/friends/api/v1/*/recent/fortnite", (req, res) => { res.json([]) })
 

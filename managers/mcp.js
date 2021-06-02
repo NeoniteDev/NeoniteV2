@@ -278,41 +278,41 @@ module.exports = (app) => {
 			}
 
 			case "EquipBattleRoyaleCustomization":
-				var slot, itemToSlot
+				var statName, itemToSlot
 
 				switch (req.body.slotName) {
 					case "Character":
-						slot = "favorite_character"
+						statName = "favorite_character"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "Backpack":
-						slot = "favorite_backpack"
+						statName = "favorite_backpack"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "Pickaxe":
-						slot = "favorite_pickaxe"
+						statName = "favorite_pickaxe"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "Glider":
-						slot = "favorite_glider"
+						statName = "favorite_glider"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "SkyDiveContrail":
-						slot = "favorite_skydivecontrail"
+						statName = "favorite_skydivecontrail"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "MusicPack":
-						slot = "favorite_musicpack"
+						statName = "favorite_musicpack"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "LoadingScreen":
-						slot = "favorite_loadingscreen"
+						statName = "favorite_loadingscreen"
 						itemToSlot = req.body.itemToSlot
 						break
 					case "Dance":
 					case "ItemWrap":
 						var bIsDance = req.body.slotName == "Dance";
-						slot = bIsDance ? "favorite_dance" : "favorite_itemwraps";
+						statName = bIsDance ? "favorite_dance" : "favorite_itemwraps";
 						var arr = profileData.stats.attributes[statName] || [];
 						if (req.body.indexWithinSlot == -1) {
 							// handle wrap "Apply To All"
@@ -335,8 +335,8 @@ module.exports = (app) => {
 						break
 				}
 
-				if (slot != null && itemToSlot != null) {
-					Profile.modifyStat(profileData, slot, itemToSlot, response.profileChanges);
+				if (statName != null && itemToSlot != null) {
+					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
 				}
 				break
 
