@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const version = "2.7.3";
 const NeoLog = require('./structs/NeoLog')
-
+const cookieParser = require("cookie-parser");
 global.xmppClients = [];
 global.port = 5595;
 global.LobbyBotPort = 80;
@@ -28,6 +28,7 @@ global.LobbyBotPort = 80;
 
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json());
+	app.use(cookieParser());
 	app.set("etag", false);
 
 	app.use("/", express.static("public"));
