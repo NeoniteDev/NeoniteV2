@@ -25,7 +25,7 @@ let partys = []
 */
 
 module.exports = (app) => {
-    app.post("/party/api/v1/Fortnite/parties", (req, res) => {
+    app.post("/party/api/v1/*/parties", (req, res) => {
         var response = ""
 
 
@@ -80,7 +80,7 @@ module.exports = (app) => {
         res.json(response)
     })
 
-    app.patch('/party/api/v1/Fortnite/parties/:partyId/members/:accountId/meta', (req, res) => {
+    app.patch('/party/api/v1/*/parties/:partyId/members/:accountId/meta', (req, res) => {
         var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 
         if (!client) return res.status(204).end();
@@ -130,7 +130,7 @@ module.exports = (app) => {
     })
 
 
-    app.post('/party/api/v1/Fortnite/user/:accountId/pings/:pingerId', (req, res) => {
+    app.post('/party/api/v1/*/user/:accountId/pings/:pingerId', (req, res) => {
         res.json({
             sent_by: req.params.pingerId,
             sent_to: req.params.accountId,
@@ -149,31 +149,20 @@ module.exports = (app) => {
     })
 
 
-    app.post('/party/api/v1/Fortnite/parties/:PartyId/members/*/join', (req, res) => { res.json({ "status": "JOINED", "party_id": req.params.PartyId }) })
+    app.post('/party/api/v1/*/parties/:PartyId/members/*/join', (req, res) => { res.json({ "status": "JOINED", "party_id": req.params.PartyId }) })
 
-    app.post("/party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/BeatYT/disconnect", (req, res) => { res.status(204).end()})
+    app.post("/party/api/v1/*/parties/LobbyBotPartyLMFAO/members/BeatYT/disconnect", (req, res) => { res.status(204).end()})
 
-    app.post('/party/api/v1/Fortnite/parties/*/members/*/conferences/connection', (req, res) => {
-        res.status(410).json({
-            "errorCode": "errors.com.epicgames.dev.BeatYT.Neonite_Endpoint_Gone",
-            "errorMessage": "Stfu stop voiceshat.",
-            "messageVars": [],
-            "numericErrorCode": 51023,
-            "originatingService": "party",
-            "intent": "prod"
-        })
-    })
+    app.post(`/party/api/v1/*/parties/:partyId/members/*/confirm`, (req, res) => { res.status(403).end() })
 
-    app.post(`/party/api/v1/Fortnite/parties/:partyId/members/*/confirm`, (req, res) => { res.status(403).end() })
+    app.patch("/party/api/v1/*/parties/:partyId", (req, res) => { res.status(204).send() })
 
-    app.patch("/party/api/v1/Fortnite/parties/:partyId", (req, res) => { res.status(204).send() })
-
-    app.delete("/party/api/v1/Fortnite/parties/:partyId", (req, res) => { res.status(204).send() })
+    app.delete("/party/api/v1/*/parties/:partyId", (req, res) => { res.status(204).send() })
 
     app.all('/presence/api/v1/*', (req, res) => { res.json([]) })
 
     // /party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/NeoniteBot
-    app.delete('/party/api/v1/Fortnite/parties/:PartyId/members/:accountId', (req, res) => {
+    app.delete('/party/api/v1/*/parties/:PartyId/members/:accountId', (req, res) => {
         res.status(204).end()
         var token = req.headers.authorization.replace("bearer ", "").replace("Bearer ", "")
 
@@ -198,9 +187,9 @@ module.exports = (app) => {
         }
     })
 
-    app.post('/party/api/v1/Fortnite/parties/:PartyId/members/:accountId/promote', (req, res) => { res.status(204).end() })
+    app.post('/party/api/v1/*/parties/:PartyId/members/:accountId/promote', (req, res) => { res.status(204).end() })
 
-    app.get('/party/api/v1/Fortnite/user/:accountId', (req, res) => {
+    app.get('/party/api/v1/*/user/:accountId', (req, res) => {
         //var party = partys.filter(x => x.accountId == req.params.accountId);
         res.json({
             "current": [{
@@ -247,7 +236,7 @@ module.exports = (app) => {
         });
     });
 
-    app.get("/party/api/v1/Fortnite/parties/:partyId", (req, res) => {
+    app.get("/party/api/v1/*/parties/:partyId", (req, res) => {
         res.json({
             "id": req.params.partyId,
             "created_at": new Date(),

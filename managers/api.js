@@ -12,6 +12,19 @@ Date.prototype.addHours = function (h) {
 	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
 	return this;
 }
+
+Array.prototype.shuffle = function () {
+	var a = this;
+	var j, x, i;
+	for (i = a.length - 1; i > 0; i--) {
+		j = Math.floor(Math.random() * (i + 1));
+		x = a[i];
+		a[i] = a[j];
+		a[j] = x;
+	}
+	return a;
+}
+
 /**
  * 
  * @param {Express.Application} app 
@@ -39,7 +52,7 @@ module.exports = (app) => {
 	});
 
 	app.get("/lightswitch/api/service/:serviceId/status", (req, res) => {
-		const serviceId = req.params.serviceId ? req.params.serviceId.toLowerCase() : "fortnite";
+		const serviceId = req.params.serviceId.toLowerCase();
 		res.json({
 			"serviceInstanceId": serviceId,
 			"status": "UP",
@@ -48,11 +61,11 @@ module.exports = (app) => {
 			"allowedActions": [],
 			"banned": false,
 			"launcherInfoDTO": {
-			  "appName": "Fortnite",
-			  "catalogItemId": "4fe75bbc5a674f4f9b356b5c90567da5",
-			  "namespace": "fn"
+				"appName": "Fortnite",
+				"catalogItemId": "4fe75bbc5a674f4f9b356b5c90567da5",
+				"namespace": "fn"
 			}
-		  })
+		})
 	})
 
 
@@ -65,8 +78,11 @@ module.exports = (app) => {
 	});
 
 
+	const GithubManifestUserAgent = [];
 	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", async (req, res) => {
+		const FormattedUserAgent = req.headers["user-agent"].replace("Fortnite/", "").replace("FortniteGame/", "")
 		const token = (await axios.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", "grant_type=client_credentials", { headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: "Basic M2Y2OWU1NmM3NjQ5NDkyYzhjYzI5ZjFhZjA4YThhMTI6YjUxZWU5Y2IxMjIzNGY1MGE2OWVmYTY3ZWY1MzgxMmU=" } })).data.access_token;
+
 
 		axios.get("https://launcher-public-service-prod06.ol.epicgames.com" + req.url, {
 			headers: {
@@ -74,31 +90,78 @@ module.exports = (app) => {
 			}
 		}).then(response => {
 			res.json(response.data)
-		}).catch(lul => {
-			res.json({
-				"appName": req.query.appName,
-				"labelName": req.headers['user-agent'].split(" ")[0] || req.headers['user-agent'],
-				"buildVersion": req.headers['user-agent'].split(" ")[0] || req.headers['user-agent'],
-				"catalogItemId": req.params.catalogItemId,
-				"expires": new Date().addHours(2),
-				"items": { "MANIFEST": { "signature": "ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268", "distribution": "https://epicgames-download1.akamaized.net/", "path": "Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest", "hash": "2817e928c4e0cdce735e8328e37d6fd5338134df", "additionalDistributions": [] }, "CHUNKS": { "signature": "ak_token=exp=1619828899~hmac=1968bf14793626dc350d50e03ae92004cff698dcb8276688e175f394b8b8f268", "distribution": "https://epicgames-download1.akamaized.net/", "path": "Builds/Fortnite/Content/CloudDir/9rt_NKT5rwdY4PthEU24o6SUQYYdfA.manifest", "additionalDistributions": [] } },
-				"assetId": "FortniteContentBuilds"
-			})
+		}).catch(async (error) => {
+
+			if (error.response.data.errorCode == "errors.com.epicgames.launcher.download_info_not_found" && req.query.manifest) {
+				var BuildVersion = req.headers["user-agent"];
+				try {
+					BuildVersion = req.headers["user-agent"].split("/")[1].replace(/ /g, "-");
+				} catch { }
+
+				axios.head(`https://raw.githubusercontent.com/VastBlast/FortniteManifestArchive/main/Fortnite/Android/${req.query.manifest}.manifest`).then(() => {
+					if (!GithubManifestUserAgent.includes(FormattedUserAgent)) {
+						GithubManifestUserAgent.push(FormattedUserAgent);
+					}
+					
+					res.json({
+						"appName": req.params.appName,
+						"labelName": `${req.query.label}-${req.params.platform}`,
+						"buildVersion": BuildVersion,
+						"catalogItemId": req.params.catalogItemId,
+						"expires": "9999-12-31T23:59:59.999Z",
+						"items": {
+							"MANIFEST": {
+								"signature": "",
+								"distribution": "https://raw.githubusercontent.com/VastBlast/FortniteManifestArchive/main/Fortnite/Android/",
+								"path": `/../${req.query.manifest}.manifest`,
+								"additionalDistributions": []
+							}
+						},
+						"assetId": req.params.appName
+					})
+
+				}).catch(() => {
+					res.status(error.response.status);
+					res.json(error.response.data);
+				})
+			}
+			else {
+				res.status(error.response.status);
+				res.json(error.response.data);
+			}
 		})
-	})
+	});
+
 
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
-		res.json(
-			{
+		const FormattedUserAgent = req.headers["user-agent"].replace("Fortnite/", "").replace("FortniteGame/", "")
+
+		if (GithubManifestUserAgent.includes(FormattedUserAgent)) {
+			res.json({
 				"distributions": [
+					"https://epicgames-download1.akamaized.net/Builds/Fortnite/Content/CloudDir/",
+					"https://download.epicgames.com/Builds/Fortnite/Content/CloudDir/",
+					"https://download2.epicgames.com/Builds/Fortnite/Content/CloudDir/",
+					"https://download3.epicgames.com/Builds/Fortnite/Content/CloudDir/",
+					"https://download4.epicgames.com/Builds/Fortnite/Content/CloudDir/",
+					"https://fastly-download.epicgames.com/Builds/Fortnite/Content/CloudDir/",,
+					"https://raw.githubusercontent.com/VastBlast/FortniteManifestArchive/main/Fortnite/Android/"
+				]
+			});
+		}
+		else {
+			res.json({
+				"distributions": [
+					"https://epicgames-download1.akamaized.net/",
 					"https://download.epicgames.com/",
 					"https://download2.epicgames.com/",
 					"https://download3.epicgames.com/",
 					"https://download4.epicgames.com/",
-					"https://epicgames-download1.akamaized.net/",
 					"https://fastly-download.epicgames.com/"
 				]
-			})
+			});
+		}
+
 	})
 
 	app.post("/api/v1/user/setting", (req, res) => {
@@ -360,7 +423,7 @@ module.exports = (app) => {
 		});
 
 		var payload = Buffer.from(JSON.stringify(data, null, 0)).toString('base64');
-		
+
 		res.json({
 			"serviceUrl": "ws://matchmaking-fn.herokuapp.com/",
 			"ticketType": "mms-player",
@@ -370,19 +433,19 @@ module.exports = (app) => {
 
 	});
 
-	app.get("/fortnite/api/game/v2/matchmaking/account/:accountId/session/:sessionId", (req, res) => 
+	app.get("/fortnite/api/game/v2/matchmaking/account/:accountId/session/:sessionId", (req, res) =>
 		res.json({
 			"accountId": req.params.accountId,
 			"sessionId": req.params.sessionId,
-			"key": "none"
+			"key": /*"none"*/ null
 		})
 	)
 
 	app.post("/fortnite/api/matchmaking/session/:SessionId/join", (req, res) => res.status(204).end())
-	
+
 	app.get("/fortnite/api/matchmaking/session/:sessionId", (req, res) => {
 		var BuildUniqueId = req.cookies["NetCL"];
-		
+
 		res.json({
 			"id": req.params.sessionId,
 			"ownerId": "Neonite",
@@ -561,12 +624,12 @@ module.exports = (app) => {
 
 
 function RandomString(length) {
-    var result           = [];
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-      result.push(characters.charAt(Math.floor(Math.random() * 
- charactersLength)));
-   }
-   return result.join('');
+	var result = [];
+	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	var charactersLength = characters.length;
+	for (var i = 0; i < length; i++) {
+		result.push(characters.charAt(Math.floor(Math.random() *
+			charactersLength)));
+	}
+	return result.join('');
 }
