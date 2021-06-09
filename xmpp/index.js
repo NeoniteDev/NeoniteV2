@@ -1,7 +1,8 @@
 const xmlparser = require('xml-parser')
 const builder = require("xmlbuilder")
 const WebSocket = require('ws');
-const uuid = require("uuid")
+const uuid = require("uuid");
+const e = require('express');
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
@@ -81,23 +82,20 @@ wss.on("connection", ws => {
                 //funny xmpp
                 ws.send(builder.create('stream:features')
                     .att("xmlns:stream", "http://etherx.jabber.org/streams")
-                    .ele("ver")
-                    .att('xmlns', "urn:xmpp:features:rosterver")
+                    .ele("ver").att('xmlns', "urn:xmpp:features:rosterver")
                     .up()
-                    .ele("starttls")
-                    .att("xmlns", "urn:ietf:params:xml:ns:xmpp-tls")
-                    .up()
-                    .ele('compression')
-                    .att("xmlns", "http://jabber.org/features/compress")
-                    .ele('method')
-                    .txt("zlib")
-                    .up()
-                    .up()
-                    .ele("session")
-                    .att("xmlns", "urn:ietf:params:xml:ns:xmpp-session")
+                    .ele("session").att("xmlns", "urn:ietf:params:xml:ns:xmpp-session")
                     .up()
                     .ele("bind")
                     .att("xmlns", "urn:ietf:params:xml:ns:xmpp-bind")
+                    .up()
+                    .ele("mechanisms")
+                    .att("xmlns", 'urn:ietf:params:xml:ns:xmpp-sasl')
+                    .ele("mechanism").txt("PLAIN")
+                    .up()
+                    .up()
+                    .ele("auth")
+                    .att("xmlns", "http://jabber.org/features/iq-auth")
                     .up()
                     .toString()
                 )
@@ -507,20 +505,20 @@ wss.on("connection", ws => {
                             }
                         }),
                         "Default:AthenaCosmeticLoadoutVariants_j": JSON.stringify({
-                            "AthenaCosmeticLoadoutVariants":{
-                               "vL":{
-                                  "AthenaPickaxe":{
-                                     "i":[]
-                                  },
-                                  "AthenaCharacter":{
-                                     "i":[]
-                                  },
-                                  "AthenaBackpack":{
-                                     "i":[]
-                                  }
-                               }
+                            "AthenaCosmeticLoadoutVariants": {
+                                "vL": {
+                                    "AthenaPickaxe": {
+                                        "i": []
+                                    },
+                                    "AthenaCharacter": {
+                                        "i": []
+                                    },
+                                    "AthenaBackpack": {
+                                        "i": []
+                                    }
+                                }
                             }
-                         }),
+                        }),
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
                         "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
