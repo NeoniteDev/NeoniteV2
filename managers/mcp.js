@@ -8,11 +8,11 @@ Array.prototype.insert = function ( index, item ) {
     this.splice( index, 0, item );
 };
 
-const express = require("express");
-const { default: axios } = require("axios");
+const { Application } = require("express");
+
 /**
  * 
- * @param {express.Express} app 
+ * @param {Application} app 
  */
 module.exports = (app) => {
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
@@ -89,7 +89,7 @@ module.exports = (app) => {
 			case "PurchaseCatalogEntry":
 				checkValidProfileID("common_core");
 
-				const shop = (await axios.get("https://api.nitestats.com/v1/epic/store")).data;
+				const shop = require("./../shop.json");
 
 				let catalogEntryToPurchase = null;
 
