@@ -123,7 +123,8 @@ module.exports = (app, port) => {
                 "backgrounds": {
                     "backgrounds": [
                         {
-                            "stage": `season${season}`,
+                            "backgroundimage": `http://127.0.0.1:${port}/NeoniteLobby.png`,
+                            "stage": "defaultnotris",
                             "_type": "DynamicBackground",
                             "key": "lobby"
                         }
@@ -132,9 +133,9 @@ module.exports = (app, port) => {
                 },
                 "_title": "dynamicbackgrounds",
                 "_noIndex": false,
-                "jcr:baseVersion": "a7ca237317f1e7fb739979-8025-4304-bb56-b3ad0080e265",
-                "_activeDate": "2019-08-21T15:59:59.342Z",
-                "lastModified": "2021-03-16T06:22:03.584Z",
+                "jcr:baseVersion": "a7ca237317f1e70712af90-59fe-4576-8f32-f80bf513c946",
+                "_activeDate": "2020-07-06T06:00:00.000Z",
+                "lastModified": "2021-06-22T13:53:48.402Z",
                 "_locale": "en-US"
             },
 

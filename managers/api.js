@@ -437,7 +437,7 @@ module.exports = (app) => {
 		res.json({
 			"accountId": req.params.accountId,
 			"sessionId": req.params.sessionId,
-			"key": /*"none"*/ null
+			"key": "none"
 		})
 	)
 
