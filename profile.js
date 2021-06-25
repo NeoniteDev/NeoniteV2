@@ -42,6 +42,8 @@ module.exports = {
         //commented it to prevent removing gift item from the profile
         //delete profile.items[itemId];
 
+        delete profile.items[itemId];
+
         if (profileChangesArr) {
             profileChangesArr.push({ "changeType": "itemRemoved", "itemId": itemId });
         }

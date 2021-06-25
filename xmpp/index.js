@@ -2,8 +2,8 @@ const xmlparser = require('xml-parser')
 const builder = require("xmlbuilder")
 const WebSocket = require('ws');
 const uuid = require("uuid");
-const e = require('express');
-
+const Profile = require("../profile");
+const { default: axios } = require('axios');
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
         return console.error(`[\x1b[33mXMPP\x1b[0m] Error: ${msg}\n`)
@@ -269,18 +269,70 @@ wss.on("connection", ws => {
 
                 if (!body.startsWith('!')) return;
                 var command = body;
-                var commandBody
+                var commandBody = "";
                 try {
                     command = body.split(" ")[0]
-                    commandBody = body.split(command + " ")[1]
+                    commandBody = body.replace(command + ' ', "");
                 } catch {
                     command = body;
                     commandBody = null
                 }
 
-                switch (command.replace("!", '')) {
+                switch (command.replace("!", '').toLowerCase()) {
 
                     case "gift":
+                        const profiledata = Profile.readProfile(accountId, "common_core");
+
+                        if (!profiledata) {
+                            return close();
+                        }
+
+                        profile.bumpRvn(profiledata);
+                        const body = encodeURI(commandBody);
+
+                        axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${body}&matchMethod=contains`).then(response => {
+                            const body = response.data.data;
+
+                            profiledata.items[uuid.v4()] = {
+                                "templateId": "GiftBox:GB_GiftWrap1",
+                                "attributes": {
+                                    "max_level_bonus": 0,
+                                    "fromAccountId": "NeoniteBot",
+                                    "lootList": [
+                                        {
+                                            "itemProfile": "athena",
+                                            "itemType": `${body.type.backendValue}:${body.id}`,
+                                            "itemGuid": `${body.type.backendValue}:${body.id}`,
+                                            "quantity": 1
+                                        }
+                                    ],
+                                    "level": 1,
+                                    "item_seen": false,
+                                    "xp": 0,
+                                    "giftedOn": new Date(),
+                                    "params": {
+                                        "userMessage": "Thanks for using Neonite"
+                                    },
+                                    "favorite": false
+                                },
+                                "quantity": 1
+                            }
+                            profile.saveProfile(accountId, "common_core", profiledata);
+
+                            functions.SendMessage(JSON.stringify({
+                                type: 'com.epicgames.gift.received',
+                                payload: "",
+                                timestamp: new Date()
+                            }))
+                        }).catch(error => {
+                            if (error.response && error.response.status == 404) {
+                                functions.SendChat("Cosmetic Not found");
+                            }
+                            else {
+                                throw error;
+                            }
+                        })
+
                         break;
 
                     case "copy":
@@ -294,25 +346,53 @@ wss.on("connection", ws => {
                         break;
 
                     case "add4bot":
-                        functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
-                        functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
-                        functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
-                        functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+
+                        setTimeout(() => {
+                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                        }, 100);
+
+                        setTimeout(() => {
+                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                        }, 1500);
+
+                        setTimeout(() => {
+                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                        }, 2000);
+
+                        setTimeout(() => {
+                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                        }, 2500);
                         break;
 
+                    case "maxbot":
+                        var count = 0;
+
+                        var interval = setInterval(() => {
+                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                            count++;
+                            if (count >= 15) {
+                                clearInterval(interval);
+                            }
+                        }, 500);
+                        break;
+
+                    default:
+                        break;
                 }
 
-                break;
             }
 
             case "presence":
                 if (doc.root.attributes.to && doc.root.attributes.to.startsWith("Party-")) return;
 
-                ws.send(builder.create('presence')
-                    .att('to', Jid)
-                    .att("from", Jid)
-                    .att('xmlns', "jabber:client")
-                    .ele("status").txt(doc.root.children.find(x => x.name == 'status').content).up().toString());
+                try {
+                    ws.send(builder.create('presence')
+                        .att('to', Jid)
+                        .att("from", Jid)
+                        .att('xmlns', "jabber:client")
+                        .ele("status").txt(doc.root.children.find(x => x.name == 'status').content).up().toString());
+                }
+                catch { }
 
                 ws.send(builder.create("presence")
                     .att('to', Jid)
@@ -533,6 +613,7 @@ wss.on("connection", ws => {
 
             ))
             global.xmppClients.find(x => x.Ws == ws).Settings.botNumber = global.xmppClients.find(x => x.Ws == ws).Settings.botNumber + 1
+
         }
     }
 })

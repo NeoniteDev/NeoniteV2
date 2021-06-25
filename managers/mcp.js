@@ -68,6 +68,7 @@ module.exports = (app) => {
 		const { profileChanges } = response;
 		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds);
 
+		
 		//profile commands
 		switch (command) {
 			case "SetHardcoreModifier":
@@ -167,6 +168,7 @@ module.exports = (app) => {
 				break;
 
 			case "QueryProfile":
+				
 				break;
 
 			case "RefreshExpeditions":
@@ -176,10 +178,15 @@ module.exports = (app) => {
 			case "RemoveGiftBox":
 				checkValidProfileID("common_core", "campaign", "athena");
 
-				if (typeof req.body.giftBoxItemId === "string") {
-					Profile.removeItem(profileData, req.body.giftBoxItemId, profileChanges);
-				}
+				profileData.commandRevision = req.query.rvn || -1;
+				profileData.rvn = req.query.rvn || -1;
 
+				req.body.giftBoxItemIds.forEach(item => {
+					Profile.removeItem(profileData, item, profileChanges);
+				})
+
+				profileData.commandRevision++;
+				profileData.rvn++;
 				break;
 
 			case "SetAffiliateName":
