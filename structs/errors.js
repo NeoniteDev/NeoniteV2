@@ -66,7 +66,7 @@ class ApiException extends Error {
 }
 
 module.exports = {
-    com: { //{"errorCode":"errors.com.epicgames.cloudstorage.file_not_found","errorMessage":"Sorry, we couldn't find a file yo for account 7b4c78500866465a9dc36bfe7e6aa8d9","messageVars":["yo","7b4c78500866465a9dc36bfe7e6aa8d9"],"numericErrorCode":12007,"originatingService":"fortnite","intent":"prod-live"}
+    com: { 
         epicgames: {
             common: {
                 not_found: new ErrDef("errors.com.epicgames.common.not_found", "Sorry the resource you were trying to find could not be found", 1004, 404),

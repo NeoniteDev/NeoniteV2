@@ -18,13 +18,13 @@ module.exports = (app) => {
 		var accountId = "";
 		switch (req.body.grant_type) {
 			case "client_credentials":
-				displayName = req.h;
-				accountId = req.h;
+				displayName = undefined;
+				accountId = undefined;
 				break;
 
 			case "password":
 				if (!req.body.username) {
-					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username"))
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username")
 				}
 				if (req.body.username.includes("@")) {
 					displayName = req.body.username.split("@")[0]
@@ -38,7 +38,7 @@ module.exports = (app) => {
 
 			case "authorization_code":
 				if (!req.body.code) {
-					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username"))
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("code")
 				}
 				displayName = req.body.code;
 				accountId = req.body.code;
@@ -47,7 +47,7 @@ module.exports = (app) => {
 
 			case "device_auth":
 				if (!req.body.account_id) {
-					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("account_id"))
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("account_id")
 				}
 				displayName = req.body.account_id;
 				accountId = req.body.account_id;
@@ -56,7 +56,7 @@ module.exports = (app) => {
 
 			case "exchange_code":
 				if (!req.body.exchange_code) {
-					return next(ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code"))
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
 				}
 
 				displayName = req.body.exchange_code;
@@ -65,7 +65,7 @@ module.exports = (app) => {
 				break;
 
 			default:
-				return next(new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type))
+				throw new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type)
 				break;
 		}
 
@@ -112,17 +112,15 @@ module.exports = (app) => {
 	});
 
 	app.delete('/account/api/oauth/sessions/kill/:token', (req, res) => {
-		delete global[req.params.token]
 		res.status(204).end();
 	});
 
 	//account info
 	app.get('/account/api/public/account/:accountId', (req, res) => {
-		var displayname = `${req.params.accountId}`
-		if (displayname.endsWith('=')) displayname = Buffer.from(req.params.accountId, 'base64').toString();
+		req
 		res.json({
 			id: req.params.accountId,
-			displayName: displayname,
+			displayName:  req.params.accountId,
 			externalAuths: {}
 		})
 	});

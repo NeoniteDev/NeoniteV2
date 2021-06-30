@@ -1,3 +1,4 @@
+// require('./tcp-xmpp');
 const xmlparser = require('xml-parser')
 const builder = require("xmlbuilder")
 const WebSocket = require('ws');
@@ -287,7 +288,7 @@ wss.on("connection", ws => {
                             return close();
                         }
 
-                        profile.bumpRvn(profiledata);
+                        Profile.bumpRvn(profiledata);
                         const body = encodeURI(commandBody);
 
                         axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${body}&matchMethod=contains`).then(response => {
@@ -317,7 +318,7 @@ wss.on("connection", ws => {
                                 },
                                 "quantity": 1
                             }
-                            profile.saveProfile(accountId, "common_core", profiledata);
+                            Profile.saveProfile(accountId, "common_core", profiledata);
 
                             functions.SendMessage(JSON.stringify({
                                 type: 'com.epicgames.gift.received',

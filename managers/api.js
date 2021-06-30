@@ -71,7 +71,7 @@ module.exports = (app) => {
 
 	// empty json endpoint if needed
 	app.all("/api/json", (req, res) => res.json({}));
-
+	
 	//external auth
 	app.get('/account/api/public/account/:accountId/externalAuths', (req, res) => {
 		res.json([])
@@ -279,7 +279,11 @@ module.exports = (app) => {
 
 
 	//version check
-	app.get('/fortnite/api/v2/versioncheck/:version', (req, res) => {
+	app.get('/fortnite/api/v2/versioncheck*', (req, res) => {
+		res.json({ "type": "NO_UPDATE" })
+	});
+
+	app.get('/fortnite/api/versioncheck*', (req, res) => {
 		res.json({ "type": "NO_UPDATE" })
 	});
 
