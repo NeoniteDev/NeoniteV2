@@ -7,7 +7,8 @@ module.exports = (app) => {
     const ExcludedEndpoint = [
         '/account/api/oauth/token',
         '/fortnite/api/game/v2/profile/:accountId/client/:command',
-        '/launcher/api/public/distributionpoints/'
+        '/launcher/api/public/distributionpoints/',
+        '/fortnite/api/game/v2/matchmakingservice/ticket/player/:accountId'
     ]
 
     const util = require('util')
