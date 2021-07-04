@@ -151,7 +151,7 @@ module.exports = (app) => {
 
     app.post('/party/api/v1/*/parties/:PartyId/members/*/join', (req, res) => { res.json({ "status": "JOINED", "party_id": req.params.PartyId }) })
 
-    app.post("/party/api/v1/*/parties/LobbyBotPartyLMFAO/members/BeatYT/disconnect", (req, res) => { res.status(204).end()})
+    app.post("/party/api/v1/*/parties/LobbyBotPartyLMFAO/members/:displayName/disconnect", (req, res) => { res.status(204).end()})
 
     app.post(`/party/api/v1/*/parties/:partyId/members/*/confirm`, (req, res) => { res.status(403).end() })
 

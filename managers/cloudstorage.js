@@ -13,7 +13,6 @@ module.exports = (app) => {
 	 * Dynamic Cloudstorage Implementation: @VastBlastt
 	 */
 	app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
-
 		const output = [];
 		const dir = await fs.promises.opendir(hotfixPath);
 		for await (const dirent of dir) {
@@ -36,7 +35,6 @@ module.exports = (app) => {
 
 		res.json(output);
 	});
-
 
 	app.get('/fortnite/api/cloudstorage/system/:filename', (req, res) => {
 		const fileName = req.params.filename;

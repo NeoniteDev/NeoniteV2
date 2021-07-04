@@ -3,7 +3,7 @@
   "Update": "profile by tim",
   "created": "2020-10-22T04:50:49.839Z",
   "updated": "2020-12-04T15:20:43.863Z",
-  "rvn": 19,
+  "rvn": 1,
   "wipeNumber": 1,
   "accountId": "",
   "profileId": "athena",
@@ -107,7 +107,7 @@
       "mfa_reward_claimed": true,
       "quest_manager": {},
       "book_level": 0,
-      "season_num": 16,
+      "season_num": 17,
       "season_update": 1,
       "book_xp": 1,
       "permissions": [],
@@ -146,5 +146,5 @@
       "favorite_loadingscreen": ""
     }
   },
-  "commandRevision": 0
+  "commandRevision": 1
 }

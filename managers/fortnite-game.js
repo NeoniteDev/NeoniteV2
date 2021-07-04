@@ -8,16 +8,6 @@ const { application } = require('express')
 module.exports = (app, port) => {
     //var lastest = await axios.get("https://api.nitestats.com/v1/epic/builds/fltoken")
     app.get(["/content/api/pages/fortnite-game", "/content/api/pages/"], async (req, res) => {
-        var season = "9";
-        try {
-            season = req.headers["user-agent"].split('-')[1].split('.')[0]
-        } catch { }
-        finally {
-            if (season == "10") {
-                season = "x";
-            }
-        }
-
         res.json({
             "jcr:isCheckedOut": true,
             "_title": "Fortnite Game",
@@ -25,6 +15,7 @@ module.exports = (app, port) => {
             "_activeDate": "2017-07-24T22:24:02.300Z",
             "lastModified": "2020-11-01T17:36:19.024Z",
             "_locale": "en-US",
+
             "emergencynotice": {
                 "news": {
                     "platform_messages": [],
@@ -1587,6 +1578,7 @@ module.exports = (app, port) => {
                 "lastModified": "2021-06-21T16:08:13.601Z",
                 "_locale": "en-US"
             },
+
             "_suggestedPrefetch": [
                 `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
                 `http://127.0.0.1:${port}/Neonite1024.png`

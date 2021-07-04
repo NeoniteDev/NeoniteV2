@@ -72,11 +72,16 @@ module.exports = (app) => {
 		//profile commands
 		switch (command) {
 			case "SetHardcoreModifier":
+				break;
+
+			case "ClaimMfaEnabled":
+				break;
+
 			case "ClientQuestLogin":
 				break;
 
-			// case "CopyCosmeticLoadout":
-			// 	break;
+			case "CopyCosmeticLoadout":
+			 	break;
 
 			case "MarkItemSeen":
 				checkValidProfileID("common_core", "campaign", "athena");
@@ -168,7 +173,6 @@ module.exports = (app) => {
 				break;
 
 			case "QueryProfile":
-				
 				break;
 
 			case "RefreshExpeditions":
@@ -194,10 +198,9 @@ module.exports = (app) => {
 				const force = true;
 				Profile.modifyStat(profileData, "mtx_affiliate", force ? "Neonite" : req.body.affiliateName, profileChanges);
 				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
-				break;
-				
+				break;	
 
-			case "SetCosmeticLockerBanner": {
+			case "SetCosmeticLockerBanner": 
 				checkValidProfileID("campaign", "athena");
 				const item = profileData.items[req.body.lockerItem];
 
@@ -214,9 +217,8 @@ module.exports = (app) => {
 				}
 
 				break;
-			}
 
-			case "SetCosmeticLockerName": {
+			case "SetCosmeticLockerName": 
 				checkValidProfileID("campaign", "athena");
 				const item = profileData.items[req.body.lockerItem];
 
@@ -229,9 +231,8 @@ module.exports = (app) => {
 				}
 
 				break;
-			}
 
-			case "SetCosmeticLockerSlot": {
+			case "SetCosmeticLockerSlot": 
 				checkValidProfileID("campaign", "athena");
 				const item = profileData.items[req.body.lockerItem];
 
@@ -287,7 +288,6 @@ module.exports = (app) => {
 				}
 
 				break;
-			}
 
 			case "EquipBattleRoyaleCustomization":
 				var statName, itemToSlot
@@ -358,16 +358,25 @@ module.exports = (app) => {
 				if (typeof req.body.bFavorite === "boolean" && profileData.items[req.body.targetItemId].attributes.favorite != req.body.bFavorite) {
 					Profile.changeItemAttribute(profileData, req.body.targetItemId, "favorite", req.body.bFavorite, profileChanges);
 				}
-
 				break;
 
 			case "SetItemFavoriteStatusBatch":
 				checkValidProfileID("campaign", "athena");
+
 				req.body.itemIds.forEach((itemId, index) => {
 					if (typeof itemId === "string" && typeof req.body.itemFavStatus[index] === "boolean") {
-						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index]), profileChanges;
+						profileData.items[itemId].attributes.favorite = req.body.itemFavStatus[index];
 					}
 				});
+				
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1;
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
+				Profile.saveProfile(accountId, profileId, profileData);
 				break;
 
 			case "SetMtxPlatform":
@@ -410,8 +419,6 @@ module.exports = (app) => {
 			default:
 				throw next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 		}
-
-		
 
 		if (profileChanges.length > 0) {
 			Profile.bumpRvn(profileData);

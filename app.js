@@ -56,8 +56,7 @@ global.LobbyBotPort = 80;
 	});
 
 	app.listen(port, () => {
-		if (process.argv.includes("--test"))
-		{
+		if (process.argv.includes("--test")) {
 			require(`${__dirname}/.github/test/testing.js`)(app);
 			process.exit(0)
 		}
