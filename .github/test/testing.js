@@ -1,5 +1,5 @@
 const errors = require("./../../structs/errors");
-const NeoLog = require('./../../structs/NeoLog')
+const NeoLog = require('./../../structs/neoconsole')
 
 module.exports = (app) => {
 
