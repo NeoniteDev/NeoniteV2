@@ -46,7 +46,9 @@
               ]
             },
             "Backpack": {
-              "items": [],
+              "items": [
+                ""
+              ],
               "activeVariants": [
                 {
                   "variants": []
@@ -54,7 +56,15 @@
               ]
             },
             "ItemWrap": {
-              "items": [],
+              "items": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
               "activeVariants": [
                 null,
                 null,
@@ -66,7 +76,9 @@
               ]
             },
             "LoadingScreen": {
-              "items": [],
+              "items": [
+                ""
+              ],
               "activeVariants": [
                 null
               ]
@@ -80,7 +92,9 @@
               ]
             },
             "SkyDiveContrail": {
-              "items": [],
+              "items": [
+                ""
+              ],
               "activeVariants": [
                 null
               ]
@@ -95,13 +109,115 @@
         "favorite": false
       },
       "quantity": 1
+    },
+    "neoset1_loadout": {
+      "templateId": "CosmeticLocker:cosmeticlocker_athena",
+      "attributes": {
+        "locker_slots_data": {
+          "slots": {
+            "Pickaxe": {
+              "items": [
+                ""
+              ],
+              "activeVariants": []
+            },
+            "Dance": {
+              "items": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            "Glider": {
+              "items": [
+                ""
+              ]
+            },
+            "Character": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                {
+                  "variants": []
+                }
+              ]
+            },
+            "Backpack": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                {
+                  "variants": []
+                }
+              ]
+            },
+            "ItemWrap": {
+              "items": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              "activeVariants": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            "LoadingScreen": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                null
+              ]
+            },
+            "MusicPack": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                null
+              ]
+            },
+            "SkyDiveContrail": {
+              "items": [
+                ""
+              ],
+              "activeVariants": [
+                null
+              ]
+            }
+          }
+        },
+        "use_count": 1,
+        "banner_icon_template": "",
+        "locker_name": "NEOSET",
+        "banner_color_template": "",
+        "item_seen": false,
+        "favorite": false
+      },
+      "quantity": 1
     }
   },
   "stats": {
     "attributes": {
       "season_match_boost": 0,
       "loadouts": [
-        "sandbox_loadout"
+        "sandbox_loadout",
+        "neoset1_loadout"
       ],
       "rested_xp_overflow": 0,
       "mfa_reward_claimed": true,

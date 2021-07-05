@@ -1,10 +1,8 @@
-const { application } = require('express')
+const express = require("express");
+const app = express.Router();
 
-/**
- * @param {application} app
- */
-module.exports = (app) => {
-	app.get('/fortnite/api/storefront/v2/catalog', function (req, res) {
-		res.json(require("../shop.json"));
-	});
-}
+app.get("/fortnite/api/storefront/v2/catalog", (req, res) => {
+	res.json(require("../shop.json"));
+});
+
+module.exports = app;

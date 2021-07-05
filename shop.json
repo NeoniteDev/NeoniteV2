@@ -1,15 +1,15 @@
 {
-  "expiration": "9999-12-31T23:59:59.999Z",
-  "refreshIntervalHrs": 24,
-  "dailyPurchaseHrs": 24,
-  "storefronts": [
-    {
-      "name": "BRDailyStorefront",
-      "catalogEntries": []
-    },
-    {
-      "name": "BRWeeklyStorefront",
-      "catalogEntries": []
-    }
-  ]
-}
+    "expiration": "9999-12-31T23:59:59.999Z",
+    "refreshIntervalHrs": 24,
+    "dailyPurchaseHrs": 24,
+    "storefronts": [
+      {
+        "name": "BRDailyStorefront",
+        "catalogEntries": []
+      },
+      {
+        "name": "BRWeeklyStorefront",
+        "catalogEntries": []
+      }
+    ]
+  }

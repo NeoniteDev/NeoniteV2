@@ -18,9 +18,13 @@
   },
   "stats": {
     "attributes": {
-      "mtx_affiliate": "Neonite",
+      "mtx_affiliate": "",
       "current_mtx_platform": "EpicPC",
-      "mtx_purchase_history": {}
+      "mtx_purchase_history": {
+        "refundsUsed": 0,
+        "refundCredits": 3,
+        "purchases": []
+      }
     }
   }
 }

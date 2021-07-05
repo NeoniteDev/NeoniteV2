@@ -1,67 +1,57 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 const fs = require("fs");
-const errors = require("./structs/errors");
+const neoconsole = require("./structs/neoconsole.js");
+const errors = require("./structs/errors.js");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
-const version = "2.7.3";
-const NeoLog = require('./structs/NeoLog')
-const cookieParser = require("cookie-parser");
+
+const app = express();
+global.version = "2.8.0";
 global.xmppClients = [];
 global.port = 5595;
 global.LobbyBotPort = 80;
 
-(function () {
-	"use strict";
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.set("etag", false);
+app.use("/", express.static("public"));
 
-	String.prototype.format = function () {
-		const args = arguments[0] instanceof Array ? arguments[0] : arguments;
-		return this.replace(/{(\d+)}/g, function (match, number) {
-			return typeof args[number] != "undefined" ? args[number] : match;
-		});
-	};
+require("./xmpp");
 
+app.all("*", (req, res, next) => {
+	console.log(`[${req.method}] ${req.url}`);
+	next();
+});
 
-	require('./xmpp')
+fs.readdirSync(`${__dirname}/managers`).forEach(route => {
+	app.use(require(`${__dirname}/managers/${route}`))
+});
 
-	const app = express();
+app.use((req, res, next) => {
+	next(new ApiException(errors.com.epicgames.common.not_found));
+});
 
-	app.use(bodyParser.urlencoded({ extended: false }));
-	app.use(bodyParser.json());
-	app.use(cookieParser());
-	app.set("etag", false);
+app.use((err, req, res, next) => {
+	let error = null;
 
-	app.use("/", express.static("public"));
+	if (err instanceof ApiException) {
+		error = err;
+	} else {
+		const trackingId = req.headers["x-epic-correlation-id"] || uuidv4();
+		error = new ApiException(errors.com.epicgames.common.server_error).with(trackingId);
+		console.error(trackingId, err);
+	}
 
-	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
-		require(`${__dirname}/managers/${route}`)(app, port);
-	})
+	error.apply(res);
+});
 
-	app.use((req, res, next) => {
-		next(new ApiException(errors.com.epicgames.common.not_found));
-	})
-
-	app.use((err, req, res, next) => {
-		let error = null;
-
-		if (err instanceof ApiException) {
-			error = err;
-		} else {
-			const trackingId = req.headers["x-epic-correlation-id"] || uuidv4();
-			error = new ApiException(errors.com.epicgames.common.server_error).with(trackingId);
-			console.error(trackingId, err);
-		}
-
-		error.apply(res);
-	});
-
-	app.listen(port, () => {
-		if (process.argv.includes("--test")) {
-			require(`${__dirname}/.github/test/testing.js`)(app);
-			process.exit(0)
-		}
-		NeoLog.Log(`v${version} is listening on port ${port || 5595}!`);
-	});
-
-	module.exports = app;
-}());
+app.listen(port, () => {
+	if (process.argv.includes("--test")) {
+		require(`${__dirname}/.github/test/testing.js`)(app);
+		process.exit(0)
+	}
+	neoconsole.log(`v${version} is listening on port ${port || 5595}!`);
+});
