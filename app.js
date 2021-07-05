@@ -50,7 +50,7 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
 	if (process.argv.includes("--test")) {
-		require(`${__dirname}/.github/test/testing.js`)(app);
+		//app.use(require(`${__dirname}/.github/test/testing.js`));
 		process.exit(0)
 	}
 	neoconsole.log(`v${version} is listening on port ${port || 5595}!`);

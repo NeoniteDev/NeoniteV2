@@ -1,7 +1,9 @@
+const express = require("express");
 const errors = require("./../../structs/errors");
-const neoconsole = require('./../../structs/neoconsole')
+const neoconsole = require('./../../structs/neoconsole');
+const app = express.Router();
 
-module.exports = (app) => {
+
     const ExcludedEndpoint = [
         '/account/api/oauth/token',
         '/fortnite/api/game/v2/profile/:accountId/client/:command',
@@ -11,7 +13,7 @@ module.exports = (app) => {
 
     const util = require('util')
 
-    var layers = app._router.stack.filter(x => x.name == "bound dispatch");
+    var layers = app.stack.filter(x => x.name == "bound dispatch");
 
 
     console.log("\nTesting MCP\n")
@@ -205,5 +207,6 @@ module.exports = (app) => {
         time = time + 50;
     })
     neoconsole.log("Finished Testing")
-    process.exit(0)
-}
+    process.exit(0);
+
+module.exports = app;
