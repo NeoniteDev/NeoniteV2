@@ -1,9 +1,7 @@
 const errors = require("./../../structs/errors");
-const NeoLog = require('./../../structs/neoconsole')
+const neoconsole = require('./../../structs/neoconsole')
 
 module.exports = (app) => {
-
-
     const ExcludedEndpoint = [
         '/account/api/oauth/token',
         '/fortnite/api/game/v2/profile/:accountId/client/:command',
@@ -197,7 +195,7 @@ module.exports = (app) => {
             layer.handle(req, res, next)
             counter++;
             if (counter >= layers.length) {
-                NeoLog.Log("Finished Testing")
+                neoconsole.log("Finished Testing")
                 process.exit(0)
             }
         }, time);*/
@@ -206,6 +204,6 @@ module.exports = (app) => {
 
         time = time + 50;
     })
-    NeoLog.Log("Finished Testing")
+    neoconsole.log("Finished Testing")
     process.exit(0)
 }
