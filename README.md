@@ -118,4 +118,4 @@ Discord Server: [Neonite](https://dsc.gg/neonite)
 <!-- LICENSE -->
 ## License
 
-This project is licensed under the [Neo License](https://neonite.dev/LICENSE.html)
+This project is licensed under the [Neo License](https://github.com/NeoniteDev/NeoniteV2/blob/main/LICENSE)
