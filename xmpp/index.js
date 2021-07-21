@@ -43,7 +43,7 @@ wss.on("connection", ws => {
 
     var AuthType
 
-    var BotJid = `NeoniteBot@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
+    var BotJid = `${cfg.botUser}@neonite.dev/V2:Fortnite:${cfg.botPlatform}::Neonite-Bot-By-BeatYT`
 
     //SendMessage("pogu")
 
@@ -175,15 +175,13 @@ wss.on("connection", ws => {
                         resource = doc.root.children.find(x => x.name == "bind").children.find(x => x.name == "resource").content
                         Jid = accountId + "@neonite.dev/" + resource;
                         /*
-
                         <iq xmlns="jabber:client" from="neonite.dev"
-                            to="BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D" 
+                            to="BeatYT@neonite.dev/V2:Fortnite:${cfg.botPlatform}::B1D5CD0B469E2ADB22F639BFB8620D0D" 
                             type="result" id="_xmpp_bind1">
                             <bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
-                                <jid>BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
+                                <jid>BeatYT@neonite.dev/V2:Fortnite:${cfg.botPlatform}::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
                             </bind>
                         </iq>
-
                         */
 
                         ws.send(builder.create('iq')
@@ -300,7 +298,7 @@ wss.on("connection", ws => {
                                 "templateId": "GiftBox:GB_GiftWrap1",
                                 "attributes": {
                                     "max_level_bonus": 0,
-                                    "fromAccountId": "NeoniteBot",
+                                    "fromAccountId": `${cfg.botUser}`,
                                     "lootList": [
                                         {
                                             "itemProfile": "athena",
@@ -403,7 +401,7 @@ wss.on("connection", ws => {
                     .att('xmlns', "jabber:client")
                     .ele("status").txt(JSON.stringify(
                         {
-                            "Status": "Neonite Lobby Bot",
+                            "Status": cfg.botStatus,
                             "bIsPlaying": false,
                             "bIsJoinable": true,
                             "bHasVoiceSupport": false,
@@ -468,16 +466,17 @@ wss.on("connection", ws => {
         },
 
         AddBot(cid) {
-            var HeroID = "HID_286_Athena_Commando_F_NeonCat"
+            var botCidH = cfg.botCid.replace("CID_A", "HID");
+            var HeroID = `${botCidH}`
             var BotNumber = global.xmppClients.find(x => x.Ws == ws).Settings.botNumber
             functions.SendMessage(JSON.stringify(
                 {
                     "sent": new Date(),
                     "type": "com.epicgames.social.party.notification.v0.MEMBER_JOINED",
                     "connection": {
-                        "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT${BotNumber != 0 ? BotNumber : ""}`,
+                        "id": `${cfg.botUser}${BotNumber != 0 ? BotNumber : ""}@neonite.dev/V2:Fortnite:${cfg.botPlatform}::Neonite-Bot-By-BeatYT${BotNumber != 0 ? BotNumber : ""}`,
                         "meta": {
-                            "urn:epic:conn:platform_s": "WIN",
+                            "urn:epic:conn:platform_s": `${cfg.botPlatform}`,
                             "urn:epic:conn:type_s": "game"
                         },
                         "connected_at": new Date(),
@@ -487,11 +486,11 @@ wss.on("connection", ws => {
                     "revision": 0,
                     "ns": "Fortnite",
                     "party_id": "LobbyBotPartyLMFAO",
-                    "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
-                    "account_dn": "NeoniteBot",
+                    "account_id": `${cfg.botUser}${BotNumber != 0 ? BotNumber : ""}`,
+                    "account_dn": `${cfg.botUser}`,
                     "member_state_updated": {
-                        "urn:epic:member:joinrequestusers_j": JSON.stringify({ "users": [{ "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`, "dn": "NeoniteBot", "plat": `WIN`, "data": JSON.stringify({ "CrossplayPreference_i": "1", "SubGame_u": "1" }) }] }),
-                        "urn:epic:member:dn_s": `NeoniteBot`,
+                        "urn:epic:member:joinrequestusers_j": JSON.stringify({ "users": [{ "id": `${cfg.botUser}${BotNumber != 0 ? BotNumber : ""}`, "dn": `${cfg.botUser}`, "plat": `${cfg.botPlatform}`, "data": JSON.stringify({ "CrossplayPreference_i": "1", "SubGame_u": "1" }) }] }),
+                        "urn:epic:member:dn_s": `${cfg.botUser}`,
                     },
                     "joined_at": new Date(),
                     "updated_at": new Date()
@@ -505,8 +504,8 @@ wss.on("connection", ws => {
                     "revision": 0,
                     "ns": "Fortnite",
                     "party_id": "LobbyBotPartyLMFAO",
-                    "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
-                    "account_dn": "NeoniteBot",
+                    "account_id": `${cfg.botUser}${BotNumber != 0 ? BotNumber : ""}`,
+                    "account_dn": `${cfg.botUser}`,
                     "member_state_removed": [],
                     "member_state_updated": {
                         "Default:Location_s": "PreLobby",
@@ -528,7 +527,7 @@ wss.on("connection", ws => {
                         "Default:VoiceChatStatus_s": "PartyVoice",
                         "Default:SidekickStatus_s": "None",
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
-                        "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
+                        "Default:AthenaBannerInfo_j": `{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":${cfg.botLevel}}}`,
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
                         "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${cfg.botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
                         "Default:PlatformUniqueId_s": "INVALID",
@@ -548,8 +547,8 @@ wss.on("connection", ws => {
                     "revision": 0,
                     "ns": "Fortnite",
                     "party_id": "LobbyBotPartyLMFAO",
-                    "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
-                    "account_dn": "NeoniteBot",
+                    "account_id": `${cfg.botUser}${BotNumber != 0 ? BotNumber : ""}`,
+                    "account_dn": `${cfg.botUser}`,
                     "member_state_removed": [],
                     "member_state_updated": {
                         "Default:Location_s": "PreLobby",
@@ -603,7 +602,7 @@ wss.on("connection", ws => {
                             }
                         }),
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
-                        "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
+                        "Default:AthenaBannerInfo_j": `{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":${cfg.botLevel}}}`,
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
                         "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${cfg.botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
                         "Default:PlatformUniqueId_s": "INVALID",
@@ -624,5 +623,3 @@ wss.on("connection", ws => {
 wss.on("error", error => {
 
 })
-
-
