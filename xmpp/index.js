@@ -530,7 +530,7 @@ wss.on("connection", ws => {
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
                         "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
-                        "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
+                        "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${cfg.botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
                         "Default:PlatformUniqueId_s": "INVALID",
                         "Default:PlatformSessionId_s": "",
                         "Default:CrossplayPreference_s": "OptedIn"
@@ -605,7 +605,7 @@ wss.on("connection", ws => {
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
                         "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
-                        "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
+                        "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${cfg.botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
                         "Default:PlatformUniqueId_s": "INVALID",
                         "Default:PlatformSessionId_s": "",
                         "Default:CrossplayPreference_s": "OptedIn"
