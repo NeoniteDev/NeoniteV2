@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require("uuid");
-const builder = require("xmlbuilder")
+const builder = require("xmlbuilder");
+const cfg = require('../config');
 
 Date.prototype.addHours = function (h) {
     this.setTime(this.getTime() + (h * 60 * 60 * 1000));
@@ -100,8 +101,8 @@ module.exports = (app) => {
                         "revision": 0,
                         "ns": "Fortnite",
                         "party_id": req.params.PartyId || "LobbyBotPartyLMFAO",
-                        "account_id": `NeoniteBot${counter != 0 ? counter : ''}`,
-                        "account_dn": 'NeoniteBot',
+                        "account_id": `${cfg.botUser}${counter != 0 ? counter : ''}`,
+                        "account_dn": `${cfg.botUser}`,
                         "member_state_removed": [],
                         "member_state_updated": req.body.update,
                         "joined_at": new Date(),
@@ -139,13 +140,13 @@ module.exports = (app) => {
             meta: {}
         })
 
-        if (req.params.accountId != "NeoniteBot") return;
+        if (req.params.accountId != `${cfg.botUser}`) return;
 
         var client = global.xmppClients.find(x => x.accountId == req.params.pingerId);
 
         if (!client) return;
 
-        client.functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+        client.functions.AddBot(`${cfg.botCid}`)
     })
 
 
@@ -161,7 +162,7 @@ module.exports = (app) => {
 
     app.all('/presence/api/v1/*', (req, res) => { res.json([]) })
 
-    // /party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/NeoniteBot
+    // /party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/${cfg.botUser}
     app.delete('/party/api/v1/*/parties/:PartyId/members/:accountId', (req, res) => {
         res.status(204).end()
         var token = req.headers.authorization.replace("bearer ", "").replace("Bearer ", "")
@@ -170,7 +171,7 @@ module.exports = (app) => {
         if (!client) return;
 
 
-        if (`${req.params.accountId}`.startsWith("NeoniteBot")) {
+        if (`${req.params.accountId}`.startsWith(`${cfg.botUser}`)) {
             
             client.functions.SendMessage(JSON.stringify({
                 "account_id": req.params.accountId,
