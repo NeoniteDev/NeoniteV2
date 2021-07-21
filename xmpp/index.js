@@ -5,18 +5,7 @@ const WebSocket = require('ws');
 const uuid = require("uuid");
 const Profile = require("../profile");
 const { default: axios } = require('axios');
-
-var botCid = "CID_286_Athena_Commando_F_NeonCat"
-var botPlatform = "WIN" // I'm not sure if I have fully implemented this (I doubt) - Milxnor 
-/*
-Windows = WIN
-Mac = MAC
-Xbox = XBL
-PlayStation = PSN
-Switch = SWT
-iOS = IOS
-Android = AND
-*/
+const cfg = require('../config');
 
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
@@ -356,25 +345,25 @@ wss.on("connection", ws => {
                         break;
 
                     case "addbot":
-                        functions.AddBot(botCid)
+                        functions.AddBot(cfg.botCid)
                         break;
 
                     case "add4bot":
 
                         setTimeout(() => {
-                            functions.AddBot(botCid)
+                            functions.AddBot(cfg.botCid)
                         }, 100);
 
                         setTimeout(() => {
-                            functions.AddBot(botCid)
+                            functions.AddBot(cfg.botCid)
                         }, 1500);
 
                         setTimeout(() => {
-                            functions.AddBot(botCid)
+                            functions.AddBot(cfg.botCid)
                         }, 2000);
 
                         setTimeout(() => {
-                            functions.AddBot(botCid)
+                            functions.AddBot(cfg.botCid)
                         }, 2500);
                         break;
 
@@ -382,7 +371,7 @@ wss.on("connection", ws => {
                         var count = 0;
 
                         var interval = setInterval(() => {
-                            functions.AddBot(botCid)
+                            functions.AddBot(cfg.botCid)
                             count++;
                             if (count >= 15) {
                                 clearInterval(interval);
