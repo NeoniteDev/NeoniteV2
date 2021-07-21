@@ -14,7 +14,9 @@ module.exports = {
      * @returns {boolean} if the a change is made
      */
     addItem(profile, itemId, item, profileChangesArr) {
-        if (profile.items[itemId]) return false;
+        if (profile.items[itemId]) {
+            return false;
+        }
 
         profile.items[itemId] = item;
 
@@ -34,9 +36,7 @@ module.exports = {
      * @returns {boolean} if the a change is made
      */
     removeItem(profile, itemId, profileChangesArr) {
-        if (!profile.items[itemId]) {
-            return false;
-        }
+        if (!profile.items[itemId]) return false;
         //commented it to prevent removing gift item from the profile
         //delete profile.items[itemId];
 
@@ -85,9 +85,7 @@ module.exports = {
     changeItemAttribute(profile, itemId, attributeName, attributeValue, profileChangesArr) {
         var item = profile.items[itemId];
 
-        if (!item) {
-            return false;
-        }
+        if (!item) return false;
 
         if (!item.attributes) {
             item.attributes = {};
