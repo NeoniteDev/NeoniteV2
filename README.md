@@ -59,7 +59,6 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 ## Installation
 
 - Install the latest version of **[Node.JS](https://nodejs.org/en/download/current/)**. 
-- (Download the latest **[.NET Runtime](https://dotnet.microsoft.com/download)** if NeoniteV2 is not working for you.)
 - Download **[Neonite](https://github.com/NeoniteDev/NeoniteV2/releases)**.
 - Extract the source code.
 - Open `install.bat` and wait for it to install. (only required on the first run!)	
