@@ -4,6 +4,7 @@ const uuid = require('uuid')
 const Profile = require("../profile");
 const { ApiException } = require('../structs/errors');
 const errors = require("../structs/errors");
+const cfg = require('../config');
 
 const { application } = require('express');
 
@@ -140,7 +141,7 @@ module.exports = (app) => {
 			req.query.accountId.forEach(accId => {
 				response.push([{
 					id: accId,
-					displayName: accId.startsWith("NeoniteBot") ? "NeoniteBot" : accId,
+					displayName: accId.startsWith(`${cfg.botUser}`) ? `${cfg.botUser}` : accId,
 					externalAuths: {}
 				}])
 			})
@@ -149,7 +150,7 @@ module.exports = (app) => {
 		catch {
 			res.json([{
 				id: req.query.accountId,
-				displayName: req.query.accountId.startsWith("NeoniteBot") ? "NeoniteBot" : req.query.accountId,
+				displayName: req.query.accountId.startsWith(`${cfg.botUser}`) ? `${cfg.botUser}` : req.query.accountId,
 				externalAuths: {}
 			}])
 		}
