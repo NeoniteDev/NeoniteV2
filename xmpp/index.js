@@ -5,6 +5,19 @@ const WebSocket = require('ws');
 const uuid = require("uuid");
 const Profile = require("../profile");
 const { default: axios } = require('axios');
+
+var botCid = "CID_286_Athena_Commando_F_NeonCat"
+var botPlatform = "WIN" // I'm not sure if I have fully implemented this (I doubt) - Milxnor 
+/*
+Windows = WIN
+Mac = MAC
+Xbox = XBL
+PlayStation = PSN
+Switch = SWT
+iOS = IOS
+Android = AND
+*/
+
 function XmppPrint(msg, type) {
     if (type == 1 || msg instanceof Error) {
         return console.error(`[\x1b[33mXMPP\x1b[0m] Error: ${msg}\n`)
@@ -312,7 +325,7 @@ wss.on("connection", ws => {
                                     "xp": 0,
                                     "giftedOn": new Date(),
                                     "params": {
-                                        "userMessage": "Thanks for using Neonite"
+                                        "userMessage": "Thanks for using Neonite <3"
                                     },
                                     "favorite": false
                                 },
@@ -343,25 +356,25 @@ wss.on("connection", ws => {
                         break;
 
                     case "addbot":
-                        functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                        functions.AddBot(botCid)
                         break;
 
                     case "add4bot":
 
                         setTimeout(() => {
-                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                            functions.AddBot(botCid)
                         }, 100);
 
                         setTimeout(() => {
-                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                            functions.AddBot(botCid)
                         }, 1500);
 
                         setTimeout(() => {
-                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                            functions.AddBot(botCid)
                         }, 2000);
 
                         setTimeout(() => {
-                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                            functions.AddBot(botCid)
                         }, 2500);
                         break;
 
@@ -369,7 +382,7 @@ wss.on("connection", ws => {
                         var count = 0;
 
                         var interval = setInterval(() => {
-                            functions.AddBot("CID_286_Athena_Commando_F_NeonCat")
+                            functions.AddBot(botCid)
                             count++;
                             if (count >= 15) {
                                 clearInterval(interval);
@@ -488,7 +501,7 @@ wss.on("connection", ws => {
                     "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
                     "account_dn": "NeoniteBot",
                     "member_state_updated": {
-                        "urn:epic:member:joinrequestusers_j": JSON.stringify({ "users": [{ "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`, "dn": "NeoniteBot", "plat": "WIN", "data": JSON.stringify({ "CrossplayPreference_i": "1", "SubGame_u": "1" }) }] }),
+                        "urn:epic:member:joinrequestusers_j": JSON.stringify({ "users": [{ "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`, "dn": "NeoniteBot", "plat": `WIN`, "data": JSON.stringify({ "CrossplayPreference_i": "1", "SubGame_u": "1" }) }] }),
                         "urn:epic:member:dn_s": `NeoniteBot`,
                     },
                     "joined_at": new Date(),
@@ -528,7 +541,7 @@ wss.on("connection", ws => {
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
                         "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
-                        "Default:Platform_j": "{\"Platform\":{\"platformDescription\":{\"name\":\"WIN\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}",
+                        "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
                         "Default:PlatformUniqueId_s": "INVALID",
                         "Default:PlatformSessionId_s": "",
                         "Default:CrossplayPreference_s": "OptedIn"
@@ -603,7 +616,7 @@ wss.on("connection", ws => {
                         "Default:ArbitraryCustomDataStore_j": "{\"ArbitraryCustomDataStore\":[]}",
                         "Default:AthenaBannerInfo_j": "{\"AthenaBannerInfo\":{\"bannerIconId\":\"standardbanner2\",\"bannerColorId\":\"defaultcolor12\",\"seasonLevel\":69}}",
                         "Default:BattlePassInfo_j": "{\"BattlePassInfo\":{\"bHasPurchasedPass\":false,\"passLevel\":6,\"selfBoostXp\":0,\"friendBoostXp\":0}}",
-                        "Default:Platform_j": "{\"Platform\":{\"platformDescription\":{\"name\":\"WIN\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}",
+                        "Default:Platform_j": `{\"Platform\":{\"platformDescription\":{\"name\":\"${botPlatform}\",\"platformType\":\"DESKTOP\",\"onlineSubsystem\":\"None\",\"sessionType\":\"\",\"externalAccountType\":\"\",\"crossplayPool\":\"DESKTOP\"}}}`,
                         "Default:PlatformUniqueId_s": "INVALID",
                         "Default:PlatformSessionId_s": "",
                         "Default:CrossplayPreference_s": "OptedIn"
