@@ -14,9 +14,7 @@ module.exports = {
      * @returns {boolean} if the a change is made
      */
     addItem(profile, itemId, item, profileChangesArr) {
-        if (profile.items[itemId]) {
-            return false;
-        }
+        if (profile.items[itemId]) return false;
 
         profile.items[itemId] = item;
 
