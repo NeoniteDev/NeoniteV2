@@ -7,6 +7,7 @@ const errors = require('./../structs/errors');
 const { ErrDef, ApiException, com } = require('./../structs/errors');
 var builder = require('xmlbuilder');
 const Express = require('express');
+const cfg = require('../config.js')
 
 Date.prototype.addHours = function (h) {
 	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
@@ -183,7 +184,7 @@ module.exports = (app) => {
 			}])
 	})
 
-	app.delete("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
+	app.delete(`/friends/api/v1/:accountId/friends/${cfg.botUser}`, (req, res) => {
 		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
 		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 		if (!client) return;
@@ -191,14 +192,14 @@ module.exports = (app) => {
 		client.functions.SendMessage(JSON.stringify({
 			"type": "FRIENDSHIP_REQUEST",
 			"timestamp": new Date(),
-			"from": "NeoniteBot",
+			"from": `${cfg.botUser}`,
 			"to": req.params.accountId,
 			"status": "ACCEPTED"
 		}))
 
 		client.functions.SendMessage(JSON.stringify({
 			"payload": {
-				"accountId": "NeoniteBot",
+				"accountId": `${cfg.botUser}`,
 				"status": "ACCEPTED",
 				"direction": "INBOUND",
 				"created": new Date(),
@@ -255,7 +256,7 @@ module.exports = (app) => {
 	app.get('/friends/api/v1/:accountId/summary', (req, res) => {
 		res.json({
 			"friends": [{
-				"accountId": "NeoniteBot",
+				"accountId": `${cfg.botUser}`,
 				"groups": [],
 				"mutual": 0,
 				"alias": "",
@@ -306,7 +307,7 @@ module.exports = (app) => {
 		})
 	});
 
-	app.post("/friends/api/v1/:accountId/blocklist/NeoniteBot", (req, res) => {
+	app.post(`/friends/api/v1/:accountId/blocklist/${cfg.botUser}`, (req, res) => {
 		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
 
 		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
@@ -315,14 +316,14 @@ module.exports = (app) => {
 		client.functions.SendMessage(JSON.stringify({
 			"type": "FRIENDSHIP_REQUEST",
 			"timestamp": new Date(),
-			"from": "NeoniteBot",
+			"from": `${cfg.botUser}`,
 			"to": req.params.accountId,
 			"status": "ACCEPTED"
 		}))
 
 		client.functions.SendMessage(JSON.stringify({
 			"payload": {
-				"accountId": "NeoniteBot",
+				"accountId": `${cfg.botUser}`,
 				"status": "ACCEPTED",
 				"direction": "INBOUND",
 				"created": new Date(),
@@ -342,7 +343,7 @@ module.exports = (app) => {
 			"externalAuths": {}
 		})
 
-		if (req.params.displayName != "NeoniteBot") return;
+		if (req.params.displayName != `${cfg.botUser}`) return;
 
 		var token = req.headers.authorization.replace("bearer ", "").replace("Bearer ", "")
 		var client = global.xmppClients.find(x => x.token == token);
@@ -352,14 +353,14 @@ module.exports = (app) => {
 		client.functions.SendMessage(JSON.stringify({
 			"type": "FRIENDSHIP_REQUEST",
 			"timestamp": new Date(),
-			"from": "NeoniteBot",
+			"from": `${cfg.botUser}`,
 			"to": req.params.accountId,
 			"status": "ACCEPTED"
 		}))
 
 		client.functions.SendMessage(JSON.stringify({
 			"payload": {
-				"accountId": "NeoniteBot",
+				"accountId": `${cfg.botUser}`,
 				"status": "ACCEPTED",
 				"direction": "INBOUND",
 				"created": new Date(),
@@ -370,7 +371,7 @@ module.exports = (app) => {
 		}))
 	})
 
-	app.post("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
+	app.post(`/friends/api/v1/:accountId/friends/${cfg.botUser}`, (req, res) => {
 		res.status(204).send()
 	})
 
@@ -522,7 +523,7 @@ module.exports = (app) => {
 	app.get('/friends/api/public/friends/:accountId', (req, res) => {
 		res.json([
 			{
-				accountId: 'NeoniteBot',
+				accountId: `${cfg.botUser}`,
 				status: 'ACCEPTED',
 				direction: 'INBOUND',
 				created: '2018-12-06T04:46:01.296Z',
