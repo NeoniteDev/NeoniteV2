@@ -6,7 +6,7 @@ const { application } = require('express')
  * @param {String} port 
  */
 module.exports = (app, port) => {
-    //var lastest = await axios.get("https://api.nitestats.com/v1/epic/builds/fltoken")
+    //var latest = await axios.get("https://api.nitestats.com/v1/epic/builds/fltoken")
     app.get(["/content/api/pages/fortnite-game", "/content/api/pages/"], async (req, res) => {
         var season = "9";
         try {
