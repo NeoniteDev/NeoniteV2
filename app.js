@@ -4,7 +4,7 @@ const fs = require("fs");
 const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
-const version = "2.7.3";
+const version = "2.8.0";
 const NeoLog = require('./structs/NeoLog')
 const cookieParser = require("cookie-parser");
 global.xmppClients = [];
@@ -56,8 +56,7 @@ global.LobbyBotPort = 80;
 	});
 
 	app.listen(port, () => {
-		if (process.argv.includes("--test"))
-		{
+		if (process.argv.includes("--test")) {
 			require(`${__dirname}/.github/test/testing.js`)(app);
 			process.exit(0)
 		}
