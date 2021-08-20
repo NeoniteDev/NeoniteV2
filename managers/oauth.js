@@ -69,20 +69,6 @@ module.exports = (app) => {
 				break;
 		}
 
-		var profileData = Profile.readProfile(accountId, "athena")
-		
-		if (!profileData) {
-			profileData = Profile.readProfileTemplate("athena");
-		}
-		if (profileData) {
-			await Profile.updatedCos(profileData);
-			
-			try {
-				fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
-				Profile.saveProfile(accountId, "athena", profileData);
-			} catch {}
-		}
-
 		res.json({
 			access_token: crypto.randomBytes(16).toString("hex"),
 			expires_in: 28800,

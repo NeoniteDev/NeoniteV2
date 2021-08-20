@@ -166,44 +166,6 @@ module.exports = {
         }
     },
 
-    async updatedCos(profileData){
-        //up to date cosmatics on login from officer's api.
-        const data = (await axios.get("https://fortnite-api.com/v2/cosmetics/br")).data;
-        
-        let upcoming_data = [];
-        (await axios.get("https://fortnite-api.com/v2/cosmetics/br/new")).data.data.items.forEach(item =>{
-            upcoming_data.push(item.id.toLowerCase());
-        });
-        
-        let yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-        
-        for (cosmetic of data.data) {
-            const item = {
-                "templateId": cosmetic.type.backendValue + ":" + cosmetic.id.toLowerCase(),
-                "attributes": {
-                    "creation_time": upcoming_data.includes(cosmetic.id.toLowerCase()) ? yesterday : "min",
-                    "max_level_bonus": 0,
-                    "level": 1,
-                    "item_seen": true,
-                    "rnd_sel_cnt": 0,
-                    "xp": 0,
-                    "variants": cosmetic.variants ? cosmetic.variants.map(it => {
-                        return {
-                            channel: it.channel,
-                            active: it.options[0].tag,
-                            owned: it.options.map(it => it.tag)
-                        };
-                    }) : [],
-                    "favorite": false
-                },
-                "quantity": 1
-            };
-            profileData.items[item.templateId] = item;
-        }
-        return true;
-    },
-
     saveProfile(accountId, profileId, data) {
         fs.writeFileSync(path.join(__dirname, `/config/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
     }
