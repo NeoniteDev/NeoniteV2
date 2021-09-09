@@ -84,7 +84,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
  * How do I play with my friends?
    * Neonite V2 is a locally-hosted project, meaning it has no party or friends functionality.
  * Why dont i see any cosmetics in my locker?
-   * We removed cosmetics because Epic Games made it clear it does not like services that offer cosmetics for free.
+   * We removed cosmetics because Epic Games made it clear it does not like services that offer cosmetics for free. If you wish for skins you're welcome to add them yourself.
 
 
 
