@@ -4,7 +4,7 @@
   "description": "A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience",
   "main": "app.js",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
