@@ -174,8 +174,8 @@ module.exports = (app) => {
          * @param {ApiException} thing 
          */
         function next(thing) {
-            console.log("Next Called by " + path + "\n")
-            if (!thing) throw new Error("Unknow Error at " + path);
+            console.log("Next called by " + path + "\n")
+            if (!thing) throw new Error("Unknown error at " + path);
 
             else if (!thing.errorMessage) throw thing;
 
@@ -186,7 +186,7 @@ module.exports = (app) => {
             message.replace('{1}', thing.messageVars[1])
             message.replace('{2}', thing.messageVars[2])
 
-            console.log(`Api Error At route ${path}: ${message}\n`);
+            console.log(`API error at route ${path}: ${message}\n`);
 
             //throw thing;
         }

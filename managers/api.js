@@ -184,7 +184,7 @@ module.exports = (app) => {
 	})
 
 	app.delete("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
-		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
+		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You can not remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
 		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 		if (!client) return;
 
@@ -307,7 +307,7 @@ module.exports = (app) => {
 	});
 
 	app.post("/friends/api/v1/:accountId/blocklist/NeoniteBot", (req, res) => {
-		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
+		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You can not remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
 
 		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 		if (!client) return;

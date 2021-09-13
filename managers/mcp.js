@@ -9,6 +9,7 @@ Array.prototype.insert = function ( index, item ) {
 };
 
 const { Application } = require("express");
+const NeoLog = require("../structs/NeoLog");
 
 /**
  * 
@@ -43,7 +44,7 @@ module.exports = (app) => {
 					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
 					Profile.saveProfile(accountId, profileId, profileData);
 				} catch (e) {
-					console.log("Failed creating profile");
+					NeoLog.Error("Failed creating profile.");
 					throw e;
 				}
 			}
