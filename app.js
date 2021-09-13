@@ -20,18 +20,20 @@ global.LobbyBotPort = 80;
 			return typeof args[number] != "undefined" ? args[number] : match;
 		});
 	};
+	
 
 
 	require('./xmpp')
 
 	const app = express();
+	app.use("/", express.static("public"));
 
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json());
 	app.use(cookieParser());
 	app.set("etag", false);
 
-	app.use("/", express.static("public"));
+	
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
 		require(`${__dirname}/managers/${route}`)(app, port);
@@ -60,7 +62,7 @@ global.LobbyBotPort = 80;
 			require(`${__dirname}/.github/test/testing.js`)(app);
 			process.exit(0)
 		}
-		NeoLog.Log(`v${version} is listening on port ${port || 5595}!`);
+		NeoLog.Log(`v${version} is up and listening on port ${port || 5595}!`);
 	});
 
 	module.exports = app;

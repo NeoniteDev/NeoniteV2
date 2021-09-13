@@ -1,380 +1,419 @@
 <body>
     <style>
-@charset "UTF-8";
-body {
-    color: #fff;
-    font-family: Rubik, sans-serif
-}
+        @charset "UTF-8";
 
-.item.footer {
-    flex-wrap: wrap;
-    padding: 5rem;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.7;
-    grid-column: span 1
-}
+        body {
+            color: #fff;
+            font-family: Rubik, sans-serif
+        }
+
+        .item.footer {
+            flex-wrap: wrap;
+            padding: 5rem;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.7;
+            grid-column: span 1
+        }
 
 
-/* Add styles to the form container */
-.form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: red;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
 
-@media screen and (min-width:823px) and (max-width:1223px) {
-    .item.footer {
-        grid-column: span 2
-    }
-}
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
 
-.item.footer a {
-    text-decoration: none;
-    color: #fff;
-    padding: 3px 0;
-    border-bottom: 1px dashed
-}
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
 
-.item.footer a:hover {
-    border-bottom: 1px solid
-}
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
 
-footer {
-    margin-top: 1.5rem
-}
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
 
-footer a {
-    text-decoration: none;
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: 0 0;
-    border: 1px dashed #fff;
-    color: #fff;
-    margin: 5px
-}
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
 
-footer a:hover {
-    background: rgba(255, 255, 255, .1)
-}
+        @media screen and (min-width:823px) and (max-width:1223px) {
+            .item.footer {
+                grid-column: span 2
+            }
+        }
 
-* {
-    box-sizing: border-box
-}
+        .item.footer a {
+            text-decoration: none;
+            color: #fff;
+            padding: 3px 0;
+            border-bottom: 1px dashed
+        }
 
-:after,
-:before {
-    content: "";
-    position: absolute
-}
+        .item.footer a:hover {
+            border-bottom: 1px solid
+        }
 
-button {
-    background: 0 0;
-    color: #fff;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    padding: .8rem 2rem;
-    font: 24px Margarine, sans-serif;
-    outline: 0;
-    cursor: pointer;
-    position: relative;
-    transition: .2s ease-in-out;
-    letter-spacing: 2px
-}
+        footer {
+            margin-top: 1.5rem
+        }
 
-.name {
-    width: 100%;
-    text-align: center;
-    padding: 0 0 3rem;
-    font: 500 14px Rubik, sans-serif;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .4)
-}
+        footer a {
+            text-decoration: none;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: 0 0;
+            border: 1px dashed #fff;
+            color: #fff;
+            margin: 5px
+        }
 
-@keyframes pulsing {
-    0% {
-        opacity: 1;
-        transform: scaleY(1) scaleX(1)
-    }
-    20% {
-        opacity: .5
-    }
-    70% {
-        opacity: .2;
-        transform: scaleY(1.8) scaleX(1.4)
-    }
-    80% {
-        opacity: 0;
-        transform: scaleY(1.8) scaleX(1.4)
-    }
-    90% {
-        opacity: 0;
-        transform: scaleY(1) scaleX(1)
-    }
-}
+        footer a:hover {
+            background: rgba(255, 255, 255, .1)
+        }
 
-@keyframes pulsing1 {
-    0% {
-        opacity: 1;
-        transform: scaleY(1) scaleX(1)
-    }
-    20% {
-        opacity: .5
-    }
-    70% {
-        opacity: .2;
-        transform: scaleY(1.3) scaleX(1.15)
-    }
-    80% {
-        opacity: 0;
-        transform: scaleY(1.3) scaleX(1.15)
-    }
-    90% {
-        opacity: 0;
-        transform: scaleY(1) scaleX(1)
-    }
-}
+        * {
+            box-sizing: border-box
+        }
 
-@keyframes typing {
-    0% {
-        width: 0
-    }
-    50% {
-        width: 100%
-    }
-    55%,
-    65%,
-    75% {
-        opacity: 1
-    }
-    60%,
-    70% {
-        opacity: 0
-    }
-    80% {
-        width: 100%
-    }
-    100% {
-        width: 0
-    }
-}
+        :after,
+        :before {
+            content: "";
+            position: absolute
+        }
 
-@keyframes blink {
-    25%,
-    75% {
-        color: transparent
-    }
-    40%,
-    60% {
-        color: #fff
-    }
-}
+        button {
+            background: 0 0;
+            color: #fff;
+            border: 3px solid #fff;
+            border-radius: 50px;
+            padding: .8rem 2rem;
+            font: 24px Margarine, sans-serif;
+            outline: 0;
+            cursor: pointer;
+            position: relative;
+            transition: .2s ease-in-out;
+            letter-spacing: 2px
+        }
 
-@keyframes up-down {
-    50% {
-        margin-top: -20px
-    }
-}
+        .name {
+            width: 100%;
+            text-align: center;
+            padding: 0 0 3rem;
+            font: 500 14px Rubik, sans-serif;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .4)
+        }
 
-.button-100 .emoji {
-    position: absolute;
-    top: -45px;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    overflow: hidden
-}
+        @keyframes pulsing {
+            0% {
+                opacity: 1;
+                transform: scaleY(1) scaleX(1)
+            }
 
-.button-100 .emoji:before {
-    content: "👌";
-    display: inline-block;
-    animation: give-score 2.5s infinite;
-    position: relative;
-    top: 0
-}
+            20% {
+                opacity: .5
+            }
 
-.button-100 .emoji:nth-child(2) {
-    left: 0;
-    right: 0;
-    margin: auto
-}
+            70% {
+                opacity: .2;
+                transform: scaleY(1.8) scaleX(1.4)
+            }
 
-.button-100 .emoji:nth-child(2):before {
-    animation: give-score 2.5s infinite .2s
-}
+            80% {
+                opacity: 0;
+                transform: scaleY(1.8) scaleX(1.4)
+            }
 
-.button-100 .emoji:nth-child(3) {
-    left: auto;
-    right: 0
-}
+            90% {
+                opacity: 0;
+                transform: scaleY(1) scaleX(1)
+            }
+        }
 
-.button-100 .emoji:nth-child(3):before {
-    animation: give-score 2.5s infinite .4s
-}
+        @keyframes pulsing1 {
+            0% {
+                opacity: 1;
+                transform: scaleY(1) scaleX(1)
+            }
 
-.button-100 button:hover .emoji:before {
-    content: "💯";
-    transition: .5s ease
-}
+            20% {
+                opacity: .5
+            }
 
-@keyframes give-score {
-    30%,
-    80% {
-        top: 0
-    }
-    40%,
-    70% {
-        top: 50px
-    }
-}
+            70% {
+                opacity: .2;
+                transform: scaleY(1.3) scaleX(1.15)
+            }
 
-@keyframes rotate-nonstop {
-    50% {
-        transform: rotate(92deg)
-    }
-}
+            80% {
+                opacity: 0;
+                transform: scaleY(1.3) scaleX(1.15)
+            }
 
-@keyframes omg-yes {
-    50% {
-        opacity: 1
-    }
-    100% {
-        top: -50px
-    }
-}
+            90% {
+                opacity: 0;
+                transform: scaleY(1) scaleX(1)
+            }
+        }
 
-@keyframes rainbow {
-    0% {
-        background: #1abc9c
-    }
-    10% {
-        background: #2ecc71
-    }
-    20% {
-        background: #3498db
-    }
-    30% {
-        background: #9b59b6
-    }
-    40% {
-        background: #e74c3c
-    }
-    50% {
-        background: #e67e22
-    }
-    60% {
-        background: #f1c40f
-    }
-    70% {
-        background: #2c3e50
-    }
-    80% {
-        background: #9b59b6
-    }
-}
+        @keyframes typing {
+            0% {
+                width: 0
+            }
 
-@keyframes jittery {
-    5%,
-    50% {
-        transform: scale(1)
-    }
-    10% {
-        transform: scale(.9)
-    }
-    15% {
-        transform: scale(1.15)
-    }
-    20% {
-        transform: scale(1.15) rotate(-5deg)
-    }
-    25% {
-        transform: scale(1.15) rotate(5deg)
-    }
-    30% {
-        transform: scale(1.15) rotate(-3deg)
-    }
-    35% {
-        transform: scale(1.15) rotate(2deg)
-    }
-    40% {
-        transform: scale(1.15) rotate(0)
-    }
-}
+            50% {
+                width: 100%
+            }
 
-@keyframes heartbeat {
-    50% {
-        transform: scale(1.1)
-    }
-}
+            55%,
+            65%,
+            75% {
+                opacity: 1
+            }
 
-@font-face {
-    font-family: 'burbank';
-    src: url('burbank.woff2') format('woff2'), url('burbank.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+            60%,
+            70% {
+                opacity: 0
+            }
 
-a {
-    font-family: burbank;
-    color: black;
-    font-size: 55px;
-    text-align: center;
-}
+            80% {
+                width: 100%
+            }
 
-body {
-    color: #fff;
-    font-family: Rubik, sans-serif;
-    background: rgb(65,142,255);
-    background: linear-gradient(127deg, rgba(65,142,255,1) 80%, rgba(87,128,189,1) 88%);
-}
+            100% {
+                width: 0
+            }
+        }
 
-head {
-    text-align: center;
-}
+        @keyframes blink {
+
+            25%,
+            75% {
+                color: transparent
+            }
+
+            40%,
+            60% {
+                color: #fff
+            }
+        }
+
+        @keyframes up-down {
+            50% {
+                margin-top: -20px
+            }
+        }
+
+        .button-100 .emoji {
+            position: absolute;
+            top: -45px;
+            left: 0;
+            width: 35px;
+            height: 35px;
+            overflow: hidden
+        }
+
+        .button-100 .emoji:before {
+            content: "👌";
+            display: inline-block;
+            animation: give-score 2.5s infinite;
+            position: relative;
+            top: 0
+        }
+
+        .button-100 .emoji:nth-child(2) {
+            left: 0;
+            right: 0;
+            margin: auto
+        }
+
+        .button-100 .emoji:nth-child(2):before {
+            animation: give-score 2.5s infinite .2s
+        }
+
+        .button-100 .emoji:nth-child(3) {
+            left: auto;
+            right: 0
+        }
+
+        .button-100 .emoji:nth-child(3):before {
+            animation: give-score 2.5s infinite .4s
+        }
+
+        .button-100 button:hover .emoji:before {
+            content: "💯";
+            transition: .5s ease
+        }
+
+        @keyframes give-score {
+
+            30%,
+            80% {
+                top: 0
+            }
+
+            40%,
+            70% {
+                top: 50px
+            }
+        }
+
+        @keyframes rotate-nonstop {
+            50% {
+                transform: rotate(92deg)
+            }
+        }
+
+        @keyframes omg-yes {
+            50% {
+                opacity: 1
+            }
+
+            100% {
+                top: -50px
+            }
+        }
+
+        @keyframes rainbow {
+            0% {
+                background: #1abc9c
+            }
+
+            10% {
+                background: #2ecc71
+            }
+
+            20% {
+                background: #3498db
+            }
+
+            30% {
+                background: #9b59b6
+            }
+
+            40% {
+                background: #e74c3c
+            }
+
+            50% {
+                background: #e67e22
+            }
+
+            60% {
+                background: #f1c40f
+            }
+
+            70% {
+                background: #2c3e50
+            }
+
+            80% {
+                background: #9b59b6
+            }
+        }
+
+        @keyframes jittery {
+
+            5%,
+            50% {
+                transform: scale(1)
+            }
+
+            10% {
+                transform: scale(.9)
+            }
+
+            15% {
+                transform: scale(1.15)
+            }
+
+            20% {
+                transform: scale(1.15) rotate(-5deg)
+            }
+
+            25% {
+                transform: scale(1.15) rotate(5deg)
+            }
+
+            30% {
+                transform: scale(1.15) rotate(-3deg)
+            }
+
+            35% {
+                transform: scale(1.15) rotate(2deg)
+            }
+
+            40% {
+                transform: scale(1.15) rotate(0)
+            }
+        }
+
+        @keyframes heartbeat {
+            50% {
+                transform: scale(1.1)
+            }
+        }
+
+        @font-face {
+            font-family: 'burbank';
+            src: url('burbank.woff2') format('woff2'), url('burbank.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            font-family: burbank;
+            color: black;
+            font-size: 55px;
+            text-align: center;
+        }
+
+        body {
+            color: #fff;
+            font-family: Rubik, sans-serif;
+            background: rgb(65, 142, 255);
+            background: linear-gradient(127deg, rgba(65, 142, 255, 1) 80%, rgba(87, 128, 189, 1) 88%);
+        }
+
+        head {
+            text-align: center;
+        }
     </style>
+
     <head>
         <a>404...</a>
         <br>
-        <a href="#">Go Back!</a>
+        <a href="#">Go back!</a>
     </head>
 </body>
