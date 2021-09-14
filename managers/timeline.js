@@ -46,7 +46,7 @@ module.exports = (app) => {
                             "activeStorefronts": [],
                             "eventNamedWeights": {},
                             "activeEvents": [],
-                            "seasonNumber": parseInt(season),
+                            "seasonNumber": 10,
                             "seasonTemplateId": `AthenaSeason:athenaseason${season}`,
                             "matchXpBonusPoints": 0,
                             "eventPunchCardTemplateId": "",
