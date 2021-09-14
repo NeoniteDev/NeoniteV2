@@ -50,11 +50,11 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 
 - Install the latest version of **[Node.js](https://nodejs.org/en/download/current/)**. 
 - (Download the latest **[.NET Runtime](https://dotnet.microsoft.com/download)** if NeoniteV2 is not working for you.)
-- Download the **[source code](https://github.com/NeoniteDev/NeoniteV2/releases)**.
+- Download the **[Release](https://github.com/NeoniteDev/NeoniteV2/releases)**.
 - Extract the source code.
 - Open `install.bat` and wait for it to install. (only required on the first run!)	
 - Open `run.bat`, it should say `[Neonite]: v2.7.3 is listening on port 5595!` (Do not close this while running Neonite V2!)	
-- Download the **[launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/Launcher.zip?raw=true)**.	
+- Download the **[Launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/Launcher.zip?raw=true)**.	
 - Extract the launcher and open `Silver.exe`.
 - Type in your username, make sure to put "@." at the end or it won't let you login. (don't use any special characters or spaces.)
 - Type a random password (doesn't matter what you put, so you can login)	
@@ -66,7 +66,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
  * How do I access Neonite V2?
    * You can access Neonite V2's dashboard at http://localhost:5595/.
  * Can I go in-game?
-   * No, however, Neonite++ is available to use for in-game support, Check it out [here](https://github.com/NeoniteDev/NeonitePP).
+   * No, however, Neonite++ is available to use for in-game support, Check it out [Here](https://github.com/NeoniteDev/NeonitePP).
  * Will I get banned?
    * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
