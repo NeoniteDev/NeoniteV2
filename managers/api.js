@@ -132,6 +132,175 @@ module.exports = (app) => {
 		})
 	});
 
+	app.post('fortnite/api/game/v2/creative/discovery/surface/7b4c78500866465a9dc36bfe7e6aa8d9', (req, res) => res.json({
+		"Panels": [{
+			"PanelName": "ByEpic_18.00",
+			"Pages": [
+				{
+					"results": [
+						{
+							"linkData": {
+								"mnemonic": "playlist_defaultsolo",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_defaultsolo"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_defaultduo",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_defaultduo"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_trios",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_trios"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_defaultsquad",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_defaultsquad"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_respawn_24_alt",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_respawn_24_alt"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_molegame",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_molegame"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_playgroundv2",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_playgroundv2"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_battlelab",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_battlelab"
+									}
+								}
+							},
+							"isFavorite": false
+						},
+						{
+							"linkData": {
+								"mnemonic": "playlist_papaya",
+								"linkType": "BR:Playlist",
+								"active": true,
+								"version": 93,
+								"accountId": "epic",
+								"creatorName": "Epic",
+								"descriptionTags": [],
+								"metadata": {
+									"matchmaking": {
+										"override_playlist": "playlist_papaya"
+									}
+								}
+							},
+							"isFavorite": false
+						}
+					],
+					"hasMore": false
+				}
+			]
+		}],
+		"TestCohorts": [
+			"V2_18.00_9/20_L10RATE_PS4"
+		]
+	}))
+
 
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
 		const FormattedUserAgent = req.headers["user-agent"].replace("Fortnite/", "").replace("FortniteGame/", "")
