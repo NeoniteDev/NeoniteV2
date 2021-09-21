@@ -175,6 +175,23 @@ module.exports = (app) => {
 							"results": [
 								{
 									"linkData": {
+										"mnemonic": "playlist_battlelab",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_battlelab"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
 										"mnemonic": "playlist_defaultsolo",
 										"linkType": "BR:Playlist",
 										"active": true,
@@ -192,7 +209,7 @@ module.exports = (app) => {
 								},
 								{
 									"linkData": {
-										"mnemonic": "playlist_defaultduo",
+										"mnemonic": "playlist_papaya",
 										"linkType": "BR:Playlist",
 										"active": true,
 										"version": 93,
@@ -201,75 +218,7 @@ module.exports = (app) => {
 										"descriptionTags": [],
 										"metadata": {
 											"matchmaking": {
-												"override_playlist": "playlist_defaultduo"
-											}
-										}
-									},
-									"isFavorite": false
-								},
-								{
-									"linkData": {
-										"mnemonic": "playlist_trios",
-										"linkType": "BR:Playlist",
-										"active": true,
-										"version": 93,
-										"accountId": "epic",
-										"creatorName": "Epic",
-										"descriptionTags": [],
-										"metadata": {
-											"matchmaking": {
-												"override_playlist": "playlist_trios"
-											}
-										}
-									},
-									"isFavorite": false
-								},
-								{
-									"linkData": {
-										"mnemonic": "playlist_defaultsquad",
-										"linkType": "BR:Playlist",
-										"active": true,
-										"version": 93,
-										"accountId": "epic",
-										"creatorName": "Epic",
-										"descriptionTags": [],
-										"metadata": {
-											"matchmaking": {
-												"override_playlist": "playlist_defaultsquad"
-											}
-										}
-									},
-									"isFavorite": false
-								},
-								{
-									"linkData": {
-										"mnemonic": "playlist_playgroundv2",
-										"linkType": "BR:Playlist",
-										"active": true,
-										"version": 93,
-										"accountId": "epic",
-										"creatorName": "Epic",
-										"descriptionTags": [],
-										"metadata": {
-											"matchmaking": {
-												"override_playlist": "playlist_playgroundv2"
-											}
-										}
-									},
-									"isFavorite": false
-								},
-								{
-									"linkData": {
-										"mnemonic": "playlist_molegame",
-										"linkType": "BR:Playlist",
-										"active": true,
-										"version": 93,
-										"accountId": "epic",
-										"creatorName": "Epic",
-										"descriptionTags": [],
-										"metadata": {
-											"matchmaking": {
-												"override_playlist": "playlist_molegame"
+												"override_playlist": "playlist_papaya"
 											}
 										}
 									},
@@ -298,72 +247,7 @@ module.exports = (app) => {
 					]
 				},
 				{
-					"PanelName": "Competitive",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Team Deathmatch",
-					"Pages": [
-						[
-							{
-								"results": [],
-								"hasMore": false
-							}
-						]
-					]
-				},
-				{
-					"PanelName": "If You Like Zone Wars",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Zombies",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Classes",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Deathrun",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Good for Duos",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "ByEpic_18.00",
+					"PanelName": "FeaturedV2_17.50_Launch",
 					"Pages": [
 						{
 							"results": [
@@ -434,10 +318,20 @@ module.exports = (app) => {
 										}
 									},
 									"isFavorite": false
-								},
+								}
+							],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "ByEpic_17.50_Launch",
+					"Pages": [
+						{
+							"results": [
 								{
 									"linkData": {
-										"mnemonic": "playlist_respawn_24_alt",
+										"mnemonic": "playlist_fritter_40",
 										"linkType": "BR:Playlist",
 										"active": true,
 										"version": 93,
@@ -446,7 +340,7 @@ module.exports = (app) => {
 										"descriptionTags": [],
 										"metadata": {
 											"matchmaking": {
-												"override_playlist": "playlist_respawn_24_alt"
+												"override_playlist": "playlist_fritter_40"
 											}
 										}
 									},
@@ -454,7 +348,7 @@ module.exports = (app) => {
 								},
 								{
 									"linkData": {
-										"mnemonic": "playlist_molegame",
+										"mnemonic": "Playlist_Buffet".toLowerCase(),
 										"linkType": "BR:Playlist",
 										"active": true,
 										"version": 93,
@@ -463,7 +357,7 @@ module.exports = (app) => {
 										"descriptionTags": [],
 										"metadata": {
 											"matchmaking": {
-												"override_playlist": "playlist_molegame"
+												"override_playlist": "Playlist_Buffet".toLowerCase()
 											}
 										}
 									},
@@ -471,7 +365,7 @@ module.exports = (app) => {
 								},
 								{
 									"linkData": {
-										"mnemonic": "playlist_playgroundv2",
+										"mnemonic": "playlist_music_highest",
 										"linkType": "BR:Playlist",
 										"active": true,
 										"version": 93,
@@ -480,7 +374,7 @@ module.exports = (app) => {
 										"descriptionTags": [],
 										"metadata": {
 											"matchmaking": {
-												"override_playlist": "playlist_playgroundv2"
+												"override_playlist": "playlist_music_highest"
 											}
 										}
 									},
@@ -488,7 +382,7 @@ module.exports = (app) => {
 								},
 								{
 									"linkData": {
-										"mnemonic": "playlist_battlelab",
+										"mnemonic": "playlist_vamp_duo",
 										"linkType": "BR:Playlist",
 										"active": true,
 										"version": 93,
@@ -497,7 +391,7 @@ module.exports = (app) => {
 										"descriptionTags": [],
 										"metadata": {
 											"matchmaking": {
-												"override_playlist": "playlist_battlelab"
+												"override_playlist": "playlist_vamp_duo"
 											}
 										}
 									},
@@ -505,7 +399,7 @@ module.exports = (app) => {
 								},
 								{
 									"linkData": {
-										"mnemonic": "playlist_papaya",
+										"mnemonic": "playlist_dadbro_squads_12",
 										"linkType": "BR:Playlist",
 										"active": true,
 										"version": 93,
@@ -514,7 +408,125 @@ module.exports = (app) => {
 										"descriptionTags": [],
 										"metadata": {
 											"matchmaking": {
-												"override_playlist": "playlist_papaya"
+												"override_playlist": "playlist_dadbro_squads_12"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_race_12",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_race_12"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "Playlist_Respawn_20_Lava".toLowerCase(),
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "Playlist_Respawn_20_Lava".toLowerCase()
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "Playlist_Barrier_16_B_Lava".toLowerCase(),
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "Playlist_Barrier_16_B_Lava".toLowerCase()
+											}
+										}
+									},
+									"isFavorite": false
+								}, 
+								{
+									"linkData": {
+										"mnemonic": "Playlist_Fill_Solo".toLowerCase(),
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "Playlist_Fill_Solo".toLowerCase()
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "Playlist_Classic_Squads".toLowerCase(),
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "Playlist_Classic_Squads".toLowerCase()
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "Playlist_Sword_Solo".toLowerCase(),
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "Playlist_Sword_Solo".toLowerCase()
+											}
+										}
+									},
+									"isFavorite": false
+								}, {
+									"linkData": {
+										"mnemonic": "Playlist_Goose_Duos_16_SP".toLowerCase(),
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "Playlist_Goose_Duos_16_SP".toLowerCase()
 											}
 										}
 									},
@@ -524,118 +536,50 @@ module.exports = (app) => {
 							"hasMore": false
 						}
 					]
-				},
-				{
-					"PanelName": "If You Like Survival",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Roleplay",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "1v1",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "2v2",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "8v8",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Updated",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Boxfight",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Just For Fun",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Try Something New",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Large Worlds",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Chill Out",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
-				},
-				{
-					"PanelName": "Tycoon",
-					"Pages": [
-						{
-							"results": [],
-							"hasMore": false
-						}
-					]
 				}
 			],
-			"TestCohorts": []
-		}))
+			"TestCohorts": [
+				"V2_17_50_Launch"
+			]
+		})
+	)
+
+	app.get('/links/api/fn/mnemonic/:playlist', (req, res) =>
+		res.json({
+			"namespace": "fn",
+			"accountId": "epic",
+			"creatorName": "Epic",
+			"mnemonic": req.params.playlist,
+			"linkType": "BR:Playlist",
+			"metadata": {
+				"matchmaking": {
+					"override_playlist": req.params.playlist
+				}
+			},
+			"version": 93,
+			"active": true,
+			"disabled": false,
+			"created": "2021-08-16T16:43:18.268Z",
+			"published": "2021-08-03T15:27:17.540Z",
+			"descriptionTags": [
+
+			]
+		})
+	)
+
+	app.get('/fortnite/api/game/v2/creative/favorites/:accountId', (req, res) =>
+		res.json({
+			"results": [],
+			"hasMore": false
+		})
+	)
+
+	app.get('/fortnite/api/game/v2/creative/history/:accountId', (req, res) =>
+		res.json({
+			"results": [],
+			"hasMore": false
+		})
+	)
 
 	app.post("/api/v1/user/setting", (req, res) => {
 		res.json([

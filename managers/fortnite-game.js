@@ -25,7 +25,6 @@ module.exports = (app, port) => {
             "_activeDate": "2017-07-24T22:24:02.300Z",
             "lastModified": "2020-11-01T17:36:19.024Z",
             "_locale": "en-US",
-
             "emergencynotice": {
                 "news": {
                     "platform_messages": [],
@@ -1588,7 +1587,7 @@ module.exports = (app, port) => {
                 "lastModified": "2021-06-21T16:08:13.601Z",
                 "_locale": "en-US"
             },
-
+            playlistinformation: await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').then(resp => resp.data.playlistinformation).catch(() => undefined),
             "_suggestedPrefetch": [
                 `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
                 `http://127.0.0.1:${port}/Neonite1024.png`
