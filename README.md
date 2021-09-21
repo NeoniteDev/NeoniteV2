@@ -79,7 +79,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 
 Email: <a href="mailto:contact@neonite.dev">contact@neonite.dev</a>
 
-Discord Server: [Neo](https://dsc.gg/neonite)
+Discord Server: [Neo](https://dsc.gg/neo)
 
 
 <!-- CREDITS -->
