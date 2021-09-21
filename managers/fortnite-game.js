@@ -1,5 +1,7 @@
 const { default: axios } = require("axios");
 const { application } = require('express')
+
+
 /**
  * 
  * @param {application} app 
@@ -17,6 +19,8 @@ module.exports = (app, port) => {
                 season = "x";
             }
         }
+
+        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {}))?.data;
 
         res.json({
             "jcr:isCheckedOut": true,
@@ -123,7 +127,7 @@ module.exports = (app, port) => {
                 "lastModified": "2020-12-05T23:52:44.269Z",
                 "_locale": "en-US"
             },
-            "dynamicbackgrounds": {
+            "dynamicbackgrounds": content.dynamicbackgrounds || {
                 "jcr:isCheckedOut": true,
                 "backgrounds": {
                     "backgrounds": [
@@ -1587,7 +1591,7 @@ module.exports = (app, port) => {
                 "lastModified": "2021-06-21T16:08:13.601Z",
                 "_locale": "en-US"
             },
-            playlistinformation: await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').then(resp => resp.data.playlistinformation).catch(() => undefined),
+            playlistinformation: content.playlistinformation,
             "_suggestedPrefetch": [
                 `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
                 `http://127.0.0.1:${port}/Neonite1024.png`

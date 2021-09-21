@@ -464,7 +464,7 @@ module.exports = (app) => {
 										}
 									},
 									"isFavorite": false
-								}, 
+								},
 								{
 									"linkData": {
 										"mnemonic": "Playlist_Fill_Solo".toLowerCase(),
@@ -669,7 +669,30 @@ module.exports = (app) => {
 
 	app.get("/catalog/api/shared/bulk/offers", (req, res) => { res.json({}) })
 
-
+	app.get('/friends/api/v1/:accountId/summary', (req, res) => {
+		res.json({
+			"friends": [{
+				"accountId": "NeoniteBot",
+				"groups": [],
+				"mutual": 0,
+				"alias": "",
+				"note": "",
+				"favorite": true,
+				"created": "2021-01-17T16:42:04.125Z"
+			}],
+			"incoming": [],
+			"suggested": [],
+			"blocklist": [],
+			"settings": {
+				"acceptInvites": "public"
+			},
+			"limitsReached": {
+				"incoming": false,
+				"outgoing": false,
+				"accepted": false
+			}
+		})
+	})
 
 
 	//version check
