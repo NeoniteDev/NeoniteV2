@@ -167,172 +167,474 @@ module.exports = (app) => {
 
 	app.post('/fortnite/api/game/v2/creative/discovery/surface/:accountId', (req, res) =>
 		res.json({
-			"Panels": [{
-				"PanelName": "ByEpic_18.00",
-				"Pages": [
-					{
-						"results": [
-							{
-								"linkData": {
-									"mnemonic": "playlist_defaultsolo",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_defaultsolo"
+			"Panels": [
+				{
+					"PanelName": "Most Popular",
+					"Pages": [
+						{
+							"results": [
+								{
+									"linkData": {
+										"mnemonic": "playlist_defaultsolo",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_defaultsolo"
+											}
 										}
-									}
+									},
+									"isFavorite": false
 								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_defaultduo",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_defaultduo"
+								{
+									"linkData": {
+										"mnemonic": "playlist_defaultduo",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_defaultduo"
+											}
 										}
-									}
+									},
+									"isFavorite": false
 								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_trios",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_trios"
+								{
+									"linkData": {
+										"mnemonic": "playlist_trios",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_trios"
+											}
 										}
-									}
+									},
+									"isFavorite": false
 								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_defaultsquad",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_defaultsquad"
+								{
+									"linkData": {
+										"mnemonic": "playlist_defaultsquad",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_defaultsquad"
+											}
 										}
-									}
+									},
+									"isFavorite": false
 								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_respawn_24_alt",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_respawn_24_alt"
+								{
+									"linkData": {
+										"mnemonic": "playlist_playgroundv2",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_playgroundv2"
+											}
 										}
-									}
+									},
+									"isFavorite": false
 								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_molegame",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_molegame"
+								{
+									"linkData": {
+										"mnemonic": "playlist_molegame",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_molegame"
+											}
 										}
-									}
+									},
+									"isFavorite": false
 								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_playgroundv2",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_playgroundv2"
+								{
+									"linkData": {
+										"mnemonic": "playlist_respawn_24_alt",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_respawn_24_alt"
+											}
 										}
-									}
-								},
-								"isFavorite": false
-							},
+									},
+									"isFavorite": false
+								}
+							],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Competitive",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Team Deathmatch",
+					"Pages": [
+						[
 							{
-								"linkData": {
-									"mnemonic": "playlist_battlelab",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_battlelab"
-										}
-									}
-								},
-								"isFavorite": false
-							},
-							{
-								"linkData": {
-									"mnemonic": "playlist_papaya",
-									"linkType": "BR:Playlist",
-									"active": true,
-									"version": 93,
-									"accountId": "epic",
-									"creatorName": "Epic",
-									"descriptionTags": [],
-									"metadata": {
-										"matchmaking": {
-											"override_playlist": "playlist_papaya"
-										}
-									}
-								},
-								"isFavorite": false
+								"results": [],
+								"hasMore": false
 							}
-						],
-						"hasMore": false
-					}
-				]
-			}],
-			"TestCohorts": [
-				"V2_18.00_9/20_L10RATE_PS4"
-			]
+						]
+					]
+				},
+				{
+					"PanelName": "If You Like Zone Wars",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Zombies",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Classes",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Deathrun",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Good for Duos",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "ByEpic_18.00",
+					"Pages": [
+						{
+							"results": [
+								{
+									"linkData": {
+										"mnemonic": "playlist_defaultsolo",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_defaultsolo"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_defaultduo",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_defaultduo"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_trios",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_trios"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_defaultsquad",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_defaultsquad"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_respawn_24_alt",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_respawn_24_alt"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_molegame",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_molegame"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_playgroundv2",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_playgroundv2"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_battlelab",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_battlelab"
+											}
+										}
+									},
+									"isFavorite": false
+								},
+								{
+									"linkData": {
+										"mnemonic": "playlist_papaya",
+										"linkType": "BR:Playlist",
+										"active": true,
+										"version": 93,
+										"accountId": "epic",
+										"creatorName": "Epic",
+										"descriptionTags": [],
+										"metadata": {
+											"matchmaking": {
+												"override_playlist": "playlist_papaya"
+											}
+										}
+									},
+									"isFavorite": false
+								}
+							],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "If You Like Survival",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Roleplay",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "1v1",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "2v2",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "8v8",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Updated",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Boxfight",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Just For Fun",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Try Something New",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Large Worlds",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Chill Out",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				},
+				{
+					"PanelName": "Tycoon",
+					"Pages": [
+						{
+							"results": [],
+							"hasMore": false
+						}
+					]
+				}
+			],
+			"TestCohorts": []
 		}))
 
 	app.post("/api/v1/user/setting", (req, res) => {
