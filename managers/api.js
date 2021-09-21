@@ -165,7 +165,7 @@ module.exports = (app) => {
 
 	})
 
-	app.post('fortnite/api/game/v2/creative/discovery/surface/:accountId', (req, res) =>
+	app.post('/fortnite/api/game/v2/creative/discovery/surface/:accountId', (req, res) =>
 		res.json({
 			"Panels": [{
 				"PanelName": "ByEpic_18.00",
