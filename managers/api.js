@@ -1040,7 +1040,15 @@ module.exports = (app) => {
 		res.json([])
 	})
 
-};
+};  
+    //change the 0 to what ever amount of gold you want
+    app.get('/fortnite/api/game/v2/br-inventory/account/:accountId', (req, res) => {
+	    res.json({
+		    "stash": {
+			    "globalcash": 0 
+		    },
+	    })
+    });
 
 
 function RandomString(length) {
