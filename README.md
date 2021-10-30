@@ -18,7 +18,7 @@
 	<a href="https://github.com/NeoniteDev/NeoniteV2/releases">Downloads</a> | 
 	<a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a> |
 	<a href="https://dsc.gg/neonite">Discord Server</a> | 
-	<a href="https://neonitedev.github.io/">Website</a> | 
+	<a href="https://neonitedev.github.io/">Website</a>
 </p>
 <p align="center">
     <img alt="Release" src="https://img.shields.io/github/v/release/NeoniteDev/NeoniteV2?color=blue&style=for-the-badge">
