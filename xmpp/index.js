@@ -375,8 +375,8 @@ wss.on("connection", ws => {
                                         "lootList": [
                                             {
                                                 "itemProfile": "athena",
-                                                "itemType": `${body[0].type.backendValue}:${body.id}`,
-                                                "itemGuid": `${body[0].type.backendValue}:${body.id}`,
+                                                "itemType": `${body[0].type.backendValue}:${body[0].id}`,
+                                                "itemGuid": `${body[0].type.backendValue}:${body[0].id}`,
                                                 "quantity": 1
                                             }
                                         ],
