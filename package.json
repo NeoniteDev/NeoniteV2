@@ -1,6 +1,6 @@
 {
   "name": "neonitev2",
-  "version": "2.7.2.2",
+  "version": "2.7.3",
   "description": "A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience",
   "main": "app.js",
   "dependencies": {
