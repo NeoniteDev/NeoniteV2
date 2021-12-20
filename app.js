@@ -1,12 +1,24 @@
+const NeoLog = require('./structs/NeoLog')
+
+try {
+	var cookieParser = require("cookie-parser");
+} catch {
+	console.log('Missing module(s), running npm i')
+	const child_process = require('child_process');
+	child_process.execSync('npm i', { stdio: 'inherit' });
+
+	console.log('\n\n')
+	try {
+		var cookieParser = require("cookie-parser");
+	} catch { NeoLog.Error('Module install failed, join our discord for more help: https://dsc.gg/neonite');  }
+}
+
 const express = require("express");
-const bodyParser = require("body-parser");
 const fs = require("fs");
 const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { ApiException } = errors;
 const version = "2.7.5";
-const NeoLog = require('./structs/NeoLog')
-const cookieParser = require("cookie-parser");
 global.xmppClients = [];
 global.port = 5595;
 global.LobbyBotPort = 80;
@@ -20,7 +32,7 @@ global.LobbyBotPort = 80;
 			return typeof args[number] != "undefined" ? args[number] : match;
 		});
 	};
-	
+
 
 
 	require('./xmpp')
@@ -28,12 +40,12 @@ global.LobbyBotPort = 80;
 	const app = express();
 	app.use("/", express.static("public"));
 
-	app.use(bodyParser.urlencoded({ extended: false }));
-	app.use(bodyParser.json());
+	app.use(express.urlencoded({ extended: false }));
+	app.use(express.json());
 	app.use(cookieParser());
 	app.set("etag", false);
 
-	
+
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
 		require(`${__dirname}/managers/${route}`)(app, port);
