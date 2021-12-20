@@ -3,25 +3,45 @@ const NeoLog = require('./structs/NeoLog')
 try {
 	var cookieParser = require("cookie-parser");
 } catch {
-	console.log('Missing module(s), running npm i')
+	NeoLog.warn('Missing module(s), running npm i')
 	const child_process = require('child_process');
 	child_process.execSync('npm i', { stdio: 'inherit' });
 
 	console.log('\n\n')
 	try {
 		var cookieParser = require("cookie-parser");
-	} catch { NeoLog.Error('Module install failed, join our discord for more help: https://dsc.gg/neonite');  }
+	} catch { NeoLog.Error('Module install failed, join our discord for more help: https://dsc.gg/neonite'); }
 }
 
 const express = require("express");
 const fs = require("fs");
 const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
+const { default: axios } = require('axios');
+const axiosPackage = require('axios/package.json')
+const versionCompare = require('compare-versions');
+
+
 const { ApiException } = errors;
-const version = "2.7.5";
+
+const version = require('./package.json').version;
+
 global.xmppClients = [];
 global.port = 5595;
 global.LobbyBotPort = 80;
+
+axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
+
+axios.get('https://raw.githubusercontent.com/NeoniteDev/NeoniteV2/main/package.json', { validateStatus: undefined }).then((response) => {
+	if (response.status == 200) {
+		var compare = versionCompare(response.data.version, version);
+
+		if (compare > 0) {
+			console.log('\n')
+			NeoLog.warn(`NEW UPDATE IS AVAILABLE, PLEASE CONSIDER UPDATING TO FIX POTENTIAL BUGS AND SECURITY ISSUES.\nVERSION ${response.data.version} IS NOW AVAILABLE\nCURRENT VERSION IS ${version}`, false)
+		}
+	}
+});
 
 (function () {
 	"use strict";
@@ -32,8 +52,6 @@ global.LobbyBotPort = 80;
 			return typeof args[number] != "undefined" ? args[number] : match;
 		});
 	};
-
-
 
 	require('./xmpp')
 
