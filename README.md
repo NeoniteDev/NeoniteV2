@@ -95,9 +95,9 @@ Discord Server: [Neo](https://discord.gg/vM8p3mpWBS)
 | ----------- | ----------- |
 | [Kemo](https://github.com/kem0o)  | Original creator and maintainer |
 | [Beat-YT](https://github.com/Beat-YT)   | Current maintainer |
-| [iDrDoge](https://github.com/iDrDoge)   | Presets and others |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
+| [iDrDoge](https://github.com/iDrDoge)   | Pull requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
 
