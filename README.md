@@ -100,6 +100,7 @@ Discord Server: [Neo](https://discord.gg/vM8p3mpWBS)
 | [iDrDoge](https://github.com/iDrDoge)   | Pull requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
+| [Jacobb](https://github.com/Jacobb626)   | Pull requests |
 
 
 
