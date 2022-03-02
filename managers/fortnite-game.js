@@ -37,7 +37,7 @@ module.exports = (app, port) => {
                         "hidden": false,
                         "_type": "CommonUI Simple Message Base",
                         "subgame": "br",
-                        "body": "Made by kemo (@xkem0x).\r\nDiscord: https://discord.gg/DJ6VUmD",
+                        "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil).\r\nDiscord: https://discord.gg/DJ6VUmD",
                         "title": "Neonite V2",
                         "spotlight": false
                     },
@@ -63,7 +63,7 @@ module.exports = (app, port) => {
                             "hidden": false,
                             "_type": "CommonUI Emergency Notice Base",
                             "title": "Neonite V2",
-                            "body": "Made by kemo (@xkem0x).\r\nDiscord: https://discord.gg/DJ6VUmD",
+                            "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil)..\r\nDiscord: https://discord.gg/DJ6VUmD",
                         }
                     ]
                 },
@@ -82,7 +82,7 @@ module.exports = (app, port) => {
                         "tabTitleOverride": "Neonite V2",
                         "_type": "CommonUI Simple Message MOTD",
                         "title": "Neonite",
-                        "body": "Made by Kemo (@xkem0x). If you have any bugs, you can join our Discord by clicking the button below.",
+                        "body": "Made by Kemo (@xkem0x) and maintained Beat (@TheBeatYT_evil). If you have any bugs, you can join our Discord by clicking the button below.",
                         "videoLoop": false,
                         "videoStreamingEnabled": false,
                         "sortingPriority": 0,
