@@ -1050,8 +1050,6 @@ module.exports = (app) => {
 	    })
     });
 
-};
-
 	app.get('/launcher/api/public/assets/Windows/5cb97847cee34581afdbc445400e2f77/FortniteContentBuilds', function (req, res) {
 		res.json({
 			"appName": "FortniteContentBuilds",
@@ -1092,6 +1090,8 @@ module.exports = (app) => {
 			]
 		});
 	});
+
+};
 
 function RandomString(length) {
 	var result = [];
