@@ -18,6 +18,7 @@
 	<a href="https://github.com/NeoniteDev/NeoniteV2/releases">Downloads</a> | 
 	<a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a> |
 	<a href="https://dsc.gg/neonite">Discord Server</a> | 
+	<a href="https://neonitedev.github.io/?source=NeoniteV2-readme">Website</a>
 </p>
 <p align="center">
     <img alt="Release" src="https://img.shields.io/github/v/release/NeoniteDev/NeoniteV2?color=blue&style=for-the-badge">
@@ -32,7 +33,7 @@
 <ol>
     <li><a href="#about-neonite-v2">About Neonite V2</a></li>
     <li><a href="#installation">Installation</a></li>
-	  <li><a href="#faqs">FAQs</a></li>
+    <li><a href="#faqs">FAQs</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#credits">Credits</a></li>
     <li><a href="#license">License</a></li>
@@ -52,12 +53,10 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 - (Download the latest **[.NET Runtime](https://dotnet.microsoft.com/download)** if NeoniteV2 is not working for you.)
 - Download the **[source code](https://github.com/NeoniteDev/NeoniteV2/releases)**.
 - Extract the source code.
-- Open `install.bat` and wait for it to install. (only required on the first run!)	
-- Open `run.bat`, it should say `[Neonite]: v2.7.5 is listening on port 5595!` (Do not close this while running Neonite V2!)	
+- Open `run.bat`, it should say `[Neonite]: v2.* is listening on port 5595!` (Do not close this while running Neonite V2!)	
 - Download the **[launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/Launcher.zip?raw=true)**.	
-- Extract the launcher and open `Silver.exe`.
-- Type in your username, make sure to put "@." at the end or it won't let you login. (don't use any special characters or spaces.)
-- Type a random password (doesn't matter what you put, so you can login)	
+- Extract the launcher and open `NeoniteLauncher.exe`.
+- Type in your username (don't use any special characters or spaces.)	
 - Click launch, and enjoy!
 
 <!-- FAQs -->
@@ -97,6 +96,7 @@ Discord Server: [Neo](https://discord.gg/vM8p3mpWBS)
 | [Beat-YT](https://github.com/Beat-YT)   | Current maintainer |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
+| [iDrDoge](https://github.com/iDrDoge)   | Pull requests |
 | [Tim](https://github.com/timjans01)   | Improving this awesome page |
 | [Ayal](https://github.com/AyalX)   | Management |
 | [Jacobb](https://github.com/Jacobb626)   | Pull requests |

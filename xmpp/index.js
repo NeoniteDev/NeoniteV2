@@ -39,6 +39,9 @@ wss.on("connection", ws => {
     var Jid = ""
     var UUID = uuid.v4()
 
+    var bWaitingForGiftNumValid = false;
+    var giftResults = [];
+
     var AuthType
 
     var BotJid = `NeoniteBot@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
@@ -265,8 +268,69 @@ wss.on("connection", ws => {
             }
 
             case "message": {
-                var client = global.xmppClients.find(x => x.resource == resource)
                 var body = doc.root.children.find(x => x.name == "body").content
+                var client = global.xmppClients.find(x => x.resource == resource)
+
+                if (bWaitingForGiftNumValid && giftResults.length > 0) {
+                    bWaitingForGiftNumValid = false;
+                    var result = parseInt(body);
+
+
+                    // console.log(isNaN(result), giftResults.at(result))
+
+                    var Valid = !isNaN(result) && giftResults.at(result) != undefined;
+
+                    if (!Valid) {
+                        functions.SendChat("Not Valid");
+                        return;
+                    }
+
+                    const profiledata = Profile.readProfile(accountId, "common_core");
+
+                    var body = giftResults.at(result);
+
+                    if (!profiledata) {
+                        return close();
+                    }
+
+                    Profile.bumpRvn(profiledata);
+
+                    profiledata.items[uuid.v4()] = {
+                        "templateId": "GiftBox:GB_GiftWrap1",
+                        "attributes": {
+                            "max_level_bonus": 0,
+                            "fromAccountId": "NeoniteBot",
+                            "lootList": [
+                                {
+                                    "itemProfile": "athena",
+                                    "itemType": `${body.backendValue}:${body.id}`,
+                                    "itemGuid": `${body.backendValue}:${body.id}`,
+                                    "quantity": 1
+                                }
+                            ],
+                            "level": 1,
+                            "item_seen": false,
+                            "xp": 0,
+                            "giftedOn": new Date(),
+                            "params": {
+                                "userMessage": "Thanks for using Neonite"
+                            },
+                            "favorite": false
+                        },
+                        "quantity": 1
+                    }
+
+                    Profile.saveProfile(accountId, "common_core", profiledata);
+
+                    functions.SendMessage(JSON.stringify({
+                        type: 'com.epicgames.gift.received',
+                        payload: "",
+                        timestamp: new Date()
+                    }))
+
+                    return;
+                }
+
 
                 if (!body.startsWith('!')) return;
                 var command = body;
@@ -274,10 +338,12 @@ wss.on("connection", ws => {
                 try {
                     command = body.split(" ")[0]
                     commandBody = body.replace(command + ' ', "");
+                    // console.log(commandBody)
                 } catch {
                     command = body;
                     commandBody = null
                 }
+
 
                 switch (command.replace("!", '').toLowerCase()) {
 
@@ -291,40 +357,57 @@ wss.on("connection", ws => {
                         Profile.bumpRvn(profiledata);
                         const body = encodeURI(commandBody);
 
-                        axios.get(`https://fortnite-api.com/v2/cosmetics/br/search?name=${body}&matchMethod=contains`).then(response => {
+                        // console.log(encodeURIComponent(body))
+
+                        axios.get(`https://fortnite-api.com/v2/cosmetics/br/search/all?name=${body}&matchMethod=contains`).then(response => {
+                            /** @type {Array} */
                             const body = response.data.data;
+                            
+                            if (body.length == 1) {
 
-                            profiledata.items[uuid.v4()] = {
-                                "templateId": "GiftBox:GB_GiftWrap1",
-                                "attributes": {
-                                    "max_level_bonus": 0,
-                                    "fromAccountId": "NeoniteBot",
-                                    "lootList": [
-                                        {
-                                            "itemProfile": "athena",
-                                            "itemType": `${body.type.backendValue}:${body.id}`,
-                                            "itemGuid": `${body.type.backendValue}:${body.id}`,
-                                            "quantity": 1
-                                        }
-                                    ],
-                                    "level": 1,
-                                    "item_seen": false,
-                                    "xp": 0,
-                                    "giftedOn": new Date(),
-                                    "params": {
-                                        "userMessage": "Thanks for using Neonite"
+                                // console.log(body[0])
+
+                                profiledata.items[uuid.v4()] = {
+                                    "templateId": "GiftBox:GB_GiftWrap1",
+                                    "attributes": {
+                                        "max_level_bonus": 0,
+                                        "fromAccountId": "NeoniteBot",
+                                        "lootList": [
+                                            {
+                                                "itemProfile": "athena",
+                                                "itemType": `${body[0].type.backendValue}:${body[0].id}`,
+                                                "itemGuid": `${body[0].type.backendValue}:${body[0].id}`,
+                                                "quantity": 1
+                                            }
+                                        ],
+                                        "level": 1,
+                                        "item_seen": false,
+                                        "xp": 0,
+                                        "giftedOn": new Date(),
+                                        "params": {
+                                            "userMessage": "Thanks for using Neonite"
+                                        },
+                                        "favorite": false
                                     },
-                                    "favorite": false
-                                },
-                                "quantity": 1
-                            }
-                            Profile.saveProfile(accountId, "common_core", profiledata);
+                                    "quantity": 1
+                                }
+                                Profile.saveProfile(accountId, "common_core", profiledata);
 
-                            functions.SendMessage(JSON.stringify({
-                                type: 'com.epicgames.gift.received',
-                                payload: "",
-                                timestamp: new Date()
-                            }))
+                                functions.SendMessage(JSON.stringify({
+                                    type: 'com.epicgames.gift.received',
+                                    payload: "",
+                                    timestamp: new Date()
+                                }))
+                            } else {
+
+                                bWaitingForGiftNumValid = true;
+                                giftResults = body.slice(0, 5).map(x => ({ backendValue: x.type.backendValue, id: x.id }));
+                                functions.SendChat("Pick a choise: ");
+
+                                body.slice(0, 5).forEach((item, index) => {
+                                    functions.SendChat(`${index}: ${item.name} (${item.type.displayValue})`)
+                                })
+                            }
                         }).catch(error => {
                             if (error.response && error.response.status == 404) {
                                 functions.SendChat("Cosmetic Not found");

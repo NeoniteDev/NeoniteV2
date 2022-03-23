@@ -1,12 +1,13 @@
 {
   "name": "neonitev2",
-  "version": "2.7.2",
+  "version": "2.7.3",
   "description": "A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.21.2",
     "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.5",
+    "compare-versions": "^4.1.2",
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.1",
     "express-ws": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
@@ -14,7 +15,8 @@
     "path": "^0.12.7",
     "uuid": "^8.3.2",
     "xml-parser": "^1.2.1",
-    "xmlbuilder": "^15.1.1"
+    "xmlbuilder": "^15.1.1",
+    "follow-redirects": ">=1.14.8"
   },
   "scripts": {
     "start": "node app.js",
