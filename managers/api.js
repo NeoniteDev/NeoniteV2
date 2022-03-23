@@ -1052,6 +1052,47 @@ module.exports = (app) => {
 
 };
 
+	app.get('/launcher/api/public/assets/Windows/5cb97847cee34581afdbc445400e2f77/FortniteContentBuilds', function (req, res) {
+		res.json({
+			"appName": "FortniteContentBuilds",
+			"labelName": "h_gIcuQxgkcib_3yl0GIk4DB_pT86A-Windows",
+			"buildVersion": "++Fortnite+Release-20.00-CL-19458861-Windows",
+			"catalogItemId": "5cb97847cee34581afdbc445400e2f77",
+			"expires": "2022-03-23T11:22:18.652Z",
+			"items": {
+			"MANIFEST": {
+				"signature": "ak_token=exp=1648034538~hmac=738e66c847196a096c40505b172603713443b1db90269405c1382f4d3a743e42",
+				"distribution": "https://epicgames-download1.akamaized.net/",
+				"path": "Builds/Fortnite/Content/CloudDir/IB8ZSoVSaX2W-XndK0yNLZifFC9hqA.manifest",
+				"hash": "55bb954f5596cadbe03693e1c06ca73368d427f3",
+				"additionalDistributions": []
+			},
+			"CHUNKS": {
+				"signature": "ak_token=exp=1648034538~hmac=738e66c847196a096c40505b172603713443b1db90269405c1382f4d3a743e42",
+				"distribution": "https://epicgames-download1.akamaized.net/",
+				"path": "Builds/Fortnite/Content/CloudDir/IB8ZSoVSaX2W-XndK0yNLZifFC9hqA.manifest",
+				"additionalDistributions": []
+			}
+			},
+			"assetId": "FortniteContentBuilds"
+		})
+		});
+
+
+	
+	app.get('/launcher/api/public/distributionpoints/', function (req, res) {
+		res.json({
+			"distributions": [
+			"https://download.epicgames.com/",
+			"https://download2.epicgames.com/",
+			"https://download3.epicgames.com/",
+			"https://download4.epicgames.com/",
+			"https://epicgames-download1.akamaized.net/",
+			"https://fastly-download.epicgames.com/"
+			]
+		});
+	});
+
 function RandomString(length) {
 	var result = [];
 	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
