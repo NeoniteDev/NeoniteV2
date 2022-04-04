@@ -1057,6 +1057,7 @@ module.exports = (app) => {
 			res.json(response.data);
 		});
 	});
+})
 
 
 	
