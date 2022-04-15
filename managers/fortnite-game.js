@@ -20,7 +20,7 @@ module.exports = (app, port) => {
             }
         }
 
-        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {}))?.data;
+        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
 
         res.json({
             "jcr:isCheckedOut": true,
