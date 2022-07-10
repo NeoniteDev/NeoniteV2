@@ -351,7 +351,7 @@ module.exports = (app) => {
 						itemsArray.push("");
 					}
 					// If the index points to the array's last index, then the array
-					// isn't big enough yet, so we to append it.
+					// isn't big enough yet, so we have to append it.
 					if (index == itemsArray.length) {
 						itemsArray.push(req.body.itemToSlot);
 						bChanged = true;
