@@ -49,6 +49,25 @@ module.exports = (app) => {
 				}
 			}
 
+			// Set some extra attributes only at runtime for 100 seasons to
+			// unlock the final forms of any cosmetic items with super styles.
+			if (profileData.stats) {
+				var pastSeasons = [];
+				for (var i = 1; i <= 100; i++) {
+					pastSeasons.push({
+						"seasonNumber": i,
+						"numWins": 10000,
+						"seasonXp": 1000000,
+						"seasonLevel": 500,
+						"bookXp": 1000000,
+						"bookLevel": 500,
+						"purchasedVIP": true
+					});
+				}
+
+				profileData.stats["attributes"]["past_seasons"] = pastSeasons;
+			}
+			
 			return {
 				profileData,
 				response: {
