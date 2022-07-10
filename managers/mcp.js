@@ -437,7 +437,7 @@ module.exports = (app) => {
 
 				req.body.itemIds.forEach((itemId, index) => {
 					if (typeof itemId === "string" && typeof req.body.itemFavStatus[index] === "boolean") {
-						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index]), profileChanges;
+						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index], profileChanges);
 					}
 				});
 
