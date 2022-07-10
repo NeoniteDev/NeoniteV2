@@ -1040,15 +1040,45 @@ module.exports = (app) => {
 		res.json([])
 	})
 
-  
-    //change the 0 to what ever amount of gold you want
-    app.get('/fortnite/api/game/v2/br-inventory/account/:accountId', (req, res) => {
-	    res.json({
-		    "stash": {
-			    "globalcash": 0 
-		    },
-	    })
-    });
+
+	//change the 0 to what ever amount of gold you want
+	app.get('/fortnite/api/game/v2/br-inventory/account/:accountId', (req, res) => {
+		res.json({
+			"stash": {
+				"globalcash": 0
+			},
+		})
+	});
+
+	app.get('/launcher/api/public/assets/Windows/:catalogItemId/:appName', async function (req, res) {
+		const tokenResponse = await axios.get('https://api.nitestats.com/v1/epic/bearer');
+		const auth_token = tokenResponse.data.accessToken;
+
+		const response = await axios.get(
+			`https://launcher-public-service-prod06.ol.epicgames.com${req.originalUrl}`,
+			{
+				headers: {
+					'Authorization': `bearer ${auth_token}`
+				}
+			}
+		)
+		res.json(response.data);
+	})
+
+
+
+	app.get('/launcher/api/public/distributionpoints/', function (req, res) {
+		res.json({
+			"distributions": [
+				"https://download.epicgames.com/",
+				"https://download2.epicgames.com/",
+				"https://download3.epicgames.com/",
+				"https://download4.epicgames.com/",
+				"https://epicgames-download1.akamaized.net/",
+				"https://fastly-download.epicgames.com/"
+			]
+		});
+	});
 
 };
 
