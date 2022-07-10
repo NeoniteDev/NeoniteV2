@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
 Array.prototype.insert = function ( index, item ) {
-    this.splice( index, 0, item );
+	this.splice( index, 0, item );
 };
 
 const { Application } = require("express");
@@ -21,9 +21,9 @@ module.exports = (app) => {
 		var accountId = req.params.accountId;
 
 		var season = 1;
-        try {
-            season = parseInt(req.headers["user-agent"].split('-')[1].split('.')[0]);
-        } catch { }
+		try {
+			season = parseInt(req.headers["user-agent"].split('-')[1].split('.')[0]);
+		} catch { }
 
 		const getOrCreateProfile = profileId => {
 			var profileData = Profile.readProfile(accountId, profileId);
@@ -331,42 +331,67 @@ module.exports = (app) => {
 				const locker_slots_data = item.attributes.locker_slots_data;
 				let lockerSlot = locker_slots_data.slots[req.body.category];
 
+				// Define the expected locker items capacity.
+				var expectedCapacity;
+				switch (req.body.category) {
+					case "Dance":
+						expectedCapacity = 6;
+						break;
+					case "ItemWrap":
+						expectedCapacity = 7;
+						break;
+					default:
+						expectedCapacity = 1;
+						break;
+				}
+
+				// FIXME: It's unclear at which condition the `lockerSlot` might not exist.
 				if (!lockerSlot) {
-					const capacity = req.body.category == "Dance" ? 6 : req.body.category == "ItemWrap" ? 7 : 1;
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
-						items: new Array(capacity),
-						activeVariants: new Array(capacity)
+						items: new Array(expectedCapacity),
+						activeVariants: new Array(expectedCapacity)
 					};
 				}
 
 				const itemsArray = lockerSlot.items;
-				const activeVariantsArray = lockerSlot.activeVariants;
 				let bChanged = false;
 
-				if (req.body.slotIndex == -1) { // handle wrap "Apply To All"
-					for (var i = 0; i < itemsArray.length; ++i) {
-						if (itemsArray[i] != req.body.itemToSlot) {
-							itemsArray[i] = req.body.itemToSlot
-							bChanged = true;
-						}
-					}
-				} else {
-					const i = req.body.slotIndex || 0;
+				// If the slot index is lower than zero, we should iterate over
+				// the entire range `[0 ..< expectedCapacity]`, otherwise use a single
+				// value range `[slotIndex ..< slotIndex + 1]`.
+				const startIndex = req.body.slotIndex < 0 ? 0 : req.body.slotIndex;
+				const endIndex = req.body.slotIndex < 0 ? expectedCapacity : (startIndex + 1);
 
-					if (i >= 0 && i < itemsArray.length) {
-						if (itemsArray[i] != req.body.itemToSlot) { // so kids wont do 2147483647 and crash the server
-							itemsArray[i] = req.body.itemToSlot;
+				for (var index = startIndex; index < endIndex; index++) {
+					// The inner loop makes sure that missing intermediate elements 
+					// will be prefilled, because otherwise it will fail if the request 
+					// tries to set at an out of bounds index.
+					for (var i = itemsArray.length; i < index; i++) {
+						itemsArray.push("");
+					}
+					// If the index points to the array's last index, then the array
+					// isn't big enough yet, so we have to append it.
+					if (index == itemsArray.length) {
+						itemsArray.push(req.body.itemToSlot);
+						bChanged = true;
+					} else if (index < itemsArray.length) {
+						// Check if the value for a given value has changed at all,
+						// otherwise we can skip it.
+						if (itemsArray[index] != req.body.itemToSlot) {
+							itemsArray[index] = req.body.itemToSlot;
 							bChanged = true;
 						}
+					} else {
+						console.log("[Error] Unexpected slot index & capacity configuration.");
 					}
 				}
 
 				if (req.body.variantUpdates.length != 0) {
 					lockerSlot.activeVariants = [{
-                        "variants": []
-                    }]
+						"variants": []
+					}]
 					req.body.variantUpdates.forEach(variant => {
-							lockerSlot.activeVariants[0].variants.push(variant)
+						lockerSlot.activeVariants[0].variants.push(variant)
 					})
 					bChanged = true
 				}
@@ -456,7 +481,7 @@ module.exports = (app) => {
 
 				req.body.itemIds.forEach((itemId, index) => {
 					if (typeof itemId === "string" && typeof req.body.itemFavStatus[index] === "boolean") {
-						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index]), profileChanges;
+						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index], profileChanges);
 					}
 				});
 
@@ -473,11 +498,11 @@ module.exports = (app) => {
 			case "SetMtxPlatform": {
 				checkValidProfileID("common_core");
 
-                response.profileChanges[0] = {
-                    changeType: "statModified",
-                    name: "current_mtx_platform",
-                    value: req.body.newPlatform || "EpicPC"
-                }
+				response.profileChanges[0] = {
+					changeType: "statModified",
+					name: "current_mtx_platform",
+					value: req.body.newPlatform || "EpicPC"
+				}
 				break;
 			}
 
@@ -505,15 +530,13 @@ module.exports = (app) => {
 						"quantity": 1500
 					}
 				}
-			   break;
+				break;
 			}
 
 			default: {
 				throw next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 			}
 		}
-
-		
 
 		if (profileChanges.length > 0) {
 			Profile.bumpRvn(profileData);
