@@ -2,10 +2,14 @@ const crypto = require('crypto');
 const fs = require('fs');
 const uuid = require('uuid')
 const Profile = require("../profile");
-const { ApiException } = require('../structs/errors');
+const {
+	ApiException
+} = require('../structs/errors');
 const errors = require("../structs/errors");
 
-const { application } = require('express');
+const {
+	application
+} = require('express');
 
 /**
  * 
@@ -22,14 +26,18 @@ module.exports = (app) => {
 				accountId = undefined;
 				break;
 
+			case "refresh_token":
+				displayName = undefined;
+				accountId = undefined;
+				break;
+
 			case "password":
 				if (!req.body.username) {
 					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username")
 				}
 				if (req.body.username.includes("@")) {
 					displayName = req.body.username.split("@")[0]
-				}
-				else {
+				} else {
 					displayName = req.body.username;
 				}
 
@@ -120,7 +128,7 @@ module.exports = (app) => {
 		req
 		res.json({
 			id: req.params.accountId,
-			displayName:  req.params.accountId,
+			displayName: req.params.accountId,
 			externalAuths: {}
 		})
 	});
@@ -145,8 +153,7 @@ module.exports = (app) => {
 				}])
 			})
 			res.json(response)
-		}
-		catch {
+		} catch {
 			res.json([{
 				id: req.query.accountId,
 				displayName: req.query.accountId.startsWith("NeoniteBot") ? "NeoniteBot" : req.query.accountId,
