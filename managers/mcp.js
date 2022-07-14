@@ -534,7 +534,7 @@ module.exports = (app) => {
 			}
 
 			default: {
-				throw next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
+				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 			}
 		}
 
