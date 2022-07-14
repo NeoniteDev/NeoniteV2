@@ -17,7 +17,7 @@ const {
  */
 module.exports = (app) => {
 	//token
-	app.post('/account/api/oauth/token', async (req, res, next) => {
+	app.post('/account/api/oauth/token', (req, res, next) => {
 		var displayName = "";
 		var accountId = "";
 		switch (req.body.grant_type) {
