@@ -1079,7 +1079,54 @@ module.exports = (app) => {
 			]
 		});
 	});
-
+	
+	app.all('/v1/epic-settings/public/users/:accountId/values', (req, res) => {
+		res.json({
+			"response": {
+				"settings": [
+					{
+						"namespace": "profile",
+						"settingName": "allow-non-squad-users-to-see-my-username",
+						"effectiveValue": true,
+						"effectiveSource": "preference",
+						"parentLimit": true
+					},
+					{
+						"namespace": "profile",
+						"settingName": "can-see-player-usernames-from-other-squads",
+						"effectiveValue": true,
+						"effectiveSource": "preference",
+						"parentLimit": true
+					},
+					{
+						"namespace": "chat",
+						"settingName": "filter-out-mature-language",
+						"effectiveValue": false,
+						"effectiveSource": "preference",
+						"parentLimit": false
+					},
+					{
+						"namespace": "chat",
+						"settingName": "text",
+						"effectiveValue": "everybody",
+						"effectiveSource": "preference",
+						"parentLimit": "everybody"
+					},
+					{
+						"namespace": "chat",
+						"settingName": "voice",
+						"effectiveValue": "everybody",
+						"effectiveSource": "preference",
+						"parentLimit": "everybody"
+					}
+				]
+			},
+			"meta": {
+				"requestId": "",
+				"timestamp": new Date()
+			}
+		});
+	});
 };
 
 function RandomString(length) {
