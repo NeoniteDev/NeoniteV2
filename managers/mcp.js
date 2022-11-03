@@ -169,6 +169,10 @@ module.exports = (app) => {
 				break;
 			}
 
+			case "RedeemRealMoneyPurchases": {
+				break;
+			}
+
 			case "SetHardcoreModifier": {
 				break;
 			}
