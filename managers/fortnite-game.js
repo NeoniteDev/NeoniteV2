@@ -132,7 +132,7 @@ module.exports = (app, port) => {
                 "backgrounds": {
                     "backgrounds": [
                         {
-                            "backgroundimage": `http://127.0.0.1:${port}/NeoniteLobby.png`,
+                            "backgroundimage": "https://cdn2.unrealengine.com/t-bp22-lobby-square-2048x2048-2048x2048-e4e90c6e8018.jpg",
                             "stage": "defaultnotris",
                             "_type": "DynamicBackground",
                             "key": "lobby"
