@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 
 <p align="center">
-	<img align="center" src="https://cdn.discordapp.com/attachments/838613584970776608/839187334515130408/neonitev2.png" alt="Logo" width="216" height="127">
+	<img align="center" src="https://www.neonite.net/images/neonite.png" alt="Logo" width="216" height="127">
 </p>
 <p align="center">A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience.</p>
 <p align="center">Use code Neonite in the item shop! #EpicPartner</p>
