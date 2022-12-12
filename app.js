@@ -10,7 +10,7 @@ try {
 	console.log('\n\n')
 	try {
 		var cookieParser = require("cookie-parser");
-	} catch { NeoLog.Error('Module install failed, join our discord for more help: https://dsc.gg/neonite'); }
+	} catch { NeoLog.Error('Module install failed, join our discord for more help: https://dsc.gg/neoCommunism'); }
 }
 
 const express = require("express");
@@ -30,9 +30,9 @@ global.xmppClients = [];
 global.port = 5595;
 global.LobbyBotPort = 80;
 
-axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
+axios.defaults.headers["user-agent"] = `NeoCommunismServer/${version} axios/${axiosPackage.version}`;
 
-axios.get('https://raw.githubusercontent.com/NeoniteDev/NeoniteV2/main/package.json', { validateStatus: undefined }).then((response) => {
+axios.get('https://raw.githubusercontent.com/NeoCommunismDev/NeoCommunismV2/main/package.json', { validateStatus: undefined }).then((response) => {
 	if (response.status == 200) {
 		var compare = versionCompare(response.data.version, version);
 

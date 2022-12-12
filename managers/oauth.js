@@ -86,12 +86,12 @@ module.exports = (app) => {
 			account_id: accountId,
 			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
 			internal_client: true,
-			client_service: "fortnite",
+			client_service: "fortCommunism",
 			refresh_token: "eyJ0IjoiZXBpY19pZCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiV01TN0Vua0lHcGNIOURHWnN2MldjWTl4c3VGblpDdHhaamo0QWhiLV84RSJ9.eyJzdWIiOiJlMjE0ODYyMjgzMjA0YjE5OTcyODU3ZjU2MGJhZDhlMCIsInBmc2lkIjoiZm4iLCJpc3MiOiJodHRwczpcL1wvYXBpLmVwaWNnYW1lcy5kZXZcL2VwaWNcL29hdXRoXC92MSIsImRuIjoiUyDOlCBNIFUiLCJwZnBpZCI6InByb2QtZm4iLCJhdWQiOiJlYzY4NGI4YzY4N2Y0NzlmYWRlYTNjYjJhZDgzZjVjNiIsInBmZGlkIjoiNjJhOTQ3M2EyZGNhNDZiMjljY2YxNzU3N2ZjZjQyZDciLCJ0IjoiZXBpY19pZCIsImFwcGlkIjoiZmdoaTQ1NjdGTkZCS0Z6M0U0VFJPYjBibVBTOGgxR1ciLCJzY29wZSI6ImJhc2ljX3Byb2ZpbGUgZnJpZW5kc19saXN0IG9wZW5pZCBwcmVzZW5jZSIsImV4cCI6MTY2ODU1NjkzOSwiaWF0IjoxNjY4NTI4MTM5LCJqdGkiOiI1YzI1ODVkZDZmYzE0MTQ3ODRhNmJjNzM1MDg1YjJjMiJ9.k6n-oFrrQF2x5eNn1BWO7-buauGWSlCcDnc6m-p_-1KK2WZv1cjSFQbfdC3rPPKtABGhfyvy7TNkgZGmCr7W4Kh2PgXT_zJMnRIZ49ibZqKzsCcg-AU3MrNgPz4lqfwwi7uU5oLc6LdgXym2KUADLYygMQn0tM5oYJHGM2FzHhFvgdjigdFIxp94wNG7DiWKpYHB5XkvOJfcctF20RtCufuy9VswvmIXSe443RvWJFsfO0pZZ4vlxbz3FUV9b3Dc-0UQRdg-RaSMLebT7GoaQL7uajYglXEL6WEYQEJccopitAJtjqAvr_5F-7w2fbVyBLWD4xByTcAzLa3KGrWrLQ",
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			displayName: displayName,
-			app: "fortnite",
+			app: "fortCommunism",
 			in_app_id: accountId,
 			device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
 		})
@@ -125,9 +125,9 @@ module.exports = (app) => {
 			account_id: "ninja",
 			client_id: "3446cd72694c4a4485d81b77adbb2141",
 			internal_client: true,
-			client_service: "fortnite",
+			client_service: "fortCommunism",
 			displayName: req.h,
-			app: "fortnite",
+			app: "fortCommunism",
 			in_app_id: "ninja",
 			device_id: "164fb25bb44e42c5a027977d0d5da800"
 		})
@@ -167,7 +167,7 @@ module.exports = (app) => {
 			req.query.accountId.forEach(accId => {
 				response.push([{
 					id: accId,
-					displayName: accId.startsWith("NeoniteBot") ? "NeoniteBot" : accId,
+					displayName: accId.startsWith("NeoCommunismBot") ? "NeoCommunismBot" : accId,
 					externalAuths: {}
 				}])
 			})
@@ -175,7 +175,7 @@ module.exports = (app) => {
 		} catch {
 			res.json([{
 				id: req.query.accountId,
-				displayName: req.query.accountId.startsWith("NeoniteBot") ? "NeoniteBot" : req.query.accountId,
+				displayName: req.query.accountId.startsWith("NeoCommunismBot") ? "NeoCommunismBot" : req.query.accountId,
 				externalAuths: {}
 			}])
 		}

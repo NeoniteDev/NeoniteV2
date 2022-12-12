@@ -8,8 +8,8 @@ const { application } = require('express')
  * @param {String} port 
  */
 module.exports = (app, port) => {
-    //var lastest = await axios.get("https://api.nitestats.com/v1/epic/builds/fltoken")
-    app.get(["/content/api/pages/fortnite-game", "/content/api/pages/"], async (req, res) => {
+    //var lastest = await axios.get("https://api.Communismstats.com/v1/epic/builds/fltoken")
+    app.get(["/content/api/pages/fortCommunism-game", "/content/api/pages/"], async (req, res) => {
         var season = "9";
         try {
             season = req.headers["user-agent"].split('-')[1].split('.')[0]
@@ -20,11 +20,11 @@ module.exports = (app, port) => {
             }
         }
 
-        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
+        const content = (await axios.get('https://fortCommunismcontent-website-prod07.ol.epicgames.com/content/api/pages/fortCommunism-game').catch(() => {})).data;
 
         res.json({
             "jcr:isCheckedOut": true,
-            "_title": "Fortnite Game",
+            "_title": "FortCommunism Game",
             "jcr:baseVersion": "a7ca237317f1e7b00bc82e-d9a2-4f0d-b951-704d295cd1aa",
             "_activeDate": "2017-07-24T22:24:02.300Z",
             "lastModified": "2020-11-01T17:36:19.024Z",
@@ -38,7 +38,7 @@ module.exports = (app, port) => {
                         "_type": "CommonUI Simple Message Base",
                         "subgame": "br",
                         "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil).\r\nDiscord: https://discord.gg/DJ6VUmD",
-                        "title": "Neonite V2",
+                        "title": "NeoCommunism V2",
                         "spotlight": false
                     },
                     ],
@@ -62,7 +62,7 @@ module.exports = (app, port) => {
                         {
                             "hidden": false,
                             "_type": "CommonUI Emergency Notice Base",
-                            "title": "Neonite V2",
+                            "title": "NeoCommunism V2",
                             "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil)..\r\nDiscord: https://discord.gg/DJ6VUmD",
                         }
                     ]
@@ -75,18 +75,18 @@ module.exports = (app, port) => {
                 "news": {
                     "motds": [{
                         "entryType": "Website",
-                        "image": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
-                        "tileImage": `http://127.0.0.1:${port}/Neonite1024.png`,
+                        "image": `http://127.0.0.1:${port}/NeoCommunismWallpaper1920x1080.png`,
+                        "tileImage": `http://127.0.0.1:${port}/NeoCommunism1024.png`,
                         "videoMute": false,
                         "hidden": false,
-                        "tabTitleOverride": "Neonite V2",
+                        "tabTitleOverride": "NeoCommunism V2",
                         "_type": "CommonUI Simple Message MOTD",
-                        "title": "Neonite",
+                        "title": "NeoCommunism",
                         "body": "Made by Kemo (@xkem0x) and maintained by Beat (@TheBeatYT_evil). If you have any bugs, you can join our Discord by clicking the button below.",
                         "videoLoop": false,
                         "videoStreamingEnabled": false,
                         "sortingPriority": 0,
-                        "id": "NeoniteNewsBR",
+                        "id": "NeoCommunismNewsBR",
                         "videoAutoplay": false,
                         "videoFullscreen": false,
                         "spotlight": false,
@@ -110,14 +110,14 @@ module.exports = (app, port) => {
                 "itemsList": {
                     "_type": "ShopCarouselItemList",
                     "items": [{
-                        "tileImage": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
-                        "fullTitle": "Neonite",
+                        "tileImage": `http://127.0.0.1:${port}/NeoCommunismWallpaper1920x1080.png`,
+                        "fullTitle": "NeoCommunism",
                         "hidden": false,
                         "_type": "ShopCarouselItem",
                         "landingPriority": 100,
                         "action": "ShowOfferDetails",
                         "offerId": null,
-                        "title": "Neonite"
+                        "title": "NeoCommunism"
                     }]
                 },
                 "_title": "shop-carousel",
@@ -132,7 +132,7 @@ module.exports = (app, port) => {
                 "backgrounds": {
                     "backgrounds": [
                         {
-                            "backgroundimage": `http://127.0.0.1:${port}/NeoniteLobby.png`,
+                            "backgroundimage": `http://127.0.0.1:${port}/NeoCommunismLobby.png`,
                             "stage": "defaultnotris",
                             "_type": "DynamicBackground",
                             "key": "lobby"
@@ -1580,7 +1580,7 @@ module.exports = (app, port) => {
                             "bHidden": false,
                             "sectionId": "Subscription",
                             "bShowTimer": false,
-                            "sectionDisplayName": "Fortnite Crew",
+                            "sectionDisplayName": "FortCommunism Crew",
                             "bShowIneligibleOffers": true
                         }
                     ]
@@ -1593,13 +1593,13 @@ module.exports = (app, port) => {
             },
             playlistinformation: content.playlistinformation,
             "_suggestedPrefetch": [
-                `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`,
-                `http://127.0.0.1:${port}/Neonite1024.png`
+                `http://127.0.0.1:${port}/NeoCommunismWallpaper1920x1080.png`,
+                `http://127.0.0.1:${port}/NeoCommunism1024.png`
             ]
         })
     })
-    //implementation needed in the future, response example: https://api.nitestats.com/v1/epic/prm/motd
-    /*app.post("/api/v1/fortnite-br/surfaces/motd/target", (req, res) => {
+    //implementation needed in the future, response example: https://api.Communismstats.com/v1/epic/prm/motd
+    /*app.post("/api/v1/fortCommunism-br/surfaces/motd/target", (req, res) => {
         res.status(404).end();
     })*/
 }

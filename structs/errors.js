@@ -1,4 +1,4 @@
-const ORIGINATING_SERVICE = "fortnite";
+const ORIGINATING_SERVICE = "fortCommunism";
 const INTENT = "prod-live";
 String.prototype.format = function () {
     const args = arguments[0] instanceof Array ? arguments[0] : arguments;
@@ -80,12 +80,12 @@ module.exports = {
                     authentication_failed: new ErrDef("errors.com.epicgames.common.authentication.authentication_failed", "Authentication failed for {0}]")
                 }
             },
-            fortnite: {
-                item_not_found: new ErrDef("errors.com.epicgames.fortnite.item_not_found", "Locker item {0} not found", 16006, 404),
-                operation_not_found: new ErrDef("errors.com.epicgames.fortnite.operation_not_found", "Operation {0} not valid", 16035, 404),
-                invalid_bucket_id: new ErrDef("errors.com.epicgames.fortnite.invalid_bucket_id", "blank bucketId", 16102, 400),
-                invalid_party_player_ids: new ErrDef("errors.com.epicgames.fortnite.invalid_party_player_ids", "blank partyPlayerIds", 16103, 400),
-                invalid_platform: new ErrDef("errors.com.epicgames.fortnite.invalid_platform", "Invalid platform: '{0}'", 16104, 400)
+            fortCommunism: {
+                item_not_found: new ErrDef("errors.com.epicgames.fortCommunism.item_not_found", "Locker item {0} not found", 16006, 404),
+                operation_not_found: new ErrDef("errors.com.epicgames.fortCommunism.operation_not_found", "Operation {0} not valid", 16035, 404),
+                invalid_bucket_id: new ErrDef("errors.com.epicgames.fortCommunism.invalid_bucket_id", "blank bucketId", 16102, 400),
+                invalid_party_player_ids: new ErrDef("errors.com.epicgames.fortCommunism.invalid_party_player_ids", "blank partyPlayerIds", 16103, 400),
+                invalid_platform: new ErrDef("errors.com.epicgames.fortCommunism.invalid_platform", "Invalid platform: '{0}'", 16104, 400)
             },
             cloudstorage: {
                 file_not_found: new ErrDef("errors.com.epicgames.cloudstorage.file_not_found", "Sorry, we couldn't find a file {0} for account {1}", 12007, 404)

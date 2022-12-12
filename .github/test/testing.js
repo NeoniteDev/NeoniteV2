@@ -6,9 +6,9 @@ module.exports = (app) => {
 
     const ExcludedEndpoint = [
         '/account/api/oauth/token',
-        '/fortnite/api/game/v2/profile/:accountId/client/:command',
+        '/fortCommunism/api/game/v2/profile/:accountId/client/:command',
         '/launcher/api/public/distributionpoints/',
-        '/fortnite/api/game/v2/matchmakingservice/ticket/player/:accountId'
+        '/fortCommunism/api/game/v2/matchmakingservice/ticket/player/:accountId'
     ]
 
     const util = require('util')
@@ -50,7 +50,7 @@ module.exports = (app) => {
         }
     }
 
-    var MPC_layer = layers.find(x => x.route.path == "/fortnite/api/game/v2/profile/:accountId/client/:command")
+    var MPC_layer = layers.find(x => x.route.path == "/fortCommunism/api/game/v2/profile/:accountId/client/:command")
 
     function McpTest(command, profileId, body) {
         if (body) {
@@ -168,7 +168,7 @@ module.exports = (app) => {
         })
 
         
-        req.params.affiliateName = "Neonite";
+        req.params.affiliateName = "NeoCommunism";
         /**
          * 
          * @param {ApiException} thing 

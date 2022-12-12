@@ -44,7 +44,7 @@ wss.on("connection", ws => {
 
     var AuthType
 
-    var BotJid = `NeoniteBot@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT`
+    var BotJid = `NeoCommunismBot@neoCommunism.dev/V2:FortCommunism:WIN::NeoCommunism-Bot-By-BeatYT`
 
     //SendMessage("pogu")
 
@@ -79,7 +79,7 @@ wss.on("connection", ws => {
         switch (doc.root.name) {
 
             case "open":
-                var build = builder.create('open').att("id", UUID).att('xmlns', 'urn:ietf:params:xml:ns:xmpp-framing').att('from', 'neonite.dev')
+                var build = builder.create('open').att("id", UUID).att('xmlns', 'urn:ietf:params:xml:ns:xmpp-framing').att('from', 'neoCommunism.dev')
                 ws.send(build.toString());
 
 
@@ -129,7 +129,7 @@ wss.on("connection", ws => {
                             resource = query.children.find(x => x.name == "resource").content
                             accountId = query.children.find(x => x.name == "username").content
                             token = query.children.find(x => x.name == "password").content
-                            Jid = `${accountId}@neonite.dev/${resource}`
+                            Jid = `${accountId}@neoCommunism.dev/${resource}`
 
                             var bIsValid = resource && accountId && token && Jid
                             if (!bIsValid) {
@@ -174,14 +174,14 @@ wss.on("connection", ws => {
                             return;
                         }
                         resource = doc.root.children.find(x => x.name == "bind").children.find(x => x.name == "resource").content
-                        Jid = accountId + "@neonite.dev/" + resource;
+                        Jid = accountId + "@neoCommunism.dev/" + resource;
                         /*
 
-                        <iq xmlns="jabber:client" from="neonite.dev"
-                            to="BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D" 
+                        <iq xmlns="jabber:client" from="neoCommunism.dev"
+                            to="BeatYT@neoCommunism.dev/V2:FortCommunism:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D" 
                             type="result" id="_xmpp_bind1">
                             <bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
-                                <jid>BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
+                                <jid>BeatYT@neoCommunism.dev/V2:FortCommunism:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
                             </bind>
                         </iq>
 
@@ -190,7 +190,7 @@ wss.on("connection", ws => {
                         ws.send(builder.create('iq')
                             .att("xmlns", "jabber:client")
                             .att("to", Jid)
-                            .att("from", "neonite.dev")
+                            .att("from", "neoCommunism.dev")
                             .att("type", "result")
                             .att("id", '_xmpp_bind1')
                             .ele("bind")
@@ -225,7 +225,7 @@ wss.on("connection", ws => {
                     default:
                         ws.send(builder.create('iq')
                             .att('type', 'result')
-                            .att("from", "neonite.dev")
+                            .att("from", "neoCommunism.dev")
                             .att('xmlns', 'jabber:client')
                             .att('to', Jid)
                             .att('id', doc.root.attributes.id)
@@ -299,7 +299,7 @@ wss.on("connection", ws => {
                         "templateId": "GiftBox:GB_GiftWrap1",
                         "attributes": {
                             "max_level_bonus": 0,
-                            "fromAccountId": "NeoniteBot",
+                            "fromAccountId": "NeoCommunismBot",
                             "lootList": [
                                 {
                                     "itemProfile": "athena",
@@ -313,7 +313,7 @@ wss.on("connection", ws => {
                             "xp": 0,
                             "giftedOn": new Date(),
                             "params": {
-                                "userMessage": "Thanks for using Neonite"
+                                "userMessage": "Thanks for using NeoCommunism"
                             },
                             "favorite": false
                         },
@@ -359,7 +359,7 @@ wss.on("connection", ws => {
 
                         // console.log(encodeURIComponent(body))
 
-                        axios.get(`https://fortnite-api.com/v2/cosmetics/br/search/all?name=${body}&matchMethod=contains`).then(response => {
+                        axios.get(`https://fortCommunism-api.com/v2/cosmetics/br/search/all?name=${body}&matchMethod=contains`).then(response => {
                             /** @type {Array} */
                             const body = response.data.data;
                             
@@ -371,7 +371,7 @@ wss.on("connection", ws => {
                                     "templateId": "GiftBox:GB_GiftWrap1",
                                     "attributes": {
                                         "max_level_bonus": 0,
-                                        "fromAccountId": "NeoniteBot",
+                                        "fromAccountId": "NeoCommunismBot",
                                         "lootList": [
                                             {
                                                 "itemProfile": "athena",
@@ -385,7 +385,7 @@ wss.on("connection", ws => {
                                         "xp": 0,
                                         "giftedOn": new Date(),
                                         "params": {
-                                            "userMessage": "Thanks for using Neonite"
+                                            "userMessage": "Thanks for using NeoCommunism"
                                         },
                                         "favorite": false
                                     },
@@ -484,12 +484,12 @@ wss.on("connection", ws => {
                     .att('xmlns', "jabber:client")
                     .ele("status").txt(JSON.stringify(
                         {
-                            "Status": "Neonite Lobby Bot",
+                            "Status": "NeoCommunism Lobby Bot",
                             "bIsPlaying": false,
                             "bIsJoinable": true,
                             "bHasVoiceSupport": false,
                             "SessionId": "",
-                            "ProductName": "Fortnite",
+                            "ProductName": "FortCommunism",
                             "Properties": {
                                 "KairosProfile_j": {
                                     "appInstalled": "init",
@@ -540,7 +540,7 @@ wss.on("connection", ws => {
                 .att('xmlns', "jabber:client")
                 .att('to', Jid)
                 .att('id', UUID)
-                .att("from", "xmpp-admin@neonite.dev")
+                .att("from", "xmpp-admin@neoCommunism.dev")
                 .ele('body')
                 .txt(body)
                 .up()
@@ -556,7 +556,7 @@ wss.on("connection", ws => {
                     "sent": new Date(),
                     "type": "com.epicgames.social.party.notification.v0.MEMBER_JOINED",
                     "connection": {
-                        "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}@neonite.dev/V2:Fortnite:WIN::Neonite-Bot-By-BeatYT${BotNumber != 0 ? BotNumber : ""}`,
+                        "id": `NeoCommunismBot${BotNumber != 0 ? BotNumber : ""}@neoCommunism.dev/V2:FortCommunism:WIN::NeoCommunism-Bot-By-BeatYT${BotNumber != 0 ? BotNumber : ""}`,
                         "meta": {
                             "urn:epic:conn:platform_s": "WIN",
                             "urn:epic:conn:type_s": "game"
@@ -566,13 +566,13 @@ wss.on("connection", ws => {
                         "yield_leadership": false
                     },
                     "revision": 0,
-                    "ns": "Fortnite",
+                    "ns": "FortCommunism",
                     "party_id": "LobbyBotPartyLMFAO",
-                    "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
-                    "account_dn": "NeoniteBot",
+                    "account_id": `NeoCommunismBot${BotNumber != 0 ? BotNumber : ""}`,
+                    "account_dn": "NeoCommunismBot",
                     "member_state_updated": {
-                        "urn:epic:member:joinrequestusers_j": JSON.stringify({ "users": [{ "id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`, "dn": "NeoniteBot", "plat": "WIN", "data": JSON.stringify({ "CrossplayPreference_i": "1", "SubGame_u": "1" }) }] }),
-                        "urn:epic:member:dn_s": `NeoniteBot`,
+                        "urn:epic:member:joinrequestusers_j": JSON.stringify({ "users": [{ "id": `NeoCommunismBot${BotNumber != 0 ? BotNumber : ""}`, "dn": "NeoCommunismBot", "plat": "WIN", "data": JSON.stringify({ "CrossplayPreference_i": "1", "SubGame_u": "1" }) }] }),
+                        "urn:epic:member:dn_s": `NeoCommunismBot`,
                     },
                     "joined_at": new Date(),
                     "updated_at": new Date()
@@ -584,10 +584,10 @@ wss.on("connection", ws => {
                     "sent": new Date(),
                     "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
                     "revision": 0,
-                    "ns": "Fortnite",
+                    "ns": "FortCommunism",
                     "party_id": "LobbyBotPartyLMFAO",
-                    "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
-                    "account_dn": "NeoniteBot",
+                    "account_id": `NeoCommunismBot${BotNumber != 0 ? BotNumber : ""}`,
+                    "account_dn": "NeoCommunismBot",
                     "member_state_removed": [],
                     "member_state_updated": {
                         "Default:Location_s": "PreLobby",
@@ -627,10 +627,10 @@ wss.on("connection", ws => {
                     "sent": new Date(),
                     "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
                     "revision": 0,
-                    "ns": "Fortnite",
+                    "ns": "FortCommunism",
                     "party_id": "LobbyBotPartyLMFAO",
-                    "account_id": `NeoniteBot${BotNumber != 0 ? BotNumber : ""}`,
-                    "account_dn": "NeoniteBot",
+                    "account_id": `NeoCommunismBot${BotNumber != 0 ? BotNumber : ""}`,
+                    "account_dn": "NeoCommunismBot",
                     "member_state_removed": [],
                     "member_state_updated": {
                         "Default:Location_s": "PreLobby",

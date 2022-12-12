@@ -4,7 +4,7 @@ const { application } = require('express')
  * @param {application} app
  */
 module.exports = (app) => {
-    app.get('/fortnite/api/calendar/v1/timeline', async (req, res) => {
+    app.get('/fortCommunism/api/calendar/v1/timeline', async (req, res) => {
         var version;
 
         try {
@@ -14,10 +14,10 @@ module.exports = (app) => {
         }
 
 
-        var CurrentVersion = (await axios.get("https://fortnite-public-service-prod.ak.epicgames.com/fortnite/api/version")).data.version;
+        var CurrentVersion = (await axios.get("https://fortCommunism-public-service-prod.ak.epicgames.com/fortCommunism/api/version")).data.version;
 
         if (CurrentVersion && CurrentVersion == version) {
-            var Calendar = await axios.get("https://api.nitestats.com/v1/epic/modes", {timeout: 3000});
+            var Calendar = await axios.get("https://api.Communismstats.com/v1/epic/modes", {timeout: 3000});
             if (Calendar.status == 200) {
                 return res.json(Calendar.data);
             }

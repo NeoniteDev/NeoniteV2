@@ -10,19 +10,19 @@
 <!-- PROJECT LOGO -->
 
 <p align="center">
-	<img align="center" src="https://www.neonite.net/images/neonite.png" alt="Logo" width="216" height="127">
+	<img align="center" src="https://www.neoCommunism.net/images/neoCommunism.png" alt="Logo" width="216" height="127">
 </p>
-<p align="center">A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience.</p>
-<p align="center">Use code Neonite in the item shop! #EpicPartner</p>
+<p align="center">A FortCommunism private server/lobby emulator allowing you to design your dream FortCommunism experience.</p>
+<p align="center">Use code NeoCommunism in the item shop! #EpicPartner</p>
 <p align="center">
-	<a href="https://github.com/NeoniteDev/NeoniteV2/releases">Downloads</a> | 
-	<a href="https://github.com/NeoniteDev/NeoniteV2/issues">Report a Bug</a> |
-	<a href="https://dsc.gg/neonite">Discord Server</a> | 
-	<a href="https://neonitedev.github.io/?source=NeoniteV2-readme">Website</a>
+	<a href="https://github.com/NeoCommunismDev/NeoCommunismV2/releases">Downloads</a> | 
+	<a href="https://github.com/NeoCommunismDev/NeoCommunismV2/issues">Report a Bug</a> |
+	<a href="https://dsc.gg/neoCommunism">Discord Server</a> | 
+	<a href="https://neoCommunismdev.github.io/?source=NeoCommunismV2-readme">Website</a>
 </p>
 <p align="center">
-    <img alt="Release" src="https://img.shields.io/github/v/release/NeoniteDev/NeoniteV2?color=blue&style=for-the-badge">
-    <img alt="Stars" src="https://img.shields.io/github/stars/NeoniteDev/NeoniteV2?color=blue&style=for-the-badge">
+    <img alt="Release" src="https://img.shields.io/github/v/release/NeoCommunismDev/NeoCommunismV2?color=blue&style=for-the-badge">
+    <img alt="Stars" src="https://img.shields.io/github/stars/NeoCommunismDev/NeoCommunismV2?color=blue&style=for-the-badge">
 </p>
 
 
@@ -31,7 +31,7 @@
 ## Table of Contents
 
 <ol>
-    <li><a href="#about-neonite-v2">About Neonite V2</a></li>
+    <li><a href="#about-neoCommunism-v2">About NeoCommunism V2</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#faqs">FAQs</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -39,44 +39,44 @@
     <li><a href="#license">License</a></li>
 </ol>
 
-<!-- ABOUT NEONITEV2 -->
-## About Neonite V2
+<!-- ABOUT NEOCommunismV2 -->
+## About NeoCommunism V2
 
-Neonite V2 is a popular private server written in [Node.js](https://nodejs.org/en/download/current/), aimed to provide a fun yet easy-to-use program for people wanting to customize their Fortnite experience.
+NeoCommunism V2 is a popular private server written in [Node.js](https://nodejs.org/en/download/current/), aimed to provide a fun yet easy-to-use program for people wanting to customize their FortCommunism experience.
 _This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._ <br>
-_In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for Neonite V2 has been stripped. If you want to use skins, please purchase them on Fortnite._
+_In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for NeoCommunism V2 has been stripped. If you want to use skins, please purchase them on FortCommunism._
 
 <!-- INSTALL -->
 ## Installation
 
 - Install the latest version of **[Node.js](https://nodejs.org/en/download/current/)**. 
-- (Download the latest **[.NET Runtime](https://dotnet.microsoft.com/download)** if NeoniteV2 is not working for you.)
-- Download the **[source code](https://github.com/NeoniteDev/NeoniteV2/releases)**.
+- (Download the latest **[.NET Runtime](https://dotnet.microsoft.com/download)** if NeoCommunismV2 is not working for you.)
+- Download the **[source code](https://github.com/NeoCommunismDev/NeoCommunismV2/releases)**.
 - Extract the source code.
-- Open `run.bat`, it should say `[Neonite]: v2.* is listening on port 5595!` (Do not close this while running Neonite V2!)	
-- Download the **[launcher](https://github.com/NeoniteDev/NeoniteV2/blob/main/public/Launcher.zip?raw=true)**.	
-- Extract the launcher and open `NeoniteLauncher.exe`.
+- Open `run.bat`, it should say `[NeoCommunism]: v2.* is listening on port 5595!` (Do not close this while running NeoCommunism V2!)	
+- Download the **[launcher](https://github.com/NeoCommunismDev/NeoCommunismV2/blob/main/public/Launcher.zip?raw=true)**.	
+- Extract the launcher and open `NeoCommunismLauncher.exe`.
 - Type in your username (don't use any special characters or spaces.)	
 - Click launch, and enjoy!
 
 <!-- FAQs -->
 ## FAQs
 
- * How do I access Neonite V2?
-   * You can access Neonite V2's dashboard at http://localhost:5595/.
+ * How do I access NeoCommunism V2?
+   * You can access NeoCommunism V2's dashboard at http://localhost:5595/.
  * Can I go in-game?
-   * No, however, Neonite++ is available to use for in-game support, Check it out [here](https://github.com/NeoniteDev/NeonitePP).
+   * No, however, NeoCommunism++ is available to use for in-game support, Check it out [here](https://github.com/NeoCommunismDev/NeoCommunismPP).
  * Will I get banned?
-   * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
+   * No, you won't get banned because NeoCommunism V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
-   * Neonite V2 is a locally-hosted project, meaning it has no party or friends functionality.
+   * NeoCommunism V2 is a locally-hosted project, meaning it has no party or friends functionality.
  * Why don't I see any cosmetics in my locker?
    * We removed cosmetics because Epic Games made it clear it does not like services that offer cosmetics for free. If you wish for skins you're welcome to add them yourself.
 
 <!-- CONTACT -->
 ## Contact
 
-Email: <a href="mailto:contact@neonite.dev">contact@neonite.dev</a>
+Email: <a href="mailto:contact@neoCommunism.dev">contact@neoCommunism.dev</a>
 
 Discord Server: [Neo](https://discord.gg/vM8p3mpWBS)
 
@@ -85,8 +85,8 @@ Discord Server: [Neo](https://discord.gg/vM8p3mpWBS)
 ## Credits
 
 ### Used APIs
-<img src="https://fortnite-api.com/assets/img/logo.png" width="15" title="Fortnite-API"> [Fortnite-API](https://fortnite-api.com/) developed by [Officer](https://github.com/NotOfficer) <br>
-<img src="https://api.nitestats.com/v1/static/ns-logo.png" width="15" title="NiteStats-API"> [NiteStats API](https://nitestats.com/) developed by [VastBlast](https://github.com/VastBlast)
+<img src="https://fortCommunism-api.com/assets/img/logo.png" width="15" title="FortCommunism-API"> [FortCommunism-API](https://fortCommunism-api.com/) developed by [Officer](https://github.com/NotOfficer) <br>
+<img src="https://api.Communismstats.com/v1/static/ns-logo.png" width="15" title="CommunismStats-API"> [CommunismStats API](https://Communismstats.com/) developed by [VastBlast](https://github.com/VastBlast)
 
 ### Contributors
 
@@ -106,4 +106,4 @@ Discord Server: [Neo](https://discord.gg/vM8p3mpWBS)
 <!-- LICENSE -->
 ## License
 
-This project is licensed under the [Neo License](https://github.com/NeoniteDev/NeoniteV2/blob/main/LICENSE)
+This project is licensed under the [Neo License](https://github.com/NeoCommunismDev/NeoCommunismV2/blob/main/LICENSE)

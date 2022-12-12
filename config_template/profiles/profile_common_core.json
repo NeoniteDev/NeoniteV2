@@ -6,7 +6,7 @@
   "wipeNumber": 1,
   "accountId": "",
   "profileId": "common_core",
-  "version": "neonite_2",
+  "version": "neoCommunism_2",
   "items": {
     "Currency:MtxPurchased": {
       "attributes": {
@@ -18,7 +18,7 @@
   },
   "stats": {
     "attributes": {
-      "mtx_affiliate": "Neonite",
+      "mtx_affiliate": "NeoCommunism",
       "current_mtx_platform": "EpicPC",
       "mtx_purchase_history": {}
     }

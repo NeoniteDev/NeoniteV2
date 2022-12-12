@@ -64,7 +64,7 @@
                   "sortPriority": 3,
                   "title": "7,800 V-Bucks",
                   "shortDescription": "",
-                  "description": "Buy 7,800 Fortnite V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
+                  "description": "Buy 7,800 FortCommunism V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack7800.DA_MtxPack7800",
                   "itemGrants": []
               },
@@ -130,7 +130,7 @@
                   "sortPriority": 5,
                   "title": "2,800 V-Bucks",
                   "shortDescription": "",
-                  "description": "Buy 2,800 Fortnite V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
+                  "description": "Buy 2,800 FortCommunism V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack2800.DA_MtxPack2800",
                   "itemGrants": []
               },
@@ -196,7 +196,7 @@
                   "sortPriority": 2,
                   "title": "13,500 V-Bucks",
                   "shortDescription": "",
-                  "description": "Buy 13,500 Fortnite V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
+                  "description": "Buy 13,500 FortCommunism V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack13500.DA_MtxPack13500",
                   "itemGrants": []
               },
@@ -258,7 +258,7 @@
                   "sortPriority": 6,
                   "title": "1,000 V-Bucks",
                   "shortDescription": "",
-                  "description": "Buy 1,000 Fortnite V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
+                  "description": "Buy 1,000 FortCommunism V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -324,7 +324,7 @@
                   "sortPriority": 4,
                   "title": "5,000 V-Bucks",
                   "shortDescription": "",
-                  "description": "Buy 5,000 Fortnite V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
+                  "description": "Buy 5,000 FortCommunism V-Bucks that can be spent in Battle Royale, Creative, and Save the World modes. Note: Not all items purchased may be available in Save the World mode.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack5000.DA_MtxPack5000",
                   "itemGrants": []
               }
@@ -369,7 +369,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "RewardEventGraphPurchaseToken:winterfestpurchasetoken",
                           "minQuantity": 1
                       }
@@ -512,12 +512,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_a_183_athena_commando_m_antiquepal_s7a9w",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_827_antiquepal_bl5er",
                           "minQuantity": 1
                       }
@@ -605,7 +605,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaPickaxe:pickaxe_id_649_antiquepalmale1h_gbt24",
                           "minQuantity": 1
                       }
@@ -1105,7 +1105,7 @@
                   "sortPriority": 0,
                   "catalogGroup": "Shared",
                   "catalogGroupPriority": 1,
-                  "fulfillmentClass": "com.epicgames.fortnite.core.game.fulfillments.PrerollFulfillment"
+                  "fulfillmentClass": "com.epicgames.fortCommunism.core.game.fulfillments.PrerollFulfillment"
               },
               {
                   "offerId": "C52FB3AE073F4A9AADC068B8323213D7",
@@ -1244,7 +1244,7 @@
                   "sortPriority": 0,
                   "title": "Legendary Troll Stash Llama",
                   "shortDescription": "",
-                  "description": "An entire suite of goodies, direct from your local troll's stash! Contains at least 8 definitely-not-stolen items.",
+                  "description": "An entire suite of goodies, direct from your local troll's stash! Contains at least 8 defiCommunismly-not-stolen items.",
                   "displayAssetPath": "/Game/Items/CardPacks/CardPack_Jackpot.CardPack_Jackpot",
                   "itemGrants": [
                       {
@@ -1370,7 +1370,7 @@
                   "sortPriority": 0,
                   "title": "2021 Birthday Llama",
                   "shortDescription": "",
-                  "description": "A blast from the past! Guarantees a weapon schematic and hero introduced during Fortnite events. One Epic or better, and one Legendary!",
+                  "description": "A blast from the past! Guarantees a weapon schematic and hero introduced during FortCommunism events. One Epic or better, and one Legendary!",
                   "displayAssetPath": "/Game/Items/CardPacks/Events/2021_Anniversary/CardPack_Event_2021_Anniversary.CardPack_Event_2021_Anniversary",
                   "itemGrants": [
                       {
@@ -1511,7 +1511,7 @@
               },
               {
                   "offerId": "5726F71BD7A445BE8E1689F5C009F1E3",
-                  "devName": "Event.Event.Persistent.Fortnitemares.01",
+                  "devName": "Event.Event.Persistent.FortCommunismmares.01",
                   "offerType": "StaticPrice",
                   "prices": [
                       {
@@ -1553,13 +1553,13 @@
                   "catalogGroup": "",
                   "catalogGroupPriority": 0,
                   "sortPriority": 0,
-                  "title": "Fortnitemares Llama",
+                  "title": "FortCommunismmares Llama",
                   "shortDescription": "",
-                  "description": "Guarantees at least one Epic or better limited time Fortnitemares weapon or hero plus at least one Fortnitemares Survivor!",
-                  "displayAssetPath": "/Game/Items/CardPacks/Events/Release/CardPack_Event_Persistent_Fortnitemares.CardPack_Event_Persistent_Fortnitemares",
+                  "description": "Guarantees at least one Epic or better limited time FortCommunismmares weapon or hero plus at least one FortCommunismmares Survivor!",
+                  "displayAssetPath": "/Game/Items/CardPacks/Events/Release/CardPack_Event_Persistent_FortCommunismmares.CardPack_Event_Persistent_FortCommunismmares",
                   "itemGrants": [
                       {
-                          "templateId": "CardPack:cardpack_event_persistent_fortnitemares",
+                          "templateId": "CardPack:cardpack_event_persistent_fortCommunismmares",
                           "quantity": 1
                       }
                   ]
@@ -1605,7 +1605,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:battlepassgift",
                           "minQuantity": 1
                       }
@@ -1616,7 +1616,7 @@
                   "sortPriority": 0,
                   "title": "BP Gift Token",
                   "shortDescription": "",
-                  "description": "Give a friend the Chapter 2, Season 8 Battle Pass! Your purchase includes:\r\n\r\n- A token allowing gifting of the Chapter 2, Season 8 Battle Pass to a friend of your choice.\r\n- A unique Gift Box for you to use when gifting items from the Battle Royale shop (unlocks only once).\r\n\r\nNote: In order to gift, you must have multi-factor authentication enabled on your account. You must also be Epic friends with the recipient for at least 48 hours before you can send them a gift.\r\n\r\nYou will only be able to gift five times within a 24 hour period. Any gifts that are purchased or received are NOT refundable. You can only gift one Battle Pass at a time.\r\n\r\nIf your intended recipient purchases the Battle Pass or subscribes to the Fortnite Crew before you complete your purchase, you can gift the Battle Pass to someone else. If you don’t gift the Battle Pass by the end of the season, it will be refunded as 950 V-Bucks in your account.",
+                  "description": "Give a friend the Chapter 2, Season 8 Battle Pass! Your purchase includes:\r\n\r\n- A token allowing gifting of the Chapter 2, Season 8 Battle Pass to a friend of your choice.\r\n- A unique Gift Box for you to use when gifting items from the Battle Royale shop (unlocks only once).\r\n\r\nNote: In order to gift, you must have multi-factor authentication enabled on your account. You must also be Epic friends with the recipient for at least 48 hours before you can send them a gift.\r\n\r\nYou will only be able to gift five times within a 24 hour period. Any gifts that are purchased or received are NOT refundable. You can only gift one Battle Pass at a time.\r\n\r\nIf your intended recipient purchases the Battle Pass or subscribes to the FortCommunism Crew before you complete your purchase, you can gift the Battle Pass to someone else. If you don’t gift the Battle Pass by the end of the season, it will be refunded as 950 V-Bucks in your account.",
                   "displayAssetPath": "",
                   "itemGrants": [
                       {
@@ -1665,7 +1665,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:battlepassgift",
                           "minQuantity": 1
                       }
@@ -2341,12 +2341,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_a_205_athena_commando_f_textileram_gmrj0",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_850_textileramfemale_2r9wr",
                           "minQuantity": 1
                       }
@@ -2449,12 +2449,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_a_207_athena_commando_m_textileknight_9te8l",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_851_textileknightmale_mipj6",
                           "minQuantity": 1
                       }
@@ -2537,7 +2537,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaGlider:glider_id_316_textilemale_3s90r",
                           "minQuantity": 1
                       }
@@ -2617,12 +2617,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_a_206_athena_commando_f_textilesparkle_v8ysa",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_852_textilesparklefemale_x8koh",
                           "minQuantity": 1
                       }
@@ -2709,7 +2709,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaItemWrap:wrap_394_textilesilver_zuh63",
                           "minQuantity": 1
                       }
@@ -2936,12 +2936,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_a_208_athena_commando_m_textilepup_c85od",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_853_textilepupmale_lfoe4",
                           "minQuantity": 1
                       }
@@ -3153,7 +3153,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaPickaxe:pickaxe_id_170_aztec",
                           "minQuantity": 1
                       }
@@ -3381,7 +3381,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaItemWrap:wrap_396_textilegold_gc2tl",
                           "minQuantity": 1
                       }
@@ -3460,7 +3460,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaItemWrap:wrap_395_textileblack_dbvu2",
                           "minQuantity": 1
                       }
@@ -3538,12 +3538,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_359_athena_commando_f_aztec",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_222_aztecfemale",
                           "minQuantity": 1
                       }
@@ -3622,7 +3622,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaDance:eid_textile_3o8qg",
                           "minQuantity": 1
                       }
@@ -3702,7 +3702,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaPickaxe:pickaxe_id_675_textilepupmale_96jzf",
                           "minQuantity": 1
                       }
@@ -3788,7 +3788,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaGlider:glider_id_127_aztec",
                           "minQuantity": 1
                       }
@@ -3992,12 +3992,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_358_athena_commando_m_aztec",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_221_aztecmale",
                           "minQuantity": 1
                       }
@@ -4758,7 +4758,7 @@
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:athena_s11_nobattlebundleoption_token",
                           "minQuantity": 1
                       }
@@ -4819,7 +4819,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaDance:eid_bottlecapchallenge",
                           "minQuantity": 1
                       }
@@ -4893,12 +4893,12 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_038_athena_commando_m_disco",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaBackpack:bid_323_funkopsremix",
                           "minQuantity": 1
                       }
@@ -4976,7 +4976,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaCharacter:cid_414_athena_commando_f_militaryfashion",
                           "minQuantity": 1
                       }
@@ -5050,7 +5050,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaDance:eid_og_runningman",
                           "minQuantity": 1
                       }
@@ -5123,7 +5123,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaDance:eid_hilowwave",
                           "minQuantity": 1
                       }
@@ -5197,7 +5197,7 @@
                   "appStoreId": [],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "AthenaDance:eid_applause",
                           "minQuantity": 1
                       }
@@ -5783,7 +5783,7 @@
                   "sortPriority": 9,
                   "title": "Throwback Axe",
                   "shortDescription": "",
-                  "description": "Relive the early days of Fortnite Battle Royale with the Chapter 1 default pickaxe.",
+                  "description": "Relive the early days of FortCommunism Battle Royale with the Chapter 1 default pickaxe.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_Pickaxe_ID_475_ChOnePickaxe.DA_Featured_Pickaxe_ID_475_ChOnePickaxe",
                   "itemGrants": [
                       {
@@ -5956,7 +5956,7 @@
                   "catalogGroup": "",
                   "catalogGroupPriority": 0,
                   "sortPriority": 9,
-                  "title": "Fortnite - The Last Laugh Bundle",
+                  "title": "FortCommunism - The Last Laugh Bundle",
                   "shortDescription": "",
                   "description": "Genius comes in many forms - whether you're dangerously funny, creating havoc with wild plants, or flooding the island with your best intentions; it often comes along with a companion: madness. Become everyone’s nemesis with The Last Laugh bundle!",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_LastLaughBundle.DA_Featured_LastLaughBundle",
@@ -6061,7 +6061,7 @@
                   "catalogGroup": "",
                   "catalogGroupPriority": 0,
                   "sortPriority": 9,
-                  "title": "Fortnite - Darkfire Bundle",
+                  "title": "FortCommunism - Darkfire Bundle",
                   "shortDescription": "",
                   "description": "Embrace your dark side, heat up the battle and slip into the shadows with the Darkfire Bundle.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_Featured_DarkFireBundle.DA_Featured_DarkFireBundle",
@@ -6450,7 +6450,7 @@
               },
               {
                   "offerId": "AE1A98314BFD6F057A4D5785916058DD",
-                  "devName": "Fortnite Crew",
+                  "devName": "FortCommunism Crew",
                   "offerType": "StaticPrice",
                   "prices": [
                       {
@@ -6512,9 +6512,9 @@
                   "catalogGroup": "",
                   "catalogGroupPriority": 0,
                   "sortPriority": 10,
-                  "title": "Fortnite Crew",
+                  "title": "FortCommunism Crew",
                   "shortDescription": "",
-                  "description": "Fortnite Crew",
+                  "description": "FortCommunism Crew",
                   "displayAssetPath": "",
                   "itemGrants": []
               },
@@ -7028,7 +7028,7 @@
               },
               {
                   "offerId": "D3DBBE694059D151F191DE897DD2640D",
-                  "devName": "Fortnite Crew Bling",
+                  "devName": "FortCommunism Crew Bling",
                   "offerType": "StaticPrice",
                   "prices": [
                       {
@@ -9354,7 +9354,7 @@
                   ],
                   "metaInfo": [
                       {
-                          "key": "bShowInItemShop",
+                          "key": "bShowICommunismmShop",
                           "value": "false"
                       },
                       {
@@ -9506,7 +9506,7 @@
                   ],
                   "metaInfo": [
                       {
-                          "key": "bShowInItemShop",
+                          "key": "bShowICommunismmShop",
                           "value": "true"
                       },
                       {
@@ -9598,7 +9598,7 @@
                   ],
                   "metaInfo": [
                       {
-                          "key": "bShowInItemShop",
+                          "key": "bShowICommunismmShop",
                           "value": "true"
                       },
                       {
@@ -9676,7 +9676,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_3",
                           "minQuantity": 1
                       },
@@ -9686,7 +9686,7 @@
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_2",
                           "minQuantity": 1
                       }
@@ -9737,7 +9737,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_2",
                           "minQuantity": 1
                       },
@@ -9793,7 +9793,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_1",
                           "minQuantity": 1
                       }
@@ -9844,7 +9844,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_4",
                           "minQuantity": 1
                       },
@@ -9854,7 +9854,7 @@
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_3",
                           "minQuantity": 1
                       }
@@ -9905,7 +9905,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_5",
                           "minQuantity": 1
                       },
@@ -9961,7 +9961,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_3",
                           "minQuantity": 1
                       },
@@ -10017,7 +10017,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_1",
                           "minQuantity": 1
                       }
@@ -10068,7 +10068,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_4",
                           "minQuantity": 1
                       },
@@ -10175,7 +10175,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_4",
                           "minQuantity": 1
                       },
@@ -10185,12 +10185,12 @@
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_2",
                           "minQuantity": 1
                       },
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_3",
                           "minQuantity": 1
                       }
@@ -10241,7 +10241,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_1",
                           "minQuantity": 1
                       }
@@ -10598,7 +10598,7 @@
                   ],
                   "requirements": [
                       {
-                          "requirementType": "DenyOnItemOwnership",
+                          "requirementType": "DenyOCommunismmOwnership",
                           "requiredId": "Token:founderspack_1",
                           "minQuantity": 1
                       }
@@ -10676,7 +10676,7 @@
                   "sortPriority": 6,
                   "title": "2,000 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 2,000 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 2,000 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -10738,7 +10738,7 @@
                   "sortPriority": 6,
                   "title": "1,100 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,100 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,100 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -10800,7 +10800,7 @@
                   "sortPriority": 6,
                   "title": "500 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 500 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 500 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -10862,7 +10862,7 @@
                   "sortPriority": 6,
                   "title": "700 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 700 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 700 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -10924,7 +10924,7 @@
                   "sortPriority": 6,
                   "title": "300 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 300 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 300 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -10986,7 +10986,7 @@
                   "sortPriority": 6,
                   "title": "1,200 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,200 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,200 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11048,7 +11048,7 @@
                   "sortPriority": 6,
                   "title": "1,800 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,800 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,800 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11110,7 +11110,7 @@
                   "sortPriority": 6,
                   "title": "100 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 100 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 100 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11172,7 +11172,7 @@
                   "sortPriority": 6,
                   "title": "1,400 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,400 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,400 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11234,7 +11234,7 @@
                   "sortPriority": 6,
                   "title": "900 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 900 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 900 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11296,7 +11296,7 @@
                   "sortPriority": 6,
                   "title": "400 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 400 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 400 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11358,7 +11358,7 @@
                   "sortPriority": 6,
                   "title": "1,500 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,500 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,500 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11420,7 +11420,7 @@
                   "sortPriority": 6,
                   "title": "800 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 800 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 800 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11482,7 +11482,7 @@
                   "sortPriority": 6,
                   "title": "1,300 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,300 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,300 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11544,7 +11544,7 @@
                   "sortPriority": 6,
                   "title": "1,700 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,700 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,700 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11606,7 +11606,7 @@
                   "sortPriority": 6,
                   "title": "1,900 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,900 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,900 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11668,7 +11668,7 @@
                   "sortPriority": 6,
                   "title": "200 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 200 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 200 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11730,7 +11730,7 @@
                   "sortPriority": 6,
                   "title": "1,600 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 1,600 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 1,600 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               },
@@ -11792,7 +11792,7 @@
                   "sortPriority": 6,
                   "title": "600 V-Bucks",
                   "shortDescription": "",
-                  "description": "Complete your purchase by grabbing 600 V-Bucks, the in-game currency that can be spent in Fortnite Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
+                  "description": "Complete your purchase by grabbing 600 V-Bucks, the in-game currency that can be spent in FortCommunism Battle Royale, Creative, and Save the World Modes!  These V-Bucks will immediately be spent on the currently selected offer.",
                   "displayAssetPath": "/Game/Catalog/DisplayAssets/DA_MtxPack1000.DA_MtxPack1000",
                   "itemGrants": []
               }

@@ -98,10 +98,10 @@ module.exports = (app) => {
                         "sent": new Date(),
                         "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
                         "revision": 0,
-                        "ns": "Fortnite",
+                        "ns": "FortCommunism",
                         "party_id": req.params.PartyId || "LobbyBotPartyLMFAO",
-                        "account_id": `NeoniteBot${counter != 0 ? counter : ''}`,
-                        "account_dn": 'NeoniteBot',
+                        "account_id": `NeoCommunismBot${counter != 0 ? counter : ''}`,
+                        "account_dn": 'NeoCommunismBot',
                         "member_state_removed": [],
                         "member_state_updated": req.body.update,
                         "joined_at": new Date(),
@@ -116,7 +116,7 @@ module.exports = (app) => {
                 "sent": new Date(),
                 "type": "com.epicgames.social.party.notification.v0.MEMBER_STATE_UPDATED",
                 "revision": req.body.revision,
-                "ns": "Fortnite",
+                "ns": "FortCommunism",
                 "party_id": req.params.PartyId,
                 "account_id": req.params.accountId,
                 "account_dn": req.params.accountId,
@@ -139,7 +139,7 @@ module.exports = (app) => {
             meta: {}
         })
 
-        if (req.params.accountId != "NeoniteBot") return;
+        if (req.params.accountId != "NeoCommunismBot") return;
 
         var client = global.xmppClients.find(x => x.accountId == req.params.pingerId);
 
@@ -161,7 +161,7 @@ module.exports = (app) => {
 
     app.all('/presence/api/v1/*', (req, res) => { res.json([]) })
 
-    // /party/api/v1/Fortnite/parties/LobbyBotPartyLMFAO/members/NeoniteBot
+    // /party/api/v1/FortCommunism/parties/LobbyBotPartyLMFAO/members/NeoCommunismBot
     app.delete('/party/api/v1/*/parties/:PartyId/members/:accountId', (req, res) => {
         res.status(204).end()
         var token = req.headers.authorization.replace("bearer ", "").replace("Bearer ", "")
@@ -170,12 +170,12 @@ module.exports = (app) => {
         if (!client) return;
 
 
-        if (`${req.params.accountId}`.startsWith("NeoniteBot")) {
+        if (`${req.params.accountId}`.startsWith("NeoCommunismBot")) {
             
             client.functions.SendMessage(JSON.stringify({
                 "account_id": req.params.accountId,
                 "member_state_update": {},
-                "ns": "Fortnite",
+                "ns": "FortCommunism",
                 "type": "com.epicgames.social.party.notification.v0.MEMBER_LEFT",
                 "party_id": req.params.PartyId,
                 "revision": 0,

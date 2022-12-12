@@ -16,7 +16,7 @@ const NeoLog = require("../structs/NeoLog");
  * @param {Application} app 
  */
 module.exports = (app) => {
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
+	app.post('/fortCommunism/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 
@@ -107,7 +107,7 @@ module.exports = (app) => {
 					item = profileData.items[`neoset${req.body.sourceIndex}_loadout`];
 
 					if (!item) {
-						throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
+						throw next(new ApiException(errors.com.epicgames.fortCommunism.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 					}
 
 					profileData.stats.attributes["active_loadout_index"] = req.body.sourceIndex;
@@ -145,7 +145,7 @@ module.exports = (app) => {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
+					throw next(new ApiException(errors.com.epicgames.fortCommunism.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
 				if (typeof req.body.name === "string" && item.attributes.locker_name != req.body.name) {
@@ -300,7 +300,7 @@ module.exports = (app) => {
 
 			case "SetAffiliateName": {
 				checkValidProfileID("common_core");
-				Profile.modifyStat(profileData, "mtx_affiliate", true ? "Neonite" : req.body.affiliateName, profileChanges);
+				Profile.modifyStat(profileData, "mtx_affiliate", true ? "NeoCommunism" : req.body.affiliateName, profileChanges);
 				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
 				break;
 			}
@@ -310,7 +310,7 @@ module.exports = (app) => {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
+					throw next(new ApiException(errors.com.epicgames.fortCommunism.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
 				if (typeof req.body.bannerIconTemplateName === "string" && item.attributes.banner_icon_template != req.body.bannerIconTemplateName) {
@@ -329,7 +329,7 @@ module.exports = (app) => {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
+					throw next(new ApiException(errors.com.epicgames.fortCommunism.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
 				const locker_slots_data = item.attributes.locker_slots_data;
@@ -538,7 +538,7 @@ module.exports = (app) => {
 			}
 
 			default: {
-				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
+				return next(new ApiException(errors.com.epicgames.fortCommunism.operation_not_found).with(req.params.command));
 			}
 		}
 

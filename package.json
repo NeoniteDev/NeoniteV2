@@ -1,7 +1,7 @@
 {
-  "name": "neonitev2",
+  "name": "neoCommunismv2",
   "version": "2.7.3",
-  "description": "A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience",
+  "description": "A FortCommunism private server/lobby emulator allowing you to design your dream FortCommunism experience",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.21.2",
@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NeoniteDev/NeoniteV2.git"
+    "url": "git+https://github.com/NeoCommunismDev/NeoCommunismV2.git"
   },
   "author": "kemo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NeoniteDev/NeoniteV2/pulls"
+    "url": "https://github.com/NeoCommunismDev/NeoCommunismV2/pulls"
   },
-  "homepage": "https://github.com/NeoniteDev/NeoniteV2#readme",
+  "homepage": "https://github.com/NeoCommunismDev/NeoCommunismV2#readme",
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/ws": "^7.4.0",

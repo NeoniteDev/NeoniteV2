@@ -32,18 +32,18 @@ Array.prototype.shuffle = function () {
 module.exports = (app) => {
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
-		//adds serviceId based on what the game feeds it, if undefined defaults to fortnite
-		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortnite";
+		//adds serviceId based on what the game feeds it, if undefined defaults to fortCommunism
+		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortCommunism";
 		res.json([
 			{
 				"serviceInstanceId": serviceId,
 				"status": "UP",
 				"message": "Hi",
-				"maintenanceUri": "https://dsc.gg/neonite",
+				"maintenanceUri": "https://dsc.gg/neoCommunism",
 				"allowedActions": [],
 				"banned": false,
 				"launcherInfoDTO": {
-					"appName": "Fortnite",
+					"appName": "FortCommunism",
 					"catalogItemId": "4fe75bbc5a674f4f9b356b5c90567da5",
 					"namespace": "fn"
 				}
@@ -57,11 +57,11 @@ module.exports = (app) => {
 			"serviceInstanceId": serviceId,
 			"status": "UP",
 			"message": "Hello",
-			"maintenanceUri": "https://dsc.gg/neonite",
+			"maintenanceUri": "https://dsc.gg/neoCommunism",
 			"allowedActions": [],
 			"banned": false,
 			"launcherInfoDTO": {
-				"appName": "Fortnite",
+				"appName": "FortCommunism",
 				"catalogItemId": "4fe75bbc5a674f4f9b356b5c90567da5",
 				"namespace": "fn"
 			}
@@ -80,7 +80,7 @@ module.exports = (app) => {
 
 	const GithubManifestUserAgent = [];
 	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", async (req, res) => {
-		const FormattedUserAgent = req.headers["user-agent"].replace("Fortnite/", "").replace("FortniteGame/", "")
+		const FormattedUserAgent = req.headers["user-agent"].replace("FortCommunism/", "").replace("FortCommunismGame/", "")
 		const token = (await axios.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", "grant_type=client_credentials", { headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: "Basic M2Y2OWU1NmM3NjQ5NDkyYzhjYzI5ZjFhZjA4YThhMTI6YjUxZWU5Y2IxMjIzNGY1MGE2OWVmYTY3ZWY1MzgxMmU=" } })).data.access_token;
 
 
@@ -98,7 +98,7 @@ module.exports = (app) => {
 					BuildVersion = req.headers["user-agent"].split("/")[1].replace(/ /g, "-");
 				} catch { }
 
-				axios.head(`https://raw.githubusercontent.com/VastBlast/FortniteManifestArchive/main/Fortnite/Android/${req.query.manifest}.manifest`).then(() => {
+				axios.head(`https://raw.githubusercontent.com/VastBlast/FortCommunismManifestArchive/main/FortCommunism/Android/${req.query.manifest}.manifest`).then(() => {
 					if (!GithubManifestUserAgent.includes(FormattedUserAgent)) {
 						GithubManifestUserAgent.push(FormattedUserAgent);
 					}
@@ -112,7 +112,7 @@ module.exports = (app) => {
 						"items": {
 							"MANIFEST": {
 								"signature": "",
-								"distribution": "https://raw.githubusercontent.com/VastBlast/FortniteManifestArchive/main/Fortnite/Android/",
+								"distribution": "https://raw.githubusercontent.com/VastBlast/FortCommunismManifestArchive/main/FortCommunism/Android/",
 								"path": `/../${req.query.manifest}.manifest`,
 								"additionalDistributions": []
 							}
@@ -135,18 +135,18 @@ module.exports = (app) => {
 
 
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
-		const FormattedUserAgent = req.headers["user-agent"].replace("Fortnite/", "").replace("FortniteGame/", "")
+		const FormattedUserAgent = req.headers["user-agent"].replace("FortCommunism/", "").replace("FortCommunismGame/", "")
 
 		if (GithubManifestUserAgent.includes(FormattedUserAgent)) {
 			res.json({
 				"distributions": [
-					"https://epicgames-download1.akamaized.net/Builds/Fortnite/Content/CloudDir/",
-					"https://download.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://download2.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://download3.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://download4.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://fastly-download.epicgames.com/Builds/Fortnite/Content/CloudDir/", ,
-					"https://raw.githubusercontent.com/VastBlast/FortniteManifestArchive/main/Fortnite/Android/"
+					"https://epicgames-download1.akamaized.net/Builds/FortCommunism/Content/CloudDir/",
+					"https://download.epicgames.com/Builds/FortCommunism/Content/CloudDir/",
+					"https://download2.epicgames.com/Builds/FortCommunism/Content/CloudDir/",
+					"https://download3.epicgames.com/Builds/FortCommunism/Content/CloudDir/",
+					"https://download4.epicgames.com/Builds/FortCommunism/Content/CloudDir/",
+					"https://fastly-download.epicgames.com/Builds/FortCommunism/Content/CloudDir/", ,
+					"https://raw.githubusercontent.com/VastBlast/FortCommunismManifestArchive/main/FortCommunism/Android/"
 				]
 			});
 		}
@@ -165,7 +165,7 @@ module.exports = (app) => {
 
 	})
 
-	app.post('/fortnite/api/game/v2/creative/discovery/surface/:accountId', (req, res) =>
+	app.post('/fortCommunism/api/game/v2/creative/discovery/surface/:accountId', (req, res) =>
 		res.json({
 			"Panels": [
 				{
@@ -567,14 +567,14 @@ module.exports = (app) => {
 		})
 	)
 
-	app.get('/fortnite/api/game/v2/creative/favorites/:accountId', (req, res) =>
+	app.get('/fortCommunism/api/game/v2/creative/favorites/:accountId', (req, res) =>
 		res.json({
 			"results": [],
 			"hasMore": false
 		})
 	)
 
-	app.get('/fortnite/api/game/v2/creative/history/:accountId', (req, res) =>
+	app.get('/fortCommunism/api/game/v2/creative/history/:accountId', (req, res) =>
 		res.json({
 			"results": [],
 			"hasMore": false
@@ -600,22 +600,22 @@ module.exports = (app) => {
 			}])
 	})
 
-	app.delete("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
-		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
+	app.delete("/friends/api/v1/:accountId/friends/NeoCommunismBot", (req, res) => {
+		res.status(403).json({ "errorCode": "errors.com.epicgames.NeoCommunism.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
 		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 		if (!client) return;
 
 		client.functions.SendMessage(JSON.stringify({
 			"type": "FRIENDSHIP_REQUEST",
 			"timestamp": new Date(),
-			"from": "NeoniteBot",
+			"from": "NeoCommunismBot",
 			"to": req.params.accountId,
 			"status": "ACCEPTED"
 		}))
 
 		client.functions.SendMessage(JSON.stringify({
 			"payload": {
-				"accountId": "NeoniteBot",
+				"accountId": "NeoCommunismBot",
 				"status": "ACCEPTED",
 				"direction": "INBOUND",
 				"created": new Date(),
@@ -627,18 +627,18 @@ module.exports = (app) => {
 	})
 
 
-	app.get('/api/v1/assets/Fortnite/:version/', (req, res) => {
+	app.get('/api/v1/assets/FortCommunism/:version/', (req, res) => {
 		res.json([])
 	});
 
-	app.get("/fortnite/api/game/v2/world/info", (req, res) => res.json({}))
+	app.get("/fortCommunism/api/game/v2/world/info", (req, res) => res.json({}))
 
 	app.get("/friends/api/v1/*/blocklist", (req, res) => { res.json([]) })
 
 
 	app.get("/eulatracking/api/public/agreements/*/account/:accountId", (req, res) => { res.status(204).end() })
 
-	app.get("/friends/api/v1/*/recent/fortnite", (req, res) => { res.json([]) })
+	app.get("/friends/api/v1/*/recent/fortCommunism", (req, res) => { res.json([]) })
 
 	app.get("/api/v1/events/:game/download/:accountId", (req, res) => {
 		res.json({
@@ -658,7 +658,7 @@ module.exports = (app) => {
 		})
 	})
 
-	app.all("/fortnite/api/game/v2/br-inventory/account/:accountId", (req, res) => {
+	app.all("/fortCommunism/api/game/v2/br-inventory/account/:accountId", (req, res) => {
 		res.json({
 			"stash": {
 				"globalcash": 0
@@ -672,7 +672,7 @@ module.exports = (app) => {
 	app.get('/friends/api/v1/:accountId/summary', (req, res) => {
 		res.json({
 			"friends": [{
-				"accountId": "NeoniteBot",
+				"accountId": "NeoCommunismBot",
 				"groups": [],
 				"mutual": 0,
 				"alias": "",
@@ -696,23 +696,23 @@ module.exports = (app) => {
 
 
 	//version check
-	app.get('/fortnite/api/v2/versioncheck*', (req, res) => {
+	app.get('/fortCommunism/api/v2/versioncheck*', (req, res) => {
 		res.json({ "type": "NO_UPDATE" })
 	});
 
-	app.get('/fortnite/api/versioncheck*', (req, res) => {
+	app.get('/fortCommunism/api/versioncheck*', (req, res) => {
 		res.json({ "type": "NO_UPDATE" })
 	});
 
 	//privacy
-	app.get('/fortnite/api/game/v2/privacy/account/:accountId', (req, res) => {
+	app.get('/fortCommunism/api/game/v2/privacy/account/:accountId', (req, res) => {
 		res.json({
 			"accountId": req.params.accountId,
 			"optOutOfPublicLeaderboards": false
 		})
 	});
 
-	app.post('/api/v1/assets/Fortnite/:version/:netcl', (req, res) => {
+	app.post('/api/v1/assets/FortCommunism/:version/:netcl', (req, res) => {
 		res.json({
 			"FortPlaylistAthena": {
 				"meta": {
@@ -723,8 +723,8 @@ module.exports = (app) => {
 		})
 	});
 
-	app.post("/friends/api/v1/:accountId/blocklist/NeoniteBot", (req, res) => {
-		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
+	app.post("/friends/api/v1/:accountId/blocklist/NeoCommunismBot", (req, res) => {
+		res.status(403).json({ "errorCode": "errors.com.epicgames.NeoCommunism.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
 
 		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 		if (!client) return;
@@ -732,14 +732,14 @@ module.exports = (app) => {
 		client.functions.SendMessage(JSON.stringify({
 			"type": "FRIENDSHIP_REQUEST",
 			"timestamp": new Date(),
-			"from": "NeoniteBot",
+			"from": "NeoCommunismBot",
 			"to": req.params.accountId,
 			"status": "ACCEPTED"
 		}))
 
 		client.functions.SendMessage(JSON.stringify({
 			"payload": {
-				"accountId": "NeoniteBot",
+				"accountId": "NeoCommunismBot",
 				"status": "ACCEPTED",
 				"direction": "INBOUND",
 				"created": new Date(),
@@ -759,7 +759,7 @@ module.exports = (app) => {
 			"externalAuths": {}
 		})
 
-		if (req.params.displayName != "NeoniteBot") return;
+		if (req.params.displayName != "NeoCommunismBot") return;
 
 		var token = req.headers.authorization.replace("bearer ", "").replace("Bearer ", "")
 		var client = global.xmppClients.find(x => x.token == token);
@@ -769,14 +769,14 @@ module.exports = (app) => {
 		client.functions.SendMessage(JSON.stringify({
 			"type": "FRIENDSHIP_REQUEST",
 			"timestamp": new Date(),
-			"from": "NeoniteBot",
+			"from": "NeoCommunismBot",
 			"to": req.params.accountId,
 			"status": "ACCEPTED"
 		}))
 
 		client.functions.SendMessage(JSON.stringify({
 			"payload": {
-				"accountId": "NeoniteBot",
+				"accountId": "NeoCommunismBot",
 				"status": "ACCEPTED",
 				"direction": "INBOUND",
 				"created": new Date(),
@@ -787,11 +787,11 @@ module.exports = (app) => {
 		}))
 	})
 
-	app.post("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
+	app.post("/friends/api/v1/:accountId/friends/NeoCommunismBot", (req, res) => {
 		res.status(204).send()
 	})
 
-	app.all("/fortnite/api/game/v2/matchmakingservice/ticket/player/:accountId", (req, res) => {
+	app.all("/fortCommunism/api/game/v2/matchmakingservice/ticket/player/:accountId", (req, res) => {
 		var ParsedBckt = {
 			NetCL: "",
 			Region: "",
@@ -807,11 +807,11 @@ module.exports = (app) => {
 			ParsedBckt.Playlist = splitted[3];
 		}
 		catch {
-			throw new ApiException(errors.com.epicgames.fortnite.invalid_bucket_id);
+			throw new ApiException(errors.com.epicgames.fortCommunism.invalid_bucket_id);
 		}
 		finally {
 			if (ParsedBckt.NetCL === "" || ParsedBckt.Region === "" || ParsedBckt.Playlist === "" || ParsedBckt.Region === -1) {
-				throw new ApiException(errors.com.epicgames.fortnite.invalid_bucket_id).withMessage(`Failed to parse bucketId: '${req.query.bucketId}'`).with(req.query.bucketId)
+				throw new ApiException(errors.com.epicgames.fortCommunism.invalid_bucket_id).withMessage(`Failed to parse bucketId: '${req.query.bucketId}'`).with(req.query.bucketId)
 			}
 		}
 
@@ -854,7 +854,7 @@ module.exports = (app) => {
 
 	});
 
-	app.get("/fortnite/api/game/v2/matchmaking/account/:accountId/session/:sessionId", (req, res) =>
+	app.get("/fortCommunism/api/game/v2/matchmaking/account/:accountId/session/:sessionId", (req, res) =>
 		res.json({
 			"accountId": req.params.accountId,
 			"sessionId": req.params.sessionId,
@@ -862,16 +862,16 @@ module.exports = (app) => {
 		})
 	)
 
-	app.post("/fortnite/api/matchmaking/session/:SessionId/join", (req, res) => res.status(204).end())
+	app.post("/fortCommunism/api/matchmaking/session/:SessionId/join", (req, res) => res.status(204).end())
 
-	app.get("/fortnite/api/matchmaking/session/:sessionId", (req, res) => {
+	app.get("/fortCommunism/api/matchmaking/session/:sessionId", (req, res) => {
 		var BuildUniqueId = req.cookies["NetCL"];
 
 		res.json({
 			"id": req.params.sessionId,
-			"ownerId": "Neonite",
-			"ownerName": "Neonite",
-			"serverName": "NeoniteV2",
+			"ownerId": "NeoCommunism",
+			"ownerName": "NeoCommunism",
+			"serverName": "NeoCommunismV2",
 			"serverAddress": "127.0.0.1",
 			"serverPort": -1,
 			"totalPlayers": 0,
@@ -902,17 +902,17 @@ module.exports = (app) => {
 	});
 
 	//grant access
-	app.post('/fortnite/api/game/v2/grant_access/:accountId', (req, res) => {
+	app.post('/fortCommunism/api/game/v2/grant_access/:accountId', (req, res) => {
 		res.status(204).end();
 	});
 
 	//enabled features
-	app.get('/fortnite/api/game/v2/enabled_features', (req, res) => {
+	app.get('/fortCommunism/api/game/v2/enabled_features', (req, res) => {
 		res.json([])
 	});
 
 	//receipt
-	app.get('/fortnite/api/receipts/v1/account/:accountId/receipts', (req, res) => {
+	app.get('/fortCommunism/api/receipts/v1/account/:accountId/receipts', (req, res) => {
 		res.json([])
 	});
 
@@ -931,7 +931,7 @@ module.exports = (app) => {
 	});
 
 	//recent players
-	app.get('/friends/api/public/list/fortnite/:accountId/recentPlayers', (req, res) => {
+	app.get('/friends/api/public/list/fortCommunism/:accountId/recentPlayers', (req, res) => {
 		res.json([]);
 	});
 
@@ -939,7 +939,7 @@ module.exports = (app) => {
 	app.get('/friends/api/public/friends/:accountId', (req, res) => {
 		res.json([
 			{
-				accountId: 'NeoniteBot',
+				accountId: 'NeoCommunismBot',
 				status: 'ACCEPTED',
 				direction: 'INBOUND',
 				created: '2018-12-06T04:46:01.296Z',
@@ -972,14 +972,14 @@ module.exports = (app) => {
 	});
 
 	//platform
-	app.post('/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId', (req, res) => {
+	app.post('/fortCommunism/api/game/v2/tryPlayOnPlatform/account/:accountId', (req, res) => {
 		res.set('Content-Type', 'text/plain');
 		res.send(true);
 	});
 
 	//sac
 	app.get('/affiliate/api/public/affiliates/slug/:affiliateName', (req, res) => {
-		if (req.params.affiliateName != "Neonite") {
+		if (req.params.affiliateName != "NeoCommunism") {
 			throw new ApiException(errors.com.epicgames.ecommerce.affiliate.not_found).with(req.params.affiliateName);
 		}
 
@@ -1009,22 +1009,22 @@ module.exports = (app) => {
 		})
 	})
 
-	app.get('/fortnite/api/cloudstorage/system/DefaultGame.ini', (req, res) => {
+	app.get('/fortCommunism/api/cloudstorage/system/DefaultGame.ini', (req, res) => {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname, '../hotfixes/DefaultGame.ini'));
 	});
 
-	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
+	app.get('/fortCommunism/api/cloudstorage/user/:accountId', (req, res) => {
 		res.json([])
 	});
 
-	app.put('/fortnite/api/cloudstorage/user/:accountId/:filename', (req, res) => res.status(204).end())
+	app.put('/fortCommunism/api/cloudstorage/user/:accountId/:filename', (req, res) => res.status(204).end())
 
-	app.post("/fortnite/api/game/v2/profileToken/verify/*", (req, res) => { res.status(204).end() })
+	app.post("/fortCommunism/api/game/v2/profileToken/verify/*", (req, res) => { res.status(204).end() })
 
 	//keychain
-	app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
-		axios.get("https://api.nitestats.com/v1/epic/keychain", { timeout: 3000 }).then(response => {
+	app.get('/fortCommunism/api/storefront/v2/keychain', (req, res) => {
+		axios.get("https://api.Communismstats.com/v1/epic/keychain", { timeout: 3000 }).then(response => {
 			res.json(response.data);
 		}).catch(e => {
 			res.json(["74AF07F9A2908BB2C32C9B07BC998560:V0Oqo/JGdPq3K1fX3JQRzwjCQMK7bV4QoyqQQFsIf0k=:Glider_ID_158_Hairy"])
@@ -1032,17 +1032,17 @@ module.exports = (app) => {
 	})
 
 	//sigh
-	app.get("/fortnite/api/matchmaking/session/findPlayer/:id", (req, res) => {
+	app.get("/fortCommunism/api/matchmaking/session/findPlayer/:id", (req, res) => {
 		res.json([])
 	})
 
-	app.get("/fortnite/api/statsv2/account/:accountId", (req, res) => {
+	app.get("/fortCommunism/api/statsv2/account/:accountId", (req, res) => {
 		res.json([])
 	})
 
 
 	//change the 0 to what ever amount of gold you want
-	app.get('/fortnite/api/game/v2/br-inventory/account/:accountId', (req, res) => {
+	app.get('/fortCommunism/api/game/v2/br-inventory/account/:accountId', (req, res) => {
 		res.json({
 			"stash": {
 				"globalcash": 0
@@ -1051,7 +1051,7 @@ module.exports = (app) => {
 	});
 
 	app.get('/launcher/api/public/assets/Windows/:catalogItemId/:appName', async function (req, res) {
-		const tokenResponse = await axios.get('https://api.nitestats.com/v1/epic/bearer');
+		const tokenResponse = await axios.get('https://api.Communismstats.com/v1/epic/bearer');
 		const auth_token = tokenResponse.data.accessToken;
 
 		const response = await axios.get(
