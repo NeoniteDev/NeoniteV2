@@ -499,6 +499,17 @@ module.exports = (app) => {
 				break;
 			}
 
+			case "SetItemArchivedStatusBatch": {
+				checkValidProfileID("campaign", "athena");
+
+				req.body.itemIds.forEach(itemId => {
+					if (typeof itemId === "string" && typeof req.body.archived === "boolean") {
+						Profile.changeItemAttribute(profileData, itemId, "archived", req.body.archived, profileChanges);
+					}
+				});
+				break;
+			}
+
 			case "SetMtxPlatform": {
 				checkValidProfileID("common_core");
 
