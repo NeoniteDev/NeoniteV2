@@ -1080,6 +1080,39 @@ module.exports = (app) => {
 		});
 	});
 	
+	app.get("/api/content/v2/search/artifact/:artifactId/*", (req, res) => {
+		res.json({
+			"artifactId":"769b0cd9-9b87-4d89-898e-835a42498a45:pc",
+			"name":"pc",
+			"filter":{
+				"platform":"Windows"
+    		}	
+ 		})
+	})
+
+
+
+	app.get("/api/content/v2/artifact/:artifactId/*", (req, res) => {
+		res.json({
+		"status":"cooked",
+		"start":"2023-02-28T20:24:04.858Z",
+		"end":"2023-02-28T20:24:50.836Z",
+		"cookJobId":"2a304158-f603-48b4-a0fe-132b68361737",
+		"cooker":"23.50.24441668-live-testing",
+		"output":{
+			"baseUrl":"https://datastorage-public-service-live.ol.epicgames.com/api/v1/redirect/fortnite/valkyrie/cooked-content/23.50.24441668/0900f784-4f38-4606-4092-95a613f6c5fb/v2/2a304158-f603-48b4-a0fe-132b68361737/",
+			"totalSizeKb":1517.1142578125,
+			"files":[
+				
+			],
+			"manifest":"alt/plugin.manifest",
+			"manifestSizeKb":0.4365234375,
+			"manifestDiskSizeKb":1516.677734375,
+			"manifestDownloadSizeKb":1261.0078125,
+			"userContentTotalSizeKb":0
+    	}
+ 	})})
+
 	app.all('/v1/epic-settings/public/users/:accountId/values', (req, res) => {
 		res.json({
 			"response": {
