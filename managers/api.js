@@ -544,6 +544,36 @@ module.exports = (app) => {
 		})
 	)
 
+	app.get("/links/api/fn/mnemonic/:playlist/related", (req, res) => {
+        var response = {
+            "parentLinks": [],
+            "links": {}
+        };
+
+		response.links[req.params.playlist] = {
+			"namespace": "fn",
+			"accountId": "epic",
+			"creatorName": "Epic",
+			"mnemonic": req.params.playlist,
+			"linkType": "BR:Playlist",
+			"metadata": {
+				"matchmaking": {
+					"override_playlist": req.params.playlist
+				}
+			},
+			"version": 93,
+			"active": true,
+			"disabled": false,
+			"created": "2021-08-16T16:43:18.268Z",
+			"published": "2021-08-03T15:27:17.540Z",
+			"descriptionTags": [
+
+			]
+		}
+
+        res.json(response)
+    })
+
 	app.get('/links/api/fn/mnemonic/:playlist', (req, res) =>
 		res.json({
 			"namespace": "fn",
